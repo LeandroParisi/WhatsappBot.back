@@ -5,7 +5,7 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Users', {
+      await queryInterface.createTable('Customers', {
         id: {
           allowNull: false,
           autoIncrement: true,
@@ -108,11 +108,11 @@ module.exports = {
         },
       }, { transaction });
 
-      await queryInterface.addIndex('Users', ['whatsappNumber'], { transaction });
+      await queryInterface.addIndex('Customers', ['whatsappNumber'], { transaction });
 
-      await queryInterface.addIndex('Users', ['whatsappId'], { transaction });
+      await queryInterface.addIndex('Customers', ['whatsappId'], { transaction });
 
-      await queryInterface.addIndex('Users', ['cnpj'], { transaction });
+      await queryInterface.addIndex('Customers', ['cpf'], { transaction });
 
       await transaction.commit();
 
@@ -123,6 +123,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Users');
+    await queryInterface.dropTable('Customers');
   }
 };
