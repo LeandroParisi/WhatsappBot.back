@@ -72,6 +72,23 @@ module.exports = {
           allowNull: false,
           type: Sequelize.ENUM('unique', 'neibourhood', 'radius')
         },
+        paymentMethods: {
+          allowNull: false,
+          type: Sequelize.ARRAY(Sequelize.ENUM(
+          'money',
+          'pix',
+          'visa',
+          'mastercard',
+          'elo',
+          'hipercard',
+          'diners_club',
+          'american_express',
+          'alelo_meal',
+          'alelo_food',
+          'sodexo_meal',
+          'sodexo_food',
+          )),
+        },
         isActive: {
           allowNull: false,
           type: Sequelize.BOOLEAN,
