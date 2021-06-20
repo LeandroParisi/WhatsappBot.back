@@ -5,26 +5,24 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Users_Customers', {
-        userId: {
+      await queryInterface.createTable('Branches_DeliveryTypes', {
+        branchId: {
           allowNull: false,
           foreignKey: true,
           type: Sequelize.INTEGER,
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
           references: {
-            model: 'Users',
+            model: 'Branches',
             key: 'id',
           },
         },
-        customerId: {
+        deliveryTypeId: {
           allowNull: false,
           foreignKey: true,
           type: Sequelize.INTEGER,
-          onUpdate: 'CASCADE',
-          onDelete: 'CASCADE',
           references: {
-            model: 'Customers',
+            model: 'DeliveryTypes',
             key: 'id',
           },
         },
@@ -40,6 +38,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Users_Customers');
+    await queryInterface.dropTable('Branches_DeliveryTypes');
   }
 };
