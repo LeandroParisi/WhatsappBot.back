@@ -5,7 +5,7 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Promotions', {
+      await queryInterface.createTable('Products', {
         id: {
           allowNull: false,
           autoIncrement: true,
@@ -20,12 +20,41 @@ module.exports = {
             key: 'id'
           }
         },
-        totalPrice: {
+        categoryId: {
+          allowNull: false,
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'Categories',
+            key: 'id'
+          }
+        },
+        attributeTypeId: {
+          allowNull: true,
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'AttributeTypes',
+            key: 'id'
+          }
+        },
+        name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        dueDate: {
-          type: Sequelize.DATA,
+        attributes: {
+          allowNull: true,
+          type: Sequelize.JSONB,
+        },
+        basePrice: {
+          allowNull: false,
+          type: Sequelize.STRING,
+        },
+        description: {
+          allowNull: false,
+          type: Sequelize.TEXT,
+        },
+        ingredients: {
+          allowNull: true,
+          type: Sequelize.ARRAY(Sequelize.STRING),
         },
         avaiability: {
           allowNull: true,
@@ -55,6 +84,7 @@ module.exports = {
         },
       }, { transaction });
 
+
       await transaction.commit();
 
     } catch(error) {
@@ -64,6 +94,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Promotions');
+    await queryInterface.dropTable('Products');
   }
 };

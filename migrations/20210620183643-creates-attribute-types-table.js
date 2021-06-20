@@ -5,28 +5,16 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Products', {
+      await queryInterface.createTable('AttributeTypes', {
         id: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.INTEGER,
         },
-        branchId: {
+        attributeType: {
           allowNull: false,
-          type: Sequelize.INTEGER,
-          references: {
-            model: 'Branches',
-            key: 'id'
-          }
-        },
-        category: {
-          allowNull: false,
-          type: Sequelize.ENUM('food', 'nonAlcoholic', 'drink', 'desert')
-        },
-        type: {
-          allowNull: false,
-          type: Sequelize.ENUM('')
+          type: Sequelize.STRING,
         },
         updatedAt: {
           type: Sequelize.DATE,
@@ -48,6 +36,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Products');
+    await queryInterface.dropTable('AttributeTypes');
   }
 };
