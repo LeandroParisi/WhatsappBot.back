@@ -12,6 +12,14 @@ module.exports = {
           primaryKey: true,
           type: Sequelize.INTEGER,
         },
+        branchId: {
+          allowNull: false,
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'Branches',
+            key: 'id'
+          }
+        },
         monday: {
           type: Sequelize.STRING,
         },
