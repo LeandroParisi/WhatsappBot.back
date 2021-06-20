@@ -46,23 +46,23 @@ module.exports = {
         },
         neibourhood: {
           allowNull: false,
-          type: Sequelize.String,
+          type: Sequelize.STRING,
         },
         street: {
           allowNull: false,
-          type: Sequelize.String,
+          type: Sequelize.STRING,
         },
         streetNumber: {
           allowNull: false,
-          type: Sequelize.String,
+          type: Sequelize.STRING,
         },
         streetComplement: {
           allowNull: false,
-          type: Sequelize.String,
+          type: Sequelize.STRING,
         },
         postalCode: {
           allowNull: false,
-          type: Sequelize.String,
+          type: Sequelize.STRING,
         },
         isActive: {
           allowNull: false,
@@ -83,7 +83,7 @@ module.exports = {
       await transaction.commit();
 
     } catch(error) {
-      await transaction.roolback();
+      await transaction.rollback();
       throw error
     }
   },
