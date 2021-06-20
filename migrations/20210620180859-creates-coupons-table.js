@@ -12,6 +12,14 @@ module.exports = {
           primaryKey: true,
           type: Sequelize.INTEGER,
         },
+        branchId: {
+          allowNull: false,
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'Branches',
+            key: 'id'
+          }
+        },
         cupomCode: {
           allowNull: false,
           type: Sequelize.STRING,
