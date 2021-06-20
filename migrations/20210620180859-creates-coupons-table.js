@@ -5,20 +5,12 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Cupons', {
+      await queryInterface.createTable('Coupons', {
         id: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: Sequelize.INTEGER,
-        },
-        branchId: {
-          allowNull: false,
-          type: Sequelize.INTEGER,
-          references: {
-            model: 'Branches',
-            key: 'id'
-          }
         },
         cupomCode: {
           allowNull: false,
@@ -55,6 +47,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Cupons');
+    await queryInterface.dropTable('Coupons');
   }
 };
