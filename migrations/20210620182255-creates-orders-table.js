@@ -36,10 +36,6 @@ module.exports = {
           type: Sequelize.STRING,
           defaultValue: '0', 
         },
-        deliveryType: {
-          allowNull: false,
-          type: Sequelize.ENUM('delivery', 'counter_pickup', 'on_spot_consumption')
-        },
         paymentMethods: {
           allowNull: false,
           type: Sequelize.ARRAY(Sequelize.ENUM(
