@@ -31,7 +31,19 @@ module.exports = {
         conditions: {
           allowNull: false,
           type: Sequelize.JSONB,
+          // [
+          //   {
+          //     type: products,
+          //     condition: [1, 2, 3]
+          //   },
+          //   {
+          //     type: maxPrice,
+          //     condition: 50,
+          //   }
+          // ]
         },
+        // maxUses
+        // used
         dueDate: {
           type: Sequelize.DATE,
         },

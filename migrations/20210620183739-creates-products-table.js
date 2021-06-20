@@ -28,24 +28,36 @@ module.exports = {
             key: 'id'
           }
         },
-        attributeTypeId: {
-          allowNull: true,
-          type: Sequelize.INTEGER,
-          references: {
-            model: 'AttributeTypes',
-            key: 'id'
-          }
-        },
         name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
+        // attributeTypeId: {
+        //   allowNull: true,
+        //   type: Sequelize.INTEGER,
+        //   references: {
+        //     model: 'AttributeTypes',
+        //     key: 'id'
+        //   }
+        // },
         attributes: {
           allowNull: true,
           type: Sequelize.JSONB,
+          // [
+          //   {
+          //     type: size,
+          //     attributes: [p, m, g]
+          //   },
+          //   {
+          //     type: additional,
+          //     attributes: [
+          //       {}
+          //     ]
+          //   }
+          // ]
         },
         basePrice: {
-          allowNull: false,
+          allowNull: true,
           type: Sequelize.STRING,
         },
         description: {
@@ -54,7 +66,7 @@ module.exports = {
         },
         ingredients: {
           allowNull: true,
-          type: Sequelize.ARRAY(Sequelize.STRING),
+          type: Sequelize.TEXT,
         },
         avaiability: {
           allowNull: true,

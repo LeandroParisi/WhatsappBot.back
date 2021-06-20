@@ -24,6 +24,9 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
+        // startDate: {
+        //   type: Sequelize.DATE,
+        // },
         dueDate: {
           type: Sequelize.DATE,
         },

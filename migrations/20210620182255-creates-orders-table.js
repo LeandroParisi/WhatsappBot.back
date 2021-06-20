@@ -73,10 +73,6 @@ module.exports = {
             'fullfilled'
           )
         },
-        totalPrice: {
-          allowNull: false,
-          type: Sequelize.STRING,
-        },
         coupomId: {
           allowNull: true,
           type: Sequelize.INTEGER,
@@ -101,20 +97,13 @@ module.exports = {
           allowNull: true,
           type: Sequelize.TEXT,
         },
-        postTime: {
-          allowNull: false,
-          type: Sequelize.DATE,
-          defaultValue: Sequelize.fn('now'),
-        },
         dispatchTime: {
           allowNull: true,
           type: Sequelize.DATE,
-          defaultValue: Sequelize.fn('now'),
         },
         deliveryTime: {
           allowNull: true,
           type: Sequelize.DATE,
-          defaultValue: Sequelize.fn('now'),
         },
         updatedAt: {
           type: Sequelize.DATE,
