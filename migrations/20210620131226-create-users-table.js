@@ -30,6 +30,11 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
+        email: {
+          allowNull: false,
+          unique: true,
+          type: Sequelize.STRING,
+        },
         ownerFirstName: {
           allowNull: false,
           type: Sequelize.STRING,
@@ -54,13 +59,13 @@ module.exports = {
           type: Sequelize.STRING,
           defaultValue: 'Walle',
         },
-        email: {
-          allowNull: false,
-          unique: true,
-          type: Sequelize.STRING,
-        },
         logo: {
           type: Sequelize.STRING,
+        },
+        isActive: {
+          allowNull: false,
+          type: Sequelize.BOOLEAN,
+          defaultValue: true,
         },
         updatedAt: {
           type: Sequelize.DATE,
