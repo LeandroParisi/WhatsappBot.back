@@ -36,22 +36,13 @@ module.exports = {
           type: Sequelize.STRING,
           defaultValue: '0', 
         },
-        paymentMethods: {
+        paymentMethodId: {
+          type: Sequelize.UUID,
           allowNull: false,
-          type: Sequelize.ARRAY(Sequelize.ENUM(
-          'money',
-          'pix',
-          'visa',
-          'mastercard',
-          'elo',
-          'hipercard',
-          'diners_club',
-          'american_express',
-          'alelo_meal',
-          'alelo_food',
-          'sodexo_meal',
-          'sodexo_food',
-          )),
+          references: {
+            model: 'PaymentMethods',
+            key: 'id'
+          }
         },
         discount: {
           allowNull: false,
