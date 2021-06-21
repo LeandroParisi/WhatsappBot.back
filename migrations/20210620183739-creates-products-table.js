@@ -70,16 +70,14 @@ module.exports = {
         },
         avaiability: {
           allowNull: true,
-          type: Sequelize.ARRAY(Sequelize.ENUM(
-            'monday',
-            'tuesday',
-            'wednesday',
-            'thursday',
-            'friday',
-            'saturday',
-            'sunday'
-            )
-          )
+          type: Sequelize.STRING,
+            // ('monday',
+            // 'tuesday',
+            // 'wednesday',
+            // 'thursday',
+            // 'friday',
+            // 'saturday',
+            // 'sunday')
         },
         isActive: {
           allowNull: false,

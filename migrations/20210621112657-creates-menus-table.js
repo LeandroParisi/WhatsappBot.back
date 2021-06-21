@@ -5,46 +5,20 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Promotions', {
+      await queryInterface.createTable('Menus', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
           defaultValue: Sequelize.UUIDV4
         },
-        branchId: {
-          allowNull: false,
-          type: Sequelize.UUID,
-          references: {
-            model: 'Branches',
-            key: 'id'
-          }
-        },
-        totalPrice: {
+        menuName: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        // startDate: {
-        //   type: Sequelize.DATE,
-        // },
-        dueDate: {
-          type: Sequelize.DATE,
-        },
-        avaiability: {
+        description: {
           allowNull: true,
-          type: Sequelize.STRING,
-            // ('monday',
-            // 'tuesday',
-            // 'wednesday',
-            // 'thursday',
-            // 'friday',
-            // 'saturday',
-            // 'sunday')
-        },
-        isActive: {
-          allowNull: false,
-          type: Sequelize.BOOLEAN,
-          defaultValue: true,
+          type: Sequelize.TEXT,          
         },
         updatedAt: {
           type: Sequelize.DATE,
@@ -65,6 +39,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Promotions');
+    await queryInterface.dropTable('Menus');
   }
 };

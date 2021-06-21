@@ -73,7 +73,7 @@ module.exports = {
             key: 'id'
           }
         },
-        neibourhood: {
+        neighborhood: {
           allowNull: false,
           type: Sequelize.STRING,
         },

@@ -24,7 +24,7 @@ module.exports = {
           allowNull: false,
           type: Sequelize.JSONB,
           // {
-          //   type: enum('unique', 'neibourhood', 'radius'),
+          //   type: enum('unique', 'neighborhood', 'radius'),
           //   fees: {
 
           //   }
