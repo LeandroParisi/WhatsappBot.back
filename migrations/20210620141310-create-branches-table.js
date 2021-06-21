@@ -12,7 +12,15 @@ module.exports = {
           type: Sequelize.UUID,
           defaultValue: Sequelize.UUIDV4
         },
-        manager: {
+        userId: {
+          allowNull: false,
+          type: Sequelize.UUID,
+          references: {
+            model: 'Users',
+            key: 'id'
+          }
+        },
+        managerName: {
           allowNull: false,
           type: Sequelize.STRING
         },
