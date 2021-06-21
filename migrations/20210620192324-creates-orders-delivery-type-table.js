@@ -9,7 +9,7 @@ module.exports = {
         orderId: {
           allowNull: false,
           foreignKey: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
           references: {
@@ -20,7 +20,7 @@ module.exports = {
         deliveryTypeId: {
           allowNull: false,
           foreignKey: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
           references: {

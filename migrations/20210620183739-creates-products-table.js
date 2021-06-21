@@ -8,13 +8,13 @@ module.exports = {
       await queryInterface.createTable('Products', {
         id: {
           allowNull: false,
-          autoIncrement: true,
           primaryKey: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
+          defaultValue: Sequelize.UUIDV4
         },
         branchId: {
           allowNull: false,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'Branches',
             key: 'id'
@@ -22,7 +22,7 @@ module.exports = {
         },
         categoryId: {
           allowNull: false,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'Categories',
             key: 'id'

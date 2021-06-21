@@ -7,13 +7,13 @@ module.exports = {
       await queryInterface.createTable('Orders', {
         id: {
           allowNull: false,
-          autoIncrement: true,
           primaryKey: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
+          defaultValue: Sequelize.UUIDV4
         },
         branchId: {
           allowNull: false,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'Branches',
             key: 'id'
@@ -21,7 +21,7 @@ module.exports = {
         },
         customerId: {
           allowNull: false,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'Customers',
             key: 'id'
@@ -75,7 +75,7 @@ module.exports = {
         },
         coupomId: {
           allowNull: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'Coupons',
             key: 'id'
@@ -83,7 +83,7 @@ module.exports = {
         },
         promotionId: {
           allowNull: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'Promotions',
             key: 'id'

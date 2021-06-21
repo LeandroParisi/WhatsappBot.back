@@ -8,9 +8,9 @@ module.exports = {
       await queryInterface.createTable('Branches', {
         id: {
           allowNull: false,
-          autoIncrement: true,
           primaryKey: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
+          defaultValue: Sequelize.UUIDV4
         },
         manager: {
           allowNull: false,
@@ -22,7 +22,7 @@ module.exports = {
         },
         countryId: {
           allowNull: false,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'Countries',
             key: 'id'
@@ -30,7 +30,7 @@ module.exports = {
         },
         stateId: {
           allowNull: false,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'States',
             key: 'id'
@@ -38,7 +38,7 @@ module.exports = {
         },
         cityId: {
           allowNull: false,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'Cities',
             key: 'id'

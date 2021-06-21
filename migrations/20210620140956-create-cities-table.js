@@ -8,9 +8,9 @@ module.exports = {
       await queryInterface.createTable('Cities', {
         id: {
           allowNull: false,
-          autoIncrement: true,
           primaryKey: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
+          defaultValue: Sequelize.UUIDV4
         },
         cityName: {
           allowNull: false,
