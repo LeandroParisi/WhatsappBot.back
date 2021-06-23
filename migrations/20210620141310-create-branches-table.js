@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
@@ -10,19 +8,19 @@ module.exports = {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4
+          defaultValue: Sequelize.UUIDV4,
         },
         userId: {
           allowNull: false,
           type: Sequelize.UUID,
           references: {
             model: 'Users',
-            key: 'id'
-          }
+            key: 'id',
+          },
         },
         managerName: {
           allowNull: false,
-          type: Sequelize.STRING
+          type: Sequelize.STRING,
         },
         branchName: {
           allowNull: false,
@@ -33,24 +31,24 @@ module.exports = {
           type: Sequelize.UUID,
           references: {
             model: 'Countries',
-            key: 'id'
-          }
+            key: 'id',
+          },
         },
         stateId: {
           allowNull: false,
           type: Sequelize.UUID,
           references: {
             model: 'States',
-            key: 'id'
-          }
+            key: 'id',
+          },
         },
         cityId: {
           allowNull: false,
           type: Sequelize.UUID,
           references: {
             model: 'Cities',
-            key: 'id'
-          }
+            key: 'id',
+          },
         },
         neibourhood: {
           allowNull: false,
@@ -87,16 +85,14 @@ module.exports = {
         },
       }, { transaction });
 
-
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Branches');
-  }
+  },
 };

@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
@@ -10,16 +8,17 @@ module.exports = {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4
+          autoIncrement: true,
+          defaultValue: Sequelize.UUIDV4,
         },
         whatsappNumber: {
           allowNull: false,
-          type: Sequelize.STRING,  
+          type: Sequelize.STRING,
           unique: true,
         },
         whatsappId: {
           allowNull: false,
-          type: Sequelize.STRING,  
+          type: Sequelize.STRING,
           unique: true,
         },
         bussinessName: {
@@ -84,14 +83,13 @@ module.exports = {
       await queryInterface.addIndex('Users', ['cnpj'], { transaction });
 
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Users');
-  }
+  },
 };

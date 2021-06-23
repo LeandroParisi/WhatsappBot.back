@@ -10,8 +10,8 @@ module.exports = {
           allowNull: false,
           foreignKey: true,
           type: Sequelize.UUID,
-          // onUpdate: 'CASCADE',
-          // onDelete: 'CASCADE',
+          onUpdate: 'CASCADE',
+          onDelete: 'CASCADE',
           references: {
             model: 'Menus',
             key: 'id',
@@ -21,8 +21,8 @@ module.exports = {
           allowNull: false,
           foreignKey: true,
           type: Sequelize.UUID,
-          // onUpdate: 'CASCADE',
-          // onDelete: 'CASCADE',
+          onUpdate: 'CASCADE',
+          onDelete: 'CASCADE',
           references: {
             model: 'Products',
             key: 'id',
