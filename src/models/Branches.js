@@ -1,3 +1,8 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-return-assign */
+const uuid = require('uuid/v4');
+
 const createBranches = (sequelize, DataTypes) => {
   const Branches = sequelize.define('Branches', {
     id: {
@@ -57,6 +62,8 @@ const createBranches = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
     },
   });
+
+  Branches.beforeCreate((branch) => branch.id = uuid());
 
   Branches.associate = (models) => {
     Branches.belongsTo(models.Users, {

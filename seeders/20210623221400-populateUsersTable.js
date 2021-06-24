@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
 const uuid = require('uuid/v4');
 
