@@ -1,5 +1,6 @@
-const { status, messages } = require('../../libs');
+/* eslint-disable no-unused-vars */
 const { Sequelize } = require('../../models');
+const { sendCustomError, sendValidationError } = require('./errorSenders');
 
 class FireError extends Error {
   constructor(statusCode, message) {
@@ -9,29 +10,11 @@ class FireError extends Error {
   }
 }
 
-const sendError = (err, res) => {
-  const { statusCode, message } = err;
-
-  if (!statusCode) {
-    return res.status(status.internalError).json({
-      message: messages.internalError,
-    });
-  }
-
-  return res.status(statusCode).json({
-    message,
-  });
-};
-
 const errorHandler = (error, _req, res, _next) => {
-  // console.log('CHEGOU NO ERROR HANDLER!!!');
-  // console.log(error);
-  // if (error instanceof Sequelize.ValidationError) {
-  //   console.log('sequelize Error');
-  // }
-  // console.log(error);
-  console.log(error);
-  sendError(error, res);
+  if (error instanceof Sequelize.ValidationError) {
+    return sendValidationError(error, res);
+  }
+  return sendCustomError(error, res);
 };
 
 const errorCatcher = (middleware) => async (req, res, next) => {
