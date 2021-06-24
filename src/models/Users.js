@@ -19,6 +19,12 @@ const createUsers = (sequelize, DataTypes) => {
     },
     bussinessName: {
       type: DataTypes.STRING,
+      validate: {
+        isNumeric: {
+          args: true,
+          msg: 'O campo bussinessName deve ser um número',
+        },
+      },
     },
     cnpj: {
       type: DataTypes.STRING,

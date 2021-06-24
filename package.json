@@ -23,6 +23,8 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "express-rescue": "^1.1.31",
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.7",
     "pg": "^8.6.0",
