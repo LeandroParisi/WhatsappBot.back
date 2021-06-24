@@ -6,10 +6,14 @@ const findAll = async (req, res) => {
   res.status(200).json({ users });
 };
 
-const createUser = async (req, res) => {
+const createUser = async (req, res, next) => {
   const user = req.body;
+  // try {
   const createdUser = await usersServices.createUser(user);
   res.status(200).json({ ok: 'ok' });
+  // } catch (error) {
+  // next(error);
+  // }
 };
 
 module.exports = { findAll, createUser };
