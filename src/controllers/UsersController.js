@@ -1,13 +1,12 @@
-const { Users } = require('../models');
+const { Users, Branches } = require('../models');
 
 const findAll = async (req, res) => {
+  const users = await Users.findAll({
+    include: { model: Branches, as: 'userBranches' },
 
-  const users = await Users.findAll();
+  });
 
-  res.status(200).json({users });
+  res.status(200).json({ users });
 };
 
-
-
-module.exports = {
-  findAll};
+module.exports = { findAll };

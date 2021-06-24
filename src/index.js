@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const { UsersRouter, CharactersRouter, ComicsRouter } = require('./routes');
+const { UsersRouter } = require('./routes');
 
 require('dotenv').config();
 
