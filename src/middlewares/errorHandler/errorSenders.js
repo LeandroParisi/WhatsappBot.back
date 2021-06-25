@@ -1,4 +1,4 @@
-const { status, messages, resMessages } = require('../../libs');
+const { status, errorMessages } = require('../../libs');
 const { extractValidationErrors } = require('./utils');
 
 const sendCustomError = (err, res) => {
@@ -6,7 +6,7 @@ const sendCustomError = (err, res) => {
 
   if (!statusCode) {
     return res.status(status.internalError).json({
-      message: messages.internalError,
+      message: errorMessages.internalError,
     });
   }
 
@@ -17,7 +17,9 @@ const sendCustomError = (err, res) => {
 
 const sendValidationError = (error, res) => {
   const errors = extractValidationErrors(error);
-  res.status(status.unprocessableEntity).json({ type: resMessages.invalidBody, error: errors });
+  res
+    .status(status.unprocessableEntity)
+    .json({ type: errorMessages.invalidBody, error: errors });
 };
 
 module.exports = { sendCustomError, sendValidationError };

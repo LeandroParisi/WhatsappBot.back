@@ -4,7 +4,7 @@ const { UsersController } = require('../controllers');
 
 const UsersRouter = new Router();
 
-UsersRouter.get('/', UsersController.findAll);
+UsersRouter.get('/', errorCatcher(UsersController.findAll));
 
 UsersRouter.post('/', errorCatcher(UsersController.createUser));
 

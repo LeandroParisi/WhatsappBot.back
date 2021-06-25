@@ -1,9 +1,10 @@
 const status = require('./statusDictionary');
-const messages = require('./messagesDictionary');
+const { errorMessages, validationErrors } = require('./messagesDictionary');
 const resMessages = require('./responseDictionary');
 
 module.exports = {
   status,
-  messages,
+  errorMessages,
   resMessages,
+  validationErrors,
 };

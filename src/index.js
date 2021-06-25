@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const { errorHandler } = require('./middlewares/errorHandler/errorHandler');
 const { UsersRouter } = require('./routes');
 
@@ -11,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.use('/users', UsersRouter);
 

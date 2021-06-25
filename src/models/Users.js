@@ -2,6 +2,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 const uuid = require('uuid/v4');
+const { validationErrors } = require('../libs');
 
 const createUsers = (sequelize, DataTypes) => {
   const Users = sequelize.define('Users', {
@@ -19,12 +20,7 @@ const createUsers = (sequelize, DataTypes) => {
     },
     bussinessName: {
       type: DataTypes.STRING,
-      validate: {
-        isNumeric: {
-          args: true,
-          msg: 'O campo bussinessName deve ser um número',
-        },
-      },
+
     },
     cnpj: {
       type: DataTypes.STRING,
@@ -32,6 +28,12 @@ const createUsers = (sequelize, DataTypes) => {
     email: {
       unique: true,
       type: DataTypes.STRING,
+      validate: {
+        isEmail: {
+          args: true,
+          msg: validationErrors.invalidEmail,
+        },
+      },
     },
     ownerFirstName: {
       type: DataTypes.STRING,

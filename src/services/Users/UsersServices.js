@@ -1,8 +1,12 @@
-const { Users, Branches } = require('../models');
+const { Users, Branches } = require('../../models');
+const { generateUser } = require('./utils');
 
 const createUser = async (user) => {
-  const createdUser = await Users.create({ ...user });
-  console.log(createdUser);
+  const userToInsert = await generateUser(user);
+
+  const createdUser = await Users.create({ ...userToInsert });
+
+  return createdUser;
 };
 
 const findAll = async () => {
