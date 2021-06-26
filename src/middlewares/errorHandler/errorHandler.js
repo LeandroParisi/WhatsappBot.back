@@ -11,7 +11,6 @@ class FireError extends Error {
 }
 
 const errorHandler = (error, _req, res, _next) => {
-  console.log('ERROR HANDLER');
   if (error instanceof Sequelize.ValidationError) {
     return sendValidationError(error, res);
   }

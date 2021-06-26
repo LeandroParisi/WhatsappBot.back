@@ -3,7 +3,6 @@ const usersServices = require('../../services/Users/UsersServices');
 const createUser = async (req, res) => {
   const user = req.body;
   const createdUser = await usersServices.createUser(user);
-  console.log(createdUser);
   res.status(200).json({ ok: 'ok' });
 };
 

@@ -2,6 +2,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 const uuid = require('uuid/v4');
+const { cpf, cnpj } = require('cpf-cnpj-validator');
 const { validationErrors } = require('../libs');
 
 const createUsers = (sequelize, DataTypes) => {
@@ -20,10 +21,15 @@ const createUsers = (sequelize, DataTypes) => {
     },
     bussinessName: {
       type: DataTypes.STRING,
-
     },
     cnpj: {
       type: DataTypes.STRING,
+      validate: {
+        isValidCpf(value) {
+          const isValid = cnpj.isValid(value);
+          if (!isValid) throw new Error(validationErrors.invalidCNPJ);
+        },
+      },
     },
     email: {
       unique: true,
@@ -46,6 +52,12 @@ const createUsers = (sequelize, DataTypes) => {
     },
     ownerCpf: {
       type: DataTypes.STRING,
+      validate: {
+        isValidCpf(value) {
+          const isValid = cpf.isValid(value);
+          if (!isValid) throw new Error(validationErrors.invalidCPF);
+        },
+      },
     },
     passwordHash: {
       type: DataTypes.STRING,

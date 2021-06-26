@@ -8,7 +8,6 @@ module.exports = {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
-          autoIncrement: true,
           defaultValue: Sequelize.UUIDV4,
         },
         whatsappNumber: {
@@ -28,6 +27,7 @@ module.exports = {
         cnpj: {
           allowNull: false,
           type: Sequelize.STRING,
+          unique: true,
         },
         email: {
           allowNull: false,
@@ -48,6 +48,7 @@ module.exports = {
         ownerCpf: {
           allowNull: false,
           type: Sequelize.STRING,
+          unique: true,
         },
         passwordHash: {
           allowNull: false,
@@ -89,7 +90,7 @@ module.exports = {
     }
   },
 
-  down: async (queryInterface, Sequelize) => {
+  down: async (queryInterface) => {
     await queryInterface.dropTable('Users');
   },
 };
