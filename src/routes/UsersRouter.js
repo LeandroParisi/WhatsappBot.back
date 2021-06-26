@@ -6,6 +6,6 @@ const UsersRouter = new Router();
 
 UsersRouter.get('/', errorCatcher(UsersController.findAll));
 
-UsersRouter.post('/', errorCatcher(UsersController.createUser));
+UsersRouter.post('/', errorCatcher(UsersController.create));
 
 module.exports = UsersRouter;

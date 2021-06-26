@@ -1,14 +1,14 @@
 const status = require('../../libs/statusDictionary');
-const usersServices = require('../../services/Users/UsersServices');
+const branchesServices = require('../../services/Branches/BranchesServices');
 
 const create = async (req, res) => {
   const user = req.body;
-  const createdUser = await usersServices.create(user);
+  const createdUser = await branchesServices.create(user);
   res.status(status.created).json({ createdUser });
 };
 
 const findAll = async (req, res) => {
-  const users = await usersServices.findAll();
+  const users = await branchesServices.findAll();
   res.status(status.ok).json({ users });
 };
 

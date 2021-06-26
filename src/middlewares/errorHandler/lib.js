@@ -6,6 +6,6 @@ const defaultErrorsDict = {
   'whatsappId must be unique': 'Número de whatsapp já cadastrado em nosso sistema, é necessário ter um número único para cada estabelecimento',
 };
 
-module.export = {
+module.exports = {
   defaultErrorsDict,
 };
