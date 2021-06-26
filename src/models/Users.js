@@ -4,6 +4,7 @@
 const uuid = require('uuid/v4');
 const { cpf, cnpj } = require('cpf-cnpj-validator');
 const { validationErrors } = require('../libs');
+const { hashPassword } = require('../authentication/passwordHashing');
 
 const createUsers = (sequelize, DataTypes) => {
   const Users = sequelize.define('Users', {
@@ -59,7 +60,7 @@ const createUsers = (sequelize, DataTypes) => {
         },
       },
     },
-    passwordHash: {
+    password: {
       type: DataTypes.STRING,
     },
     botName: {
@@ -73,7 +74,12 @@ const createUsers = (sequelize, DataTypes) => {
     },
   });
 
-  Users.beforeCreate((user) => user.id = uuid());
+  Users.beforeCreate(async (user) => {
+    // To do -> tratar possível erro do hashedPassword
+    const hashedPassword = await hashPassword(user.password);
+    user.id = uuid();
+    user.password = hashedPassword;
+  });
 
   Users.associate = (models) => {
     Users.hasMany(models.Branches, {

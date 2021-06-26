@@ -22,7 +22,7 @@ module.exports = {
           ownerMiddleName: 'Parisi',
           ownerLastName: 'Carvalho',
           ownerCpf: '123456789',
-          passwordHash: '123456789',
+          password: '123456789',
           isActive: true,
         },
       ]);

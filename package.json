@@ -10,7 +10,9 @@
     "unseed": "npx sequelize-cli db:seed:undo:all",
     "migrate": "npx sequelize-cli db:migrate",
     "unmigrate": "npx sequelize-cli db:migrate:undo:all",
-    "db": "npx sequelize-cli db:create"
+    "db": "npx sequelize-cli db:create",
+    "up": "npm run migrate && npm run seed",
+    "down": "npm run unseed && npm run unmigrate"
   },
   "repository": {
     "type": "git",

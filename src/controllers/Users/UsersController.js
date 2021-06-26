@@ -1,15 +1,18 @@
 const status = require('../../libs/statusDictionary');
 const usersServices = require('../../services/Users/UsersServices');
+const BaseController = require('../1_Entities/BaseController');
 
-const create = async (req, res) => {
-  const user = req.body;
-  const createdUser = await usersServices.create(user);
-  res.status(status.created).json({ createdUser });
-};
+const UserController = new BaseController('/users', usersServices);
 
-const findAll = async (req, res) => {
-  const users = await usersServices.findAll();
-  res.status(status.ok).json({ users });
-};
+// const create = async (req, res) => {
+//   const user = req.body;
+//   const createdUser = await usersServices.create(user);
+//   res.status(status.created).json({ createdUser });
+// };
 
-module.exports = { findAll, create };
+// const findAll = async (req, res) => {
+//   const users = await usersServices.findAll();
+//   res.status(status.ok).json({ users });
+// };
+
+module.exports = UserController;
