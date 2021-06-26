@@ -69,15 +69,16 @@ class BaseController {
     return this.router;
   }
 
+  // Endpoint Methods
   async create(req, res) {
     const data = req.body;
     const insertedEntity = await this.service.create(data);
     res.status(status.created).json({ insertedEntity });
   }
 
-  async findAll(req, res, next) {
-    console.log(this.basePath);
-    console.log('base find All');
+  async findAll(_req, res) {
+    const data = await this.service.findAll();
+    res.status(status.ok).json({ data });
   }
 
   async deleteOne(req, res, next) {

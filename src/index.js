@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { errorHandler } = require('./middlewares/errorHandler/errorHandler');
-const UserController = require('./controllers/Users/UsersController');
+const UsersController = require('./controllers/Users/UsersController');
 
 require('dotenv').config();
 
@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(UserController.basePath, UserController.setRouter());
+app.use(UsersController.basePath, UsersController.setRouter());
 
 app.use(errorHandler);
 
