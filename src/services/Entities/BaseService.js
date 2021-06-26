@@ -1,7 +1,7 @@
 class BaseService {
-  constructor(model, options) {
+  constructor(model, queries) {
     this.model = model;
-    this.options = options;
+    this.queries = queries;
   }
 
   // Endpoint Methods
@@ -11,7 +11,7 @@ class BaseService {
   }
 
   async findAll() {
-    const data = await this.model.findAll(this.options.findAll);
+    const data = await this.model.findAll(this.queries.findAll);
     return data;
   }
 
