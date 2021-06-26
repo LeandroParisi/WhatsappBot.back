@@ -1,6 +1,7 @@
 class BaseService {
-  constructor(model) {
+  constructor(model, options) {
     this.model = model;
+    this.options = options;
   }
 
   // Endpoint Methods
@@ -10,8 +11,8 @@ class BaseService {
   }
 
   async findAll() {
-    console.log(this.basePath);
-    console.log('base find All');
+    const data = await this.model.findAll(this.options.findAll);
+    return data;
   }
 
   async deleteOne(payload) {
