@@ -3,9 +3,6 @@
 const uuid = require('uuid/v4');
 
 const userId = uuid();
-const brazilId = uuid();
-const minasGeraisId = uuid();
-const bhId = uuid();
 
 module.exports = {
   up: async (queryInterface, _Sequelize) => {
@@ -30,7 +27,6 @@ module.exports = {
     await queryInterface.bulkInsert('Countries',
       [
         {
-          id: brazilId,
           countryName: 'Brazil',
         },
       ]);
@@ -38,7 +34,6 @@ module.exports = {
     await queryInterface.bulkInsert('States',
       [
         {
-          id: minasGeraisId,
           stateName: 'Minas Gerais',
           stateCode: 'MG',
         },
@@ -47,7 +42,6 @@ module.exports = {
     await queryInterface.bulkInsert('Cities',
       [
         {
-          id: bhId,
           cityName: 'Belo Horizonte',
         },
       ]);
@@ -59,9 +53,9 @@ module.exports = {
           userId,
           managerName: 'Leandro',
           branchName: 'Quintal da Dirce 1',
-          countryId: brazilId,
-          stateId: minasGeraisId,
-          cityId: bhId,
+          countryId: 1,
+          stateId: 1,
+          cityId: 1,
           neibourhood: 'Minha Kombi',
           street: 'rua da kombui',
           streetNumber: '222',
@@ -74,9 +68,9 @@ module.exports = {
           userId,
           managerName: 'Leandro',
           branchName: 'Quintal da Dirce 2000',
-          countryId: brazilId,
-          stateId: minasGeraisId,
-          cityId: bhId,
+          countryId: 1,
+          stateId: 1,
+          cityId: 1,
           neibourhood: 'Minha Kombi',
           street: 'rua da kombui',
           streetNumber: '222',

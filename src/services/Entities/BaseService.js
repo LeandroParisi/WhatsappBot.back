@@ -11,14 +11,13 @@ class BaseService {
   }
 
   async findAll() {
-    const data = await this.model.findAll(this.queries.findAll);
+    const data = await this.model.findAll(this.queries.findAll());
     return data;
   }
 
-  async deleteOne(payload) {
-    const id = req.params;
-    console.log(this.basePath);
-    console.log('base delete');
+  async deleteOne(id) {
+    const deletedEntity = await this.model.destroy(this.queries.deleteOne(id));
+    return deletedEntity;
   }
 
   async updateOne(payload) {

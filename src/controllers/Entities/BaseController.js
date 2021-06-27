@@ -81,10 +81,10 @@ class BaseController {
     res.status(status.ok).json({ data });
   }
 
-  async deleteOne(req, res, next) {
-    const id = req.params;
-    console.log(this.basePath);
-    console.log('base delete');
+  async deleteOne(req, res) {
+    const { id } = req.params;
+    const deletedEntity = await this.service.deleteOne(id);
+    res.status(status.ok).json({ deletedEntity });
   }
 
   async updateOne(req, res, next) {

@@ -17,6 +17,8 @@ module.exports = {
             model: 'Users',
             key: 'id',
           },
+          onDelete: 'CASCADE',
+          onUpdate: 'CASCADE',
         },
         managerName: {
           allowNull: false,
@@ -28,27 +30,30 @@ module.exports = {
         },
         countryId: {
           allowNull: false,
-          type: Sequelize.UUID,
+          type: Sequelize.INTEGER,
           references: {
             model: 'Countries',
             key: 'id',
           },
+          onUpdate: 'CASCADE',
         },
         stateId: {
           allowNull: false,
-          type: Sequelize.UUID,
+          type: Sequelize.INTEGER,
           references: {
             model: 'States',
             key: 'id',
           },
+          onUpdate: 'CASCADE',
         },
         cityId: {
           allowNull: false,
-          type: Sequelize.UUID,
+          type: Sequelize.INTEGER,
           references: {
             model: 'Cities',
             key: 'id',
           },
+          onUpdate: 'CASCADE',
         },
         neibourhood: {
           allowNull: false,

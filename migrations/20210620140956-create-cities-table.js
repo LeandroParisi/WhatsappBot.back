@@ -1,6 +1,5 @@
-'use strict';
-
 module.exports = {
+
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
 
@@ -9,24 +8,23 @@ module.exports = {
         id: {
           allowNull: false,
           primaryKey: true,
-          type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4
+          type: Sequelize.INTEGER,
+          autoIncrement: true,
         },
         cityName: {
           allowNull: false,
-          type: Sequelize.STRING
-        }
+          type: Sequelize.STRING,
+        },
       }, { transaction });
 
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Cities');
-  }
+  },
 };

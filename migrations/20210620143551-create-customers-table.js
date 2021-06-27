@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
@@ -10,16 +8,16 @@ module.exports = {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4
+          defaultValue: Sequelize.UUIDV4,
         },
         whatsappNumber: {
           allowNull: false,
-          type: Sequelize.STRING,  
+          type: Sequelize.STRING,
           unique: true,
         },
         whatsappId: {
           allowNull: false,
-          type: Sequelize.STRING,  
+          type: Sequelize.STRING,
           unique: true,
         },
         email: {
@@ -51,27 +49,27 @@ module.exports = {
         },
         countryId: {
           allowNull: false,
-          type: Sequelize.UUID,
+          type: Sequelize.INTEGER,
           references: {
             model: 'Countries',
-            key: 'id'
-          }
+            key: 'id',
+          },
         },
         stateId: {
           allowNull: false,
-          type: Sequelize.UUID,
+          type: Sequelize.INTEGER,
           references: {
             model: 'States',
-            key: 'id'
-          }
+            key: 'id',
+          },
         },
         cityId: {
           allowNull: false,
-          type: Sequelize.UUID,
+          type: Sequelize.INTEGER,
           references: {
             model: 'Cities',
-            key: 'id'
-          }
+            key: 'id',
+          },
         },
         neighborhood: {
           allowNull: false,
@@ -115,14 +113,13 @@ module.exports = {
       await queryInterface.addIndex('Customers', ['cpf'], { transaction });
 
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Customers');
-  }
+  },
 };

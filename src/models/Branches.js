@@ -23,21 +23,21 @@ const createBranches = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
     countryId: {
-      type: DataTypes.UUID,
+      type: DataTypes.NUMBER,
       references: {
         model: 'Countries',
         key: 'id',
       },
     },
     stateId: {
-      type: DataTypes.UUID,
+      type: DataTypes.NUMBER,
       references: {
         model: 'States',
         key: 'id',
       },
     },
     cityId: {
-      type: DataTypes.UUID,
+      type: DataTypes.NUMBER,
       references: {
         model: 'Cities',
         key: 'id',
@@ -69,6 +69,10 @@ const createBranches = (sequelize, DataTypes) => {
     Branches.belongsTo(models.Users, {
       as: 'userBranches',
       foreignKey: 'userId',
+    });
+    Branches.belongsTo(models.Countries, {
+      as: 'branchCountry',
+      foreignKey: 'countryId',
     });
   };
 
