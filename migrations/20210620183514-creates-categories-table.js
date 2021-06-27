@@ -1,41 +1,37 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Categories', {
+      await queryInterface.createTable('categories', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4
+          defaultValue: Sequelize.UUIDV4,
         },
-        categoryName: {
+        category_name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        updatedAt: {
+        updated_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-        createdAt: {
+        created_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
 
-
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Categories');
-  }
+    await queryInterface.dropTable('categories');
+  },
 };

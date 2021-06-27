@@ -3,14 +3,14 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('PaymentMethods', {
+      await queryInterface.createTable('payment_methods', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
           defaultValue: Sequelize.UUIDV4,
         },
-        paymentMethod: {
+        payment_method: {
           allowNull: false,
           type: Sequelize.STRING,
           // ('money',
@@ -26,11 +26,11 @@ module.exports = {
           // 'sodexo_meal',
           // 'sodexo_food',)
         },
-        updatedAt: {
+        updated_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-        createdAt: {
+        created_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
@@ -44,6 +44,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('PaymentMethods');
+    await queryInterface.dropTable('payment_methods');
   },
 };

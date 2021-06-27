@@ -20,7 +20,7 @@ const errorHandler = (error, _req, res, _next) => {
 
 const errorCatcher = (middleware) => async (req, res, next) => {
   try {
-    await middleware(req, res);
+    await middleware(req, res, next);
   } catch (err) {
     next(err);
   }

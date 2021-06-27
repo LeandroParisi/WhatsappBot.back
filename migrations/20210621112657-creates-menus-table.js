@@ -1,16 +1,14 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Menus', {
+      await queryInterface.createTable('menus', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4
+          defaultValue: Sequelize.UUIDV4,
         },
         menuName: {
           allowNull: false,
@@ -18,7 +16,7 @@ module.exports = {
         },
         description: {
           allowNull: true,
-          type: Sequelize.TEXT,          
+          type: Sequelize.TEXT,
         },
         updatedAt: {
           type: Sequelize.DATE,
@@ -31,14 +29,13 @@ module.exports = {
       }, { transaction });
 
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Menus');
-  }
+    await queryInterface.dropTable('menus');
+  },
 };

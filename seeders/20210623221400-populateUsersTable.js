@@ -6,86 +6,86 @@ const userId = uuid();
 
 module.exports = {
   up: async (queryInterface, _Sequelize) => {
-    await queryInterface.bulkInsert('Users',
+    await queryInterface.bulkInsert('users',
       [
         {
           id: userId,
-          whatsappNumber: '5531975080415',
-          whatsappId: '5531975080415',
-          bussinessName: 'Quintal da Dirce',
+          whatsapp_number: '5531975080415',
+          whatsapp_id: '5531975080415',
+          bussiness_name: 'Quintal da Dirce',
           cnpj: '123456789',
           email: 'lepcbelisario@gmail.com',
-          ownerFirstName: 'Leandro',
-          ownerMiddleName: 'Parisi',
-          ownerLastName: 'Carvalho',
-          ownerCpf: '123456789',
+          owner_first_name: 'Leandro',
+          owner_middle_name: 'Parisi',
+          owner_last_name: 'Carvalho',
+          owner_cpf: '123456789',
           password: '123456789',
-          isActive: true,
+          is_active: true,
         },
       ]);
 
-    await queryInterface.bulkInsert('Countries',
+    await queryInterface.bulkInsert('countries',
       [
         {
-          countryName: 'Brazil',
+          country_name: 'Brazil',
         },
       ]);
 
-    await queryInterface.bulkInsert('States',
+    await queryInterface.bulkInsert('states',
       [
         {
-          stateName: 'Minas Gerais',
-          stateCode: 'MG',
+          state_name: 'Minas Gerais',
+          state_code: 'MG',
         },
       ]);
 
-    await queryInterface.bulkInsert('Cities',
+    await queryInterface.bulkInsert('cities',
       [
         {
-          cityName: 'Belo Horizonte',
+          city_name: 'Belo Horizonte',
         },
       ]);
 
-    await queryInterface.bulkInsert('Branches',
+    await queryInterface.bulkInsert('branches',
       [
         {
           id: uuid(),
-          userId,
-          managerName: 'Leandro',
-          branchName: 'Quintal da Dirce 1',
-          countryId: 1,
-          stateId: 1,
-          cityId: 1,
+          user_id: userId,
+          manager_name: 'Leandro',
+          branch_name: 'Quintal da Dirce 1',
+          country_id: 1,
+          state_id: 1,
+          city_id: 1,
           neibourhood: 'Minha Kombi',
           street: 'rua da kombui',
-          streetNumber: '222',
-          streetComplement: '222',
-          postalCode: '12345',
-          isActive: true,
+          street_number: '222',
+          street_complement: '222',
+          postal_code: '12345',
+          is_active: true,
         },
         {
           id: uuid(),
-          userId,
-          managerName: 'Leandro',
-          branchName: 'Quintal da Dirce 2000',
-          countryId: 1,
-          stateId: 1,
-          cityId: 1,
+          user_id: userId,
+          manager_name: 'Leandro',
+          branch_name: 'Quintal da Dirce 2000',
+          country_id: 1,
+          state_id: 1,
+          city_id: 1,
           neibourhood: 'Minha Kombi',
           street: 'rua da kombui',
-          streetNumber: '222',
-          streetComplement: '222',
-          postalCode: '12345',
-          isActive: true,
+          street_number: '222',
+          street_complement: '222',
+          postal_code: '12345',
+          is_active: true,
         },
       ]);
   },
 
   down: async (queryInterface, _Sequelize) => {
-    await queryInterface.bulkDelete('Branches', null, {});
-    await queryInterface.bulkDelete('Users', null, {});
-    await queryInterface.bulkDelete('Countries', null, {});
-    await queryInterface.bulkDelete('States', null, {});
-    await queryInterface.bulkDelete('Countries', null, {});
+    await queryInterface.bulkDelete('branches', null, {});
+    await queryInterface.bulkDelete('users', null, {});
+    await queryInterface.bulkDelete('countries', null, {});
+    await queryInterface.bulkDelete('states', null, {});
+    await queryInterface.bulkDelete('countries', null, {});
   },
 };

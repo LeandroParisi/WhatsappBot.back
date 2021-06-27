@@ -72,7 +72,7 @@ const createUsers = (sequelize, DataTypes) => {
     isActive: {
       type: DataTypes.BOOLEAN,
     },
-  });
+  }, { underscored: true });
 
   Users.beforeCreate(async (user) => {
     // To do -> tratar possível erro do hashedPassword

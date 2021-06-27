@@ -3,57 +3,60 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Branches', {
+      await queryInterface.createTable('branches', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
           defaultValue: Sequelize.UUIDV4,
         },
-        userId: {
+        user_id: {
           allowNull: false,
           type: Sequelize.UUID,
           references: {
-            model: 'Users',
+            model: 'users',
             key: 'id',
           },
           onDelete: 'CASCADE',
           onUpdate: 'CASCADE',
         },
-        managerName: {
+        manager_name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        branchName: {
+        branch_name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        countryId: {
+        country_id: {
           allowNull: false,
           type: Sequelize.INTEGER,
           references: {
-            model: 'Countries',
+            model: 'countries',
             key: 'id',
           },
           onUpdate: 'CASCADE',
+          onDelete: 'RESTRICT',
         },
-        stateId: {
+        state_id: {
           allowNull: false,
           type: Sequelize.INTEGER,
           references: {
-            model: 'States',
+            model: 'states',
             key: 'id',
           },
           onUpdate: 'CASCADE',
+          onDelete: 'RESTRICT',
         },
-        cityId: {
+        city_id: {
           allowNull: false,
           type: Sequelize.INTEGER,
           references: {
-            model: 'Cities',
+            model: 'cities',
             key: 'id',
           },
           onUpdate: 'CASCADE',
+          onDelete: 'RESTRICT',
         },
         neibourhood: {
           allowNull: false,
@@ -63,28 +66,28 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        streetNumber: {
+        street_number: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        streetComplement: {
+        street_complement: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        postalCode: {
+        postal_code: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        isActive: {
+        is_active: {
           allowNull: false,
           type: Sequelize.BOOLEAN,
           defaultValue: true,
         },
-        updatedAt: {
+        updated_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-        createdAt: {
+        created_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
@@ -98,6 +101,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Branches');
+    await queryInterface.dropTable('branches');
   },
 };

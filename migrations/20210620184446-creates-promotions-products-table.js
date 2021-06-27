@@ -1,45 +1,41 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Promotions_Products', {
-        promotionId: {
+      await queryInterface.createTable('promotions_products', {
+        promotion_id: {
           allowNull: false,
           foreignKey: true,
           type: Sequelize.UUID,
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
           references: {
-            model: 'Promotions',
+            model: 'promotions',
             key: 'id',
           },
         },
-        productId: {
+        product_id: {
           allowNull: false,
           foreignKey: true,
           type: Sequelize.UUID,
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
           references: {
-            model: 'Products',
+            model: 'products',
             key: 'id',
           },
         },
       }, { transaction });
 
-
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Promotions_Products');
-  }
+    await queryInterface.dropTable('promotions_products');
+  },
 };

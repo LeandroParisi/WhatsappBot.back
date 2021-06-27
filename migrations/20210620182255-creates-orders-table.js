@@ -1,55 +1,53 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
     try {
-      await queryInterface.createTable('Orders', {
+      await queryInterface.createTable('orders', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4
+          defaultValue: Sequelize.UUIDV4,
         },
-        branchId: {
+        branch_id: {
           allowNull: false,
           type: Sequelize.UUID,
           references: {
-            model: 'Branches',
-            key: 'id'
-          }
+            model: 'branches',
+            key: 'id',
+          },
         },
-        customerId: {
+        customer_id: {
           allowNull: false,
           type: Sequelize.UUID,
           references: {
-            model: 'Customers',
-            key: 'id'
-          }
+            model: 'customers',
+            key: 'id',
+          },
         },
-        subTotal: {
+        sub_total: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        deliveryFee: {
+        delivery_fee: {
           allowNull: false,
           type: Sequelize.STRING,
-          defaultValue: '0', 
+          defaultValue: '0',
         },
-        paymentMethodId: {
+        payment_method_id: {
           type: Sequelize.UUID,
           allowNull: false,
           references: {
-            model: 'PaymentMethods',
-            key: 'id'
-          }
+            model: 'payment_methods',
+            key: 'id',
+          },
         },
         discount: {
           allowNull: false,
           type: Sequelize.STRING,
-          defaultValue: '0', 
+          defaultValue: '0',
         },
-        totalPrice: {
+        total_price: {
           allowNull: false,
           type: Sequelize.STRING,
         },
@@ -61,26 +59,26 @@ module.exports = {
             'in_production',
             'ready_to_deliver',
             'dispatched',
-            'fullfilled'
-          )
+            'fullfilled',
+          ),
         },
-        coupomId: {
+        coupom_id: {
           allowNull: true,
           type: Sequelize.UUID,
           references: {
-            model: 'Coupons',
-            key: 'id'
-          }
+            model: 'coupons',
+            key: 'id',
+          },
         },
-        promotionId: {
+        promotion_id: {
           allowNull: true,
           type: Sequelize.UUID,
           references: {
-            model: 'Promotions',
-            key: 'id'
-          }
+            model: 'promotions',
+            key: 'id',
+          },
         },
-        estimatedDeliveryTime: {
+        estimated_delivery_time: {
           allowNull: true,
           type: Sequelize.STRING,
         },
@@ -88,33 +86,32 @@ module.exports = {
           allowNull: true,
           type: Sequelize.TEXT,
         },
-        dispatchTime: {
+        dispatch_time: {
           allowNull: true,
           type: Sequelize.DATE,
         },
-        deliveryTime: {
+        delivery_time: {
           allowNull: true,
           type: Sequelize.DATE,
         },
-        updatedAt: {
+        updated_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-        createdAt: {
+        created_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
 
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Orders');
-  }
+    await queryInterface.dropTable('orders');
+  },
 };

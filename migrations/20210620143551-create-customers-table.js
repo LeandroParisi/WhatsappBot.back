@@ -3,19 +3,19 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Customers', {
+      await queryInterface.createTable('customers', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
           defaultValue: Sequelize.UUIDV4,
         },
-        whatsappNumber: {
+        whatsapp_number: {
           allowNull: false,
           type: Sequelize.STRING,
           unique: true,
         },
-        whatsappId: {
+        whatsapp_id: {
           allowNull: false,
           type: Sequelize.STRING,
           unique: true,
@@ -25,14 +25,14 @@ module.exports = {
           unique: true,
           type: Sequelize.STRING,
         },
-        firstName: {
+        first_name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        middleName: {
+        middle_name: {
           type: Sequelize.STRING,
         },
-        lastName: {
+        last_name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
@@ -40,34 +40,34 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        passwordHash: {
+        password_hash: {
           allowNull: false,
           type: Sequelize.STRING,
         },
         avatar: {
           type: Sequelize.STRING,
         },
-        countryId: {
+        country_id: {
           allowNull: false,
           type: Sequelize.INTEGER,
           references: {
-            model: 'Countries',
+            model: 'countries',
             key: 'id',
           },
         },
-        stateId: {
+        state_id: {
           allowNull: false,
           type: Sequelize.INTEGER,
           references: {
-            model: 'States',
+            model: 'states',
             key: 'id',
           },
         },
-        cityId: {
+        city_id: {
           allowNull: false,
           type: Sequelize.INTEGER,
           references: {
-            model: 'Cities',
+            model: 'cities',
             key: 'id',
           },
         },
@@ -79,38 +79,38 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        streetNumber: {
+        street_number: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        streetComplement: {
+        street_complement: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        postalCode: {
+        postal_code: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        isActive: {
+        is_active: {
           allowNull: false,
           type: Sequelize.BOOLEAN,
           defaultValue: true,
         },
-        updatedAt: {
+        updated_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-        createdAt: {
+        created_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
 
-      await queryInterface.addIndex('Customers', ['whatsappNumber'], { transaction });
+      await queryInterface.addIndex('customers', ['whatsapp_number'], { transaction });
 
-      await queryInterface.addIndex('Customers', ['whatsappId'], { transaction });
+      await queryInterface.addIndex('customers', ['whatsapp_id'], { transaction });
 
-      await queryInterface.addIndex('Customers', ['cpf'], { transaction });
+      await queryInterface.addIndex('customers', ['cpf'], { transaction });
 
       await transaction.commit();
     } catch (error) {
@@ -120,6 +120,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Customers');
+    await queryInterface.dropTable('customers');
   },
 };

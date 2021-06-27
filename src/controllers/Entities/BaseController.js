@@ -13,20 +13,36 @@ class BaseController {
   getBaseRoutes() {
     this.create = this.create.bind(this);
     this.findAll = this.findAll.bind(this);
-    this.deleteOne = this.deleteOne.bind(this);
+    this.findByPk = this.findByPk.bind(this);
+    this.findOne = this.findOne.bind(this);
     this.updateOne = this.updateOne.bind(this);
+    this.deleteOne = this.deleteOne.bind(this);
+    this.activate = this.activate.bind(this);
+    this.deActivate = this.deActivate.bind(this);
 
     return [
       {
-        endpoint: '/',
-        method: METHODS.POST,
-        handler: this.create,
+        endpoint: '/activate/:id',
+        method: METHODS.PUT,
+        handler: this.activate,
         localMiddleware: [],
       },
       {
-        endpoint: '/',
+        endpoint: '/deactivate/:id',
+        method: METHODS.PUT,
+        handler: this.deActivate,
+        localMiddleware: [],
+      },
+      {
+        endpoint: '/find',
         method: METHODS.GET,
-        handler: this.findAll,
+        handler: this.findOne,
+        localMiddleware: [],
+      },
+      {
+        endpoint: '/:id',
+        method: METHODS.GET,
+        handler: this.findByPk,
         localMiddleware: [],
       },
       {
@@ -39,6 +55,18 @@ class BaseController {
         endpoint: '/:id',
         method: METHODS.DELETE,
         handler: this.deleteOne,
+        localMiddleware: [],
+      },
+      {
+        endpoint: '/',
+        method: METHODS.GET,
+        handler: this.findAll,
+        localMiddleware: [],
+      },
+      {
+        endpoint: '/',
+        method: METHODS.POST,
+        handler: this.create,
         localMiddleware: [],
       },
     ];
@@ -71,13 +99,32 @@ class BaseController {
 
   // Endpoint Methods
   async create(req, res) {
-    const data = req.body;
-    const insertedEntity = await this.service.create(data);
+    const payload = req.body;
+    const insertedEntity = await this.service.create(payload);
     res.status(status.created).json({ insertedEntity });
   }
 
   async findAll(_req, res) {
     const data = await this.service.findAll();
+    res.status(status.ok).json({ data });
+  }
+
+  async findByPk(req, res) {
+    const { id } = req.params;
+    const data = await this.service.findByPk(id);
+    res.status(status.ok).json({ data });
+  }
+
+  async findOne(req, res) {
+    const { query } = req;
+    const data = await this.service.findOne(query);
+    res.status(status.ok).json({ data });
+  }
+
+  async updateOne(req, res) {
+    const payload = req.body;
+    const { id } = req.params;
+    const data = await this.service.updateOne(id, payload);
     res.status(status.ok).json({ data });
   }
 
@@ -87,10 +134,16 @@ class BaseController {
     res.status(status.ok).json({ deletedEntity });
   }
 
-  async updateOne(req, res, next) {
-    const data = req.body;
-    console.log(this.basePath);
-    console.log('base update');
+  async activate(req, res) {
+    const { id } = req.params;
+    const data = await this.service.activate(id);
+    res.status(status.ok).json({ data });
+  }
+
+  async deActivate(req, res) {
+    const { id } = req.params;
+    const data = await this.service.deActivate(id);
+    res.status(status.ok).json({ data });
   }
 }
 

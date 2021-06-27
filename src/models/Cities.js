@@ -2,25 +2,25 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 
-const createCountries = (sequelize, DataTypes) => {
-  const Countries = sequelize.define('Countries', {
+const createCities = (sequelize, DataTypes) => {
+  const Cities = sequelize.define('Cities', {
     id: {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    countryName: {
+    cityName: {
       type: DataTypes.STRING,
     },
   }, { timestamps: false, underscored: true });
 
-  Countries.associate = (models) => {
-    Countries.hasMany(models.Branches, {
+  Cities.associate = (models) => {
+    Cities.hasMany(models.Branches, {
       as: 'branchCountry',
-      foreignKey: 'countryId',
+      foreignKey: 'cityId',
     });
   };
 
-  return Countries;
+  return Cities;
 };
 
-module.exports = createCountries;
+module.exports = createCities;

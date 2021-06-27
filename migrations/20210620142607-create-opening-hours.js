@@ -1,24 +1,22 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('OpeningHours', {
+      await queryInterface.createTable('opening_hours', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4
+          defaultValue: Sequelize.UUIDV4,
         },
-        branchId: {
+        branch_id: {
           allowNull: false,
           type: Sequelize.UUID,
           references: {
-            model: 'Branches',
-            key: 'id'
-          }
+            model: 'branches',
+            key: 'id',
+          },
         },
         monday: {
           type: Sequelize.STRING,
@@ -41,26 +39,24 @@ module.exports = {
         sunday: {
           type: Sequelize.STRING,
         },
-        updatedAt: {
+        updated_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-        createdAt: {
+        created_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
 
-
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('OpeningHours');
-  }
+    await queryInterface.dropTable('opening_hours');
+  },
 };

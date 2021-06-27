@@ -12,7 +12,7 @@ const createBranches = (sequelize, DataTypes) => {
     userId: {
       type: DataTypes.UUID,
       references: {
-        model: 'Users',
+        model: 'users',
         key: 'id',
       },
     },
@@ -25,21 +25,21 @@ const createBranches = (sequelize, DataTypes) => {
     countryId: {
       type: DataTypes.NUMBER,
       references: {
-        model: 'Countries',
+        model: 'countries',
         key: 'id',
       },
     },
     stateId: {
       type: DataTypes.NUMBER,
       references: {
-        model: 'States',
+        model: 'states',
         key: 'id',
       },
     },
     cityId: {
       type: DataTypes.NUMBER,
       references: {
-        model: 'Cities',
+        model: 'cities',
         key: 'id',
       },
     },
@@ -61,7 +61,7 @@ const createBranches = (sequelize, DataTypes) => {
     isActive: {
       type: DataTypes.BOOLEAN,
     },
-  });
+  }, { underscored: true });
 
   Branches.beforeCreate((branch) => branch.id = uuid());
 
@@ -73,6 +73,14 @@ const createBranches = (sequelize, DataTypes) => {
     Branches.belongsTo(models.Countries, {
       as: 'branchCountry',
       foreignKey: 'countryId',
+    });
+    Branches.belongsTo(models.States, {
+      as: 'branchState',
+      foreignKey: 'stateId',
+    });
+    Branches.belongsTo(models.Cities, {
+      as: 'branchCity',
+      foreignKey: 'cityId',
     });
   };
 

@@ -1,24 +1,22 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('DeliveryFees', {
+      await queryInterface.createTable('delivery_fees', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4
+          defaultValue: Sequelize.UUIDV4,
         },
         branchId: {
           allowNull: false,
           type: Sequelize.UUID,
           references: {
-            model: 'Branches',
-            key: 'id'
-          }
+            model: 'branches',
+            key: 'id',
+          },
         },
         deliveryFees: {
           allowNull: false,
@@ -40,16 +38,14 @@ module.exports = {
         },
       }, { transaction });
 
-
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('DeliveryFees');
-  }
+    await queryInterface.dropTable('delivery_fees');
+  },
 };

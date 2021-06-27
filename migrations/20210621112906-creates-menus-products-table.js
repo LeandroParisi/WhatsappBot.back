@@ -1,11 +1,9 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Menus_Products', {
+      await queryInterface.createTable('menus_products', {
         menuId: {
           allowNull: false,
           foreignKey: true,
@@ -13,7 +11,7 @@ module.exports = {
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
           references: {
-            model: 'Menus',
+            model: 'menus',
             key: 'id',
           },
         },
@@ -24,22 +22,20 @@ module.exports = {
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
           references: {
-            model: 'Products',
+            model: 'products',
             key: 'id',
           },
         },
       }, { transaction });
 
-
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Menus_Products');
-  }
+    await queryInterface.dropTable('menus_products');
+  },
 };

@@ -4,14 +4,14 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Cities', {
+      await queryInterface.createTable('cities', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.INTEGER,
           autoIncrement: true,
         },
-        cityName: {
+        city_name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
@@ -25,6 +25,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Cities');
+    await queryInterface.dropTable('cities');
   },
 };

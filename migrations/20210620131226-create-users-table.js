@@ -3,24 +3,24 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Users', {
+      await queryInterface.createTable('users', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
           defaultValue: Sequelize.UUIDV4,
         },
-        whatsappNumber: {
+        whatsapp_number: {
           allowNull: false,
           type: Sequelize.STRING,
           unique: true,
         },
-        whatsappId: {
+        whatsapp_id: {
           allowNull: false,
           type: Sequelize.STRING,
           unique: true,
         },
-        bussinessName: {
+        bussiness_name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
@@ -34,18 +34,18 @@ module.exports = {
           unique: true,
           type: Sequelize.STRING,
         },
-        ownerFirstName: {
+        owner_first_name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        ownerMiddleName: {
+        owner_middle_name: {
           type: Sequelize.STRING,
         },
-        ownerLastName: {
+        owner_last_name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        ownerCpf: {
+        owner_cpf: {
           allowNull: false,
           type: Sequelize.STRING,
           unique: true,
@@ -54,7 +54,7 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        botName: {
+        bot_name: {
           allowNull: false,
           type: Sequelize.STRING,
           defaultValue: 'Walle',
@@ -62,26 +62,26 @@ module.exports = {
         logo: {
           type: Sequelize.STRING,
         },
-        isActive: {
+        is_active: {
           allowNull: false,
           type: Sequelize.BOOLEAN,
           defaultValue: true,
         },
-        updatedAt: {
+        updated_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-        createdAt: {
+        created_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
 
-      await queryInterface.addIndex('Users', ['whatsappNumber'], { transaction });
+      await queryInterface.addIndex('users', ['whatsapp_number'], { transaction });
 
-      await queryInterface.addIndex('Users', ['whatsappId'], { transaction });
+      await queryInterface.addIndex('users', ['whatsapp_id'], { transaction });
 
-      await queryInterface.addIndex('Users', ['cnpj'], { transaction });
+      await queryInterface.addIndex('users', ['cnpj'], { transaction });
 
       await transaction.commit();
     } catch (error) {
@@ -91,6 +91,6 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    await queryInterface.dropTable('Users');
+    await queryInterface.dropTable('users');
   },
 };

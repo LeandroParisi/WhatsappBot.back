@@ -3,18 +3,18 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('States', {
+      await queryInterface.createTable('states', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.INTEGER,
           autoIncrement: true,
         },
-        stateName: {
+        state_name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        stateCode: {
+        state_code: {
           allowNull: false,
           type: Sequelize.STRING,
         },
@@ -28,6 +28,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('States');
+    await queryInterface.dropTable('states');
   },
 };

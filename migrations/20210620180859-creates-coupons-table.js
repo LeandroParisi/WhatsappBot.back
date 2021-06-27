@@ -1,26 +1,24 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('Coupons', {
+      await queryInterface.createTable('coupons', {
         id: {
           allowNull: false,
           primaryKey: true,
           type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4
+          defaultValue: Sequelize.UUIDV4,
         },
-        branchId: {
+        branch_id: {
           allowNull: false,
           type: Sequelize.UUID,
           references: {
-            model: 'Branches',
-            key: 'id'
-          }
+            model: 'branches',
+            key: 'id',
+          },
         },
-        cupomCode: {
+        cupom_code: {
           allowNull: false,
           type: Sequelize.STRING,
         },
@@ -44,33 +42,32 @@ module.exports = {
         },
         // maxUses
         // used
-        dueDate: {
+        due_date: {
           type: Sequelize.DATE,
         },
-        isActive: {
+        is_active: {
           allowNull: false,
           type: Sequelize.BOOLEAN,
           defaultValue: true,
         },
-        updatedAt: {
+        updated_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-        createdAt: {
+        created_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
 
       await transaction.commit();
-
-    } catch(error) {
+    } catch (error) {
       await transaction.rollback();
-      throw error
+      throw error;
     }
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Coupons');
-  }
+    await queryInterface.dropTable('coupons');
+  },
 };
