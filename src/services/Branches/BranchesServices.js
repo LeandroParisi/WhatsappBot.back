@@ -1,22 +1,7 @@
-const { Users, Branches } = require('../../models');
+const { Branches } = require('../../models');
+const BaseService = require('../Entities/BaseService');
+const BranchesQueries = require('./BranchesQueries');
 
-const create = async (user) => {
-  const userToInsert = await generateUser(user);
+const BranchesService = new BaseService(Branches, BranchesQueries);
 
-  const createdUser = await Users.create({ ...userToInsert });
-
-  return createdUser;
-};
-
-const findAll = async () => {
-  const users = await Users.findAll({
-    include: { model: Branches, as: 'userBranches' },
-  });
-
-  return users;
-};
-
-module.exports = {
-  findAll,
-  create,
-};
+module.exports = BranchesService;
