@@ -1,6 +1,12 @@
 const errorMessages = {
-  internalError: 'This is not your fault, we have had a system problem, please try again later',
-  invalidBody: 'Invalid request payload received',
+  internalError: 'Tivemos um erro interno, favor tentar novamente mais tarde',
+  invalidUser: 'Email ou senha inválidos',
+};
+
+const errorTypes = {
+  validationError: 'ValidationError',
+  customError: 'CustomError',
+
 };
 
 // Written in PT because it will be the message to be displayed to the user on the front end
@@ -10,4 +16,10 @@ const validationErrors = {
   invalidCNPJ: 'CNPJ inválido',
 };
 
-module.exports = { errorMessages, validationErrors };
+const responseMessages = {
+  loginOK: 'Logado com sucesso',
+};
+
+module.exports = {
+  errorMessages, validationErrors, responseMessages, errorTypes,
+};

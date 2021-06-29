@@ -4,6 +4,9 @@ const uuid = require('uuid/v4');
 
 const userId = uuid();
 
+const branchOneId = uuid();
+const branchTwoId = uuid();
+
 module.exports = {
   up: async (queryInterface, _Sequelize) => {
     await queryInterface.bulkInsert('users',
@@ -49,7 +52,7 @@ module.exports = {
     await queryInterface.bulkInsert('branches',
       [
         {
-          id: uuid(),
+          id: branchOneId,
           user_id: userId,
           manager_name: 'Leandro',
           branch_name: 'Quintal da Dirce 1',
@@ -64,7 +67,7 @@ module.exports = {
           is_active: true,
         },
         {
-          id: uuid(),
+          id: branchTwoId,
           user_id: userId,
           manager_name: 'Leandro',
           branch_name: 'Quintal da Dirce 2000',
@@ -88,4 +91,7 @@ module.exports = {
     await queryInterface.bulkDelete('states', null, {});
     await queryInterface.bulkDelete('countries', null, {});
   },
+
+  branchOneId,
+  branchTwoId,
 };

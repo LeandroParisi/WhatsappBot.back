@@ -18,7 +18,7 @@ module.exports = {
         delivery_type_id: {
           allowNull: false,
           foreignKey: true,
-          type: Sequelize.UUID,
+          type: Sequelize.INTEGER,
           onUpdate: 'CASCADE',
           onDelete: 'CASCADE',
           references: {

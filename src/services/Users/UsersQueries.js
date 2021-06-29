@@ -1,10 +1,13 @@
 const {
-  Branches, Countries, Cities, States, Sequelize,
+  Branches, Countries, Cities, States, Sequelize, DeliveryTypes,
 } = require('../../models');
 const QueryInterface = require('../Entities/QueryInterface');
 
 const queries = {
   findAll: () => ({
+    attributes: {
+      exclude: ['password', 'createdAt', 'updatedAt'],
+    },
     include: {
       model: Branches,
       as: 'userBranches',
@@ -33,6 +36,12 @@ const queries = {
           model: Cities,
           as: 'branchCity',
           attributes: [],
+        },
+        {
+          model: DeliveryTypes,
+          as: 'deliveryTypes',
+          attributes: ['deliveryType'],
+          through: { attributes: [] },
         },
       ],
     },

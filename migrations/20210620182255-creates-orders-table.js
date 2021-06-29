@@ -35,7 +35,7 @@ module.exports = {
           defaultValue: '0',
         },
         payment_method_id: {
-          type: Sequelize.UUID,
+          type: Sequelize.INTEGER,
           allowNull: false,
           references: {
             model: 'payment_methods',
@@ -64,7 +64,7 @@ module.exports = {
         },
         coupom_id: {
           allowNull: true,
-          type: Sequelize.UUID,
+          type: Sequelize.INTEGER,
           references: {
             model: 'coupons',
             key: 'id',
@@ -72,7 +72,7 @@ module.exports = {
         },
         promotion_id: {
           allowNull: true,
-          type: Sequelize.UUID,
+          type: Sequelize.INTEGER,
           references: {
             model: 'promotions',
             key: 'id',

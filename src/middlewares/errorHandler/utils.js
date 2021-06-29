@@ -1,4 +1,4 @@
-const { defaultErrorsDict } = require('./lib');
+const { defaultErrorsDict, defaultPathDict } = require('./lib');
 
 const translateDefaultError = (errorMessage) => {
   const translatedMessage = defaultErrorsDict[errorMessage];
@@ -7,7 +7,7 @@ const translateDefaultError = (errorMessage) => {
 };
 
 const extractValidationErrors = ({ errors }) => errors.map(({ message, path }) => ({
-  invalidField: path,
+  invalidField: defaultPathDict[path],
   message: translateDefaultError(message),
 }));
 

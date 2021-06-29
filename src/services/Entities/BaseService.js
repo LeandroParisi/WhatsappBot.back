@@ -1,7 +1,8 @@
 class BaseService {
-  constructor(model, queries) {
+  constructor(model, queries, serializers) {
     this.model = model;
     this.queries = queries;
+    this.serializers = serializers;
   }
 
   // Endpoint Methods

@@ -1,14 +1,21 @@
 /* eslint-disable class-methods-use-this */
 class QueryInterface {
   constructor({
-    create, findAll, deleteOne, updateOne, findOne, findByPk, activate, deActivate,
+    create,
+    findAll,
+    deleteOne,
+    updateOne,
+    findOne,
+    findByPk,
+    activate,
+    deActivate,
   }) {
     this.create = create || this.noQuery;
     this.findAll = findAll || this.noQuery;
     this.findByPk = findByPk || this.noQuery;
-    this.findOne = findOne || this.defaultFindOne;
-    this.updateOne = updateOne || this.defaultUpdateOne;
-    this.deleteOne = deleteOne || this.defaultDelete;
+    this.findOne = findOne || this.findOne;
+    this.updateOne = updateOne || this.updateOne;
+    this.deleteOne = deleteOne || this.delete;
     this.activate = activate || this.activate;
     this.deActivate = deActivate || this.deActivate;
   }
@@ -17,16 +24,20 @@ class QueryInterface {
     return {};
   }
 
-  defaultFindOne(query) {
-    return { where: query };
+  find() {
+    return { attributes: { exclude: ['createdAt', 'updatedAt'] } };
   }
 
-  defaultUpdateOne(payload) {
+  findOne(query) {
+    return { where: query, attributes: { exclude: ['createdAt', 'updatedAt'] } };
+  }
+
+  updateOne(payload) {
     return { ...payload };
   }
 
-  defaultDelete(id) {
-    return { where: id };
+  delete(id) {
+    return { where: { id } };
   }
 
   activate() {

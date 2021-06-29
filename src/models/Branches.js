@@ -11,10 +11,6 @@ const createBranches = (sequelize, DataTypes) => {
     },
     userId: {
       type: DataTypes.UUID,
-      references: {
-        model: 'users',
-        key: 'id',
-      },
     },
     managerName: {
       type: DataTypes.STRING,
@@ -24,24 +20,12 @@ const createBranches = (sequelize, DataTypes) => {
     },
     countryId: {
       type: DataTypes.NUMBER,
-      references: {
-        model: 'countries',
-        key: 'id',
-      },
     },
     stateId: {
       type: DataTypes.NUMBER,
-      references: {
-        model: 'states',
-        key: 'id',
-      },
     },
     cityId: {
       type: DataTypes.NUMBER,
-      references: {
-        model: 'cities',
-        key: 'id',
-      },
     },
     neibourhood: {
       type: DataTypes.STRING,
@@ -81,6 +65,10 @@ const createBranches = (sequelize, DataTypes) => {
     Branches.belongsTo(models.Cities, {
       as: 'branchCity',
       foreignKey: 'cityId',
+    });
+    Branches.belongsToMany(models.DeliveryTypes, {
+      through: 'BranchesDeliveryTypes',
+      as: 'deliveryTypes',
     });
   };
 

@@ -7,8 +7,8 @@ module.exports = {
         id: {
           allowNull: false,
           primaryKey: true,
-          type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4,
+          type: Sequelize.INTEGER,
+          autoIncrement: true,
         },
         payment_method: {
           allowNull: false,
@@ -25,14 +25,6 @@ module.exports = {
           // 'alelo_food',
           // 'sodexo_meal',
           // 'sodexo_food',)
-        },
-        updated_at: {
-          type: Sequelize.DATE,
-          defaultValue: Sequelize.fn('now'),
-        },
-        created_at: {
-          type: Sequelize.DATE,
-          defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
 
