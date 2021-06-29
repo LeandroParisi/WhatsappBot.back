@@ -22,6 +22,20 @@ class UsersService extends BaseService {
 
     return token;
   }
+
+  async findAll() {
+    const users = await super.findAll();
+    return users.map((user) => {
+      const json = user.toJSON();
+      return {
+        ...json,
+        userBranches: json.userBranches.map((userBranch) => ({
+          ...userBranch,
+          deliveryTypes: userBranch.deliveryTypes.map((dt) => dt.deliveryType),
+        })),
+      };
+    });
+  }
 }
 
 module.exports = new UsersService(Users, UserQueries);
