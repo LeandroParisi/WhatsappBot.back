@@ -15,12 +15,12 @@ const createCategories = (sequelize, DataTypes) => {
     },
   }, { underscored: true });
 
-  // Categories.associate = (models) => {
-  //   Categories.hasMany(models.Branches, {
-  //     as: 'branchCountry',
-  //     foreignKey: 'countryId',
-  //   });
-  // };
+  Categories.associate = (models) => {
+    Categories.hasMany(models.Products, {
+      as: 'productCategory',
+      foreignKey: 'categoryId',
+    });
+  };
 
   return Categories;
 };

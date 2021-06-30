@@ -19,6 +19,10 @@ const createPaymentMethods = (sequelize, DataTypes) => {
       through: 'BranchesPaymentMethods',
       as: 'paymentMethods',
     });
+    PaymentMethods.hasMany(models.Orders, {
+      as: 'orderPaymentMethod',
+      foreignKey: 'paymentMethodId',
+    });
   };
 
   return PaymentMethods;

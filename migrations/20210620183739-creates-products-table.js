@@ -68,14 +68,15 @@ module.exports = {
         },
         avaiability: {
           allowNull: true,
-          type: Sequelize.STRING,
-          // ('monday',
-          // 'tuesday',
-          // 'wednesday',
-          // 'thursday',
-          // 'friday',
-          // 'saturday',
-          // 'sunday')
+          type: Sequelize.ARRAY(Sequelize.ENUM(
+            'monday',
+            'tuesday',
+            'wednesday',
+            'thursday',
+            'friday',
+            'saturday',
+            'sunday',
+          )),
         },
         is_active: {
           allowNull: false,

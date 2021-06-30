@@ -40,8 +40,14 @@ module.exports = {
           //   }
           // ]
         },
-        // maxUses
-        // used
+        maxUses: {
+          type: Sequelize.INTEGER,
+          allowNull: true,
+        },
+        used: {
+          type: Sequelize.INTEGER,
+          defaultValue: 0,
+        },
         due_date: {
           type: Sequelize.DATE,
         },

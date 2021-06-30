@@ -78,6 +78,16 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
+        delivery_fees: {
+          allowNull: false,
+          type: Sequelize.JSONB,
+          // {
+          //   type: enum('unique', 'neighborhood', 'radius'),
+          //   fees: {
+
+          //   }
+          // }
+        },
         is_active: {
           allowNull: false,
           type: Sequelize.BOOLEAN,

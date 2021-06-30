@@ -22,22 +22,20 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        // startDate: {
-        //   type: Sequelize.DATE,
-        // },
         due_date: {
           type: Sequelize.DATE,
         },
         avaiability: {
           allowNull: true,
-          type: Sequelize.STRING,
-          // ('monday',
-          // 'tuesday',
-          // 'wednesday',
-          // 'thursday',
-          // 'friday',
-          // 'saturday',
-          // 'sunday')
+          type: Sequelize.ARRAY(Sequelize.ENUM(
+            'monday',
+            'tuesday',
+            'wednesday',
+            'thursday',
+            'friday',
+            'saturday',
+            'sunday',
+          )),
         },
         is_active: {
           allowNull: false,

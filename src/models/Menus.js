@@ -24,6 +24,10 @@ const createMenus = (sequelize, DataTypes) => {
       through: 'BranchesMenus',
       as: 'menus',
     });
+    Menus.belongsToMany(models.Products, {
+      through: 'MenusProducts',
+      as: 'menuProducts',
+    });
   };
 
   return Menus;

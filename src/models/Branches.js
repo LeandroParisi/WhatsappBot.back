@@ -42,6 +42,9 @@ const createBranches = (sequelize, DataTypes) => {
     postalCode: {
       type: DataTypes.STRING,
     },
+    deliveryFees: {
+      type: DataTypes.JSONB,
+    },
     isActive: {
       type: DataTypes.BOOLEAN,
     },
@@ -80,6 +83,22 @@ const createBranches = (sequelize, DataTypes) => {
     });
     Branches.hasOne(models.OpeningHours, {
       as: 'openingHours',
+      foreignKey: 'branchId',
+    });
+    Branches.hasMany(models.Orders, {
+      as: 'branchOrders',
+      foreignKey: 'branchId',
+    });
+    Branches.hasMany(models.Promotions, {
+      as: 'branchPromotions',
+      foreignKey: 'branchId',
+    });
+    Branches.hasMany(models.Coupons, {
+      as: 'branchCoupons',
+      foreignKey: 'branchId',
+    });
+    Branches.hasMany(models.Products, {
+      as: 'branchProducts',
       foreignKey: 'branchId',
     });
   };

@@ -18,7 +18,10 @@ const createDeliveryTypes = (sequelize, DataTypes) => {
     DeliveryTypes.belongsToMany(models.Branches, {
       through: 'BranchesDeliveryTypes',
       as: 'deliveryTypes',
-
+    });
+    DeliveryTypes.hasMany(models.Orders, {
+      as: 'orderDeliveryType',
+      foreignKey: 'deliveryTypeId',
     });
   };
 

@@ -29,6 +29,14 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
+        delivery_type_id: {
+          allowNull: true,
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'delivery_types',
+            key: 'id',
+          },
+        },
         delivery_fee: {
           allowNull: false,
           type: Sequelize.STRING,
