@@ -10,7 +10,7 @@ module.exports = {
           type: Sequelize.INTEGER,
           autoIncrement: true,
         },
-        branchId: {
+        branch_id: {
           allowNull: false,
           type: Sequelize.UUID,
           references: {
@@ -18,7 +18,7 @@ module.exports = {
             key: 'id',
           },
         },
-        deliveryFees: {
+        delivery_fees: {
           allowNull: false,
           type: Sequelize.JSONB,
           // {
@@ -28,11 +28,11 @@ module.exports = {
           //   }
           // }
         },
-        updatedAt: {
+        updated_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-        createdAt: {
+        created_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },

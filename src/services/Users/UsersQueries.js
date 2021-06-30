@@ -1,5 +1,5 @@
 const {
-  Branches, Countries, Cities, States, Sequelize, DeliveryTypes,
+  Branches, Countries, Cities, States, Sequelize, DeliveryTypes, PaymentMethods, Menus,
 } = require('../../models');
 const QueryInterface = require('../Entities/QueryInterface');
 
@@ -41,6 +41,18 @@ const queries = {
           model: DeliveryTypes,
           as: 'deliveryTypes',
           attributes: ['deliveryType'],
+          through: { attributes: [] },
+        },
+        {
+          model: PaymentMethods,
+          as: 'paymentMethods',
+          attributes: ['paymentMethod'],
+          through: { attributes: [] },
+        },
+        {
+          model: Menus,
+          as: 'menus',
+          attributes: { exclude: ['updatedAt', 'createdAt'] },
           through: { attributes: [] },
         },
       ],

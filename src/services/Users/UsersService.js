@@ -32,6 +32,7 @@ class UsersService extends BaseService {
         userBranches: json.userBranches.map((userBranch) => ({
           ...userBranch,
           deliveryTypes: userBranch.deliveryTypes.map((dt) => dt.deliveryType),
+          paymentMethods: userBranch.paymentMethods.map((pm) => pm.paymentMethod),
         })),
       };
     });

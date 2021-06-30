@@ -24,10 +24,6 @@ class QueryInterface {
     return {};
   }
 
-  find() {
-    return { attributes: { exclude: ['createdAt', 'updatedAt'] } };
-  }
-
   findOne(query) {
     return { where: query, attributes: { exclude: ['createdAt', 'updatedAt'] } };
   }

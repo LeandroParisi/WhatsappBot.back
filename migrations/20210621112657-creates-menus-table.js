@@ -10,7 +10,7 @@ module.exports = {
           type: Sequelize.UUID,
           defaultValue: Sequelize.UUIDV4,
         },
-        menuName: {
+        menu_name: {
           allowNull: false,
           type: Sequelize.STRING,
         },
@@ -18,11 +18,16 @@ module.exports = {
           allowNull: true,
           type: Sequelize.TEXT,
         },
-        updatedAt: {
+        is_active: {
+          allowNull: false,
+          type: Sequelize.BOOLEAN,
+          defaultValue: true,
+        },
+        updated_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-        createdAt: {
+        created_at: {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },

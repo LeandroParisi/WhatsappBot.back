@@ -1,4 +1,4 @@
-const { METHODS, status } = require('../../libs');
+const { METHODS, status, resMessages } = require('../../libs');
 
 class BaseRoutes {
   constructor(routes) {
@@ -49,8 +49,8 @@ class BaseRoutes {
         handler: (service) => async (req, res) => {
           const payload = req.body;
           const { id } = req.params;
-          const data = await service.updateOne(id, payload);
-          res.status(status.ok).json({ data });
+          await service.updateOne(id, payload);
+          res.status(status.ok).json({ message: resMessages.updateSuccess });
         },
         localMiddleware: [],
       },

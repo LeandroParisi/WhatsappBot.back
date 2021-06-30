@@ -70,6 +70,14 @@ const createBranches = (sequelize, DataTypes) => {
       through: 'BranchesDeliveryTypes',
       as: 'deliveryTypes',
     });
+    Branches.belongsToMany(models.PaymentMethods, {
+      through: 'BranchesPaymentMethods',
+      as: 'paymentMethods',
+    });
+    Branches.belongsToMany(models.Menus, {
+      through: 'BranchesMenus',
+      as: 'menus',
+    });
   };
 
   return Branches;

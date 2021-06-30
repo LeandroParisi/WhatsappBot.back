@@ -4,7 +4,7 @@ module.exports = {
 
     try {
       await queryInterface.createTable('menus_products', {
-        menuId: {
+        menu_id: {
           allowNull: false,
           foreignKey: true,
           type: Sequelize.UUID,
@@ -15,7 +15,7 @@ module.exports = {
             key: 'id',
           },
         },
-        productId: {
+        product_id: {
           allowNull: false,
           foreignKey: true,
           type: Sequelize.UUID,

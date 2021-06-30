@@ -1,3 +1,6 @@
+const { errorMessages, status } = require('../../libs');
+const { FireError } = require('../../middlewares/errorHandler/errorHandler');
+
 class BaseService {
   constructor(model, queries) {
     this.model = model;
@@ -29,6 +32,7 @@ class BaseService {
     const updatedEntity = await this.model.update(
       this.queries.updateOne(payload), { where: { id } },
     );
+    if (!updatedEntity[0]) throw new FireError(status.notFound, errorMessages.notFound);
     return updatedEntity;
   }
 

@@ -1,6 +1,7 @@
 const errorMessages = {
   internalError: 'Tivemos um erro interno, favor tentar novamente mais tarde',
   invalidUser: 'Email ou senha inválidos',
+  notFound: 'Não encontramos o item que tentou editar',
 };
 
 const errorTypes = {
@@ -18,6 +19,7 @@ const validationErrors = {
 
 const responseMessages = {
   loginOK: 'Logado com sucesso',
+  updateSuccess: 'Sua edição foi feita com sucesso!',
 };
 
 module.exports = {

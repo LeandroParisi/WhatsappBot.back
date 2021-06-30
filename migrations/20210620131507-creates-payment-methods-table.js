@@ -13,18 +13,6 @@ module.exports = {
         payment_method: {
           allowNull: false,
           type: Sequelize.STRING,
-          // ('money',
-          // 'pix',
-          // 'visa',
-          // 'mastercard',
-          // 'elo',
-          // 'hipercard',
-          // 'diners_club',
-          // 'american_express',
-          // 'alelo_meal',
-          // 'alelo_food',
-          // 'sodexo_meal',
-          // 'sodexo_food',)
         },
       }, { transaction });
 

@@ -4,7 +4,7 @@ module.exports = {
 
     try {
       await queryInterface.createTable('orders_delivery_types', {
-        orderId: {
+        order_id: {
           allowNull: false,
           foreignKey: true,
           type: Sequelize.UUID,
@@ -15,7 +15,7 @@ module.exports = {
             key: 'id',
           },
         },
-        deliveryTypeId: {
+        delivery_type_id: {
           allowNull: false,
           foreignKey: true,
           type: Sequelize.INTEGER,
