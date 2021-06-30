@@ -33,18 +33,10 @@ module.exports = {
           type: Sequelize.STRING,
         },
         last_name: {
-          allowNull: false,
           type: Sequelize.STRING,
         },
         cpf: {
           allowNull: false,
-          type: Sequelize.STRING,
-        },
-        password_hash: {
-          allowNull: false,
-          type: Sequelize.STRING,
-        },
-        avatar: {
           type: Sequelize.STRING,
         },
         country_id: {

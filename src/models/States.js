@@ -18,7 +18,11 @@ const createStates = (sequelize, DataTypes) => {
 
   States.associate = (models) => {
     States.hasMany(models.Branches, {
-      as: 'branchCountry',
+      as: 'branchState',
+      foreignKey: 'stateId',
+    });
+    States.hasMany(models.Customers, {
+      as: 'customerState',
       foreignKey: 'stateId',
     });
   };

@@ -1,12 +1,21 @@
 const {
-  Branches, Countries, Cities, States, Sequelize, DeliveryTypes, PaymentMethods, Menus,
+  Branches,
+  Countries,
+  Cities,
+  States,
+  Sequelize,
+  DeliveryTypes,
+  OpeningHours,
+  PaymentMethods,
+  Menus,
 } = require('../../models');
 const QueryInterface = require('../Entities/QueryInterface');
+const { addressIds, timeStamps } = require('../helpers/exclusions');
 
 const queries = {
   findAll: () => ({
     attributes: {
-      exclude: ['password', 'createdAt', 'updatedAt'],
+      exclude: ['password', ...timeStamps],
     },
     include: {
       model: Branches,
@@ -18,7 +27,7 @@ const queries = {
           [Sequelize.literal('"userBranches->branchCity".city_name'), 'cityName'],
         ],
         exclude: [
-          'countryId', 'stateId', 'cityId',
+          ...addressIds, ...timeStamps, 'userId',
         ],
       },
       include: [
@@ -52,8 +61,13 @@ const queries = {
         {
           model: Menus,
           as: 'menus',
-          attributes: { exclude: ['updatedAt', 'createdAt'] },
+          attributes: { exclude: [...timeStamps] },
           through: { attributes: [] },
+        },
+        {
+          model: OpeningHours,
+          as: 'openingHours',
+          attributes: { exclude: ['id', 'branchId', ...timeStamps] },
         },
       ],
     },

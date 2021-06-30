@@ -78,6 +78,10 @@ const createBranches = (sequelize, DataTypes) => {
       through: 'BranchesMenus',
       as: 'menus',
     });
+    Branches.hasOne(models.OpeningHours, {
+      as: 'openingHours',
+      foreignKey: 'branchId',
+    });
   };
 
   return Branches;

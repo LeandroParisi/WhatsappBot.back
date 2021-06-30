@@ -18,6 +18,10 @@ const createCountries = (sequelize, DataTypes) => {
       as: 'branchCountry',
       foreignKey: 'countryId',
     });
+    Countries.hasMany(models.Customers, {
+      as: 'customerCountry',
+      foreignKey: 'countryId',
+    });
   };
 
   return Countries;
