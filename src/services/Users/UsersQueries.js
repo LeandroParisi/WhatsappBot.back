@@ -60,7 +60,7 @@ const queries = {
         },
         {
           model: Menus,
-          as: 'menus',
+          as: 'branchMenus',
           attributes: { exclude: [...timeStamps] },
           through: { attributes: [] },
         },

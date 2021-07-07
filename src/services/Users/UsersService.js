@@ -18,7 +18,7 @@ class UsersService extends BaseService {
 
     if (!isPasswordCorrect) throw new FireError(status.notFound, errorMessages.invalidUser);
 
-    const token = generateToken(email, id);
+    const token = generateToken({ email, id });
 
     return token;
   }

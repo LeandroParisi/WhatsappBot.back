@@ -45,6 +45,9 @@ const createBranches = (sequelize, DataTypes) => {
     deliveryFees: {
       type: DataTypes.JSONB,
     },
+    logo: {
+      type: DataTypes.STRING,
+    },
     isActive: {
       type: DataTypes.BOOLEAN,
     },
@@ -79,7 +82,7 @@ const createBranches = (sequelize, DataTypes) => {
     });
     Branches.belongsToMany(models.Menus, {
       through: 'BranchesMenus',
-      as: 'menus',
+      as: 'branchMenus',
     });
     Branches.hasOne(models.OpeningHours, {
       as: 'openingHours',

@@ -12,7 +12,7 @@ const createPromotionsProducts = (sequelize, DataTypes) => {
       foreignKey: true,
       type: DataTypes.UUID,
     },
-  }, { underscored: true });
+  }, { underscored: true, timestamps: false });
 
   return PromotionsProducts;
 };

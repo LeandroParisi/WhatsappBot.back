@@ -2,8 +2,8 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 
-const createBranchesMenus = (sequelize, DataTypes) => {
-  const BranchesMenus = sequelize.define('BranchesMenus', {
+const createMenusProducts = (sequelize, DataTypes) => {
+  const MenusProducts = sequelize.define('MenusProducts', {
     menuId: {
       foreignKey: true,
       type: DataTypes.UUID,
@@ -12,9 +12,9 @@ const createBranchesMenus = (sequelize, DataTypes) => {
       foreignKey: true,
       type: DataTypes.UUID,
     },
-  }, { underscored: true });
+  }, { underscored: true, timestamps: false });
 
-  return BranchesMenus;
+  return MenusProducts;
 };
 
-module.exports = createBranchesMenus;
+module.exports = createMenusProducts;

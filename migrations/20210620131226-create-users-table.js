@@ -16,7 +16,7 @@ module.exports = {
           unique: true,
         },
         whatsapp_id: {
-          allowNull: false,
+          allowNull: true,
           type: Sequelize.STRING,
           unique: true,
         },

@@ -22,7 +22,7 @@ const createMenus = (sequelize, DataTypes) => {
   Menus.associate = (models) => {
     Menus.belongsToMany(models.Branches, {
       through: 'BranchesMenus',
-      as: 'menus',
+      as: 'branchMenus',
     });
     Menus.belongsToMany(models.Products, {
       through: 'MenusProducts',

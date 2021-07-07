@@ -6,9 +6,12 @@ const translateDefaultError = (errorMessage) => {
   return errorMessage;
 };
 
-const extractValidationErrors = ({ errors }) => errors.map(({ message, path }) => ({
-  invalidField: defaultPathDict[path],
-  message: translateDefaultError(message),
-}));
+const extractValidationErrors = ({ errors }) => {
+  const { path, message } = errors[0];
+  return ({
+    invalidField: defaultPathDict[path] || path,
+    message: translateDefaultError(message),
+  });
+};
 
 module.exports = { extractValidationErrors };

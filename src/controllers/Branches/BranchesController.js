@@ -1,8 +1,7 @@
 const BranchesService = require('../../services/Branches/BranchesServices');
 const BaseController = require('../Entities/BaseController');
-const BaseRoutes = require('../Entities/BaseRoutes');
+const BranchesRoutes = require('./BranchesRoutes');
 
-const BranchesRouter = new BaseRoutes();
-const BranchesController = new BaseController('/branches', BranchesService, BranchesRouter.getRoutes());
+const BranchesController = new BaseController('/branches', BranchesService, BranchesRoutes.getRoutes());
 
 module.exports = BranchesController;

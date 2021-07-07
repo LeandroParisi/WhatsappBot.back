@@ -1,6 +1,9 @@
 const BaseRoutes = require('../Entities/BaseRoutes');
-const { METHODS, status } = require('../../libs');
-const { resMessages } = require('../../libs');
+const {
+  METHODS, status, resMessages, errorMessages,
+} = require('../../libs');
+const { FireError } = require('../../middlewares/errorHandler/errorHandler');
+const { decode } = require('../../authentication/jwtConfig');
 
 const userRoutes = {
   login: {
@@ -9,7 +12,24 @@ const userRoutes = {
     handler: (service) => async (req, res) => {
       const payload = req.body;
       const token = await service.login(payload);
-      res.status(status.ok).json({ message: resMessages.loginOK, token });
+      res.cookie('wbt', token, { maxAge: 86400000, httpOnly: true });
+      res.status(status.ok).json({ message: resMessages.loginOK });
+    },
+    localMiddleware: [],
+  },
+
+  auth: {
+    endpoint: '/auth',
+    method: METHODS.GET,
+    handler: () => async (req, res) => {
+      const { wbt } = req.cookies;
+      if (!wbt) throw new FireError(status.unauthorized, errorMessages.expiredSession);
+      try {
+        decode(wbt);
+      } catch (error) {
+        throw new FireError(status.unauthorized, errorMessages.expiredSession);
+      }
+      res.status(status.ok).json({ message: resMessages.validSession });
     },
     localMiddleware: [],
   },

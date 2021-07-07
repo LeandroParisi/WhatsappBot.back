@@ -65,6 +65,14 @@ module.exports = {
           street_complement: '222',
           postal_code: '12345',
           is_active: true,
+          delivery_fees: JSON.stringify({
+            type: 'radius',
+            fees: {
+              5: 4,
+              10: 8,
+              15: 12,
+            },
+          }),
         },
         {
           id: branchTwoId,
@@ -80,6 +88,10 @@ module.exports = {
           street_complement: '222',
           postal_code: '12345',
           is_active: true,
+          delivery_fees: JSON.stringify({
+            type: 'unique',
+            fees: 5,
+          }),
         },
       ]);
   },

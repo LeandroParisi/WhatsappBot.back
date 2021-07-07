@@ -3,6 +3,7 @@ const { METHODS, status, resMessages } = require('../../libs');
 class BaseRoutes {
   constructor(routes) {
     this.routes = {
+      ...routes,
       activate: {
         endpoint: '/activate/:id',
         method: METHODS.PUT,
@@ -83,7 +84,6 @@ class BaseRoutes {
         },
         localMiddleware: [],
       },
-      ...routes,
     };
   }
 

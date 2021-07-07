@@ -15,6 +15,12 @@ const createUsers = (sequelize, DataTypes) => {
     whatsappNumber: {
       type: DataTypes.STRING,
       unique: true,
+      validate: {
+        is: {
+          args: /[0-9]{13}/,
+          msg: validationErrors.invalidZapNumberFormat,
+        },
+      },
     },
     whatsappId: {
       type: DataTypes.STRING,
@@ -44,6 +50,12 @@ const createUsers = (sequelize, DataTypes) => {
     },
     ownerFirstName: {
       type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          args: true,
+          msg: validationErrors.emptyOwnerName,
+        },
+      },
     },
     ownerMiddleName: {
       type: DataTypes.STRING,
