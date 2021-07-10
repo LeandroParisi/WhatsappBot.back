@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
 const uuid = require('uuid/v4');
+const { hashPassword } = require('../src/authentication/passwordHashing');
 
 const userId = uuid();
 
@@ -17,12 +18,12 @@ module.exports = {
           whatsapp_id: '5531975080415',
           bussiness_name: 'Quintal da Dirce',
           cnpj: '123456789',
-          email: 'lepcbelisario@gmail.com',
+          email: 'user@teste.com',
           owner_first_name: 'Leandro',
           owner_middle_name: 'Parisi',
           owner_last_name: 'Carvalho',
           owner_cpf: '123456789',
-          password: '123456789',
+          password: await hashPassword('123456'),
           is_active: true,
         },
       ]);

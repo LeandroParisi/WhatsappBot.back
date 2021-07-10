@@ -28,13 +28,13 @@ module.exports = {
         avaiability: {
           allowNull: true,
           type: Sequelize.ARRAY(Sequelize.ENUM(
-            'monday',
-            'tuesday',
-            'wednesday',
-            'thursday',
-            'friday',
-            'saturday',
-            'sunday',
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
           )),
         },
         is_active: {

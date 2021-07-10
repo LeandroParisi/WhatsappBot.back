@@ -30,29 +30,9 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        // attributeTypeId: {
-        //   allowNull: true,
-        //   type: Sequelize.INTEGER,
-        //   references: {
-        //     model: 'AttributeTypes',
-        //     key: 'id'
-        //   }
-        // },
         attributes: {
           allowNull: true,
           type: Sequelize.JSONB,
-          // [
-          //   {
-          //     type: size,
-          //     attributes: [p, m, g]
-          //   },
-          //   {
-          //     type: additional,
-          //     attributes: [
-          //       {}
-          //     ]
-          //   }
-          // ]
         },
         base_price: {
           allowNull: true,
@@ -64,19 +44,11 @@ module.exports = {
         },
         ingredients: {
           allowNull: true,
-          type: Sequelize.TEXT,
+          type: Sequelize.ARRAY(Sequelize.STRING),
         },
         avaiability: {
           allowNull: true,
-          type: Sequelize.ARRAY(Sequelize.ENUM(
-            'monday',
-            'tuesday',
-            'wednesday',
-            'thursday',
-            'friday',
-            'saturday',
-            'sunday',
-          )),
+          type: Sequelize.ARRAY(Sequelize.INTEGER),
         },
         is_active: {
           allowNull: false,

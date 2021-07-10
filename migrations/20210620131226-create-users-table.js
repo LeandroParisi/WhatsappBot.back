@@ -62,6 +62,10 @@ module.exports = {
         logo: {
           type: Sequelize.STRING,
         },
+        role: {
+          type: Sequelize.ENUM('admin', 'user'),
+          defaultValue: 'user',
+        },
         is_active: {
           allowNull: false,
           type: Sequelize.BOOLEAN,

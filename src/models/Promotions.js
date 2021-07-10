@@ -18,15 +18,7 @@ const createPromotions = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
     },
     avaiability: {
-      type: DataTypes.ARRAY(DataTypes.ENUM(
-        'monday',
-        'tuesday',
-        'wednesday',
-        'thursday',
-        'friday',
-        'saturday',
-        'sunday',
-      )),
+      type: DataTypes.ARRAY(DataTypes.INTEGER),
     },
     isActive: {
       type: DataTypes.BOOLEAN,

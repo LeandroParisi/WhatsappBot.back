@@ -87,6 +87,10 @@ const createOrders = (sequelize, DataTypes) => {
       as: 'orderPromotion',
       foreignKey: 'promotionId',
     });
+    Orders.belongsToMany(models.Products, {
+      through: 'OrdersProducts',
+      as: 'orderProducts',
+    });
   };
 
   return Orders;

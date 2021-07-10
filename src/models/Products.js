@@ -30,15 +30,7 @@ const createProducts = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
     },
     avaiability: {
-      type: DataTypes.ARRAY(DataTypes.ENUM(
-        'monday',
-        'tuesday',
-        'wednesday',
-        'thursday',
-        'friday',
-        'saturday',
-        'sunday',
-      )),
+      type: DataTypes.ARRAY(DataTypes.INTEGER),
     },
     isActive: {
       type: DataTypes.BOOLEAN,
@@ -61,6 +53,10 @@ const createProducts = (sequelize, DataTypes) => {
     Products.belongsTo(models.Categories, {
       as: 'productCategory',
       foreignKey: 'categoryId',
+    });
+    Products.belongsToMany(models.Orders, {
+      through: 'OrdersProducts',
+      as: 'orderProducts',
     });
   };
 

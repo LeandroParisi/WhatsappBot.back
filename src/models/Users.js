@@ -81,6 +81,9 @@ const createUsers = (sequelize, DataTypes) => {
     logo: {
       type: DataTypes.STRING,
     },
+    role: {
+      type: DataTypes.ENUM,
+    },
     isActive: {
       type: DataTypes.BOOLEAN,
     },
