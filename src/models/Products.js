@@ -21,7 +21,8 @@ const createProducts = (sequelize, DataTypes) => {
       type: DataTypes.JSONB,
     },
     basePrice: {
-      type: DataTypes.STRING,
+      type: DataTypes.DECIMAL(10, 2),
+
     },
     description: {
       type: DataTypes.TEXT,

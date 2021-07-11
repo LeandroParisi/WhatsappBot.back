@@ -12,7 +12,7 @@ const createPromotions = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
     },
     totalPrice: {
-      type: DataTypes.STRING,
+      type: DataTypes.DECIMAL(10, 2),
     },
     dueDate: {
       type: DataTypes.DATE,

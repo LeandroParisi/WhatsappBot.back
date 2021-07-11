@@ -15,22 +15,22 @@ const createOrders = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
     },
     subTotal: {
-      type: DataTypes.STRING,
+      type: DataTypes.DECIMAL(10, 2),
     },
     deliveryTypeId: {
       type: DataTypes.INTEGER,
     },
     deliveryFee: {
-      type: DataTypes.STRING,
+      type: DataTypes.DECIMAL(10, 2),
     },
     paymentMethodId: {
       type: DataTypes.INTEGER,
     },
     discount: {
-      type: DataTypes.STRING,
+      type: DataTypes.DECIMAL(10, 2),
     },
     totalPrice: {
-      type: DataTypes.STRING,
+      type: DataTypes.DECIMAL(10, 2),
     },
     status: {
       type: DataTypes.ENUM(

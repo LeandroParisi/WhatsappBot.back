@@ -27,7 +27,7 @@ module.exports = {
         },
         sub_total: {
           allowNull: false,
-          type: Sequelize.STRING,
+          type: Sequelize.DECIMAL(10, 2),
         },
         delivery_type_id: {
           allowNull: true,
@@ -39,8 +39,8 @@ module.exports = {
         },
         delivery_fee: {
           allowNull: false,
-          type: Sequelize.STRING,
-          defaultValue: '0',
+          type: Sequelize.DECIMAL(10, 2),
+          defaultValue: 0,
         },
         payment_method_id: {
           type: Sequelize.INTEGER,
@@ -52,12 +52,12 @@ module.exports = {
         },
         discount: {
           allowNull: false,
-          type: Sequelize.STRING,
-          defaultValue: '0',
+          type: Sequelize.DECIMAL(10, 2),
+          defaultValue: 0,
         },
         total_price: {
           allowNull: false,
-          type: Sequelize.STRING,
+          type: Sequelize.DECIMAL(10, 2),
         },
         status: {
           allowNull: false,
