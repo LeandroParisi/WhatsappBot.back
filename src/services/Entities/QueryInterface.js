@@ -1,3 +1,5 @@
+const queryAttributesFactory = require('./Factories/queryAttributesFactory');
+
 /* eslint-disable class-methods-use-this */
 class QueryInterface {
   constructor({
@@ -11,7 +13,7 @@ class QueryInterface {
     deActivate,
   }) {
     this.create = create || this.noQuery;
-    this.findAll = findAll || this.noQuery;
+    this.findAll = findAll || this.findAll;
     this.findByPk = findByPk || this.noQuery;
     this.findOne = findOne || this.findOne;
     this.updateOne = updateOne || this.updateOne;
@@ -21,6 +23,14 @@ class QueryInterface {
   }
 
   noQuery() {
+    return {};
+  }
+
+  findAll({ id, query }) {
+    const attributes = queryAttributesFactory(query);
+    if (id) {
+      return { where: { user_id: id }, attributes };
+    }
     return {};
   }
 

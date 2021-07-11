@@ -13,8 +13,13 @@ class BaseService {
     return insertedEntity;
   }
 
-  async findAll() {
-    const data = await this.model.findAll(this.queries.findAll());
+  async findAll({ user, query }) {
+    let data;
+    if (user && user.role === 'user') {
+      data = await this.model.findAll(this.queries.findAll({ id: user.id, query }));
+    } else {
+      data = await this.model.findAll(this.queries.findAll({ query }));
+    }
     return data;
   }
 

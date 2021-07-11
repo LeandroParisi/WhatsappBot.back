@@ -82,7 +82,7 @@ const createUsers = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
     role: {
-      type: DataTypes.ENUM,
+      type: DataTypes.ENUM('admin', 'user'),
     },
     isActive: {
       type: DataTypes.BOOLEAN,

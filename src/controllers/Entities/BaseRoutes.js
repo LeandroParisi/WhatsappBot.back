@@ -68,8 +68,9 @@ class BaseRoutes {
       findAll: {
         endpoint: '/',
         method: METHODS.GET,
-        handler: (service) => async (_req, res) => {
-          const data = await service.findAll();
+        handler: (service) => async (req, res) => {
+          const { user, query } = req;
+          const data = await service.findAll({ user, query });
           res.status(status.ok).json({ data });
         },
         localMiddleware: [],
@@ -87,8 +88,28 @@ class BaseRoutes {
     };
   }
 
-  addMiddlewares(endpoint, middlewares) {
-    this.routes[endpoint].localMiddleware = [...middlewares];
+  /**
+   *
+   * @param {array} endpoints name of each endpoint to receive middleware,
+   * like [create, deleteOne], if you want to add middleware to all routes use 'all'
+   * @param {array} middlewares array containing middlewares to be added
+   */
+  addMiddlewares(endpoints, middlewares) {
+    if (endpoints === 'all') {
+      Object.keys(this.routes).forEach((endpoint) => {
+        this.routes[endpoint].localMiddleware = [
+          ...this.routes[endpoint].localMiddleware,
+          ...middlewares,
+        ];
+      });
+    } else {
+      endpoints.forEach((endpoint) => {
+        this.routes[endpoint].localMiddleware = [
+          ...this.routes[endpoint].localMiddleware,
+          ...middlewares,
+        ];
+      });
+    }
   }
 
   removeEndpoints(endpoints) {

@@ -13,12 +13,12 @@ class UsersService extends BaseService {
 
     if (!loggedUser) throw new FireError(status.notFound, errorMessages.invalidUser);
 
-    const { password: passwordHash, id } = loggedUser.dataValues;
+    const { password: passwordHash, id, role } = loggedUser.dataValues;
     const isPasswordCorrect = await verifyPassword(password, passwordHash);
 
     if (!isPasswordCorrect) throw new FireError(status.notFound, errorMessages.invalidUser);
 
-    const token = generateToken({ email, id });
+    const token = generateToken({ email, id, role });
 
     return token;
   }
