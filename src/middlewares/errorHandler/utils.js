@@ -1,4 +1,4 @@
-const { defaultErrorsDict, defaultPathDict } = require('./lib');
+const { defaultErrorsDict, defaultPathDict } = require('./sequelizeErrorsLib');
 
 const translateDefaultError = (errorMessage) => {
   const translatedMessage = defaultErrorsDict[errorMessage];
