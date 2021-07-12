@@ -1,37 +1,145 @@
-const { Router } = require('express');
-const { errorCatcher } = require('../../middlewares/errorHandler/errorHandler');
+const { METHODS, status, resMessages } = require('../../libs');
 
-class BaseController {
-  constructor(basePath, routes) {
-    this.router = new Router();
-    this.basePath = basePath;
-    this.routes = routes;
+class BaseRoutes {
+  constructor(service) {
+    this.routes = {
+      activate: {
+        endpoint: '/activate/:id',
+        method: METHODS.PUT,
+        handler: this.activate.bind(this),
+        localMiddleware: [],
+      },
+      deActivate: {
+        endpoint: '/deactivate/:id',
+        method: METHODS.PUT,
+        handler: this.deActivate.bind(this),
+        localMiddleware: [],
+      },
+      findOne: {
+        endpoint: '/find',
+        method: METHODS.GET,
+        handler: this.findOne.bind(this),
+        localMiddleware: [],
+      },
+      findByPk: {
+        endpoint: '/:id',
+        method: METHODS.GET,
+        handler: this.findByPk.bind(this),
+        localMiddleware: [],
+      },
+      updateOne: {
+        endpoint: '/:id',
+        method: METHODS.PUT,
+        handler: this.updateOne.bind(this),
+        localMiddleware: [],
+      },
+      deleteOne: {
+        endpoint: '/:id',
+        method: METHODS.DELETE,
+        handler: this.deleteOne.bind(this),
+        localMiddleware: [],
+      },
+      findAll: {
+        endpoint: '/',
+        method: METHODS.GET,
+        handler: this.findAll.bind(this),
+        localMiddleware: [],
+      },
+      create: {
+        endpoint: '/',
+        method: METHODS.POST,
+        handler: this.create.bind(this),
+        localMiddleware: [],
+      },
+    };
+    this.service = service;
   }
 
-  setRouter() {
-    Object.values(this.routes).forEach((route) => {
-      route.localMiddleware.forEach((middleWare) => {
-        this.router.use(route.endpoint, errorCatcher(middleWare));
+  async activate(req, res) {
+    const { id } = req.params;
+    const data = await this.service.activate(id);
+    res.status(status.ok).json({ data });
+  }
+
+  async deActivate(req, res) {
+    const { id } = req.params;
+    const data = await this.service.deActivate(id);
+    res.status(status.ok).json({ data });
+  }
+
+  async findOne(req, res) {
+    const { query } = req;
+    const data = await this.service.findOne(query);
+    res.status(status.ok).json({ data });
+  }
+
+  async findByPk(req, res) {
+    const { id } = req.params;
+    const data = await this.service.findByPk(id);
+    res.status(status.ok).json({ data });
+  }
+
+  async updateOne(req, res) {
+    const payload = req.body;
+    const { id } = req.params;
+    await this.service.updateOne(id, payload);
+    res.status(status.ok).json({ message: resMessages.updateSuccess });
+  }
+
+  async deleteOne(req, res) {
+    const { id } = req.params;
+    const deletedEntity = await this.service.deleteOne(id);
+    res.status(status.ok).json({ deletedEntity });
+  }
+
+  async findAll(_req, res) {
+    const data = await this.service.findAll();
+    res.status(status.ok).json({ data });
+  }
+
+  async create(req, res) {
+    const payload = req.body;
+    const insertedEntity = await this.service.create(payload);
+    res.status(status.created).json({ insertedEntity });
+  }
+
+  /**
+   *
+   * @param {array} endpoints name of each endpoint to receive middleware,
+   * like [create, deleteOne], if you want to add middleware to all routes use 'all'
+   * @param {array} middlewares array containing middlewares to be added
+   */
+  addMiddlewares(endpoints, middlewares) {
+    if (endpoints === 'all') {
+      Object.keys(this.routes).forEach((endpoint) => {
+        this.routes[endpoint].localMiddleware = [
+          ...this.routes[endpoint].localMiddleware,
+          ...middlewares,
+        ];
       });
-      switch (route.method) {
-        case 'GET':
-          this.router.get(route.endpoint, errorCatcher(route.handler));
-          break;
-        case 'POST':
-          this.router.post(route.endpoint, errorCatcher(route.handler));
-          break;
-        case 'PUT':
-          this.router.put(route.endpoint, errorCatcher(route.handler));
-          break;
-        case 'DELETE':
-          this.router.delete(route.endpoint, errorCatcher(route.handler));
-          break;
-        default:
-            // Throw exception
-      }
+    } else {
+      endpoints.forEach((endpoint) => {
+        this.routes[endpoint].localMiddleware = [
+          ...this.routes[endpoint].localMiddleware,
+          ...middlewares,
+        ];
+      });
+    }
+  }
+
+  removeEndpoints(endpoints) {
+    endpoints.forEach((endpoint) => {
+      delete this.routes[endpoint];
     });
-    return this.router;
+  }
+
+  getRoutes() {
+    return this.routes;
+  }
+
+  addRoutes(newRoutes) {
+    this.routes = { ...newRoutes, ...this.routes };
   }
 }
 
-module.exports = BaseController;
+module.exports = BaseRoutes;
