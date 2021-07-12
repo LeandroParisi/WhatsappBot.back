@@ -1,5 +1,5 @@
 const uuid = require('uuid/v4');
-const attributesFactory = require('../src/interfaces/attributes/attributesFactory');
+const {productsAttrFactory} = require('../src/interfaces/attributes/attributesFactory');
 const attributeTypes = require('../src/interfaces/attributes/attributeTypes');
 const { branchOneId } = require('./20210623221400-populateUsersTable');
 
@@ -18,15 +18,15 @@ module.exports = {
         attributes: JSON.stringify([
           {
             type: attributeTypes.sizes,
-            attributes: attributesFactory([
-              ['pequena', 5, 'Pizza 15cm'],
-              ['média', 10, 'Pizza 20cm'],
-              ['grande', 15, 'Pizza 30cm'],
+            attributes: productsAttrFactory([
+              ['P', 5, 'Pizza 15cm'],
+              ['M', 10, 'Pizza 20cm'],
+              ['G', 15, 'Pizza 30cm'],
             ]),
           },
           {
             type: attributeTypes.additionals,
-            attributes: attributesFactory([
+            attributes: productsAttrFactory([
               ['borda queijo', 2, 'Borda recheada com queijo'],
               ['borda catupiry', 4, 'Borda recheada com catupiry'],
               ['catchup', 0, 'Sachês de catchup (por conta da casa)'],
@@ -55,7 +55,7 @@ module.exports = {
         attributes: JSON.stringify([
           {
             type: attributeTypes.additionals,
-            attributes: attributesFactory([
+            attributes: productsAttrFactory([
               ['bacon', 5, '3 fatias de bacon adicionais'],
               ['carne extra', 6, 'Carne adicional no seu burgão'],
               ['molho especial', 3, 'Molho especial da casa'],

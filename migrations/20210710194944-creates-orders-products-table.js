@@ -26,6 +26,15 @@ module.exports = {
             key: 'id',
           },
         },
+        quantity: {
+          allowNull: false,
+          type: Sequelize.INTEGER,
+          defaultValue: 1
+        },
+        attributes: {
+          allowNull: true,
+          type: Sequelize.JSONB,
+        }
       }, { transaction });
 
       await transaction.commit();

@@ -24,7 +24,7 @@ class UsersService extends BaseService {
   }
 
   async findAll() {
-    const users = await super.findAll();
+    const users = await super.findAll({});
     return users.map((user) => {
       const json = user.toJSON();
       return {

@@ -12,6 +12,12 @@ const createOrdersProducts = (sequelize, DataTypes) => {
       foreignKey: true,
       type: DataTypes.UUID,
     },
+    quantity: {
+      type: DataTypes.INTEGER,
+    },
+    attributes: {
+      type: DataTypes.JSONB,
+    },
   }, { underscored: true, timestamps: false });
 
   return OrdersProducts;

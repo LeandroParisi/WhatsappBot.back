@@ -1,91 +1,106 @@
 const { METHODS, status, resMessages } = require('../../libs');
 
 class BaseRoutes {
-  constructor(routes) {
+  constructor(service) {
     this.routes = {
-      ...routes,
       activate: {
         endpoint: '/activate/:id',
         method: METHODS.PUT,
-        handler: (service) => async (req, res) => {
-          const { id } = req.params;
-          const data = await service.activate(id);
-          res.status(status.ok).json({ data });
-        },
+        handler: this.activate.bind(this),
         localMiddleware: [],
       },
       deActivate: {
         endpoint: '/deactivate/:id',
         method: METHODS.PUT,
-        handler: (service) => async (req, res) => {
-          const { id } = req.params;
-          const data = await service.deActivate(id);
-          res.status(status.ok).json({ data });
-        },
+        handler: this.deActivate.bind(this),
         localMiddleware: [],
       },
       findOne: {
         endpoint: '/find',
         method: METHODS.GET,
-        handler: (service) => async (req, res) => {
-          const { query } = req;
-          const data = await service.findOne(query);
-          res.status(status.ok).json({ data });
-        },
+        handler: this.findOne.bind(this),
         localMiddleware: [],
       },
       findByPk: {
         endpoint: '/:id',
         method: METHODS.GET,
-        handler: (service) => async (req, res) => {
-          const { id } = req.params;
-          const data = await service.findByPk(id);
-          res.status(status.ok).json({ data });
-        },
+        handler: this.findByPk.bind(this),
         localMiddleware: [],
       },
       updateOne: {
         endpoint: '/:id',
         method: METHODS.PUT,
-        handler: (service) => async (req, res) => {
-          const payload = req.body;
-          const { id } = req.params;
-          await service.updateOne(id, payload);
-          res.status(status.ok).json({ message: resMessages.updateSuccess });
-        },
+        handler: this.updateOne.bind(this),
         localMiddleware: [],
       },
       deleteOne: {
         endpoint: '/:id',
         method: METHODS.DELETE,
-        handler: (service) => async (req, res) => {
-          const { id } = req.params;
-          const deletedEntity = await service.deleteOne(id);
-          res.status(status.ok).json({ deletedEntity });
-        },
+        handler: this.deleteOne.bind(this),
         localMiddleware: [],
       },
       findAll: {
         endpoint: '/',
         method: METHODS.GET,
-        handler: (service) => async (req, res) => {
-          const { user, query } = req;
-          const data = await service.findAll({ user, query });
-          res.status(status.ok).json({ data });
-        },
+        handler: this.findAll.bind(this),
         localMiddleware: [],
       },
       create: {
         endpoint: '/',
         method: METHODS.POST,
-        handler: (service) => async (req, res) => {
-          const payload = req.body;
-          const insertedEntity = await service.create(payload);
-          res.status(status.created).json({ insertedEntity });
-        },
+        handler: this.create.bind(this),
         localMiddleware: [],
       },
     };
+    this.service = service;
+  }
+
+  async activate(req, res) {
+    const { id } = req.params;
+    const data = await this.service.activate(id);
+    res.status(status.ok).json({ data });
+  }
+
+  async deActivate(req, res) {
+    const { id } = req.params;
+    const data = await this.service.deActivate(id);
+    res.status(status.ok).json({ data });
+  }
+
+  async findOne(req, res) {
+    const { query } = req;
+    const data = await this.service.findOne(query);
+    res.status(status.ok).json({ data });
+  }
+
+  async findByPk(req, res) {
+    const { id } = req.params;
+    const data = await this.service.findByPk(id);
+    res.status(status.ok).json({ data });
+  }
+
+  async updateOne(req, res) {
+    const payload = req.body;
+    const { id } = req.params;
+    await this.service.updateOne(id, payload);
+    res.status(status.ok).json({ message: resMessages.updateSuccess });
+  }
+
+  async deleteOne(req, res) {
+    const { id } = req.params;
+    const deletedEntity = await this.service.deleteOne(id);
+    res.status(status.ok).json({ deletedEntity });
+  }
+
+  async findAll(_req, res) {
+    const data = await this.service.findAll();
+    res.status(status.ok).json({ data });
+  }
+
+  async create(req, res) {
+    const payload = req.body;
+    const insertedEntity = await this.service.create(payload);
+    res.status(status.created).json({ insertedEntity });
   }
 
   /**
@@ -120,6 +135,10 @@ class BaseRoutes {
 
   getRoutes() {
     return this.routes;
+  }
+
+  addRoutes(newRoutes) {
+    this.routes = { ...this.routes, ...newRoutes };
   }
 }
 

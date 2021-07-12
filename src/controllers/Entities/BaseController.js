@@ -2,10 +2,9 @@ const { Router } = require('express');
 const { errorCatcher } = require('../../middlewares/errorHandler/errorHandler');
 
 class BaseController {
-  constructor(basePath, service, routes) {
+  constructor(basePath, routes) {
     this.router = new Router();
     this.basePath = basePath;
-    this.service = service;
     this.routes = routes;
   }
 
@@ -16,16 +15,16 @@ class BaseController {
       });
       switch (route.method) {
         case 'GET':
-          this.router.get(route.endpoint, errorCatcher(route.handler(this.service)));
+          this.router.get(route.endpoint, errorCatcher(route.handler));
           break;
         case 'POST':
-          this.router.post(route.endpoint, errorCatcher(route.handler(this.service)));
+          this.router.post(route.endpoint, errorCatcher(route.handler));
           break;
         case 'PUT':
-          this.router.put(route.endpoint, errorCatcher(route.handler(this.service)));
+          this.router.put(route.endpoint, errorCatcher(route.handler));
           break;
         case 'DELETE':
-          this.router.delete(route.endpoint, errorCatcher(route.handler(this.service)));
+          this.router.delete(route.endpoint, errorCatcher(route.handler));
           break;
         default:
             // Throw exception

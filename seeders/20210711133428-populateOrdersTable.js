@@ -1,4 +1,6 @@
 const uuid = require('uuid/v4');
+const { orderProductsAttrFactory } = require('../src/interfaces/attributes/attributesFactory');
+const attributeTypes = require('../src/interfaces/attributes/attributeTypes');
 const { branchOneId } = require('./20210623221400-populateUsersTable');
 const { productOneId, productTwoId, productThreeId } = require('./20210710183145-populateProductsTable');
 const { customer1, customer2, customer3 } = require('./20210711133426-populateCustomersTable');
@@ -155,90 +157,164 @@ module.exports = {
       {
         order_id: order1,
         product_id: productOneId,
+        quantity: 1,
+        attributes: JSON.stringify(
+          orderProductsAttrFactory([
+            [attributeTypes.sizes, 'M', 10],
+            [attributeTypes.additionals, 'borda queijo', 2, 2],
+            [attributeTypes.additionals, 'catchup', 0, 5]
+          ])
+        )
+      },
+      {
+        order_id: order1,
+        product_id: productOneId,
+        quantity: 1,
+        attributes: JSON.stringify(
+          orderProductsAttrFactory([
+            [attributeTypes.sizes, 'P', 5],
+            [attributeTypes.additionals, 'borda queijo', 2, 2],
+            [attributeTypes.additionals, 'catchup', 0, 5]
+          ])
+        )
       },
       {
         order_id: order1,
         product_id: productTwoId,
+        quantity: 2,
       },
       {
         order_id: order2,
         product_id: productOneId,
+        quantity: 1,
+        attributes: JSON.stringify(
+          orderProductsAttrFactory([
+            [attributeTypes.sizes, 'G', 15],
+            [attributeTypes.additionals, 'borda catupiry', 4],
+            [attributeTypes.additionals, 'catchup', 0, 5]
+          ])
+        )
       },
       {
         order_id: order2,
         product_id: productTwoId,
+        quantity: 3,
       },
       {
         order_id: order2,
         product_id: productThreeId,
+        quantity: 1,
+        attributes: JSON.stringify(
+          orderProductsAttrFactory([
+            [attributeTypes.additionals, 'bacon', 5, 2],
+            [attributeTypes.additionals, 'carne extra', 6, 1],
+          ])
+        )
       },
       {
         order_id: order3,
         product_id: productThreeId,
+        quantity: 1,
+        attributes: JSON.stringify(
+          orderProductsAttrFactory([
+            [attributeTypes.additionals, 'bacon', 5, 3],
+            [attributeTypes.additionals, 'molho especial', 3],
+          ])
+        )
       },
 
       {
         order_id: order4,
         product_id: productOneId,
+        quantity: 1,
+        attributes: JSON.stringify(
+          orderProductsAttrFactory([
+            [attributeTypes.sizes, 'M', 10],
+          ])
+        )
       },
       {
         order_id: order4,
         product_id: productTwoId,
+        quantity: 1,
       },
       {
         order_id: order5,
         product_id: productOneId,
+        quantity: 1,
+        attributes: JSON.stringify(
+          orderProductsAttrFactory([
+            [attributeTypes.sizes, 'P', 5],
+          ])
+        )
       },
       {
         order_id: order5,
         product_id: productTwoId,
+        quantity: 1,
       },
       {
         order_id: order5,
         product_id: productThreeId,
+        quantity: 1,
       },
       {
         order_id: order6,
         product_id: productThreeId,
+        quantity: 1,
       },
 
       {
         order_id: order7,
         product_id: productOneId,
+        quantity: 1,
+        attributes: JSON.stringify(
+          orderProductsAttrFactory([
+            [attributeTypes.sizes, 'P', 5],
+          ])
+        )
       },
       {
         order_id: order7,
         product_id: productTwoId,
+        quantity: 3,
       },
       {
         order_id: order8,
         product_id: productOneId,
+        quantity: 1,
+        attributes: JSON.stringify(
+          orderProductsAttrFactory([
+            [attributeTypes.sizes, 'M', 10],
+            [attributeTypes.additionals, 'borda catupiry', 4],
+            [attributeTypes.additionals, 'catchup', 0, 5]
+          ])
+        )
       },
       {
         order_id: order8,
         product_id: productTwoId,
+        quantity: 1,
       },
       {
         order_id: order8,
         product_id: productThreeId,
+        quantity: 1,
       },
       {
         order_id: order9,
         product_id: productThreeId,
+        quantity: 1,
       },
       {
         order_id: order10,
         product_id: productThreeId,
+        quantity: 1,
       },
     ]);
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    await queryInterface.bulkDelete('orders', null, {});
   },
 };

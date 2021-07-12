@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(UsersController.basePath, UsersController.setRouter());
-app.use(BranchesController.basePath, BranchesController.setRouter());
+// app.use(BranchesController.basePath, BranchesController.setRouter());
 
 app.use(errorHandler);
 
