@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
 const QueryInterface = require('../Entities/QueryInterface');
-const queryAttributesFactory = require('../Entities/Factories/queryAttributesFactory');
+const queryAttributesFactory = require('../helpers/Factories/queryAttributesFactory');
 
 class BranchQueries extends QueryInterface {
   findAll({ id, query }) {

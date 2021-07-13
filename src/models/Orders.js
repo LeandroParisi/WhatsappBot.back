@@ -64,7 +64,7 @@ const createOrders = (sequelize, DataTypes) => {
 
   Orders.associate = (models) => {
     Orders.belongsTo(models.Customers, {
-      as: 'customerOrders',
+      as: 'customer',
       foreignKey: 'customerId',
     });
     Orders.belongsTo(models.Branches, {

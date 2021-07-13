@@ -67,7 +67,7 @@ const createCustomers = (sequelize, DataTypes) => {
 
   Customers.associate = (models) => {
     Customers.hasMany(models.Orders, {
-      as: 'customerOrders',
+      as: 'customer',
       foreignKey: 'customerId',
     });
     Customers.belongsTo(models.Countries, {

@@ -40,7 +40,7 @@ module.exports = {
           //   }
           // ]
         },
-        maxUses: {
+        max_uses: {
           type: Sequelize.INTEGER,
           allowNull: true,
         },
