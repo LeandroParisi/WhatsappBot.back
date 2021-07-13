@@ -2,7 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const { errorHandler } = require('./middlewares/errorHandler/errorHandler');
-const { UsersRouter } = require('./controllers');
+const { UsersRouter, BranchesRouter, OrdersRouter } = require('./controllers');
 
 require('dotenv').config();
 
@@ -20,7 +20,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(UsersRouter.basePath, UsersRouter.setRouter());
-// app.use(BranchesController.basePath, BranchesController.setRouter());
+app.use(BranchesRouter.basePath, BranchesRouter.setRouter());
+app.use(OrdersRouter.basePath, OrdersRouter.setRouter());
 
 app.use(errorHandler);
 

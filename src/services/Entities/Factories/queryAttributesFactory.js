@@ -1,7 +1,7 @@
 const queryAttributesFactory = ({ columns }) => {
   let attributes = [];
 
-  if (attributes) {
+  if (columns) {
     attributes = columns.split(',');
   }
 

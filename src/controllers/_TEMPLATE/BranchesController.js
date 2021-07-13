@@ -6,16 +6,12 @@ const { _METHODS, status } = require('../../libs');
 const { _resMessages } = require('../../libs');
 
 class BranchController extends BaseController {
-  async findAll(req, res) {
-    const { user, query } = req;
-    const data = await this.service.findAll({ user, query });
-    res.status(status.ok).json({ data });
-  }
+
 }
 
 const BranchesController = new BranchController(BranchesService);
 
-BranchesController.removeEndpoints(['deleteOne']);
-BranchesController.addMiddlewares('all', [authenticateUser]);
+// BranchesController.removeEndpoints(['deleteOne']);
+// BranchesController.addMiddlewares('all', [authenticateUser]);
 
 module.exports = BranchesController;

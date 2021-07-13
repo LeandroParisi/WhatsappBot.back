@@ -4,7 +4,7 @@ const { status, errorMessages } = require('../../libs');
 const { FireError } = require('../../middlewares/errorHandler/errorHandler');
 const { Users } = require('../../models');
 const BaseService = require('../Entities/BaseService');
-const UserQueries = require('./UsersQueries');
+const UsersQueries = require('./UsersQueries');
 
 class UsersService extends BaseService {
   async login(payload) {
@@ -39,4 +39,4 @@ class UsersService extends BaseService {
   }
 }
 
-module.exports = new UsersService(Users, UserQueries);
+module.exports = new UsersService(Users, UsersQueries);

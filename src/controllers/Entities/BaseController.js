@@ -1,6 +1,6 @@
 const { METHODS, status, resMessages } = require('../../libs');
 
-class BaseRoutes {
+class BaseController {
   constructor(service) {
     this.routes = {
       activate: {
@@ -92,8 +92,9 @@ class BaseRoutes {
     res.status(status.ok).json({ deletedEntity });
   }
 
-  async findAll(_req, res) {
-    const data = await this.service.findAll();
+  async findAll(req, res) {
+    const { query } = req;
+    const data = await this.service.findAll({ query });
     res.status(status.ok).json({ data });
   }
 
@@ -142,4 +143,4 @@ class BaseRoutes {
   }
 }
 
-module.exports = BaseRoutes;
+module.exports = BaseController;
