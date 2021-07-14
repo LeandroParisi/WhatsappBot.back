@@ -12,13 +12,13 @@ const colBuilder = (sequelize) => (associations) => {
     const camelCasedColumn = camelCaseColumn(column);
     const fkColumn = `${camelCasedColumn}Id`;
 
-    const literal = [
+    const col = [
       sequelize.col(`${association}.${column}`),
       `${camelCasedColumn}`,
     ];
 
     colExclude.push(fkColumn);
-    colInclude.push(literal);
+    colInclude.push(col);
   });
 
   return { colExclude, colInclude };

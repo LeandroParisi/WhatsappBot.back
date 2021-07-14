@@ -43,6 +43,7 @@ class OrderQueries extends QueryInterface {
           ...colExclude,
           'updatedAt',
           'branchId',
+          'customerId',
         ],
       },
       include: [
