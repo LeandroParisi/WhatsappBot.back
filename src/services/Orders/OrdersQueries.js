@@ -11,6 +11,7 @@ const QueryInterface = require('../Entities/QueryInterface');
 const associationsFactory = require('../helpers/QueryBuilders/AssociationsFactory');
 const customerAssociationsFactory = require('../helpers/defaultAssociations/customerAssociations');
 const { addressIds, timeStamps } = require('../helpers/exclusions');
+const whereTranslator = require('../helpers/QueryBuilders/whereTranslator');
 
 const {
   customerAssociations,
@@ -34,7 +35,7 @@ class OrderQueries extends QueryInterface {
     const { colExclude, colInclude } = colBuilder(associations);
 
     return {
-      where: query,
+      where: whereTranslator(query),
       attributes: {
         include: [
           ...colInclude,
@@ -67,6 +68,7 @@ class OrderQueries extends QueryInterface {
           },
         },
       ],
+      order: ['createdAt'],
     };
   }
 }

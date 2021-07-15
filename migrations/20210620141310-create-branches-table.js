@@ -107,11 +107,16 @@ module.exports = {
       }, { transaction });
 
       await transaction.commit();
+      
+      await queryInterface.addIndex('branches', ['user_id'], { transaction });
+    
     } catch (error) {
       await transaction.rollback();
       throw error;
     }
   },
+
+
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('branches');
