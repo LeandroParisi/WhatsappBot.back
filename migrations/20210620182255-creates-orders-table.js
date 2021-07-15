@@ -111,6 +111,8 @@ module.exports = {
           defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
+      
+      await queryInterface.addIndex('orders', ['branch_id'], { transaction });
 
       await transaction.commit();
     } catch (error) {

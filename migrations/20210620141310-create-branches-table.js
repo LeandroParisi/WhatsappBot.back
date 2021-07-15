@@ -106,10 +106,10 @@ module.exports = {
         },
       }, { transaction });
 
-      await transaction.commit();
-      
       await queryInterface.addIndex('branches', ['user_id'], { transaction });
-    
+
+      await transaction.commit();
+        
     } catch (error) {
       await transaction.rollback();
       throw error;
