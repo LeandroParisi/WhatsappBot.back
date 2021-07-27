@@ -82,8 +82,8 @@ class BaseController {
   async updateOne(req, res) {
     const payload = req.body;
     const { id } = req.params;
-    await this.service.updateOne(id, payload);
-    res.status(status.ok).json({ message: resMessages.updateSuccess });
+    const data = await this.service.updateOne(id, payload);
+    res.status(status.ok).json({ data, message: resMessages.updateSuccess });
   }
 
   async deleteOne(req, res) {

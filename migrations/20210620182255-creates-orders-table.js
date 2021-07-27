@@ -1,3 +1,6 @@
+const { orderStatus } = require('../src/interfaces/models/Orders');
+
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
@@ -24,6 +27,10 @@ module.exports = {
             model: 'customers',
             key: 'id',
           },
+        },
+        order_number: {
+          type: Sequelize.INTEGER,
+          autoIncrement: true,
         },
         sub_total: {
           allowNull: false,
@@ -62,12 +69,7 @@ module.exports = {
         status: {
           allowNull: false,
           type: Sequelize.ENUM(
-            'placed',
-            'to_do',
-            'in_production',
-            'ready_to_deliver',
-            'dispatched',
-            'fullfilled',
+            ...orderStatus
           ),
         },
         coupom_id: {
@@ -111,8 +113,10 @@ module.exports = {
           defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
-      
+
       await queryInterface.addIndex('orders', ['branch_id'], { transaction });
+
+      await queryInterface.addIndex('orders', ['order_number'], { transaction });
 
       await transaction.commit();
     } catch (error) {

@@ -5,6 +5,7 @@ const {
   PaymentMethods,
   Customers,
   Sequelize,
+  Products,
 } = require('../../models');
 const colBuilder = require('../helpers/QueryBuilders/SequelizeCol');
 const QueryInterface = require('../Entities/QueryInterface');
@@ -66,6 +67,12 @@ class OrderQueries extends QueryInterface {
               ...timeStamps,
             ],
           },
+        },
+        {
+          model: Products,
+          as: 'orderProducts',
+          through: { attributes: ['quantity', 'attributes'] },
+          attributes: { exclude: ['attributes'] },
         },
       ],
       order: ['createdAt'],

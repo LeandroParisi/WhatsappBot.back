@@ -2,6 +2,8 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 
+const { orderStatus } = require('../interfaces/models/Orders');
+
 const createOrders = (sequelize, DataTypes) => {
   const Orders = sequelize.define('Orders', {
     id: {
@@ -13,6 +15,9 @@ const createOrders = (sequelize, DataTypes) => {
     },
     customerId: {
       type: DataTypes.UUID,
+    },
+    orderNumber: {
+      type: DataTypes.INTEGER,
     },
     subTotal: {
       type: DataTypes.DECIMAL(10, 2),
@@ -34,12 +39,7 @@ const createOrders = (sequelize, DataTypes) => {
     },
     status: {
       type: DataTypes.ENUM(
-        'placed',
-        'to_do',
-        'in_production',
-        'ready_to_deliver',
-        'dispatched',
-        'fullfilled',
+        ...orderStatus,
       ),
     },
     coupomId: {
