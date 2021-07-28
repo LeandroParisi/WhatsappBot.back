@@ -4,6 +4,11 @@ module.exports = {
 
     try {
       await queryInterface.createTable('orders_products', {
+        id: {
+          type: Sequelize.INTEGER,
+          primaryKey: true,
+          autoIncrement: true,
+        },
         order_id: {
           allowNull: false,
           foreignKey: true,

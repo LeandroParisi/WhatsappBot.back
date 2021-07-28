@@ -6,17 +6,23 @@ const {
   Customers,
   Sequelize,
   Products,
+  OrdersProducts,
 } = require('../../models');
-const colBuilder = require('../helpers/QueryBuilders/SequelizeCol');
+const colBuilder = require('../helpers/QueryBuilders/sequelizeCol');
 const QueryInterface = require('../Entities/QueryInterface');
-const associationsFactory = require('../helpers/QueryBuilders/AssociationsFactory');
+const associationsFactory = require('../helpers/QueryBuilders/associationsFactory');
 const customerAssociationsFactory = require('../helpers/defaultAssociations/customerAssociations');
+const productsAssociationsFactory = require('../helpers/defaultAssociations/productsAssociations');
 const { addressIds, timeStamps } = require('../helpers/exclusions');
 const whereTranslator = require('../helpers/QueryBuilders/whereTranslator');
 
 const {
   customerAssociations,
 } = customerAssociationsFactory();
+
+const {
+  productsAssociations,
+} = productsAssociationsFactory();
 
 class OrderQueries extends QueryInterface {
   findAll({ query }) {
@@ -29,10 +35,10 @@ class OrderQueries extends QueryInterface {
         model: PaymentMethods,
         column: 'payment_method',
       },
+
     };
 
     const includedAssociations = associationsFactory(associations);
-
     const { colExclude, colInclude } = colBuilder(associations);
 
     return {
@@ -51,6 +57,33 @@ class OrderQueries extends QueryInterface {
       include: [
         ...includedAssociations,
         {
+          model: OrdersProducts,
+          as: 'ordersProducts',
+          attributes: {
+            include: [
+              [Sequelize.literal('"ordersProducts->productsOrders".ingredients'), 'ingredients'],
+              [Sequelize.literal('"ordersProducts->productsOrders".base_price'), 'basePrice'],
+              [Sequelize.literal('"ordersProducts->productsOrders".description'), 'description'],
+              [Sequelize.literal('"ordersProducts->productsOrders".name'), 'name'],
+              [Sequelize.literal('"ordersProducts->productsOrders->productCategory".category_name'), 'categoryName'],
+            ],
+            exclude: [
+              'id',
+              'orderId',
+            ],
+          },
+          include: [
+            {
+              model: Products,
+              as: 'productsOrders',
+              include: [
+                ...productsAssociations,
+              ],
+              attributes: [],
+            },
+          ],
+        },
+        {
           model: Customers,
           as: 'customer',
           include: [
@@ -67,12 +100,6 @@ class OrderQueries extends QueryInterface {
               ...timeStamps,
             ],
           },
-        },
-        {
-          model: Products,
-          as: 'orderProducts',
-          through: { attributes: ['quantity', 'attributes'] },
-          attributes: { exclude: ['attributes'] },
         },
       ],
       order: ['createdAt'],

@@ -3,8 +3,8 @@ const {
   States,
   Cities,
 } = require('../../../models');
-const associationsFactory = require('../QueryBuilders/AssociationsFactory');
-const colBuilder = require('../QueryBuilders/SequelizeCol');
+const associationsFactory = require('../QueryBuilders/associationsFactory');
+const colBuilder = require('../QueryBuilders/sequelizeCol');
 
 const customerAssociationsFactory = () => {
   const associations = {

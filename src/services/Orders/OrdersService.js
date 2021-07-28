@@ -5,6 +5,8 @@ const groupOrdersByStatus = require('./serializers/groupOrdersByStatus');
 
 class OrderService extends BaseService {
   async findAll({ query }) {
+    // const data = await this.queries.findAll({ query });
+    // return data;
     const data = await super.findAll({ query });
     return groupOrdersByStatus(data);
   }
