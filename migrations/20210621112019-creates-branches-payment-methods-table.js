@@ -4,6 +4,11 @@ module.exports = {
 
     try {
       await queryInterface.createTable('branches_payment_methods', {
+        id: {
+          type: Sequelize.INTEGER,
+          primaryKey: true,
+          autoIncrement: true,
+        },
         branch_id: {
           allowNull: false,
           foreignKey: true,

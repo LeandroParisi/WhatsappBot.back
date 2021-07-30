@@ -4,6 +4,10 @@
 
 const createBranchesMenus = (sequelize, DataTypes) => {
   const BranchesMenus = sequelize.define('BranchesMenus', {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     branchId: {
       foreignKey: true,
       type: DataTypes.UUID,

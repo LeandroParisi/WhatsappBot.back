@@ -4,6 +4,10 @@
 
 const createBranchesPaymentMethods = (sequelize, DataTypes) => {
   const BranchesPaymentMethods = sequelize.define('BranchesPaymentMethods', {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     branchId: {
       foreignKey: true,
       type: DataTypes.UUID,

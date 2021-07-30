@@ -4,6 +4,10 @@
 
 const createMenusProducts = (sequelize, DataTypes) => {
   const MenusProducts = sequelize.define('MenusProducts', {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     menuId: {
       foreignKey: true,
       type: DataTypes.UUID,

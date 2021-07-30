@@ -4,6 +4,10 @@
 
 const createBranchesDeliveryTypes = (sequelize, DataTypes) => {
   const BranchesDeliveryTypes = sequelize.define('BranchesDeliveryTypes', {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     branchId: {
       foreignKey: true,
       type: DataTypes.UUID,

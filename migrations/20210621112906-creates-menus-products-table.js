@@ -4,6 +4,11 @@ module.exports = {
 
     try {
       await queryInterface.createTable('menus_products', {
+        id: {
+          type: Sequelize.INTEGER,
+          primaryKey: true,
+          autoIncrement: true,
+        },
         menu_id: {
           allowNull: false,
           foreignKey: true,

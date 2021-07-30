@@ -4,6 +4,10 @@
 
 const createPromotionsProducts = (sequelize, DataTypes) => {
   const PromotionsProducts = sequelize.define('PromotionsProducts', {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     promotionId: {
       foreignKey: true,
       type: DataTypes.INTEGER,
