@@ -59,11 +59,6 @@ const createProducts = (sequelize, DataTypes) => {
       as: 'productsOrders',
       foreignKey: 'productId',
     });
-    // Products.belongsToMany(models.Orders, {
-    //   through: { model: 'OrdersProducts', unique: false },
-    //   foreignKey: 'productId',
-    //   as: 'orderProducts',
-    // });
   };
 
   return Products;

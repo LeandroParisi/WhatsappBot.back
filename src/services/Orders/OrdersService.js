@@ -1,6 +1,6 @@
 const { Orders } = require('../../models');
 const BaseService = require('../Entities/BaseService');
-const OrdersQueries = require('./OrdersQueries');
+const OrdersQueries = require('../../queries/Orders/OrdersQueries');
 const groupOrdersByStatus = require('./serializers/groupOrdersByStatus');
 
 class OrderService extends BaseService {

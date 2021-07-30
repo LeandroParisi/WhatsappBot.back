@@ -1,6 +1,8 @@
-const { Branches } = require('../../models');
+const rfr = require('rfr');
+
+const { Branches } = rfr('src/models');
+const BranchesQueries = rfr('src/queries/Branches/BranchesQueries');
 const BaseService = require('../Entities/BaseService');
-const BranchesQueries = require('./BranchesQueries');
 
 class BranchServices extends BaseService {
   async findAll({ user, query }) {

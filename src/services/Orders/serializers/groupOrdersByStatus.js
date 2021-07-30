@@ -1,4 +1,4 @@
-const { camelCaseColumn } = require('../../helpers/QueryBuilders/utils');
+const { camelCaseColumn } = require('../../../queries/helpers/QueryBuilders/utils');
 const { orderStatus } = require('../../../interfaces/models/Orders');
 
 const groupOrdersByStatus = (orders) => {

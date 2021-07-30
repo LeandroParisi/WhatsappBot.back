@@ -20,6 +20,9 @@ const createOrdersProducts = (sequelize, DataTypes) => {
     quantity: {
       type: DataTypes.INTEGER,
     },
+    totalPrice: {
+      type: DataTypes.DECIMAL(10, 2),
+    },
     attributes: {
       type: DataTypes.JSONB,
     },

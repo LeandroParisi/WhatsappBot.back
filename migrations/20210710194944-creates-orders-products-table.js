@@ -36,6 +36,10 @@ module.exports = {
           type: Sequelize.INTEGER,
           defaultValue: 1
         },
+        total_price: {
+          allowNull: false,
+          type: Sequelize.DECIMAL(10, 2),
+        },
         attributes: {
           allowNull: true,
           type: Sequelize.JSONB,

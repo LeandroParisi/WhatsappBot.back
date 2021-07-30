@@ -7,6 +7,7 @@ const productOneId = uuid();
 const productTwoId = uuid();
 const productThreeId = uuid();
 
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('products', [

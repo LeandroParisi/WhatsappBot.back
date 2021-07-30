@@ -17,6 +17,7 @@ const order8 = uuid();
 const order9 = uuid();
 const order10 = uuid();
 
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('orders', [
@@ -157,6 +158,7 @@ module.exports = {
       {
         order_id: order1,
         product_id: productOneId,
+        total_price: 10.10,
         quantity: 1,
         attributes: JSON.stringify(
           orderProductsAttrFactory([
@@ -169,6 +171,7 @@ module.exports = {
       {
         order_id: order1,
         product_id: productOneId,
+        total_price: 10.10,
         quantity: 1,
         attributes: JSON.stringify(
           orderProductsAttrFactory([
@@ -181,11 +184,13 @@ module.exports = {
       {
         order_id: order1,
         product_id: productTwoId,
+        total_price: 10.10,
         quantity: 2,
       },
       {
         order_id: order2,
         product_id: productOneId,
+        total_price: 10.10,
         quantity: 1,
         attributes: JSON.stringify(
           orderProductsAttrFactory([
@@ -198,11 +203,13 @@ module.exports = {
       {
         order_id: order2,
         product_id: productTwoId,
+        total_price: 10.10,
         quantity: 3,
       },
       {
         order_id: order2,
         product_id: productThreeId,
+        total_price: 10.10,
         quantity: 1,
         attributes: JSON.stringify(
           orderProductsAttrFactory([
@@ -214,6 +221,7 @@ module.exports = {
       {
         order_id: order3,
         product_id: productThreeId,
+        total_price: 10.10,
         quantity: 1,
         attributes: JSON.stringify(
           orderProductsAttrFactory([
@@ -226,6 +234,7 @@ module.exports = {
       {
         order_id: order4,
         product_id: productOneId,
+        total_price: 10.10,
         quantity: 1,
         attributes: JSON.stringify(
           orderProductsAttrFactory([
@@ -236,11 +245,13 @@ module.exports = {
       {
         order_id: order4,
         product_id: productTwoId,
+        total_price: 10.10,
         quantity: 1,
       },
       {
         order_id: order5,
         product_id: productOneId,
+        total_price: 10.10,
         quantity: 1,
         attributes: JSON.stringify(
           orderProductsAttrFactory([
@@ -251,22 +262,26 @@ module.exports = {
       {
         order_id: order5,
         product_id: productTwoId,
+        total_price: 10.10,
         quantity: 1,
       },
       {
         order_id: order5,
         product_id: productThreeId,
+        total_price: 10.10,
         quantity: 1,
       },
       {
         order_id: order6,
         product_id: productThreeId,
+        total_price: 10.10,
         quantity: 1,
       },
 
       {
         order_id: order7,
         product_id: productOneId,
+        total_price: 10.10,
         quantity: 1,
         attributes: JSON.stringify(
           orderProductsAttrFactory([
@@ -277,11 +292,13 @@ module.exports = {
       {
         order_id: order7,
         product_id: productTwoId,
+        total_price: 10.10,
         quantity: 3,
       },
       {
         order_id: order8,
         product_id: productOneId,
+        total_price: 10.10,
         quantity: 1,
         attributes: JSON.stringify(
           orderProductsAttrFactory([
@@ -294,21 +311,25 @@ module.exports = {
       {
         order_id: order8,
         product_id: productTwoId,
+        total_price: 10.10,
         quantity: 1,
       },
       {
         order_id: order8,
         product_id: productThreeId,
+        total_price: 10.10,
         quantity: 1,
       },
       {
         order_id: order9,
         product_id: productThreeId,
+        total_price: 10.10,
         quantity: 1,
       },
       {
         order_id: order10,
         product_id: productThreeId,
+        total_price: 10.10,
         quantity: 1,
       },
     ]);

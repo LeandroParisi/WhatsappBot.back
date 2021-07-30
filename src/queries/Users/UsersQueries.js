@@ -1,4 +1,6 @@
 /* eslint-disable class-methods-use-this */
+const rfr = require('rfr');
+
 const {
   Branches,
   Countries,
@@ -9,7 +11,7 @@ const {
   OpeningHours,
   PaymentMethods,
   Menus,
-} = require('../../models');
+} = rfr('src/models');
 const QueryInterface = require('../Entities/QueryInterface');
 const { addressIds, timeStamps } = require('../helpers/exclusions');
 

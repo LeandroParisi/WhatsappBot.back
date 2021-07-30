@@ -96,6 +96,7 @@ class OrderQueries extends QueryInterface {
               [Sequelize.literal('"customer->customerCity".city_name'), 'cityName'],
             ],
             exclude: [
+              'isActive',
               ...addressIds,
               ...timeStamps,
             ],
