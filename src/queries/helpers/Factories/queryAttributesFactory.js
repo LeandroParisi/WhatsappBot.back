@@ -5,7 +5,11 @@ const queryAttributesFactory = ({ columns }) => {
     attributes = columns.split(',');
   }
 
-  return attributes;
+  if (attributes.length) {
+    return attributes;
+  }
+
+  return null;
 };
 
 module.exports = queryAttributesFactory;

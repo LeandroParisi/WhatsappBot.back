@@ -14,11 +14,10 @@ const productsAssociationsFactory = () => {
 
   const includedAssociations = associationsFactory(associations);
 
-  const { colExclude, colInclude } = colBuilder(associations);
+  const { colInclude } = colBuilder(associations);
 
   return {
     productsAssociations: includedAssociations,
-    productsExclude: colExclude,
     productsInclude: colInclude,
   };
 };

@@ -18,6 +18,7 @@ const order9 = uuid();
 const order10 = uuid();
 
 
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('orders', [
@@ -29,6 +30,7 @@ module.exports = {
         delivery_type_id: 1,
         delivery_fee: 10,
         payment_method_id: 1,
+        payment_type: 'money',
         total_price: 60,
         status: 'placed',
         estimated_delivery_time: '10m',
@@ -42,6 +44,7 @@ module.exports = {
         delivery_type_id: 2,
         delivery_fee: 10,
         payment_method_id: 2,
+        payment_type: 'pix',
         total_price: 40.22,
         status: 'placed',
         estimated_delivery_time: '10m',
@@ -55,6 +58,7 @@ module.exports = {
         delivery_type_id: 3,
         delivery_fee: 10,
         payment_method_id: 2,
+        payment_type: 'credit',
         total_price: 30,
         status: 'placed',
         estimated_delivery_time: '20m',
@@ -68,6 +72,7 @@ module.exports = {
         delivery_type_id: 1,
         delivery_fee: 10,
         payment_method_id: 2,
+        payment_type: 'debit',
         total_price: 20.32,
         status: 'placed',
         estimated_delivery_time: '30m',
@@ -81,6 +86,7 @@ module.exports = {
         delivery_type_id: 2,
         delivery_fee: 0,
         payment_method_id: 2,
+        payment_type: 'money',
         total_price: 10,
         status: 'placed',
         estimated_delivery_time: '30m',
@@ -95,6 +101,7 @@ module.exports = {
         delivery_type_id: 3,
         delivery_fee: 10,
         payment_method_id: 1,
+        payment_type: 'pix',
         total_price: 60.22,
         status: 'placed',
         estimated_delivery_time: '10m',
@@ -108,6 +115,7 @@ module.exports = {
         delivery_type_id: 1,
         delivery_fee: 10,
         payment_method_id: 2,
+        payment_type: 'credit',
         total_price: 40.22,
         status: 'placed',
         estimated_delivery_time: '10m',
@@ -121,6 +129,7 @@ module.exports = {
         delivery_type_id: 2,
         delivery_fee: 10,
         payment_method_id: 2,
+        payment_type: 'debit',
         total_price: 30.55,
         status: 'placed',
         estimated_delivery_time: '20m',
@@ -134,6 +143,7 @@ module.exports = {
         delivery_type_id: 1,
         delivery_fee: 10,
         payment_method_id: 2,
+        payment_type: 'money',
         total_price: 20.32,
         status: 'placed',
         estimated_delivery_time: '30m',
@@ -147,6 +157,7 @@ module.exports = {
         delivery_type_id: 3,
         delivery_fee: 0,
         payment_method_id: 2,
+        payment_type: 'credit',
         total_price: 10.99,
         status: 'placed',
         estimated_delivery_time: '30m',

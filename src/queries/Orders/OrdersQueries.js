@@ -39,7 +39,7 @@ class OrderQueries extends QueryInterface {
     };
 
     const includedAssociations = associationsFactory(associations);
-    const { colExclude, colInclude } = colBuilder(associations);
+    const { colInclude } = colBuilder(associations);
 
     return {
       where: whereTranslator(query),
@@ -48,7 +48,8 @@ class OrderQueries extends QueryInterface {
           ...colInclude,
         ],
         exclude: [
-          ...colExclude,
+          'paymentMethodId',
+          'deliveryTypeId',
           'updatedAt',
           'branchId',
           'customerId',

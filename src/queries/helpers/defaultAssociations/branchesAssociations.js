@@ -6,18 +6,18 @@ const {
 const associationsFactory = require('../QueryBuilders/associationsFactory');
 const colBuilder = require('../QueryBuilders/sequelizeCol');
 
-const customerAssociationsFactory = () => {
+const branchesAssociationsFactory = () => {
   const associations = {
-    customerCountry: {
+    branchCountry: {
       model: Countries,
       column: 'country_name',
     },
-    customerState: {
+    branchState: {
       model: States,
       column: 'state_name',
 
     },
-    customerCity: {
+    branchCity: {
       model: Cities,
       column: 'city_name',
     },
@@ -28,9 +28,9 @@ const customerAssociationsFactory = () => {
   const { colInclude } = colBuilder(associations);
 
   return {
-    customerAssociations: includedAssociations,
-    customerInclude: colInclude,
+    branchesAssociations: includedAssociations,
+    branchesInclude: colInclude,
   };
 };
 
-module.exports = customerAssociationsFactory;
+module.exports = branchesAssociationsFactory;
