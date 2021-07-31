@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable class-methods-use-this */
+const {
+  PaymentMethods, DeliveryTypes,
+} = require('../../models');
 const QueryInterface = require('../Entities/QueryInterface');
-const queryAttributesFactory = require('../helpers/Factories/queryAttributesFactory');
 const branchesAssociationsFactory = require('../helpers/defaultAssociations/branchesAssociations');
 
 const {
@@ -26,6 +28,16 @@ class BranchQueries extends QueryInterface {
       },
       include: [
         ...branchesAssociations,
+        {
+          model: PaymentMethods,
+          as: 'paymentMethods',
+          through: { attributes: [] },
+        },
+        {
+          model: DeliveryTypes,
+          as: 'deliveryTypes',
+          through: { attributes: [] },
+        },
       ],
     };
 
