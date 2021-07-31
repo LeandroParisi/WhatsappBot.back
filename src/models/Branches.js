@@ -27,7 +27,7 @@ const createBranches = (sequelize, DataTypes) => {
     cityId: {
       type: DataTypes.NUMBER,
     },
-    neibourhood: {
+    neighborhood: {
       type: DataTypes.STRING,
     },
     street: {

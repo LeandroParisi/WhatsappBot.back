@@ -57,10 +57,6 @@ module.exports = {
             key: 'id',
           },
         },
-        payment_type: {
-          type: Sequelize.ENUM('credit', 'debit', 'pix', 'money'),
-          allowNull: false,
-        },
         discount: {
           allowNull: false,
           type: Sequelize.DECIMAL(10, 2),

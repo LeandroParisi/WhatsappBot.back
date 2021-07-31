@@ -31,9 +31,6 @@ const createOrders = (sequelize, DataTypes) => {
     paymentMethodId: {
       type: DataTypes.INTEGER,
     },
-    paymentType: {
-      type: DataTypes.ENUM('credit', 'debit', 'pix', 'money'),
-    },
     discount: {
       type: DataTypes.DECIMAL(10, 2),
     },

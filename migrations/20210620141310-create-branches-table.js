@@ -58,7 +58,7 @@ module.exports = {
           onUpdate: 'CASCADE',
           onDelete: 'RESTRICT',
         },
-        neibourhood: {
+        neighborhood: {
           allowNull: false,
           type: Sequelize.STRING,
         },
