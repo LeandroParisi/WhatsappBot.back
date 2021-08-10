@@ -22,7 +22,6 @@ const createProducts = (sequelize, DataTypes) => {
     },
     basePrice: {
       type: DataTypes.DECIMAL(10, 2),
-
     },
     description: {
       type: DataTypes.TEXT,
