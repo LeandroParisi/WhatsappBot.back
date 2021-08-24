@@ -1,4 +1,5 @@
-const uuid = require('uuid/v4');
+const { v4: uuid } = require('uuid');
+
 const { branchOneId, branchTwoId } = require('./20210623221400-populateUsersTable');
 
 const menuOne = uuid();

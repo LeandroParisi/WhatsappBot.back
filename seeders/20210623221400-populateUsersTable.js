@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
-const uuid = require('uuid/v4');
+const { v4: uuid } = require('uuid');
+
 const { hashPassword } = require('../src/authentication/passwordHashing');
 
 const userId = uuid();

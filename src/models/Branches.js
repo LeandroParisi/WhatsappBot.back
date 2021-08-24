@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
-const uuid = require('uuid/v4');
+const { v4: uuid } = require('uuid');
 
 const createBranches = (sequelize, DataTypes) => {
   const Branches = sequelize.define('Branches', {

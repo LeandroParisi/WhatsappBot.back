@@ -1,7 +1,8 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
-const uuid = require('uuid/v4');
+
+const { v4: uuid } = require('uuid');
 const { cpf, cnpj } = require('cpf-cnpj-validator');
 const { validationErrors } = require('../libs');
 const { hashPassword } = require('../authentication/passwordHashing');

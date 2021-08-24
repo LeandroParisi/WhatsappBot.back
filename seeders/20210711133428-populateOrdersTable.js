@@ -1,4 +1,5 @@
-const uuid = require('uuid/v4');
+const { v4: uuid } = require('uuid');
+
 const { orderProductsAttrFactory } = require('../src/interfaces/attributes/attributesFactory');
 const attributeTypes = require('../src/interfaces/attributes/attributeTypes');
 const { branchOneId } = require('./20210623221400-populateUsersTable');
