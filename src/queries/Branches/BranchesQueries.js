@@ -3,7 +3,7 @@
 /* eslint-disable class-methods-use-this */
 const { Op } = require('sequelize');
 const {
-  PaymentMethods, DeliveryTypes, Sequelize,
+  PaymentMethods, DeliveryTypes, Sequelize, OpeningHours,
 } = require('../../models');
 const QueryInterface = require('../Entities/QueryInterface');
 const branchesAssociationsFactory = require('../helpers/defaultAssociations/branchesAssociations');
@@ -16,10 +16,7 @@ const {
 
 class BranchQueries extends QueryInterface {
   findAll({ id, query }) {
-    const {
-      branchName,
-      isActive,
-    } = queryWhereFactory(query);
+    const sequelizedQuery = queryWhereFactory(query, { table: 'Branches' });
 
     const {
       paymentMethod,
@@ -30,18 +27,10 @@ class BranchQueries extends QueryInterface {
       [Op.and]: [
         { userId: id },
       ],
+      ...sequelizedQuery,
     };
 
-    if (branchName) {
-      where.branchName = branchName;
-    }
-
-    if (isActive !== undefined) {
-      where.isActive = isActive;
-    }
-
     if (deliveryType) {
-      console.log(deliveryType);
       where[Op.and] = [
         ...where[Op.and],
         Sequelize.literal(
@@ -92,6 +81,42 @@ class BranchQueries extends QueryInterface {
     };
 
     return mainQuery;
+  }
+
+  updateOne(payload) {
+    return { ...payload };
+  }
+
+  findOne(query) {
+    const { id } = query;
+
+    return {
+      where: { id },
+      attributes: {
+        include: [
+          ...branchesInclude,
+        ],
+        exclude: [
+          'countryId',
+          'stateId',
+          'cityId',
+          'userId',
+        ],
+      },
+      include: [
+        ...branchesAssociations,
+        {
+          model: PaymentMethods,
+          as: 'paymentMethods',
+          through: { attributes: [] },
+        },
+        {
+          model: DeliveryTypes,
+          as: 'deliveryTypes',
+          through: { attributes: [] },
+        },
+      ],
+    };
   }
 }
 

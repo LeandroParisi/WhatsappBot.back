@@ -4,7 +4,8 @@
  * @param {array} attributes array of attributes to be created, each attribute must follow this interface: [name: string, price: integer, description: string, min: integer, max: integer]
  * @returns
  */
-const productsAttrFactory = (attributes) => attributes.map(([name, price, description, min = null, max = null]) => ({
+const productsAttrFactory = (attributes) => attributes.map(([name, price, description, min = null, max = null, id]) => ({
+  id,
   name,
   price,
   description,

@@ -8,7 +8,6 @@ const errorMessages = {
 const errorTypes = {
   validationError: 'ValidationError',
   customError: 'CustomError',
-
 };
 
 // Written in PT because it will be the message to be displayed to the user on the front end
@@ -24,6 +23,8 @@ const responseMessages = {
   loginOK: 'Logado com sucesso',
   updateSuccess: 'Sua edição foi feita com sucesso!',
   validSession: 'Sessão válida',
+  created: 'Operação realizada com sucesso!',
+  deleted: 'Operação realizada com sucesso!',
 };
 
 module.exports = {

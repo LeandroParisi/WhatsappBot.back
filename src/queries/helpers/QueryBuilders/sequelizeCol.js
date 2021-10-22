@@ -7,15 +7,18 @@ const colBuilder = (sequelize) => (associations) => {
   const associationsNames = Object.keys(associations);
 
   associationsNames.forEach((association) => {
-    const { column } = associations[association];
-    const camelCasedColumn = camelCaseColumn(column);
+    const { column = '' } = associations[association];
 
-    const col = [
-      sequelize.col(`${association}.${column}`),
-      `${camelCasedColumn}`,
-    ];
+    if (column) {
+      const camelCasedColumn = camelCaseColumn(column);
 
-    colInclude.push(col);
+      const col = [
+        sequelize.col(`${association}.${column}`),
+        `${camelCasedColumn}`,
+      ];
+
+      colInclude.push(col);
+    }
   });
 
   return { colInclude };

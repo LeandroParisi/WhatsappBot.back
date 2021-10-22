@@ -80,29 +80,29 @@ const createBranches = (sequelize, DataTypes) => {
       through: 'BranchesPaymentMethods',
       as: 'paymentMethods',
     });
-    Branches.belongsToMany(models.Menus, {
-      through: 'BranchesMenus',
-      as: 'branchMenus',
-    });
     Branches.hasOne(models.OpeningHours, {
       as: 'openingHours',
       foreignKey: 'branchId',
+    });
+    Branches.belongsToMany(models.Menus, {
+      as: 'branchesMenus',
+      through: 'BranchesMenus',
     });
     Branches.hasMany(models.Orders, {
       as: 'branchOrders',
       foreignKey: 'branchId',
     });
-    Branches.hasMany(models.Promotions, {
-      as: 'branchPromotions',
-      foreignKey: 'branchId',
+    Branches.belongsToMany(models.Promotions, {
+      as: 'branchesPromotions',
+      through: 'BranchesPromotions',
     });
     Branches.hasMany(models.Coupons, {
       as: 'branchCoupons',
       foreignKey: 'branchId',
     });
-    Branches.hasMany(models.Products, {
-      as: 'branchProducts',
-      foreignKey: 'branchId',
+    Branches.belongsToMany(models.Products, {
+      as: 'branchesProducts',
+      through: 'BranchesProducts',
     });
   };
 

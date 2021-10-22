@@ -43,7 +43,7 @@ class UserController extends BaseController {
     } catch (error) {
       throw new FireError(status.unauthorized, errorMessages.expiredSession);
     }
-    res.status(status.ok).json({ message: resMessages.validSession });
+    res.status(status.ok).json({ ok: true });
   }
 }
 

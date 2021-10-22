@@ -8,13 +8,14 @@ class BaseService {
   }
 
   // Endpoint Methods
-  async create(payload) {
-    const insertedEntity = await this.model.create(payload);
+  async create({ body, user }) {
+    console.log({ body, user });
+    const insertedEntity = await this.model.create({ body, user });
     return insertedEntity;
   }
 
-  async findAll({ query }) {
-    const data = await this.model.findAll(this.queries.findAll({ query }));
+  async findAll({ query, user }) {
+    const data = await this.model.findAll(this.queries.findAll({ query, user }));
     return data;
   }
 
@@ -29,10 +30,13 @@ class BaseService {
   }
 
   async updateOne(id, payload) {
-    const updatedEntity = await this.model.update(
+    const wasUpdated = await this.model.update(
       this.queries.updateOne(payload), { where: { id } },
     );
-    if (!updatedEntity[0]) throw new FireError(status.notFound, errorMessages.notFound);
+
+    const updatedEntity = await this.model.findOne(this.queries.findOne({ id }));
+
+    if (!wasUpdated[0]) throw new FireError(status.notFound, errorMessages.notFound);
     return updatedEntity;
   }
 

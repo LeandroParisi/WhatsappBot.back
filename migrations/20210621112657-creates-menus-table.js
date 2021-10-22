@@ -14,6 +14,10 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
+        image: {
+          allowNull: true,
+          type: Sequelize.STRING,
+        },
         description: {
           allowNull: true,
           type: Sequelize.TEXT,
@@ -32,6 +36,8 @@ module.exports = {
           defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
+
+
 
       await transaction.commit();
     } catch (error) {

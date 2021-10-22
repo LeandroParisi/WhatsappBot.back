@@ -13,31 +13,33 @@ module.exports = {
         branch_id: {
           allowNull: false,
           type: Sequelize.UUID,
+          onDelete: 'CASCADE',
+          onUpdate: 'CASCADE',
           references: {
             model: 'branches',
             key: 'id',
           },
         },
         monday: {
-          type: Sequelize.STRING,
+          type: Sequelize.JSONB,
         },
         tuesday: {
-          type: Sequelize.STRING,
+          type: Sequelize.JSONB,
         },
         wednesday: {
-          type: Sequelize.STRING,
+          type: Sequelize.JSONB,
         },
         thursday: {
-          type: Sequelize.STRING,
+          type: Sequelize.JSONB,
         },
         friday: {
-          type: Sequelize.STRING,
+          type: Sequelize.JSONB,
         },
         saturday: {
-          type: Sequelize.STRING,
+          type: Sequelize.JSONB,
         },
         sunday: {
-          type: Sequelize.STRING,
+          type: Sequelize.JSONB,
         },
         updated_at: {
           type: Sequelize.DATE,

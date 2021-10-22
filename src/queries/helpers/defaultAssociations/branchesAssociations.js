@@ -2,6 +2,7 @@ const {
   Countries,
   States,
   Cities,
+  OpeningHours,
 } = require('../../../models');
 const associationsFactory = require('../QueryBuilders/associationsFactory');
 const colBuilder = require('../QueryBuilders/sequelizeCol');
@@ -20,6 +21,10 @@ const branchesAssociationsFactory = () => {
     branchCity: {
       model: Cities,
       column: 'city_name',
+    },
+    openingHours: {
+      model: OpeningHours,
+      attributes: ['monday', 'thursday', 'wednesday', 'tuesday', 'friday', 'saturday', 'sunday'],
     },
   };
 

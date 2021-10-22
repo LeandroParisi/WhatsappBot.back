@@ -1,14 +1,12 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
+const { v4: uuid } = require('uuid');
 
 const createProducts = (sequelize, DataTypes) => {
   const Products = sequelize.define('Products', {
     id: {
       primaryKey: true,
-      type: DataTypes.UUID,
-    },
-    branchId: {
       type: DataTypes.UUID,
     },
     categoryId: {
@@ -17,8 +15,12 @@ const createProducts = (sequelize, DataTypes) => {
     name: {
       type: DataTypes.STRING,
     },
+    image: {
+      type: DataTypes.STRING,
+    },
     attributes: {
       type: DataTypes.JSONB,
+      defaultValue: JSON.stringify([]),
     },
     basePrice: {
       type: DataTypes.DECIMAL(10, 2),
@@ -27,20 +29,24 @@ const createProducts = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
     },
     ingredients: {
-      type: DataTypes.TEXT,
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      defaultValue: [],
     },
     avaiability: {
       type: DataTypes.ARRAY(DataTypes.INTEGER),
+      defaultValue: [],
     },
     isActive: {
       type: DataTypes.BOOLEAN,
     },
   }, { underscored: true });
 
+  Products.beforeCreate((product) => product.id = uuid());
+
   Products.associate = (models) => {
-    Products.belongsTo(models.Branches, {
-      as: 'branchProducts',
-      foreignKey: 'branchId',
+    Products.belongsToMany(models.Branches, {
+      through: 'BranchesProducts',
+      as: 'branchesProducts',
     });
     Products.belongsToMany(models.Menus, {
       through: 'MenusProducts',

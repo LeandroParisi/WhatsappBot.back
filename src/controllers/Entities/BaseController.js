@@ -58,13 +58,13 @@ class BaseController {
   async activate(req, res) {
     const { id } = req.params;
     const data = await this.service.activate(id);
-    res.status(status.ok).json({ data });
+    res.status(status.ok).json({ data, message: resMessages.updateSuccess });
   }
 
   async deActivate(req, res) {
     const { id } = req.params;
     const data = await this.service.deActivate(id);
-    res.status(status.ok).json({ data });
+    res.status(status.ok).json({ data, message: resMessages.updateSuccess });
   }
 
   async findOne(req, res) {
@@ -88,20 +88,20 @@ class BaseController {
 
   async deleteOne(req, res) {
     const { id } = req.params;
-    const deletedEntity = await this.service.deleteOne(id);
-    res.status(status.ok).json({ deletedEntity });
+    await this.service.deleteOne(id);
+    res.status(status.ok).json({ data: 'ok', message: resMessages.deleted });
   }
 
   async findAll(req, res) {
-    const { query } = req;
-    const data = await this.service.findAll({ query });
+    const { query, user } = req;
+    const data = await this.service.findAll({ query, user });
     res.status(status.ok).json({ data });
   }
 
   async create(req, res) {
-    const payload = req.body;
-    const insertedEntity = await this.service.create(payload);
-    res.status(status.created).json({ insertedEntity });
+    const { body, user } = req;
+    const data = await this.service.create({ body, user });
+    res.status(status.created).json({ data, message: resMessages.created });
   }
 
   /**

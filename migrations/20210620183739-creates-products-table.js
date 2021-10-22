@@ -10,14 +10,6 @@ module.exports = {
           type: Sequelize.UUID,
           defaultValue: Sequelize.UUIDV4,
         },
-        branch_id: {
-          allowNull: false,
-          type: Sequelize.UUID,
-          references: {
-            model: 'branches',
-            key: 'id',
-          },
-        },
         category_id: {
           allowNull: false,
           type: Sequelize.INTEGER,
@@ -30,25 +22,32 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        attributes: {
+        image: {
           allowNull: true,
+          type: Sequelize.STRING,
+        },
+        attributes: {
+          allowNull: false,
           type: Sequelize.JSONB,
+          defaultValue: '[]',
         },
         base_price: {
           allowNull: true,
           type: Sequelize.DECIMAL(10, 2),
         },
         description: {
-          allowNull: false,
+          allowNull: true,
           type: Sequelize.TEXT,
         },
         ingredients: {
-          allowNull: true,
+          allowNull: false,
           type: Sequelize.ARRAY(Sequelize.STRING),
+          defaultValue: [],
         },
         avaiability: {
-          allowNull: true,
+          allowNull: false,
           type: Sequelize.ARRAY(Sequelize.INTEGER),
+          defaultValue: [],
         },
         is_active: {
           allowNull: false,

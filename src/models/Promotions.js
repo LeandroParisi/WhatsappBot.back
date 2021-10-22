@@ -8,8 +8,8 @@ const createPromotions = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    branchId: {
-      type: DataTypes.UUID,
+    name: {
+      type: DataTypes.STRING,
     },
     totalPrice: {
       type: DataTypes.DECIMAL(10, 2),
@@ -23,6 +23,9 @@ const createPromotions = (sequelize, DataTypes) => {
     isActive: {
       type: DataTypes.BOOLEAN,
     },
+    image: {
+      type: DataTypes.STRING,
+    },
   }, { underscored: true });
 
   Promotions.associate = (models) => {
@@ -30,9 +33,9 @@ const createPromotions = (sequelize, DataTypes) => {
       as: 'orderPromotion',
       foreignKey: 'promotionId',
     });
-    Promotions.belongsTo(models.Branches, {
-      as: 'branchPromotions',
-      foreignKey: 'branchId',
+    Promotions.belongsToMany(models.Branches, {
+      as: 'branchesPromotions',
+      through: 'BranchesPromotions',
     });
     Promotions.belongsToMany(models.Products, {
       through: 'PromotionsProducts',

@@ -10,13 +10,9 @@ module.exports = {
           type: Sequelize.INTEGER,
           autoIncrement: true,
         },
-        branch_id: {
+        name: {
           allowNull: false,
-          type: Sequelize.UUID,
-          references: {
-            model: 'branches',
-            key: 'id',
-          },
+          type: Sequelize.STRING,
         },
         total_price: {
           allowNull: false,
@@ -33,6 +29,9 @@ module.exports = {
           allowNull: false,
           type: Sequelize.BOOLEAN,
           defaultValue: true,
+        },
+        image: {
+          type: Sequelize.STRING,
         },
         updated_at: {
           type: Sequelize.DATE,

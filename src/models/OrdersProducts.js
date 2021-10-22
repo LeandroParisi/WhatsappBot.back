@@ -23,7 +23,6 @@ const createOrdersProducts = (sequelize, DataTypes) => {
     totalPrice: {
       type: DataTypes.DECIMAL(10, 2),
     },
-
     attributes: {
       type: DataTypes.JSONB,
     },

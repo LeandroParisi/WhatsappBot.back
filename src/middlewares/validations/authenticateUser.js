@@ -4,7 +4,6 @@ const { FireError } = require('../errorHandler/errorHandler');
 require('dotenv/config');
 
 const authenticateUser = async (req, _res, next) => {
-  console.log('AUTHENTICATE');
   const { wbt } = req.cookies;
   if (!wbt) throw new FireError(status.unauthorized, errorMessages.expiredSession);
   try {

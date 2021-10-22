@@ -4,12 +4,13 @@ const associationsFactory = (associations) => {
   const includedAssociations = [];
 
   associationsNames.forEach((association) => {
-    const { model } = associations[association];
+    const { model, attributes = [], options = {} } = associations[association];
 
     includedAssociations.push({
       model,
-      attributes: [],
+      attributes,
       as: association,
+      ...options,
     });
   });
 

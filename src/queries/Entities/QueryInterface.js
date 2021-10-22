@@ -12,11 +12,11 @@ class QueryInterface {
     return { where: query, attributes: { exclude: ['createdAt', 'updatedAt'] } };
   }
 
-  updateOne(payload) {
-    return { ...payload };
+  updateOne(body) {
+    return { ...body };
   }
 
-  delete(id) {
+  deleteOne(id) {
     return { where: { id } };
   }
 
@@ -26,6 +26,10 @@ class QueryInterface {
 
   deActivate() {
     return { isActive: false };
+  }
+
+  create(body) {
+    return { ...body };
   }
 }
 

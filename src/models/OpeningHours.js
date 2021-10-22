@@ -4,33 +4,29 @@
 
 const createOpeningHours = (sequelize, DataTypes) => {
   const OpeningHours = sequelize.define('OpeningHours', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-    },
     branchId: {
       type: DataTypes.UUID,
     },
     monday: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSONB,
     },
     tuesday: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSONB,
     },
     wednesday: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSONB,
     },
     thursday: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSONB,
     },
     friday: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSONB,
     },
     saturday: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSONB,
     },
     sunday: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSONB,
     },
   }, { underscored: true });
 

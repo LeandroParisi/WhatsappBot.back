@@ -16,6 +16,10 @@ const createPromotionsProducts = (sequelize, DataTypes) => {
       foreignKey: true,
       type: DataTypes.UUID,
     },
+    attributes: {
+      type: DataTypes.JSONB,
+      defaultValue: JSON.stringify([]),
+    },
   }, { underscored: true, timestamps: false });
 
   return PromotionsProducts;
