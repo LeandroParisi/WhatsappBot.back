@@ -22,6 +22,17 @@ const createPromotionsProducts = (sequelize, DataTypes) => {
     },
   }, { underscored: true, timestamps: false });
 
+  PromotionsProducts.associate = (models) => {
+    PromotionsProducts.belongsTo(models.Promotions, {
+      as: 'promotionProducts',
+      foreignKey: 'promotionId',
+    });
+    PromotionsProducts.belongsTo(models.Products, {
+      as: 'productsPromotions',
+      foreignKey: 'productId',
+    });
+  };
+
   return PromotionsProducts;
 };
 

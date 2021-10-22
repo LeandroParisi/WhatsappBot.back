@@ -52,9 +52,9 @@ const createProducts = (sequelize, DataTypes) => {
       through: 'MenusProducts',
       as: 'menuProducts',
     });
-    Products.belongsToMany(models.Promotions, {
-      through: 'PromotionsProducts',
-      as: 'promotionProducts',
+    Products.hasMany(models.PromotionsProducts, {
+      as: 'productsPromotions',
+      foreignKey: 'productId',
     });
     Products.belongsTo(models.Categories, {
       as: 'productCategory',

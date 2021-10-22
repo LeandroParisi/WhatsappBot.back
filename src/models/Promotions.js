@@ -37,9 +37,9 @@ const createPromotions = (sequelize, DataTypes) => {
       as: 'branchesPromotions',
       through: 'BranchesPromotions',
     });
-    Promotions.belongsToMany(models.Products, {
-      through: 'PromotionsProducts',
+    Promotions.hasMany(models.PromotionsProducts, {
       as: 'promotionProducts',
+      foreignKey: 'promotionId',
     });
   };
 

@@ -39,26 +39,21 @@ class PromotionQueries extends QueryInterface {
           raw: true,
           attributes: {
             include: [
-              [Sequelize.literal('"promotionProducts->products".name'), 'name'],
-              [Sequelize.literal('"promotionProducts->productsOrders".base_price'), 'basePrice'],
-              [Sequelize.literal('"promotionProducts->productsOrders".description'), 'description'],
-              [Sequelize.literal('"promotionProducts->productsOrders".name'), 'name'],
+              [Sequelize.literal('"promotionProducts->productsPromotions".name'), 'name'],
+              [Sequelize.literal('"promotionProducts->productsPromotions".id'), 'id'],
             ],
             exclude: [
               'id',
+              'promotionId',
               'productId',
             ],
           },
-        },
-        {
-          model: Products,
-          as: 'promotionProducts',
-          through: { attributes: [] },
-          raw: true,
-          attributes: [
-            'name',
-            'id',
-            [Sequelize.literal('"promotionProducts->PromotionsProducts".attributes'), 'attributes'],
+          include: [
+            {
+              model: Products,
+              as: 'productsPromotions',
+              attributes: [],
+            },
           ],
         },
       ],
