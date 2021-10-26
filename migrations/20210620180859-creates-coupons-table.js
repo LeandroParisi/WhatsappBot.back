@@ -10,46 +10,37 @@ module.exports = {
           type: Sequelize.INTEGER,
           autoIncrement: true,
         },
-        branch_id: {
-          allowNull: false,
-          type: Sequelize.UUID,
-          references: {
-            model: 'branches',
-            key: 'id',
-          },
-        },
-        cupom_code: {
+        coupom_code: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        discout: {
+        discount_type: {
           allowNull: false,
-          type: Sequelize.STRING,
+          type: Sequelize.ENUM('percentage', 'absolute_value'),
         },
-        conditions: {
+        discount: {
           allowNull: false,
-          type: Sequelize.JSONB,
-          // [
-          //   {
-          //     type: products,
-          //     condition: [1, 2, 3]
-          //   },
-          //   {
-          //     type: maxPrice,
-          //     condition: 50,
-          //   }
-          // ]
-        },
-        max_uses: {
-          type: Sequelize.INTEGER,
-          allowNull: true,
+          type: Sequelize.DECIMAL(10, 2),
         },
         used: {
           type: Sequelize.INTEGER,
           defaultValue: 0,
         },
-        due_date: {
+        price_limit: {
+          type: Sequelize.DECIMAL(10, 2),
+          allowNull: true,
+        },
+        date_limit: {
           type: Sequelize.DATE,
+          allowNull: true,
+        },
+        distance_limit: {
+          type: Sequelize.INTEGER,
+          allowNull: true,
+        },
+        uses_limit: {
+          type: Sequelize.INTEGER,
+          allowNull: true,
         },
         is_active: {
           allowNull: false,

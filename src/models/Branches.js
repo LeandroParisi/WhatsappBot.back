@@ -88,6 +88,10 @@ const createBranches = (sequelize, DataTypes) => {
       as: 'branchesMenus',
       through: 'BranchesMenus',
     });
+    Branches.belongsToMany(models.Coupons, {
+      as: 'coupomBranches',
+      through: 'CouponsBranches',
+    });
     Branches.hasMany(models.Orders, {
       as: 'branchOrders',
       foreignKey: 'branchId',

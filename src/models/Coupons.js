@@ -8,40 +8,47 @@ const createCoupons = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    branchId: {
-      type: DataTypes.UUID,
-    },
-    cupomCode: {
+    coupom_code: {
       type: DataTypes.STRING,
     },
-    discout: {
-      type: DataTypes.STRING,
+    discount_type: {
+      type: DataTypes.ENUM('percentage', 'absolute_value'),
     },
-    conditions: {
-      type: DataTypes.JSONB,
-    },
-    maxUses: {
-      type: DataTypes.INTEGER,
+    discount: {
+      type: DataTypes.DECIMAL(10, 2),
     },
     used: {
       type: DataTypes.INTEGER,
     },
-    dueDate: {
+    price_limit: {
+      type: DataTypes.DECIMAL(10, 2),
+    },
+    date_limit: {
       type: DataTypes.DATE,
     },
-    isActive: {
+    distance_limit: {
+      type: DataTypes.INTEGER,
+    },
+    uses_limit: {
+      type: DataTypes.INTEGER,
+    },
+    is_active: {
       type: DataTypes.BOOLEAN,
     },
   }, { underscored: true });
 
   Coupons.associate = (models) => {
-    Coupons.hasMany(models.Orders, {
+    Coupons.belongsToMany(models.Branches, {
+      as: 'coupomBranches',
+      through: 'CouponsBranches',
+    });
+    Coupons.belongsToMany(models.Conditions, {
+      as: 'coupomConditions',
+      through: 'CouponsConditions',
+    });
+    Coupons.hasOne(models.Orders, {
       as: 'orderCoupom',
       foreignKey: 'coupomId',
-    });
-    Coupons.belongsTo(models.Branches, {
-      as: 'branchCoupons',
-      foreignKey: 'branchId',
     });
   };
 

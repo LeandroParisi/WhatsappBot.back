@@ -3,7 +3,6 @@ const ProductsService = require('../../services/Products/ProductsService');
 
 const BaseController = require('../Entities/BaseController');
 const { METHODS, status } = require('../../libs');
-const { _resMessages } = require('../../libs');
 
 class ProductController extends BaseController {
   constructor(service) {
@@ -28,7 +27,6 @@ class ProductController extends BaseController {
 const ProductsController = new ProductController(ProductsService);
 
 ProductsController.addRoutes(ProductsController.newRoutes);
-ProductsController.removeEndpoints(['deleteOne']);
 ProductsController.addMiddlewares('all', [authenticateUser]);
 
 module.exports = ProductsController;
