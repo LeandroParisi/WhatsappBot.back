@@ -3,7 +3,13 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const { errorHandler } = require('./middlewares/errorHandler/errorHandler');
 const {
-  UsersRouter, BranchesRouter, OrdersRouter, MenusRouter, ProductsRouter, PromotionsRouter,
+  UsersRouter,
+  BranchesRouter,
+  OrdersRouter,
+  MenusRouter,
+  ProductsRouter,
+  PromotionsRouter,
+  CouponsRouter,
 } = require('./controllers');
 
 require('dotenv').config();
@@ -27,6 +33,7 @@ app.use(BranchesRouter.basePath, BranchesRouter.setRouter());
 app.use(OrdersRouter.basePath, OrdersRouter.setRouter());
 app.use(MenusRouter.basePath, MenusRouter.setRouter());
 app.use(ProductsRouter.basePath, ProductsRouter.setRouter());
+app.use(CouponsRouter.basePath, CouponsRouter.setRouter());
 
 app.use(errorHandler);
 

@@ -91,6 +91,7 @@ const createBranches = (sequelize, DataTypes) => {
     Branches.belongsToMany(models.Coupons, {
       as: 'coupomBranches',
       through: 'CouponsBranches',
+      foreignKey: 'branch_id',
     });
     Branches.hasMany(models.Orders, {
       as: 'branchOrders',
@@ -99,10 +100,6 @@ const createBranches = (sequelize, DataTypes) => {
     Branches.belongsToMany(models.Promotions, {
       as: 'branchesPromotions',
       through: 'BranchesPromotions',
-    });
-    Branches.hasMany(models.Coupons, {
-      as: 'branchCoupons',
-      foreignKey: 'branchId',
     });
     Branches.belongsToMany(models.Products, {
       as: 'branchesProducts',

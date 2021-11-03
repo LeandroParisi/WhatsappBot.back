@@ -8,11 +8,11 @@ const createCoupons = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    coupom_code: {
+    coupomCode: {
       type: DataTypes.STRING,
     },
-    discount_type: {
-      type: DataTypes.ENUM('percentage', 'absolute_value'),
+    discountType: {
+      type: DataTypes.ENUM('percentage', 'absoluteValue'),
     },
     discount: {
       type: DataTypes.DECIMAL(10, 2),
@@ -20,19 +20,19 @@ const createCoupons = (sequelize, DataTypes) => {
     used: {
       type: DataTypes.INTEGER,
     },
-    price_limit: {
+    priceLimit: {
       type: DataTypes.DECIMAL(10, 2),
     },
-    date_limit: {
+    dateLimit: {
       type: DataTypes.DATE,
     },
-    distance_limit: {
+    distanceLimit: {
       type: DataTypes.INTEGER,
     },
-    uses_limit: {
+    usesLimit: {
       type: DataTypes.INTEGER,
     },
-    is_active: {
+    isActive: {
       type: DataTypes.BOOLEAN,
     },
   }, { underscored: true });
@@ -41,10 +41,12 @@ const createCoupons = (sequelize, DataTypes) => {
     Coupons.belongsToMany(models.Branches, {
       as: 'coupomBranches',
       through: 'CouponsBranches',
+      foreignKey: 'coupom_id',
     });
     Coupons.belongsToMany(models.Conditions, {
       as: 'coupomConditions',
       through: 'CouponsConditions',
+      foreignKey: 'coupom_id',
     });
     Coupons.hasOne(models.Orders, {
       as: 'orderCoupom',

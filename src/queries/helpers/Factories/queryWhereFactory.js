@@ -3,9 +3,9 @@ const { sequelize } = require('../../../models');
 
 const toSnakeCase = require('../../../utils/toSnakeCase');
 
-const textFilters = new Set(['branchName', 'menuName', 'description', 'name']);
+const textFilters = new Set(['branchName', 'menuName', 'description', 'name', 'coupomCode']);
 const booleanFilters = new Set(['isActive']);
-const rangeFilters = new Set(['basePrice', 'totalPrice']);
+const rangeFilters = new Set(['basePrice', 'totalPrice', 'discount', 'used']);
 const fkFilters = new Set(['categoryId']);
 
 const queryWhereFactory = (query, { table }) => {

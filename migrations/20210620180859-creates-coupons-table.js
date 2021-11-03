@@ -57,6 +57,8 @@ module.exports = {
         },
       }, { transaction });
 
+      await queryInterface.addIndex('coupons', ['coupom_code'], { transaction });
+
       await transaction.commit();
     } catch (error) {
       await transaction.rollback();
