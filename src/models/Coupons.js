@@ -12,7 +12,7 @@ const createCoupons = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
     discountType: {
-      type: DataTypes.ENUM('percentage', 'absoluteValue'),
+      type: DataTypes.ENUM('percentage', 'absolute_value'),
     },
     discount: {
       type: DataTypes.DECIMAL(10, 2),

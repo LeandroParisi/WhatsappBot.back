@@ -8,7 +8,7 @@ const createConditions = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    condition: {
+    name: {
       type: DataTypes.STRING,
     },
   }, { underscored: true, timestamps: false });
