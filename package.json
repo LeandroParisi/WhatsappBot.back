@@ -36,7 +36,7 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.6.0",
     "rfr": "^1.2.3",
-    "sequelize": "^6.6.2",
+    "sequelize": "^6.9.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
