@@ -31,7 +31,16 @@ class UserController extends BaseController {
   async login(req, res) {
     const payload = req.body;
     const token = await this.service.login(payload);
-    res.cookie('wbt', token, { maxAge: 86400000, httpOnly: true });
+    res.cookie(
+      'wbt',
+      token,
+      {
+        maxAge: 86400000,
+        httpOnly: true,
+        sameSite: 'none',
+        secure: true,
+      },
+    );
     res.status(status.ok).json({ message: resMessages.loginOK });
   }
 
