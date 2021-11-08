@@ -4,6 +4,7 @@
   "description": "Back end for whatsapp Bot",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js",
     "seed": "npx sequelize-cli db:seed:all",
