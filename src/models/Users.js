@@ -4,8 +4,8 @@
 
 const { v4: uuid } = require('uuid');
 const { cpf, cnpj } = require('cpf-cnpj-validator');
-const { validationErrors } = require('../libs');
 const { hashPassword } = require('../authentication/passwordHashing');
+const { validationErrors } = require('../libs');
 
 const createUsers = (sequelize, DataTypes) => {
   const Users = sequelize.define('Users', {
@@ -13,19 +13,8 @@ const createUsers = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.UUID,
     },
-    whatsappNumber: {
+    phoneNumber: {
       type: DataTypes.STRING,
-      unique: true,
-      validate: {
-        is: {
-          args: /[0-9]{13}/,
-          msg: validationErrors.invalidZapNumberFormat,
-        },
-      },
-    },
-    whatsappId: {
-      type: DataTypes.STRING,
-      unique: true,
     },
     bussinessName: {
       type: DataTypes.STRING,

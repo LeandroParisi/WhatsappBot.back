@@ -7,8 +7,13 @@ const jwtSign = (payload, jwtSecret, jwtConfig) => (
   jwt.sign(payload, jwtSecret, jwtConfig)
 );
 
-const jwtConfig = {
+const baseConfig = {
   expiresIn: '1d',
+  algorithm: 'HS256',
+};
+
+const longerConfig = {
+  expiresIn: '7d',
   algorithm: 'HS256',
 };
 
@@ -18,7 +23,7 @@ const createJWTPayload = (user) => ({
   userData: user,
 });
 
-const generateToken = (user) => {
+const generateToken = (user, jwtConfig) => {
   const payload = createJWTPayload(user);
   const token = jwt.sign(payload, secret, jwtConfig);
   return token;
@@ -28,7 +33,8 @@ const decode = (token) => jwt.verify(token, secret);
 
 module.exports = {
   secret,
-  jwtConfig,
+  baseConfig,
+  longerConfig,
   createJWTPayload,
   jwtSign,
   generateToken,

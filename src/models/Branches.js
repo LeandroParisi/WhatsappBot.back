@@ -2,6 +2,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 const { v4: uuid } = require('uuid');
+const { validationErrors } = require('../libs');
 
 const createBranches = (sequelize, DataTypes) => {
   const Branches = sequelize.define('Branches', {
@@ -11,6 +12,20 @@ const createBranches = (sequelize, DataTypes) => {
     },
     userId: {
       type: DataTypes.UUID,
+    },
+    whatsappNumber: {
+      type: DataTypes.STRING,
+      unique: true,
+      validate: {
+        is: {
+          args: /[0-9]{13}/,
+          msg: validationErrors.invalidZapNumberFormat,
+        },
+      },
+    },
+    whatsappId: {
+      type: DataTypes.STRING,
+      unique: true,
     },
     managerName: {
       type: DataTypes.STRING,

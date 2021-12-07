@@ -20,8 +20,7 @@ module.exports = {
       [
         {
           id: userId,
-          whatsapp_number: '5531975080415',
-          whatsapp_id: '5531975080415',
+          phone_number: '5531975080415',
           bussiness_name: 'Quintal da Dirce',
           cnpj: '123456789',
           email: 'user@teste.com',
@@ -34,8 +33,7 @@ module.exports = {
         },
         {
           id: userTwoId,
-          whatsapp_number: '5531975080416',
-          whatsapp_id: '5531975080416',
+          phone_number: '5531975080416',
           bussiness_name: 'Quintal da Dirce',
           cnpj: '987654321',
           email: 'user2@teste.com',
@@ -5794,6 +5792,7 @@ module.exports = {
               [15, 12],
             ],
           }),
+          whatsapp_number: "553175080415"
         },
         {
           id: branchTwoId,
@@ -5813,6 +5812,7 @@ module.exports = {
             type: 'unique',
             fees: 5,
           }),
+          whatsapp_number: "5521993368574"
         },
         {
           id: branchThreeId,
@@ -5832,6 +5832,7 @@ module.exports = {
             type: 'unique',
             fees: 5,
           }),
+          whatsapp_number: "5521993368573"
         },
       ]);
   },

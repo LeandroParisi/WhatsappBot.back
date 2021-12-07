@@ -77,15 +77,22 @@ class UserController extends BaseController {
   }
 
   async botAuth(req, res) {
-    const payload = req.body;
-    await this.service.botAuth(payload);
-    res.status(status.ok).json({ message: resMessages.loginOK });
+    console.log('bot AUTH');
+    const { token } = req.body;
+    if (!token) throw new FireError(status.unauthorized, errorMessages.expiredSession);
+    try {
+      decode(token);
+    } catch (error) {
+      throw new FireError(status.unauthorized, errorMessages.expiredSession);
+    }
+    res.status(status.ok).json({ ok: true });
   }
 }
 
 const UsersController = new UserController(UsersService);
 
 UsersController.addRoutes(UsersController.newRoutes);
+
 UsersController.removeEndpoints(['deleteOne']);
 
 module.exports = UsersController;

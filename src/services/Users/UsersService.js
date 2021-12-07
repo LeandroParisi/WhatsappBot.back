@@ -1,4 +1,4 @@
-const { generateToken } = require('../../authentication/jwtConfig');
+const { generateToken, baseConfig, longerConfig } = require('../../authentication/jwtConfig');
 const { verifyPassword } = require('../../authentication/passwordHashing');
 const { status, errorMessages } = require('../../libs');
 const { FireError } = require('../../middlewares/errorHandler/errorHandler');
@@ -12,16 +12,17 @@ class UsersService extends BaseService {
 
     const { id, role } = await this.validateUser(email, password);
 
-    const token = generateToken({ email, id, role });
+    const token = generateToken({ email, id, role }, baseConfig);
     return token;
   }
 
   async botLogin(payload) {
     const { email, password } = payload;
 
-    const { passwordHash } = await this.validateUser(email, password);
+    const { id, role } = await this.validateUser(email, password);
 
-    return { token: passwordHash, email };
+    const token = generateToken({ email, id, role }, longerConfig);
+    return { token };
   }
 
   async botAuth(payload) {

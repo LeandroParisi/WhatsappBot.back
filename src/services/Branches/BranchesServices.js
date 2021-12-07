@@ -92,6 +92,12 @@ class BranchServices extends BaseService {
     }
     return {};
   }
+
+  async botInitialLoad(query) {
+    console.log(query);
+    const data = await super.findOne(query);
+    console.log(data);
+  }
 }
 const BranchesService = new BranchServices(Branches, BranchesQueries);
 
