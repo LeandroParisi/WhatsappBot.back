@@ -68,7 +68,15 @@ const createBranches = (sequelize, DataTypes) => {
     },
   }, { underscored: true });
 
-  Branches.beforeCreate((branch) => branch.id = uuid());
+  Branches.beforeCreate((branch) => {
+    branch.id = uuid();
+  });
+
+  // TODO;
+  // Branches.beforeUpdate((branch) => {
+  //   console.log({ branch });
+  //   branch.deliveryFees = normalizeDeliveryFee(branch.deliveryFees);
+  // });
 
   Branches.associate = (models) => {
     Branches.belongsTo(models.Users, {

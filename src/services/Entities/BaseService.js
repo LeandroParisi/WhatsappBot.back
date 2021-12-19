@@ -14,8 +14,8 @@ class BaseService {
     return insertedEntity;
   }
 
-  async findAll({ query, user }) {
-    const data = await this.model.findAll(this.queries.findAll({ query, user }));
+  async findAll({ query, user }, options) {
+    const data = await this.model.findAll(this.queries.findAll({ query, user }, options));
     return data;
   }
 

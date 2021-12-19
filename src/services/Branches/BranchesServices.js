@@ -19,6 +19,7 @@ class BranchServices extends BaseService {
 
   async updateOne(id, payload) {
     const { deliveryTypes, paymentMethods, openingHours } = payload;
+    console.log({ payload });
 
     try {
       await sequelize.transaction(async (transaction) => {

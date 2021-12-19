@@ -13,16 +13,22 @@ const QueryInterface = require('../Entities/QueryInterface');
 const { timeStamps } = require('../helpers/exclusions');
 
 class PromotionQueries extends QueryInterface {
-  findAll({ query, user: { id: userId } }) {
+  findAll({ query, user: { id: userId } }, options = {}) {
     const sequelizedQuery = queryWhereFactory(query, { table: 'Promotions' });
 
+    const where = {
+      [Op.and]: [
+        Sequelize.literal(`"branchesPromotions"."user_id" = '${userId}'`),
+      ],
+      ...sequelizedQuery,
+    };
+
+    if (options?.branchId) {
+      where[Op.and].push(Sequelize.literal(`"branchesPromotions"."id" = '${options.branchId}'`));
+    }
+
     return {
-      where: {
-        [Op.and]: [
-          Sequelize.literal(`"branchesPromotions"."user_id" = '${userId}'`),
-        ],
-        ...sequelizedQuery,
-      },
+      where,
       attributes: {
         exclude: [...timeStamps, 'branchId'],
       },

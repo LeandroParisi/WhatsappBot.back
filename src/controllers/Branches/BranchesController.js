@@ -1,5 +1,7 @@
 const authenticateUser = require('../../middlewares/validations/authenticateUser');
 const BranchesService = require('../../services/Branches/BranchesServices');
+const PromotionsService = require('../../services/Promotions/PromotionsServices');
+const UsersService = require('../../services/Users/UsersService');
 const authenticateBotUser = require('../../middlewares/validations/authenticateBotUser');
 
 const BaseController = require('../Entities/BaseController');
@@ -30,7 +32,16 @@ class BranchController extends BaseController {
     const { id: userId } = req.user;
     const { whatsappNumber } = req.body;
 
+    // TODO: possível erro de não achar a branch com o whatsappNumber passado
+    // TODO: deletar BranchesPromotions do Promotions (tinha que ser feito em nível de service)
     const data = await this.service.findOne({ userId, whatsappNumber });
+    const promotions = await PromotionsService.findAll(
+      { query: {}, user: req.user },
+      { branchId: data.dataValues.id },
+    );
+    const user = await UsersService.findByPk(userId);
+    data.dataValues.promotions = promotions.filter(({ isActive }) => isActive);
+    data.dataValues.botName = user.botName;
 
     res.status(status.ok).json({ ok: true, data });
   }
