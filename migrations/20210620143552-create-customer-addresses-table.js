@@ -3,39 +3,64 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('customers', {
+      await queryInterface.createTable('customer_addresses', {
         id: {
           allowNull: false,
           primaryKey: true,
+          type: Sequelize.INTEGER,
+          autoIncrement: true,
+        },
+        customer_id: {
+          allowNull: false,
           type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4,
+          onDelete: 'CASCADE',
+          onUpdate: 'CASCADE',
+          references: {
+            model: 'customers',
+            key: 'id',
+          },
         },
-        whatsapp_number: {
+        country_id: {
+          allowNull: false,
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'countries',
+            key: 'id',
+          },
+        },
+        state_id: {
+          allowNull: false,
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'states',
+            key: 'id',
+          },
+        },
+        city_id: {
+          allowNull: false,
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'cities',
+            key: 'id',
+          },
+        },
+        neighborhood: {
           allowNull: false,
           type: Sequelize.STRING,
-          unique: true,
         },
-        whatsapp_id: {
-          allowNull: false,
-          type: Sequelize.STRING,
-          unique: true,
-        },
-        email: {
-          allowNull: false,
-          unique: true,
-          type: Sequelize.STRING,
-        },
-        first_name: {
+        street: {
           allowNull: false,
           type: Sequelize.STRING,
         },
-        middle_name: {
+        street_number: {
+          allowNull: false,
           type: Sequelize.STRING,
         },
-        last_name: {
+        street_complement: {
+          allowNull: false,
           type: Sequelize.STRING,
         },
-        cpf: {
+        postal_code: {
           allowNull: false,
           type: Sequelize.STRING,
         },
@@ -53,13 +78,6 @@ module.exports = {
           defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
-
-      await queryInterface.addIndex('customers', ['whatsapp_number'], { transaction });
-
-      await queryInterface.addIndex('customers', ['whatsapp_id'], { transaction });
-
-      await queryInterface.addIndex('customers', ['cpf'], { transaction });
-
       await transaction.commit();
     } catch (error) {
       await transaction.rollback();
@@ -68,6 +86,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('customers');
+    await queryInterface.dropTable('customer_addresses');
   },
 };

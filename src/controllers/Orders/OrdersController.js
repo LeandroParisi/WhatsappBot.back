@@ -13,11 +13,21 @@ class OrderController extends BaseController {
     const data = await this.service.updateOne(id, payload);
     res.status(status.ok).json({ data });
   }
+
+  // async create() {
+  // To Calc: DeliveryFee, subTotal, totalPrice
+  // }
 }
 
 const OrdersController = new OrderController(OrdersService);
 
 OrdersController.removeEndpoints(['deleteOne']);
-OrdersController.addMiddlewares('all', [authenticateUser]);
+OrdersController.addMiddlewares(
+  [
+    'findAll',
+    'updateOne',
+  ],
+  [authenticateUser],
+);
 
 module.exports = OrdersController;

@@ -36,11 +36,11 @@ class BranchController extends BaseController {
     // TODO: deletar BranchesPromotions do Promotions (tinha que ser feito em nível de service)
     const data = await this.service.findOne({ userId, whatsappNumber });
     const promotions = await PromotionsService.findAll(
-      { query: {}, user: req.user },
+      { query: { isActive: true }, user: req.user },
       { branchId: data.dataValues.id },
     );
     const user = await UsersService.findByPk(userId);
-    data.dataValues.promotions = promotions.filter(({ isActive }) => isActive);
+    data.dataValues.promotions = promotions;
     data.dataValues.botName = user.botName;
 
     res.status(status.ok).json({ ok: true, data });

@@ -36,30 +36,6 @@ const createCustomers = (sequelize, DataTypes) => {
     cpf: {
       type: DataTypes.STRING,
     },
-    countryId: {
-      type: DataTypes.INTEGER,
-    },
-    stateId: {
-      type: DataTypes.INTEGER,
-    },
-    cityId: {
-      type: DataTypes.INTEGER,
-    },
-    neighborhood: {
-      type: DataTypes.STRING,
-    },
-    street: {
-      type: DataTypes.STRING,
-    },
-    streetNumber: {
-      type: DataTypes.STRING,
-    },
-    streetComplement: {
-      type: DataTypes.STRING,
-    },
-    postalCode: {
-      type: DataTypes.STRING,
-    },
     isActive: {
       type: DataTypes.BOOLEAN,
     },
@@ -70,17 +46,9 @@ const createCustomers = (sequelize, DataTypes) => {
       as: 'customer',
       foreignKey: 'customerId',
     });
-    Customers.belongsTo(models.Countries, {
-      as: 'customerCountry',
-      foreignKey: 'countryId',
-    });
-    Customers.belongsTo(models.States, {
-      as: 'customerState',
-      foreignKey: 'stateId',
-    });
-    Customers.belongsTo(models.Cities, {
-      as: 'customerCity',
-      foreignKey: 'cityId',
+    Customers.hasMany(models.CustomerAddresses, {
+      as: 'customerAddresses',
+      foreignKey: 'customerId',
     });
   };
 

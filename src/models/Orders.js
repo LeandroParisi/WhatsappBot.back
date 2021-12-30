@@ -16,6 +16,9 @@ const createOrders = (sequelize, DataTypes) => {
     customerId: {
       type: DataTypes.UUID,
     },
+    addressId: {
+      type: DataTypes.INTEGER,
+    },
     orderNumber: {
       type: DataTypes.INTEGER,
     },
@@ -90,6 +93,10 @@ const createOrders = (sequelize, DataTypes) => {
     Orders.hasMany(models.OrdersProducts, {
       as: 'ordersProducts',
       foreignKey: 'orderId',
+    });
+    Orders.belongsTo(models.CustomerAddresses, {
+      as: 'orderAddress',
+      foreignKey: 'addressId',
     });
   };
 

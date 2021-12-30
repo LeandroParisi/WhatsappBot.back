@@ -4,6 +4,10 @@
 
 const createPromotions = (sequelize, DataTypes) => {
   const Promotions = sequelize.define('Promotions', {
+    id: {
+      primaryKey: true,
+      type: DataTypes.INTEGER,
+    },
     name: {
       type: DataTypes.STRING,
     },

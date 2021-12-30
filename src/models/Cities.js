@@ -19,7 +19,7 @@ const createCities = (sequelize, DataTypes) => {
       foreignKey: 'cityId',
     });
     Cities.hasMany(models.Customers, {
-      as: 'customerCity',
+      as: 'addressCity',
       foreignKey: 'cityId',
     });
   };
