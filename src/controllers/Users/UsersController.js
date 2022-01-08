@@ -12,6 +12,20 @@ class UserController extends BaseController {
     super(service);
 
     this.newRoutes = {
+      botLogin: {
+        endpoint: '/bot/login',
+        method: METHODS.POST,
+        handler: this.botLogin.bind(this),
+        localMiddleware: [],
+      },
+
+      botSessionAuth: {
+        endpoint: '/bot/sessionAuth',
+        method: METHODS.POST,
+        handler: this.botAuth.bind(this),
+        localMiddleware: [],
+      },
+
       login: {
         endpoint: '/login',
         method: METHODS.POST,
@@ -31,7 +45,16 @@ class UserController extends BaseController {
   async login(req, res) {
     const payload = req.body;
     const token = await this.service.login(payload);
-    res.cookie('wbt', token, { maxAge: 86400000, httpOnly: true });
+    res.cookie(
+      'wbt',
+      token,
+      {
+        maxAge: 86400000,
+        httpOnly: true,
+        sameSite: 'none',
+        secure: true,
+      },
+    );
     res.status(status.ok).json({ message: resMessages.loginOK });
   }
 
@@ -45,11 +68,31 @@ class UserController extends BaseController {
     }
     res.status(status.ok).json({ ok: true });
   }
+
+  async botLogin(req, res) {
+    console.log('botLogin');
+    const payload = req.body;
+    const data = await this.service.botLogin(payload);
+    res.status(status.ok).json({ message: resMessages.loginOK, data });
+  }
+
+  async botAuth(req, res) {
+    console.log('bot AUTH');
+    const { token } = req.body;
+    if (!token) throw new FireError(status.unauthorized, errorMessages.expiredSession);
+    try {
+      decode(token);
+    } catch (error) {
+      throw new FireError(status.unauthorized, errorMessages.expiredSession);
+    }
+    res.status(status.ok).json({ ok: true });
+  }
 }
 
 const UsersController = new UserController(UsersService);
 
 UsersController.addRoutes(UsersController.newRoutes);
+
 UsersController.removeEndpoints(['deleteOne']);
 
 module.exports = UsersController;

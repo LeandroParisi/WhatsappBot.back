@@ -22,7 +22,7 @@ const createStates = (sequelize, DataTypes) => {
       foreignKey: 'stateId',
     });
     States.hasMany(models.Customers, {
-      as: 'customerState',
+      as: 'addressState',
       foreignKey: 'stateId',
     });
   };

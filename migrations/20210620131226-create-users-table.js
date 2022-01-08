@@ -10,13 +10,8 @@ module.exports = {
           type: Sequelize.UUID,
           defaultValue: Sequelize.UUIDV4,
         },
-        whatsapp_number: {
+        phone_number: {
           allowNull: false,
-          type: Sequelize.STRING,
-          unique: true,
-        },
-        whatsapp_id: {
-          allowNull: true,
           type: Sequelize.STRING,
           unique: true,
         },
@@ -80,10 +75,6 @@ module.exports = {
           defaultValue: Sequelize.fn('now'),
         },
       }, { transaction });
-
-      await queryInterface.addIndex('users', ['whatsapp_number'], { transaction });
-
-      await queryInterface.addIndex('users', ['whatsapp_id'], { transaction });
 
       await queryInterface.addIndex('users', ['cnpj'], { transaction });
 

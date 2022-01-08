@@ -7,18 +7,17 @@ const {
   Sequelize,
   Products,
   OrdersProducts,
+  CustomerAddresses,
+  States,
+  Cities,
+  Countries,
 } = require('../../models');
 const colBuilder = require('../helpers/QueryBuilders/sequelizeCol');
 const QueryInterface = require('../Entities/QueryInterface');
 const associationsFactory = require('../helpers/QueryBuilders/associationsFactory');
-const customerAssociationsFactory = require('../helpers/defaultAssociations/customerAssociations');
 const productsAssociationsFactory = require('../helpers/defaultAssociations/productsAssociations');
 const { addressIds, timeStamps } = require('../helpers/exclusions');
 const whereTranslator = require('../helpers/QueryBuilders/whereTranslator');
-
-const {
-  customerAssociations,
-} = customerAssociationsFactory();
 
 const {
   productsAssociations,
@@ -71,6 +70,7 @@ class OrderQueries extends QueryInterface {
             exclude: [
               'id',
               'orderId',
+              'addressId',
             ],
           },
           include: [
@@ -85,17 +85,43 @@ class OrderQueries extends QueryInterface {
           ],
         },
         {
-          model: Customers,
-          as: 'customer',
-          include: [
-            ...customerAssociations,
-          ],
+          model: CustomerAddresses,
+          as: 'orderAddress',
           attributes: {
             include: [
-              [Sequelize.literal('"customer->customerCountry".country_name'), 'countryName'],
-              [Sequelize.literal('"customer->customerState".state_name'), 'stateName'],
-              [Sequelize.literal('"customer->customerCity".city_name'), 'cityName'],
+              [Sequelize.literal('"orderAddress->addressCountry".country_name'), 'countryName'],
+              [Sequelize.literal('"orderAddress->addressState".state_name'), 'stateName'],
+              [Sequelize.literal('"orderAddress->addressCity".city_name'), 'cityName'],
             ],
+            exclude: [
+              'cityId',
+              'countryId',
+              'stateId',
+              'customerId',
+            ],
+          },
+          include: [
+            {
+              model: States,
+              as: 'addressState',
+              attributes: [],
+            },
+            {
+              model: Countries,
+              as: 'addressCountry',
+              attributes: [],
+            },
+            {
+              model: Cities,
+              as: 'addressCity',
+              attributes: [],
+            },
+          ],
+        },
+        {
+          model: Customers,
+          as: 'customer',
+          attributes: {
             exclude: [
               'isActive',
               ...addressIds,

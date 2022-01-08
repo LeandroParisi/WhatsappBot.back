@@ -4,6 +4,7 @@
   "description": "Back end for whatsapp Bot",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js",
     "seed": "npx sequelize-cli db:seed:all",
@@ -35,7 +36,8 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.6.0",
     "rfr": "^1.2.3",
-    "sequelize": "^6.6.2",
+    "sequelize": "^6.9.0",
+    "sequelize-cli": "^6.3.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

@@ -19,6 +19,7 @@ class BranchServices extends BaseService {
 
   async updateOne(id, payload) {
     const { deliveryTypes, paymentMethods, openingHours } = payload;
+    console.log({ payload });
 
     try {
       await sequelize.transaction(async (transaction) => {
@@ -91,6 +92,12 @@ class BranchServices extends BaseService {
       throw new FireError(status.internalError, errorMessages.internalError);
     }
     return {};
+  }
+
+  async botInitialLoad(query) {
+    console.log(query);
+    const data = await super.findOne(query);
+    console.log(data);
   }
 }
 const BranchesService = new BranchServices(Branches, BranchesQueries);

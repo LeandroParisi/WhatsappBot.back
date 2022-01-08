@@ -20,6 +20,16 @@ module.exports = {
           onDelete: 'CASCADE',
           onUpdate: 'CASCADE',
         },
+        whatsapp_number: {
+          allowNull: false,
+          type: Sequelize.STRING,
+          unique: true,
+        },
+        whatsapp_id: {
+          allowNull: true,
+          type: Sequelize.STRING,
+          unique: true,
+        },
         manager_name: {
           allowNull: false,
           type: Sequelize.STRING,
@@ -107,6 +117,10 @@ module.exports = {
       }, { transaction });
 
       await queryInterface.addIndex('branches', ['user_id'], { transaction });
+
+      await queryInterface.addIndex('branches', ['whatsapp_number'], { transaction });
+
+      await queryInterface.addIndex('branches', ['whatsapp_id'], { transaction });
 
       await transaction.commit();
         

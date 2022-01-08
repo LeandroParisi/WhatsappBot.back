@@ -28,6 +28,14 @@ module.exports = {
             key: 'id',
           },
         },
+        address_id: {
+          allowNull: true,
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'customer_addresses',
+            key: 'id',
+          },
+        },
         order_number: {
           type: Sequelize.INTEGER,
           autoIncrement: true,
@@ -37,7 +45,7 @@ module.exports = {
           type: Sequelize.DECIMAL(10, 2),
         },
         delivery_type_id: {
-          allowNull: true,
+          allowNull: false,
           type: Sequelize.INTEGER,
           references: {
             model: 'delivery_types',

@@ -10,21 +10,13 @@ module.exports = {
     await queryInterface.bulkInsert('customers', [
       {
         id: customer1,
-        whatsapp_number: '5531975080715',
-        whatsapp_id: '5531975080715@c.us',
+        whatsapp_number: '5531993368575',
+        whatsapp_id: '5531993368575@c.us',
         email: 'customer1@teste.com',
         first_name: 'Customer',
         middle_name: 'Teste',
         last_name: 'ONE',
         cpf: '08891890057',
-        country_id: 1,
-        state_id: 1,
-        city_id: 1,
-        neighborhood: 'Testelandia',
-        street: 'Rua do Teste',
-        street_number: '123',
-        street_complement: '123',
-        postal_code: '30220000',
       },
       {
         id: customer2,
@@ -35,14 +27,6 @@ module.exports = {
         middle_name: 'Teste',
         last_name: 'TWO',
         cpf: '96128398081',
-        country_id: 1,
-        state_id: 1,
-        city_id: 1,
-        neighborhood: 'Testelandia',
-        street: 'Rua do Teste',
-        street_number: '123',
-        street_complement: '123',
-        postal_code: '30220000',
       },
       {
         id: customer3,
@@ -53,6 +37,12 @@ module.exports = {
         middle_name: 'Teste',
         last_name: 'THREE',
         cpf: '25098789052',
+      },
+    ]);
+
+    await queryInterface.bulkInsert('customer_addresses', [
+      {
+        customer_id: customer1,
         country_id: 1,
         state_id: 1,
         city_id: 1,
@@ -62,12 +52,25 @@ module.exports = {
         street_complement: '123',
         postal_code: '30220000',
       },
-    ]);
+      {
+        customer_id: customer1,
+        country_id: 1,
+        state_id: 1,
+        city_id: 1,
+        neighborhood: 'Outra TesteLandia',
+        street: 'Rua do Teste 2',
+        street_number: '321',
+        street_complement: '321',
+        postal_code: '99999999',
+      },
+    ])
   },
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.bulkDelete('customers', null, {});
+    await queryInterface.bulkDelete('customer_addresses', null, {});
   },
+
   customer1,
   customer2,
   customer3,

@@ -88,10 +88,8 @@ class BranchQueries extends QueryInterface {
   }
 
   findOne(query) {
-    const { id } = query;
-
     return {
-      where: { id },
+      where: query,
       attributes: {
         include: [
           ...branchesInclude,

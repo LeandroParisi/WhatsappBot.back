@@ -5,19 +5,19 @@ module.exports = {
     await queryInterface.bulkInsert('conditions', [
       {
         id: 1,
-        condition: 'price_limit',
+        name: 'price_limit',
       },
       {
         id: 2,
-        condition: 'date_limit',
+        name: 'date_limit',
       },
       {
         id: 3,
-        condition: 'distance_limit',
+        name: 'distance_limit',
       },
       {
         id: 4,
-        condition: 'uses_limit',
+        name: 'uses_limit',
       },
     ]);
 
