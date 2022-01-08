@@ -1,6 +1,11 @@
 # backEnd_whatsappBot
 Back end for whatsapp Bot
 
+## Description
+Backend built on NodeJs with Sequelize to manage restaurant order app
+
+## Setup
+
 1) npm install
 2) install postgres - https://www.postgresql.org/download/
 3) Create .env file on project root with the following variables:
