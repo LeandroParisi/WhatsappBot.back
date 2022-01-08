@@ -20,10 +20,9 @@ HOSTNAME=127.0.0.1
 </br>
 
 4) npm run db - create database
-</br>
 5) npm run up - run migrations and seeds
-</br>
 6) npm run dev
+
 
 Attention!
 There may be some bugs since it's a project beeing developed
