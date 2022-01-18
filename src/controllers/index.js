@@ -5,6 +5,7 @@ const MenusRouter = require('./Menus/MenusRouter');
 const ProductsRouter = require('./Products/ProductsRouter');
 const PromotionsRouter = require('./Promotions/PromotionsRouter');
 const CouponsRouter = require('./Coupons/CouponsRouter');
+const CustomerRouter = require('./Customers/CustomerRouter');
 
 module.exports = {
   UsersRouter,
@@ -14,4 +15,5 @@ module.exports = {
   ProductsRouter,
   PromotionsRouter,
   CouponsRouter,
+  CustomerRouter,
 };

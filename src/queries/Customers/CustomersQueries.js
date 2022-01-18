@@ -14,20 +14,20 @@ class CustomerQuery extends QueryInterface {
         {
           model: CustomerAddresses,
           as: 'customerAddresses',
-          include: [
-            {
-              model: Countries,
-              as: 'addressCountry',
-            },
-            {
-              model: States,
-              as: 'addressState',
-            },
-            {
-              model: Cities,
-              as: 'addressCity',
-            },
-          ],
+          // include: [
+          //   {
+          //     model: Countries,
+          //     as: 'addressCountry',
+          //   },
+          //   {
+          //     model: States,
+          //     as: 'addressState',
+          //   },
+          //   {
+          //     model: Cities,
+          //     as: 'addressCity',
+          //   },
+          // ],
         },
       ],
     };
