@@ -39,6 +39,7 @@ class BranchController extends BaseController {
       { query: { isActive: true }, user: req.user },
       { branchId: data.dataValues.id },
     );
+
     const user = await UsersService.findByPk(userId);
     data.dataValues.promotions = promotions;
     data.dataValues.botName = user.botName;
