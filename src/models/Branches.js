@@ -74,7 +74,6 @@ const createBranches = (sequelize, DataTypes) => {
 
   // TODO;
   // Branches.beforeUpdate((branch) => {
-  //   console.log({ branch });
   //   branch.deliveryFees = normalizeDeliveryFee(branch.deliveryFees);
   // });
 

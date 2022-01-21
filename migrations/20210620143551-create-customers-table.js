@@ -21,7 +21,7 @@ module.exports = {
           unique: true,
         },
         email: {
-          allowNull: false,
+          allowNull: true,
           unique: true,
           type: Sequelize.STRING,
         },
@@ -36,7 +36,7 @@ module.exports = {
           type: Sequelize.STRING,
         },
         cpf: {
-          allowNull: false,
+          allowNull: true,
           type: Sequelize.STRING,
         },
         is_active: {

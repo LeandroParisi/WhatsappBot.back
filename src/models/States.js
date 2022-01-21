@@ -21,7 +21,7 @@ const createStates = (sequelize, DataTypes) => {
       as: 'branchState',
       foreignKey: 'stateId',
     });
-    States.hasMany(models.Customers, {
+    States.hasMany(models.CustomerAddresses, {
       as: 'addressState',
       foreignKey: 'stateId',
     });

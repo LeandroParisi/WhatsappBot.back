@@ -46,14 +46,12 @@ class ProductService extends BaseService {
         }
       });
     } catch (e) {
-      console.log(e);
       throw new FireError(status.internalError, errorMessages.internalError);
     }
     return {};
   }
 
   async create({ body }) {
-    console.log({ body });
     const { menuProducts, branchesProducts } = body;
 
     const { id } = await this.model.create(this.queries.create(body));
@@ -81,7 +79,6 @@ class ProductService extends BaseService {
         }
       });
     } catch (e) {
-      console.log(e);
       throw new FireError(status.internalError, errorMessages.internalError);
     }
     return {};

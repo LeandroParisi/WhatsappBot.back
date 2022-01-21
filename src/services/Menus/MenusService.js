@@ -40,7 +40,6 @@ class MenuService extends BaseService {
         }
       });
     } catch (e) {
-      console.log(e);
       throw new FireError(status.internalError, errorMessages.internalError);
     }
     return {};
@@ -74,7 +73,6 @@ class MenuService extends BaseService {
         }
       });
     } catch (error) {
-      console.log(error);
       throw new FireError(status.internalError, errorMessages.internalError);
     }
     return {};

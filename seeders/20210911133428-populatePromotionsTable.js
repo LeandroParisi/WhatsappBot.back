@@ -37,19 +37,19 @@ module.exports = {
         name: 'Super promoção 1',
         total_price: 20.20,
         due_date: new Date(2022, 1, 1),
-        avaiability: [1, 2, 3],
+        avaiability: [1, 2, 3, 4, 5, 6, 7],
       },
       { 
         name: 'Super promoção 2',
         total_price: 30.20,
         due_date: new Date(2022, 1, 1),
-        avaiability: [1, 2, 3],
+        avaiability: [1, 2, 3, 4, 5, 6, 7],
       },
       { 
         name: 'Super promoção 3',
         total_price: 40.20,
         due_date: new Date(2022, 1, 1),
-        avaiability: [1, 2, 3],
+        avaiability: [1, 2, 3, 4, 5, 6, 7],
       },
     ]);
 

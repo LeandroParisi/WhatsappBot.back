@@ -19,7 +19,6 @@ class CoupomService extends BaseService {
   async updateOne(id, body) {
     const { coupomBranches, coupomConditions } = body;
 
-    console.log(coupomConditions);
     try {
       await sequelize.transaction(async (transaction) => {
         await this.model.update(
@@ -49,7 +48,6 @@ class CoupomService extends BaseService {
         }
       });
     } catch (e) {
-      console.log(e);
       throw new FireError(status.internalError, errorMessages.internalError);
     }
     return {};

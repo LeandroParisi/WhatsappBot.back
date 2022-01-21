@@ -29,7 +29,6 @@ class QueryInterface {
   }
 
   create(body) {
-    console.log({ body });
     return { ...body };
   }
 }

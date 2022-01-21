@@ -11,8 +11,6 @@ const { status, errorMessages } = require('../../libs');
 class PromotionService extends BaseService {
   async updateOne(id, body) {
     const { promotionProducts, branchesPromotions } = body;
-    console.log({ body });
-    console.log({ promotionProducts });
 
     try {
       await sequelize.transaction(async (transaction) => {
@@ -49,7 +47,6 @@ class PromotionService extends BaseService {
         }
       });
     } catch (e) {
-      console.log(e);
       throw new FireError(status.internalError, errorMessages.internalError);
     }
     return {};
@@ -61,7 +58,6 @@ class PromotionService extends BaseService {
 
     const { promotionProducts, branchesPromotions } = requestBody;
 
-    console.log({ requestBody });
     const { id } = await this.model.create(this.queries.create(requestBody));
 
     if (!id) throw new FireError(status.notFound, errorMessages.notFound);
@@ -93,7 +89,6 @@ class PromotionService extends BaseService {
         }
       });
     } catch (e) {
-      console.log(e);
       throw new FireError(status.internalError, errorMessages.internalError);
     }
     return {};

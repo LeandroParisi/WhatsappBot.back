@@ -70,14 +70,12 @@ class UserController extends BaseController {
   }
 
   async botLogin(req, res) {
-    console.log('botLogin');
     const payload = req.body;
     const data = await this.service.botLogin(payload);
     res.status(status.ok).json({ message: resMessages.loginOK, data });
   }
 
   async botAuth(req, res) {
-    console.log('bot AUTH');
     const { token } = req.body;
     if (!token) throw new FireError(status.unauthorized, errorMessages.expiredSession);
     try {

@@ -1,6 +1,8 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
+const { v4: uuid } = require('uuid');
 const { validationErrors } = require('../libs');
 
 const createCustomers = (sequelize, DataTypes) => {
@@ -40,6 +42,11 @@ const createCustomers = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
     },
   }, { underscored: true });
+
+  Customers.beforeCreate((customer) => {
+    customer.id = uuid();
+    customer.whatsappNumber = customer.whatsappId.split('@')[0];
+  });
 
   Customers.associate = (models) => {
     Customers.hasMany(models.Orders, {
