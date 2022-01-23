@@ -1,12 +1,13 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
+const { v4: uuid } = require('uuid');
 
 const createCustomerAddresses = (sequelize, DataTypes) => {
   const CustomerAddresses = sequelize.define('CustomerAddresses', {
     id: {
       primaryKey: true,
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
     },
     customerId: {
       type: DataTypes.UUID,
@@ -39,6 +40,10 @@ const createCustomerAddresses = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
     },
   }, { underscored: true });
+
+  CustomerAddresses.beforeCreate((address) => {
+    address.id = uuid();
+  });
 
   CustomerAddresses.associate = (models) => {
     CustomerAddresses.belongsTo(models.Customers, {

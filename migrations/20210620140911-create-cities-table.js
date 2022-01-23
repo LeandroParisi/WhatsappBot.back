@@ -15,6 +15,16 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
+        state_id: {
+          allowNull: false,
+          type: Sequelize.INTEGER,
+          onDelete: 'CASCADE',
+          onUpdate: 'CASCADE',
+          references: {
+            model: 'states',
+            key: 'id',
+          },
+        }
       }, { transaction });
 
       await transaction.commit();

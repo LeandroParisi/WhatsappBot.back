@@ -17,7 +17,7 @@ const createOrders = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
     },
     addressId: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
     },
     orderNumber: {
       type: DataTypes.INTEGER,

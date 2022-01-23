@@ -4,7 +4,7 @@ const { orderProductsAttrFactory } = require('../src/interfaces/attributes/attri
 const attributeTypes = require('../src/interfaces/attributes/attributeTypes');
 const { branchOneId } = require('./20210623221400-populateUsersTable');
 const { productOneId, productTwoId, productThreeId } = require('./20210710183145-populateProductsTable');
-const { customer1, customer2, customer3 } = require('./20210711133426-populateCustomersTable');
+const { customer1, customer2, customer3, customerAddress1, customerAddress2 } = require('./20210711133426-populateCustomersTable');
 
 const order1 = uuid();
 const order2 = uuid();
@@ -27,7 +27,7 @@ module.exports = {
         id: order1,
         branch_id: branchOneId,
         customer_id: customer1,
-        address_id: 1,
+        address_id: customerAddress1,
         sub_total: 50,
         delivery_type_id: 1,
         delivery_fee: 10,
@@ -41,9 +41,9 @@ module.exports = {
         id: order2,
         branch_id: branchOneId,
         customer_id: customer1,
-        address_id: 2,
+        address_id: customerAddress2,
         sub_total: 30.22,
-        delivery_type_id: 2,
+        delivery_type_id: 1,
         delivery_fee: 10,
         payment_method_id: 2,
         total_price: 40.22,
@@ -69,7 +69,7 @@ module.exports = {
         branch_id: branchOneId,
         customer_id: customer2,
         sub_total: 10.32,
-        delivery_type_id: 1,
+        delivery_type_id: 2,
         delivery_fee: 10,
         payment_method_id: 3,
         total_price: 20.32,
@@ -108,7 +108,7 @@ module.exports = {
         id: order7,
         branch_id: branchOneId,
         customer_id: customer1,
-        address_id: 2,
+        address_id: customerAddress2,
         sub_total: 30.22,
         delivery_type_id: 1,
         delivery_fee: 10,
@@ -136,7 +136,7 @@ module.exports = {
         branch_id: branchOneId,
         customer_id: customer2,
         sub_total: 10.32,
-        delivery_type_id: 1,
+        delivery_type_id: 3,
         delivery_fee: 10,
         payment_method_id: 4,
         total_price: 20.32,
@@ -159,7 +159,7 @@ module.exports = {
       },
     ]);
 
-    await queryInterface.bulkInsert('orders_products', [
+    await queryInterface.bulkInsert('orders_products', [   
       {
         order_id: order1,
         product_id: productOneId,

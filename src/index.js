@@ -11,6 +11,7 @@ const {
   PromotionsRouter,
   CouponsRouter,
   CustomerRouter,
+  CustomerAddressesRouter,
 } = require('./controllers');
 
 require('dotenv').config();
@@ -36,6 +37,7 @@ app.use(MenusRouter.basePath, MenusRouter.setRouter());
 app.use(ProductsRouter.basePath, ProductsRouter.setRouter());
 app.use(CouponsRouter.basePath, CouponsRouter.setRouter());
 app.use(CustomerRouter.basePath, CustomerRouter.setRouter());
+app.use(CustomerAddressesRouter.basePath, CustomerAddressesRouter.setRouter());
 
 app.use(errorHandler);
 

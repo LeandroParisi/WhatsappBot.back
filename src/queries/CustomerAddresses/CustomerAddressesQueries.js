@@ -2,10 +2,10 @@
 
 const QueryInterface = require('../Entities/QueryInterface');
 
-class MenuQueries extends QueryInterface {
+class AddressesQuery extends QueryInterface {
 // No need to be extended yet
 }
 
-const MenusQueries = new MenuQueries();
+const AddressesQueries = new AddressesQuery();
 
-module.exports = MenusQueries;
+module.exports = AddressesQueries;

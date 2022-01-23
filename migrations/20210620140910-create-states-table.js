@@ -18,6 +18,16 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
+        country_id: {
+          allowNull: false,
+          type: Sequelize.INTEGER,
+          onDelete: 'CASCADE',
+          onUpdate: 'CASCADE',
+          references: {
+            model: 'countries',
+            key: 'id',
+          },
+        }
       }, { transaction });
 
       await transaction.commit();

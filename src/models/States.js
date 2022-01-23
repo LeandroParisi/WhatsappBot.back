@@ -14,6 +14,9 @@ const createStates = (sequelize, DataTypes) => {
     stateCode: {
       type: DataTypes.STRING,
     },
+    countryId: {
+      type: DataTypes.INTEGER,
+    },
   }, { timestamps: false, underscored: true });
 
   States.associate = (models) => {
@@ -24,6 +27,14 @@ const createStates = (sequelize, DataTypes) => {
     States.hasMany(models.CustomerAddresses, {
       as: 'addressState',
       foreignKey: 'stateId',
+    });
+    States.hasMany(models.Cities, {
+      as: 'stateCities',
+      foreignKey: 'stateId',
+    });
+    States.belongsTo(models.Countries, {
+      as: 'countryState',
+      foreignKey: 'countryId',
     });
   };
 

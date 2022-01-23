@@ -5,6 +5,10 @@ const customer1 = uuid();
 const customer2 = uuid();
 const customer3 = uuid();
 
+const customerAddress1 = uuid();
+const customerAddress2 = uuid();
+
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('customers', [
@@ -42,6 +46,7 @@ module.exports = {
 
     await queryInterface.bulkInsert('customer_addresses', [
       {
+        id: customerAddress1,
         customer_id: customer1,
         country_id: 1,
         state_id: 1,
@@ -53,6 +58,7 @@ module.exports = {
         postal_code: '30220000',
       },
       {
+        id: customerAddress2,
         customer_id: customer1,
         country_id: 1,
         state_id: 1,
@@ -74,4 +80,6 @@ module.exports = {
   customer1,
   customer2,
   customer3,
+  customerAddress1,
+  customerAddress2,
 };

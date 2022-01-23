@@ -30,7 +30,7 @@ module.exports = {
         },
         address_id: {
           allowNull: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'customer_addresses',
             key: 'id',
