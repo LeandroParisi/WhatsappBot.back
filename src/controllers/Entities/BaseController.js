@@ -100,6 +100,7 @@ class BaseController {
 
   async create(req, res) {
     const { body, user } = req;
+    console.log({ body });
     const data = await this.service.create({ body, user });
     res.status(status.created).json({ data, message: resMessages.created });
   }

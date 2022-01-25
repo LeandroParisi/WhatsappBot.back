@@ -9,7 +9,8 @@ class BaseService {
 
   // Endpoint Methods
   async create({ body, user }) {
-    const insertedEntity = await this.model.create({ body, user });
+    console.log({ servicesBody: body });
+    const insertedEntity = await this.model.create({ ...body, ...user });
     return insertedEntity;
   }
 

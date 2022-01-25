@@ -15,7 +15,6 @@ AddressessController.removeEndpoints(
     'deActivate',
     'findOne',
     'findByPk',
-    'deleteOne',
   ],
 );
 

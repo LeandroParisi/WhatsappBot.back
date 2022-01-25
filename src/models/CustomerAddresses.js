@@ -42,7 +42,12 @@ const createCustomerAddresses = (sequelize, DataTypes) => {
   }, { underscored: true });
 
   CustomerAddresses.beforeCreate((address) => {
-    address.id = uuid();
+    // eslint-disable-next-line no-empty
+    if (!address.id) {
+
+    } else {
+      address.id = uuid();
+    }
   });
 
   CustomerAddresses.associate = (models) => {
