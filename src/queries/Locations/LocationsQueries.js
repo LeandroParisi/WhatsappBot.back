@@ -6,8 +6,6 @@ class Queries extends QueryInterface {
 // No need to be extended yet
 }
 
-const CountriesQueries = new Queries();
+const LocationsQueries = new Queries();
 
-module.exports = CountriesQueries;
-
-
+module.exports = LocationsQueries;

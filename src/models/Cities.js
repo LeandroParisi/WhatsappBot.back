@@ -11,7 +11,7 @@ const createCities = (sequelize, DataTypes) => {
     cityName: {
       type: DataTypes.STRING,
     },
-    state_id: {
+    stateId: {
       type: DataTypes.INTEGER,
     },
   }, { timestamps: false, underscored: true });

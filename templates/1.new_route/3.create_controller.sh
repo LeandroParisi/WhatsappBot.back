@@ -12,7 +12,17 @@ class Controller extends BaseController {
 
 const $1Controller = new Controller($1Service);
 
-// $1Controller.removeEndpoints(['deleteOne']);
+// $1Controller.removeEndpoints([  
+//  'deleteOne',
+//  'activate',
+//  'deActivate',
+//  'findOne',
+//  'findByPk',
+//  'updateOne',
+//  'deleteOne',
+//  'findAll',
+//  'create'
+// ]);
 // $1Controller.addMiddlewares('all', [authenticateUser]);
 
 module.exports = $1Controller;"

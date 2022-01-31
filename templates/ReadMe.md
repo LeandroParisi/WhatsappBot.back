@@ -1,0 +1,1 @@
+1. Execute: sh ./1.new_route.sh <Nome_do_controller>
