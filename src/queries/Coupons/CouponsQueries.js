@@ -31,6 +31,25 @@ class CouponQueries extends QueryInterface {
 
     return mainQuery;
   }
+
+  getCoupomByCodeAndBranch(branchId, coupomCode) {
+    return {
+      where: {
+        coupomCode,
+      },
+      include: [
+        {
+          model: Branches,
+          as: 'coupomBranches',
+          through: { attributes: [] },
+          attributes: [],
+          where: {
+            id: branchId,
+          },
+        },
+      ],
+    };
+  }
 }
 
 const CouponsQueries = new CouponQueries();

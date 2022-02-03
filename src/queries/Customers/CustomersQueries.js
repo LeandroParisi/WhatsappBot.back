@@ -2,30 +2,43 @@
 
 const QueryInterface = require('../Entities/QueryInterface');
 const {
-  CustomerAddresses, Countries, Cities, States,
+  CustomerAddresses, Countries, Cities, States, Sequelize,
 } = require('../../models');
 
 class CustomerQuery extends QueryInterface {
   findOne(query) {
     return {
       where: query,
-      attributes: { exclude: ['createdAt', 'updatedAt'] },
+      attributes: {
+        exclude: ['createdAt', 'updatedAt'],
+      },
       include: [
         {
           model: CustomerAddresses,
           as: 'customerAddresses',
+          attributes: {
+            exclude: ['createdAt', 'updatedAt'],
+            include: [
+              [Sequelize.literal('"customerAddresses->addressCountry".country_name'), 'countryName'],
+              [Sequelize.literal('"customerAddresses->addressState".state_name'), 'stateName'],
+              [Sequelize.literal('"customerAddresses->addressCity".city_name'), 'cityName'],
+            ],
+          },
           include: [
             {
               model: Countries,
               as: 'addressCountry',
+              attributes: [],
             },
             {
               model: States,
               as: 'addressState',
+              attributes: [],
             },
             {
               model: Cities,
               as: 'addressCity',
+              attributes: [],
             },
           ],
         },

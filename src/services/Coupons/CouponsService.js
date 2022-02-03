@@ -52,6 +52,16 @@ class CoupomService extends BaseService {
     }
     return {};
   }
+
+  async validateCoupom({ branchId, coupomCode }) {
+    console.log({ branchId });
+    console.log({ coupomCode });
+
+    const coupom = await this.model
+      .findAll(this.queries.getCoupomByCodeAndBranch(branchId, coupomCode));
+
+    return coupom;
+  }
 }
 
 const CouponsService = new CoupomService(Coupons, CouponsQueries);

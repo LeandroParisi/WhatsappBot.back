@@ -3,7 +3,6 @@ const CouponsService = require('../../services/Coupons/CouponsService');
 
 const BaseController = require('../Entities/BaseController');
 const { METHODS, status } = require('../../libs');
-const { resMessages } = require('../../libs');
 
 class CoupomController extends BaseController {
   constructor(service) {
@@ -16,6 +15,12 @@ class CoupomController extends BaseController {
         handler: this.getConditions.bind(this),
         localMiddleware: [],
       },
+      validateCoupom: {
+        endpoint: '/isValid/:branchId/:coupomCode',
+        method: METHODS.GET,
+        handler: this.validateCoupom.bind(this),
+        localMiddleware: [],
+      },
     };
   }
 
@@ -24,12 +29,27 @@ class CoupomController extends BaseController {
     const data = await this.service.getConditions(payload);
     res.status(status.ok).json({ data });
   }
+
+  async validateCoupom(req, res) {
+    const data = await this.service.validateCoupom(req.params);
+    res.status(status.ok).json({ data });
+  }
 }
 
 const CouponsController = new CoupomController(CouponsService);
 
 CouponsController.addRoutes(CouponsController.newRoutes);
 // CouponsController.removeEndpoints(['deleteOne']);
-CouponsController.addMiddlewares('all', [authenticateUser]);
+CouponsController.addMiddlewares([
+  'getConditions',
+  'activate',
+  'deActivate',
+  'findOne',
+  'findByPk',
+  'updateOne',
+  'deleteOne',
+  'findAll',
+  'create',
+], [authenticateUser]);
 
 module.exports = CouponsController;
