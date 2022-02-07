@@ -14,7 +14,7 @@ const {
   CustomerRouter,
   CustomerAddressesRouter,
   LocationsRouter,
-} = require('./controllers');
+} = require('./Domain');
 
 require('dotenv').config();
 
