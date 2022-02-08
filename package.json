@@ -4,9 +4,9 @@
   "description": "Back end for whatsapp Bot",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon src/index.ts",
     "seed": "npx sequelize-cli db:seed:all",
     "unseed": "npx sequelize-cli db:seed:undo:all",
     "migrate": "npx sequelize-cli db:migrate",
@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/LeandroParisi/backEnd_whatsappBot#readme",
   "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/sequelize": "^4.28.11",
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
@@ -34,14 +36,23 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "knex": "^1.0.2",
     "openrouteservice-js": "^0.1.31",
     "pg": "^8.6.0",
+    "reflect-metadata": "^0.1.13",
     "rfr": "^1.2.3",
     "sequelize": "^6.9.0",
     "sequelize-cli": "^6.3.0",
+    "typedi": "^0.10.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -49,6 +60,8 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
   }
 }
