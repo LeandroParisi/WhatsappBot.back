@@ -2,7 +2,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 
-const { orderStatus } = require('../interfaces/models/Orders');
+const { orderStatus } = require('../Domain/Shared/interfaces/models/Orders');
 
 const createOrders = (sequelize, DataTypes) => {
   const Orders = sequelize.define('Orders', {

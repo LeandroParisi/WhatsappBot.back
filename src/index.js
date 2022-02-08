@@ -2,7 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 require('./tete');
-const { errorHandler } = require('./middlewares/errorHandler/errorHandler');
+const { errorHandler } = require('./Domain/Shared/middlewares/errorHandler/errorHandler');
 const {
   UsersRouter,
   BranchesRouter,
@@ -14,7 +14,7 @@ const {
   CustomerRouter,
   CustomerAddressesRouter,
   LocationsRouter,
-} = require('./Domain');
+} = require('./Domain/Services');
 
 require('dotenv').config();
 

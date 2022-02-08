@@ -4,8 +4,8 @@
 
 const { v4: uuid } = require('uuid');
 const { cpf, cnpj } = require('cpf-cnpj-validator');
-const { hashPassword } = require('../authentication/passwordHashing');
-const { validationErrors } = require('../libs');
+const { hashPassword } = require('../Domain/Shared/authentication/passwordHashing');
+const { validationErrors } = require('../Domain/Shared/libs');
 
 const createUsers = (sequelize, DataTypes) => {
   const Users = sequelize.define('Users', {
