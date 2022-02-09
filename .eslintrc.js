@@ -38,6 +38,7 @@ module.exports = {
     'import/extensions': ['error', 'never'],
     'max-len': ['error', { ignoreComments: true, code: 150 }],
     semi: ['error', 'never'],
+    '@typescript-eslint/no-var-requires': 0,
   },
 }
 
