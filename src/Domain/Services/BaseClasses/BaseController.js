@@ -1,4 +1,4 @@
-const { METHODS, status, resMessages } = require('../../Shared/libs');
+const { METHODS, status, resMessages } = require('../../Shared/libs')
 
 class BaseController {
   constructor(service) {
@@ -51,58 +51,58 @@ class BaseController {
         handler: this.create.bind(this),
         localMiddleware: [],
       },
-    };
-    this.service = service;
+    }
+    this.service = service
   }
 
   async activate(req, res) {
-    const { id } = req.params;
-    const data = await this.service.activate(id);
-    res.status(status.ok).json({ data, message: resMessages.updateSuccess });
+    const { id } = req.params
+    const data = await this.service.activate(id)
+    res.status(status.ok).json({ data, message: resMessages.updateSuccess })
   }
 
   async deActivate(req, res) {
-    const { id } = req.params;
-    const data = await this.service.deActivate(id);
-    res.status(status.ok).json({ data, message: resMessages.updateSuccess });
+    const { id } = req.params
+    const data = await this.service.deActivate(id)
+    res.status(status.ok).json({ data, message: resMessages.updateSuccess })
   }
 
   async findOne(req, res) {
-    const { query } = req;
-    const data = await this.service.findOne(query);
-    res.status(status.ok).json({ data });
+    const { query } = req
+    const data = await this.service.findOne(query)
+    res.status(status.ok).json({ data })
   }
 
   async findByPk(req, res) {
-    const { id } = req.params;
-    const data = await this.service.findByPk(id);
-    res.status(status.ok).json({ data });
+    const { id } = req.params
+    const data = await this.service.findByPk(id)
+    res.status(status.ok).json({ data })
   }
 
   async updateOne(req, res) {
-    const payload = req.body;
-    const { id } = req.params;
-    const data = await this.service.updateOne(id, payload);
-    res.status(status.ok).json({ data, message: resMessages.updateSuccess });
+    const payload = req.body
+    const { id } = req.params
+    const data = await this.service.updateOne(id, payload)
+    res.status(status.ok).json({ data, message: resMessages.updateSuccess })
   }
 
   async deleteOne(req, res) {
-    const { id } = req.params;
-    await this.service.deleteOne(id);
-    res.status(status.ok).json({ data: 'ok', message: resMessages.deleted });
+    const { id } = req.params
+    await this.service.deleteOne(id)
+    res.status(status.ok).json({ data: 'ok', message: resMessages.deleted })
   }
 
   async findAll(req, res) {
-    const { query, user } = req;
-    const data = await this.service.findAll({ query, user });
-    res.status(status.ok).json({ data });
+    const { query, user } = req
+    const data = await this.service.findAll({ query, user })
+    res.status(status.ok).json({ data })
   }
 
   async create(req, res) {
-    const { body, user } = req;
-    console.log({ body });
-    const data = await this.service.create({ body, user });
-    res.status(status.created).json({ data, message: resMessages.created });
+    const { body, user } = req
+    console.log({ body })
+    const data = await this.service.create({ body, user })
+    res.status(status.created).json({ data, message: resMessages.created })
   }
 
   /**
@@ -117,31 +117,31 @@ class BaseController {
         this.routes[endpoint].localMiddleware = [
           ...this.routes[endpoint].localMiddleware,
           ...middlewares,
-        ];
-      });
+        ]
+      })
     } else {
       endpoints.forEach((endpoint) => {
         this.routes[endpoint].localMiddleware = [
           ...this.routes[endpoint].localMiddleware,
           ...middlewares,
-        ];
-      });
+        ]
+      })
     }
   }
 
   removeEndpoints(endpoints) {
     endpoints.forEach((endpoint) => {
-      delete this.routes[endpoint];
-    });
+      delete this.routes[endpoint]
+    })
   }
 
   getRoutes() {
-    return this.routes;
+    return this.routes
   }
 
   addRoutes(newRoutes) {
-    this.routes = { ...newRoutes, ...this.routes };
+    this.routes = { ...newRoutes, ...this.routes }
   }
 }
 
-module.exports = BaseController;
+module.exports = BaseController

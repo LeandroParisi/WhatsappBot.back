@@ -5,6 +5,6 @@ const orderStatus = [
   // 'ready_to_deliver',
   'dispatched',
   'fullfilled',
-];
+]
 
-module.exports = orderStatus;
+module.exports = orderStatus

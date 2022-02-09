@@ -1,9 +1,8 @@
-const { orderStatus } = require('../src/interfaces/models/Orders');
-
+const { orderStatus } = require('../src/Domain/Shared/interfaces/models/Orders')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const transaction = await queryInterface.sequelize.transaction();
+    const transaction = await queryInterface.sequelize.transaction()
     try {
       await queryInterface.createTable('orders', {
         id: {
@@ -77,7 +76,7 @@ module.exports = {
         status: {
           allowNull: false,
           type: Sequelize.ENUM(
-            ...orderStatus
+            ...orderStatus,
           ),
         },
         coupom_id: {
@@ -120,20 +119,20 @@ module.exports = {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-      }, { transaction });
+      }, { transaction })
 
-      await queryInterface.addIndex('orders', ['branch_id'], { transaction });
+      await queryInterface.addIndex('orders', ['branch_id'], { transaction })
 
-      await queryInterface.addIndex('orders', ['order_number'], { transaction });
+      await queryInterface.addIndex('orders', ['order_number'], { transaction })
 
-      await transaction.commit();
+      await transaction.commit()
     } catch (error) {
-      await transaction.rollback();
-      throw error;
+      await transaction.rollback()
+      throw error
     }
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('orders');
+    await queryInterface.dropTable('orders')
   },
-};
+}

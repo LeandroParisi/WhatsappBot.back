@@ -39,6 +39,8 @@ module.exports = {
     'max-len': ['error', { ignoreComments: true, code: 150 }],
     semi: ['error', 'never'],
     '@typescript-eslint/no-var-requires': 0,
+    'no-useless-constructor': 0,
+    'class-methods-use-this': 0,
   },
 }
 

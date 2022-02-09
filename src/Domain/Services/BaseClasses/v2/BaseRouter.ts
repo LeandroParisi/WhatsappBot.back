@@ -1,37 +1,55 @@
-const { Router } = require('express')
-const { errorCatcher } = require('../../Shared/middlewares/errorHandler/errorHandler')
+import { Router } from 'express'
+import RoutesPath from '../../../Shared-v2-ts/Enums/Routes'
+import IRouteDefinition, { Routes } from '../../../Shared-v2-ts/Interfaces/IRouteDefinition'
+import ErrorCatcher from '../../../Shared-v2-ts/Middlewares/ErrorHandler/ErrorCatcher'
+import IMiddleware from '../../../Shared-v2-ts/Middlewares/Interfaces/IMiddleware'
+import BaseController from './BaseController'
 
-class BaseRouter {
-  constructor(basePath, routes) {
-    this.router = new Router()
-    this.basePath = basePath
-    this.routes = routes
+// const { errorCatcher } = require('../../Shared/middlewares/errorHandler/errorHandler')
+
+export default abstract class BaseRouter<TController extends BaseController> {
+  Routes : Routes
+
+  BasePath : RoutesPath
+
+  Router : Router
+
+  Controller : TController
+
+  constructor(basePath : RoutesPath) {
+    this.Router = Router()
+    this.BasePath = basePath
   }
 
-  setRouter() {
-    Object.values(this.routes).forEach((route) => {
-      route.localMiddleware.forEach((middleWare) => {
-        this.router.use(route.endpoint, errorCatcher(middleWare))
+  abstract CreateRoutes() : void
+
+  protected SetRoutes(routes : Routes) {
+    this.Routes = routes
+  }
+
+  protected SetRouter() : Router {
+    this.CreateRoutes()
+    this.Routes.forEach((route : IRouteDefinition) => {
+      route.LocalMiddlewares.forEach((middleWare : IMiddleware) => {
+        this.Router.use(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(middleWare.ExecuteAsync))
       })
-      switch (route.method) {
+      switch (route.Method) {
         case 'GET':
-          this.router.get(route.endpoint, errorCatcher(route.handler))
+          this.Router.get(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync))
           break
         case 'POST':
-          this.router.post(route.endpoint, errorCatcher(route.handler))
+          this.Router.post(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync))
           break
         case 'PUT':
-          this.router.put(route.endpoint, errorCatcher(route.handler))
+          this.Router.put(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync))
           break
         case 'DELETE':
-          this.router.delete(route.endpoint, errorCatcher(route.handler))
+          this.Router.delete(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync))
           break
         default:
             // Throw exception
       }
     })
-    return this.router
+    return this.Router
   }
 }
-
-module.exports = BaseRouter

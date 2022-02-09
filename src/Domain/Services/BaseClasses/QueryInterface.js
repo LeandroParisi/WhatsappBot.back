@@ -1,38 +1,38 @@
 /* eslint-disable class-methods-use-this */
 class QueryInterface {
   findByPk(id) {
-    return id;
+    return id
   }
 
   findAll({ query }) {
-    return { where: query };
+    return { where: query }
   }
 
   findOne(query) {
-    return { where: query, attributes: { exclude: ['createdAt', 'updatedAt'] } };
+    return { where: query, attributes: { exclude: ['createdAt', 'updatedAt'] } }
   }
 
   updateOne(body) {
-    return { ...body };
+    return { ...body }
   }
 
   deleteOne(id) {
-    return { where: { id } };
+    return { where: { id } }
   }
 
   activate() {
-    return { isActive: true };
+    return { isActive: true }
   }
 
   deActivate() {
-    return { isActive: false };
+    return { isActive: false }
   }
 
   create(body) {
-    console.log({ queryBody: body });
+    console.log({ queryBody: body })
 
-    return { ...body };
+    return { ...body }
   }
 }
 
-module.exports = QueryInterface;
+module.exports = QueryInterface
