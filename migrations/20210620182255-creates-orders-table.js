@@ -1,5 +1,3 @@
-const { orderStatus } = require('../src/Domain/Shared/interfaces/models/Orders')
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction()
@@ -75,9 +73,7 @@ module.exports = {
         },
         status: {
           allowNull: false,
-          type: Sequelize.ENUM(
-            ...orderStatus,
-          ),
+          type: Sequelize.INTEGER,
         },
         coupom_id: {
           allowNull: true,

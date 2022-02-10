@@ -1,10 +1,10 @@
 /* eslint-disable no-shadow */
 /* eslint-disable import/prefer-default-export */
 export enum OrderStatus {
-  PLACED = 'placed',
-  IN_PRODUCTION = 'in_production',
-  DISPATCHED = 'dispatched',
-  FULLFILLED = 'fullfilled',
+  PLACED = 1,
+  IN_PRODUCTION = 2,
+  DISPATCHED = 3,
+  FULLFILLED = 4,
 }
 
 export default class Order {
@@ -14,7 +14,7 @@ export default class Order {
 
   customerId : string
 
-  addressId : string
+  addressId? : string
 
   orderNumber : number
 
@@ -31,17 +31,21 @@ export default class Order {
   totalPrice : number
 
   // TODO
-  status : OrderStatus | number
+  status : number
 
-  coupomId : number
+  coupomId? : number
 
-  promotionId : number
+  promotionId? : number
 
-  estimatedDeliveryTime : string
+  estimatedDeliveryTime? : string
 
-  comments : string
+  comments? : string
 
-  dispatchTime : Date
+  dispatchTime? : string
 
-  deliveryTime : Date
+  deliveryTime? : string
+
+  createdAt? : string
+
+  updatedAt? : string
 }

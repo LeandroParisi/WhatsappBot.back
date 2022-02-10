@@ -1,13 +1,11 @@
-const { v4: uuid } = require('uuid');
+const { v4: uuid } = require('uuid')
 
+const customer1 = uuid()
+const customer2 = uuid()
+const customer3 = uuid()
 
-const customer1 = uuid();
-const customer2 = uuid();
-const customer3 = uuid();
-
-const customerAddress1 = uuid();
-const customerAddress2 = uuid();
-
+const customerAddress1 = uuid()
+const customerAddress2 = uuid()
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -42,7 +40,7 @@ module.exports = {
         last_name: 'THREE',
         cpf: '25098789052',
       },
-    ]);
+    ])
 
     await queryInterface.bulkInsert('customer_addresses', [
       {
@@ -73,8 +71,8 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('customers', null, {});
-    await queryInterface.bulkDelete('customer_addresses', null, {});
+    await queryInterface.bulkDelete('customers', null, {})
+    await queryInterface.bulkDelete('customer_addresses', null, {})
   },
 
   customer1,
@@ -82,4 +80,4 @@ module.exports = {
   customer3,
   customerAddress1,
   customerAddress2,
-};
+}

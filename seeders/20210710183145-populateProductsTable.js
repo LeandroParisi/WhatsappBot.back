@@ -1,27 +1,40 @@
-const { v4: uuid } = require('uuid');
+const { v4: uuid } = require('uuid')
+const attributeTypes = require('../src/Domain/Shared/interfaces/attributes/attributeTypes')
 
-const {productsAttrFactory} = require('../src/interfaces/attributes/attributesFactory');
-const attributeTypes = require('../src/interfaces/attributes/attributeTypes');
+/* eslint-disable max-len */
+/**
+ *
+ * @param {array} attributes array of attributes to be created, each attribute must follow this interface: [name: string, price: integer, description: string, min: integer, max: integer]
+ * @returns
+ */
+const productsAttrFactory = (attributes) => attributes.map(([name, price, description, min = null, max = null, id]) => ({
+  id,
+  name,
+  price,
+  description,
+  min,
+  max,
+}))
 
-const productOneId = uuid();
-const productTwoId = uuid();
-const productThreeId = uuid();
-const productFourId = uuid();
+const productOneId = uuid()
+const productTwoId = uuid()
+const productThreeId = uuid()
+const productFourId = uuid()
 
-const productOneAttrOne = uuid();
-const productOneAttrTwo = uuid();
-const productOneAttrThree = uuid();
-const productOneAttrFour = uuid();
-const productOneAttrFive = uuid();
-const productOneAttrSix = uuid();
+const productOneAttrOne = uuid()
+const productOneAttrTwo = uuid()
+const productOneAttrThree = uuid()
+const productOneAttrFour = uuid()
+const productOneAttrFive = uuid()
+const productOneAttrSix = uuid()
 
-const productThreeAttrOne = uuid();
-const productThreeAttrTwo = uuid();
-const productThreeAttrThree = uuid();
+const productThreeAttrOne = uuid()
+const productThreeAttrTwo = uuid()
+const productThreeAttrThree = uuid()
 
-const productFourAttrOne = uuid();
-const productFourAttrTwo = uuid();
-const productFourAttrThree = uuid();
+const productFourAttrOne = uuid()
+const productFourAttrTwo = uuid()
+const productFourAttrThree = uuid()
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -34,17 +47,17 @@ module.exports = {
           {
             type: attributeTypes.sizes,
             options: productsAttrFactory([
-              ['P', 5, 'Pizza 15cm', null, null,  productOneAttrOne],
-              ['M', 10, 'Pizza 20cm', null, null,  productOneAttrTwo],
-              ['G', 15, 'Pizza 30cm', null, null,  productOneAttrThree],
+              ['P', 5, 'Pizza 15cm', null, null, productOneAttrOne],
+              ['M', 10, 'Pizza 20cm', null, null, productOneAttrTwo],
+              ['G', 15, 'Pizza 30cm', null, null, productOneAttrThree],
             ]),
           },
           {
             type: attributeTypes.additionals,
             options: productsAttrFactory([
-              ['borda queijo', 2, 'Borda recheada com queijo', null, null,  productOneAttrFour],
-              ['borda catupiry', 4, 'Borda recheada com catupiry', null, null,  productOneAttrFive],
-              ['catchup', 0, 'Sachês de catchup (por conta da casa)', null, null,  productOneAttrSix],
+              ['borda queijo', 2, 'Borda recheada com queijo', null, null, productOneAttrFour],
+              ['borda catupiry', 4, 'Borda recheada com catupiry', null, null, productOneAttrFive],
+              ['catchup', 0, 'Sachês de catchup (por conta da casa)', null, null, productOneAttrSix],
             ]),
           },
         ]),
@@ -72,9 +85,9 @@ module.exports = {
           {
             type: attributeTypes.additionals,
             options: productsAttrFactory([
-              ['bacon', 5, '3 fatias de bacon adicionais', null, null,  productThreeAttrOne],
-              ['carne extra', 6, 'Carne adicional no seu burgão',  null, null, productThreeAttrTwo],
-              ['molho especial', 3, 'Molho especial da casa', null, null,  productThreeAttrThree],
+              ['bacon', 5, '3 fatias de bacon adicionais', null, null, productThreeAttrOne],
+              ['carne extra', 6, 'Carne adicional no seu burgão', null, null, productThreeAttrTwo],
+              ['molho especial', 3, 'Molho especial da casa', null, null, productThreeAttrThree],
             ]),
           },
         ]),
@@ -90,9 +103,9 @@ module.exports = {
           {
             type: attributeTypes.additionals,
             options: productsAttrFactory([
-              ['bacon', 5, '3 fatias de bacon adicionais', null, null,  productFourAttrOne],
-              ['carne extra', 6, 'Carne adicional no seu burgão',  null, null, productFourAttrTwo],
-              ['molho especial', 3, 'Molho especial da casa', null, null,  productFourAttrThree],
+              ['bacon', 5, '3 fatias de bacon adicionais', null, null, productFourAttrOne],
+              ['carne extra', 6, 'Carne adicional no seu burgão', null, null, productFourAttrTwo],
+              ['molho especial', 3, 'Molho especial da casa', null, null, productFourAttrThree],
             ]),
           },
         ]),
@@ -101,11 +114,11 @@ module.exports = {
         description: 'Burgão violento, gigante!!',
         ingredients: ['Pão', 'Carne artesanal', 'Alface', 'Tomate', 'Molho da casa'],
       },
-    ]);
+    ])
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('products', null, {});
+    await queryInterface.bulkDelete('products', null, {})
   },
 
   productOneId,
@@ -124,4 +137,4 @@ module.exports = {
   productFourAttrOne,
   productFourAttrTwo,
   productFourAttrThree,
-};
+}

@@ -1,9 +1,8 @@
-const { productsAttrFactory } = require('../src/interfaces/attributes/attributesFactory')
-const attributeTypes = require('../src/interfaces/attributes/attributeTypes')
-const { 
+const attributeTypes = require('../src/Domain/Shared/interfaces/attributes/attributeTypes')
+const {
   branchOneId,
   branchTwoId,
-  branchThreeId
+  branchThreeId,
 } = require('./20210623221400-populateUsersTable')
 
 const {
@@ -28,30 +27,28 @@ const promotionOneId = 1
 const promotionTwoId = 2
 const promotionThreeId = 3
 
-
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('promotions', [
-      { 
+      {
         name: 'Super promoção 1',
         total_price: 20.20,
         due_date: new Date(2022, 1, 1),
         avaiability: [1, 2, 3, 4, 5, 6, 7],
       },
-      { 
+      {
         name: 'Super promoção 2',
         total_price: 30.20,
         due_date: new Date(2022, 1, 1),
         avaiability: [1, 2, 3, 4, 5, 6, 7],
       },
-      { 
+      {
         name: 'Super promoção 3',
         total_price: 40.20,
         due_date: new Date(2022, 1, 1),
         avaiability: [1, 2, 3, 4, 5, 6, 7],
       },
-    ]);
+    ])
 
     await queryInterface.bulkInsert('promotions_products', [
       {
@@ -78,8 +75,8 @@ module.exports = {
             price: 0,
             quantity: 5,
             id: productOneAttrSix,
-          }
-        ])
+          },
+        ]),
       },
       {
         promotion_id: 1,
@@ -104,8 +101,8 @@ module.exports = {
             price: 6,
             quantity: 1,
             id: productThreeAttrTwo,
-          }
-        ])
+          },
+        ]),
       },
       {
         promotion_id: 2,
@@ -116,16 +113,16 @@ module.exports = {
             name: 'P',
             price: 5,
             quantity: 1,
-            id: productOneAttrOne
+            id: productOneAttrOne,
           },
           {
             type: attributeTypes.additionals,
             name: 'borda queijo',
             price: 2,
             quantity: 1,
-            id: productOneAttrFour
+            id: productOneAttrFour,
           },
-        ])
+        ]),
       },
       {
         promotion_id: 2,
@@ -137,7 +134,7 @@ module.exports = {
         product_id: productOneId,
         attributes: JSON.stringify([]),
       },
-    ]);
+    ])
 
     await queryInterface.bulkInsert('branches_promotions', [
       {
@@ -157,12 +154,10 @@ module.exports = {
         branch_id: branchTwoId,
       },
     ])
-
-
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('promotions', null, {});
-    await queryInterface.bulkDelete('promotions_products', null, {});
+    await queryInterface.bulkDelete('promotions', null, {})
+    await queryInterface.bulkDelete('promotions_products', null, {})
   },
-};
+}

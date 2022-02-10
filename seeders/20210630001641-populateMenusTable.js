@@ -1,14 +1,14 @@
-const { v4: uuid } = require('uuid');
+const { v4: uuid } = require('uuid')
 
-const { branchOneId, branchTwoId } = require('./20210623221400-populateUsersTable');
+const { branchOneId, branchTwoId } = require('./20210623221400-populateUsersTable')
 
- const menuOne = uuid();
- const menuTwo = uuid();
- const menuThree = uuid();
- const menuFour = uuid();
- const menuFive = uuid();
- const menuSix = uuid();
- const menuSeven = uuid();
+const menuOne = uuid()
+const menuTwo = uuid()
+const menuThree = uuid()
+const menuFour = uuid()
+const menuFive = uuid()
+const menuSix = uuid()
+const menuSeven = uuid()
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -17,46 +17,46 @@ module.exports = {
         id: menuOne,
         menu_name: 'Pizzas',
         description: 'Pizzas Boladas',
-        
+
       },
       {
         id: menuTwo,
         menu_name: 'Sucos',
         description: 'Sucos Bolados',
-        
+
       },
       {
         id: menuThree,
         menu_name: 'Refris',
         description: 'Refris Boladas',
-        
+
       },
       {
         id: menuFour,
         menu_name: 'Samdubas',
         description: 'Samdubas Boladas',
-        
+
       },
       {
         id: menuFive,
         menu_name: 'Massas',
         description: 'Massas Boladas',
-        
+
       },
       {
         id: menuSix,
         menu_name: 'Cervejas',
         description: 'Cervejas Boladas',
-        
+
       },
       {
         id: menuSeven,
         menu_name: 'Drinks',
         description: 'Drinks Boladas',
-        
+
       },
 
-    ]);
+    ])
 
     await queryInterface.bulkInsert('branches_menus', [
       {
@@ -87,11 +87,11 @@ module.exports = {
         branch_id: branchTwoId,
         menu_id: menuSeven,
       },
-    ]);
+    ])
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('menus', null, {});
+    await queryInterface.bulkDelete('menus', null, {})
   },
 
   menuOne,
@@ -100,5 +100,5 @@ module.exports = {
   menuFour,
   menuFive,
   menuSix,
-  menuSeven
-};
+  menuSeven,
+}

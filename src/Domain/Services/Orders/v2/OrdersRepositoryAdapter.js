@@ -1,5 +1,4 @@
 /* eslint-disable class-methods-use-this */
-
 const {
   DeliveryTypes,
   PaymentMethods,
@@ -11,20 +10,19 @@ const {
   States,
   Cities,
   Countries,
-} = require('../../../models')
-const colBuilder = require('../helpers/QueryBuilders/sequelizeCol')
-const associationsFactory = require('../helpers/QueryBuilders/associationsFactory')
-const productsAssociationsFactory = require('../helpers/defaultAssociations/productsAssociations')
-const { addressIds, timeStamps } = require('../helpers/exclusions')
-const whereTranslator = require('../helpers/QueryBuilders/whereTranslator')
-const QueryInterface = require('../BaseClasses/QueryInterface')
+  Orders,
+} = require('../../../../models')
+const colBuilder = require('../../helpers/QueryBuilders/sequelizeCol')
+const associationsFactory = require('../../helpers/QueryBuilders/associationsFactory')
+const productsAssociationsFactory = require('../../helpers/defaultAssociations/productsAssociations')
+const { addressIds, timeStamps } = require('../../helpers/exclusions')
 
-const {
-  productsAssociations,
-} = productsAssociationsFactory()
+class Adapter {
+  async GetAll(branchId, status) {
+    const {
+      productsAssociations,
+    } = productsAssociationsFactory()
 
-class OrderQueries extends QueryInterface {
-  findAll({ query }) {
     const associations = {
       orderDeliveryType: {
         model: DeliveryTypes,
@@ -40,8 +38,16 @@ class OrderQueries extends QueryInterface {
     const includedAssociations = associationsFactory(associations)
     const { colInclude } = colBuilder(associations)
 
-    return {
-      where: whereTranslator(query),
+    const where = {
+      branchId,
+    }
+
+    if (status) {
+      where.status = status
+    }
+
+    const select = {
+      where,
       attributes: {
         include: [
           ...colInclude,
@@ -132,8 +138,11 @@ class OrderQueries extends QueryInterface {
       ],
       order: ['createdAt'],
     }
+
+    const orders = await Orders.findAll(select)
+    return orders
   }
 }
-const OrdersQueries = new OrderQueries()
+const OrdersRepositoryAdapter = new Adapter()
 
-module.exports = OrdersQueries
+export default OrdersRepositoryAdapter

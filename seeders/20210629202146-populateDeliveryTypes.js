@@ -1,4 +1,4 @@
-const { branchOneId, branchTwoId } = require('./20210623221400-populateUsersTable');
+const { branchOneId, branchTwoId } = require('./20210623221400-populateUsersTable')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -12,7 +12,7 @@ module.exports = {
       {
         delivery_type: 'on_spot_consumption',
       },
-    ]);
+    ])
 
     await queryInterface.bulkInsert('branches_delivery_types', [
       {
@@ -35,11 +35,11 @@ module.exports = {
         branch_id: branchTwoId,
         delivery_type_id: 3,
       },
-    ]);
+    ])
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('branches_delivery_types', null, {});
-    await queryInterface.bulkDelete('delivery_types', null, {});
+    await queryInterface.bulkDelete('branches_delivery_types', null, {})
+    await queryInterface.bulkDelete('delivery_types', null, {})
   },
-};
+}

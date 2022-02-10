@@ -10,10 +10,10 @@ module.exports = {
       {
         category_name: 'Bebidas alcoólicas',
       },
-    ]);
+    ])
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('categories', null, {});
+    await queryInterface.bulkDelete('categories', null, {})
   },
-};
+}

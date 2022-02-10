@@ -1,4 +1,4 @@
-const { branchOneId, branchTwoId } = require('./20210623221400-populateUsersTable');
+const { branchOneId, branchTwoId } = require('./20210623221400-populateUsersTable')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -19,7 +19,7 @@ module.exports = {
         id: 4,
         name: 'uses_limit',
       },
-    ]);
+    ])
 
     await queryInterface.bulkInsert('coupons', [
       {
@@ -47,7 +47,7 @@ module.exports = {
         price_limit: 20.20,
         date_limit: new Date(2021, 12, 10),
       },
-    ]);
+    ])
 
     await queryInterface.bulkInsert('coupons_branches', [
       {
@@ -66,7 +66,7 @@ module.exports = {
         coupom_id: 3,
         branch_id: branchOneId,
       },
-    ]);
+    ])
 
     await queryInterface.bulkInsert('coupons_conditions', [
       {
@@ -85,13 +85,13 @@ module.exports = {
         coupom_id: 3,
         condition_id: 1,
       },
-    ]);
+    ])
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('conditions', null, {});
-    await queryInterface.bulkDelete('coupons', null, {});
-    await queryInterface.bulkDelete('coupons_branches', null, {});
-    await queryInterface.bulkDelete('coupons_conditions', null, {});
+    await queryInterface.bulkDelete('conditions', null, {})
+    await queryInterface.bulkDelete('coupons', null, {})
+    await queryInterface.bulkDelete('coupons_branches', null, {})
+    await queryInterface.bulkDelete('coupons_conditions', null, {})
   },
-};
+}

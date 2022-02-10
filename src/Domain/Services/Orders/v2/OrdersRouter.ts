@@ -14,21 +14,21 @@ export default class OrdersRouter extends BaseRouter<OrdersController> {
    */
   constructor(
   ) {
-    super(RoutesPath.ORDERSv2)
+    super(RoutesPath.ORDERS)
     this.Controller = Container.get(OrdersController)
   }
 
   CreateRoutes() : void {
     const routes : Routes = [
       {
-        Endpoint: '/set-order-status/:id/:status',
+        Endpoint: '/setOrderStatus/:id/:status',
         ExecuteAsync: this.Controller.SetOrderStatus(),
         LocalMiddlewares: [AuthenticateUser],
         Method: METHODS.POST,
       },
       {
-        Endpoint: '/',
-        ExecuteAsync: this.Controller.GetAll(),
+        Endpoint: '/byBranch/:branchId',
+        ExecuteAsync: this.Controller.GetAllByBranchId(),
         // LocalMiddlewares: [AuthenticateUser],
         LocalMiddlewares: [],
         Method: METHODS.GET,

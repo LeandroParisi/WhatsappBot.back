@@ -1,7 +1,6 @@
 const { v4: uuid } = require('uuid')
+const attributeTypes = require('../src/Domain/Shared/interfaces/attributes/attributeTypes')
 
-const { orderProductsAttrFactory } = require('../src/interfaces/attributes/attributesFactory')
-const attributeTypes = require('../src/interfaces/attributes/attributeTypes')
 const { branchOneId } = require('./20210623221400-populateUsersTable')
 const { productOneId, productTwoId, productThreeId } = require('./20210710183145-populateProductsTable')
 const {
@@ -33,7 +32,7 @@ module.exports = {
         delivery_fee: 10,
         payment_method_id: 1,
         total_price: 60,
-        status: 'placed',
+        status: 1,
         estimated_delivery_time: '10m',
         comments: 'Entregar na portaria',
       },
@@ -47,7 +46,7 @@ module.exports = {
         delivery_fee: 10,
         payment_method_id: 2,
         total_price: 40.22,
-        status: 'placed',
+        status: 1,
         estimated_delivery_time: '10m',
         comments: 'Entregar na portaria',
       },
@@ -60,7 +59,7 @@ module.exports = {
         delivery_fee: 10,
         payment_method_id: 2,
         total_price: 30,
-        status: 'placed',
+        status: 1,
         estimated_delivery_time: '20m',
         comments: 'Entregar na portaria',
       },
@@ -73,7 +72,7 @@ module.exports = {
         delivery_fee: 10,
         payment_method_id: 3,
         total_price: 20.32,
-        status: 'placed',
+        status: 1,
         estimated_delivery_time: '30m',
         comments: 'Entregar na portaria',
       },
@@ -86,7 +85,7 @@ module.exports = {
         delivery_fee: 0,
         payment_method_id: 4,
         total_price: 10,
-        status: 'placed',
+        status: 1,
         estimated_delivery_time: '30m',
         comments: 'Entregar na portaria',
       },
@@ -100,7 +99,7 @@ module.exports = {
         delivery_fee: 10,
         payment_method_id: 1,
         total_price: 60.22,
-        status: 'placed',
+        status: 1,
         estimated_delivery_time: '10m',
         comments: 'Entregar na portaria',
       },
@@ -114,7 +113,7 @@ module.exports = {
         delivery_fee: 10,
         payment_method_id: 2,
         total_price: 40.22,
-        status: 'placed',
+        status: 1,
         estimated_delivery_time: '10m',
         comments: 'Entregar na portaria',
       },
@@ -127,7 +126,7 @@ module.exports = {
         delivery_fee: 10,
         payment_method_id: 3,
         total_price: 30.55,
-        status: 'placed',
+        status: 1,
         estimated_delivery_time: '20m',
         comments: 'Entregar na portaria',
       },
@@ -140,7 +139,7 @@ module.exports = {
         delivery_fee: 10,
         payment_method_id: 4,
         total_price: 20.32,
-        status: 'placed',
+        status: 1,
         estimated_delivery_time: '30m',
         comments: 'Entregar na portaria',
       },
@@ -153,7 +152,7 @@ module.exports = {
         delivery_fee: 0,
         payment_method_id: 2,
         total_price: 10.99,
-        status: 'placed',
+        status: 1,
         estimated_delivery_time: '30m',
         comments: 'Entregar na portaria',
       },
@@ -165,26 +164,52 @@ module.exports = {
         product_id: productOneId,
         total_price: 10.10,
         quantity: 1,
-        attributes: JSON.stringify(
-          orderProductsAttrFactory([
-            [attributeTypes.sizes, 'M', 10],
-            [attributeTypes.additionals, 'borda queijo', 2, 2],
-            [attributeTypes.additionals, 'catchup', 0, 5],
-          ]),
-        ),
+        attributes: JSON.stringify([
+          {
+            type: attributeTypes.sizes,
+            name: 'M',
+            price: 10,
+            quantity: 1,
+          },
+          {
+            type: attributeTypes.additionals,
+            name: 'borda queijo',
+            price: 2,
+            quantity: 2,
+          },
+          {
+            type: attributeTypes.additionals,
+            name: 'catchup',
+            price: 0,
+            quantity: 5,
+          },
+        ]),
       },
       {
         order_id: order1,
         product_id: productOneId,
         total_price: 10.10,
         quantity: 1,
-        attributes: JSON.stringify(
-          orderProductsAttrFactory([
-            [attributeTypes.sizes, 'P', 5],
-            [attributeTypes.additionals, 'borda queijo', 2, 2],
-            [attributeTypes.additionals, 'catchup', 0, 5],
-          ]),
-        ),
+        attributes: JSON.stringify([
+          {
+            type: attributeTypes.sizes,
+            name: 'P',
+            price: 5,
+            quantity: 1,
+          },
+          {
+            type: attributeTypes.additionals,
+            name: 'borda queijo',
+            price: 2,
+            quantity: 2,
+          },
+          {
+            type: attributeTypes.additionals,
+            name: 'catchup',
+            price: 0,
+            quantity: 5,
+          },
+        ]),
       },
       {
         order_id: order1,
@@ -197,13 +222,26 @@ module.exports = {
         product_id: productOneId,
         total_price: 10.10,
         quantity: 1,
-        attributes: JSON.stringify(
-          orderProductsAttrFactory([
-            [attributeTypes.sizes, 'G', 15],
-            [attributeTypes.additionals, 'borda catupiry', 4],
-            [attributeTypes.additionals, 'catchup', 0, 5],
-          ]),
-        ),
+        attributes: JSON.stringify([
+          {
+            type: attributeTypes.sizes,
+            name: 'G',
+            price: 15,
+            quantity: 1,
+          },
+          {
+            type: attributeTypes.additionals,
+            name: 'borda catupiry',
+            price: 4,
+            quantity: 2,
+          },
+          {
+            type: attributeTypes.additionals,
+            name: 'catchup',
+            price: 0,
+            quantity: 5,
+          },
+        ]),
       },
       {
         order_id: order2,
@@ -216,24 +254,40 @@ module.exports = {
         product_id: productThreeId,
         total_price: 10.10,
         quantity: 1,
-        attributes: JSON.stringify(
-          orderProductsAttrFactory([
-            [attributeTypes.additionals, 'bacon', 5, 2],
-            [attributeTypes.additionals, 'carne extra', 6, 1],
-          ]),
-        ),
+        attributes: JSON.stringify([
+          {
+            type: attributeTypes.additionals,
+            name: 'bacon',
+            price: 4,
+            quantity: 2,
+          },
+          {
+            type: attributeTypes.additionals,
+            name: 'carne extra',
+            price: 6,
+            quantity: 5,
+          },
+        ]),
       },
       {
         order_id: order3,
         product_id: productThreeId,
         total_price: 10.10,
         quantity: 1,
-        attributes: JSON.stringify(
-          orderProductsAttrFactory([
-            [attributeTypes.additionals, 'bacon', 5, 3],
-            [attributeTypes.additionals, 'molho especial', 3],
-          ]),
-        ),
+        attributes: JSON.stringify([
+          {
+            type: attributeTypes.additionals,
+            name: 'bacon',
+            price: 5,
+            quantity: 3,
+          },
+          {
+            type: attributeTypes.additionals,
+            name: 'molho especial',
+            price: 3,
+            quantity: 2,
+          },
+        ]),
       },
 
       {
@@ -241,11 +295,14 @@ module.exports = {
         product_id: productOneId,
         total_price: 10.10,
         quantity: 1,
-        attributes: JSON.stringify(
-          orderProductsAttrFactory([
-            [attributeTypes.sizes, 'M', 10],
-          ]),
-        ),
+        attributes: JSON.stringify([
+          {
+            type: attributeTypes.additionals,
+            name: 'molho especial',
+            price: 3,
+            quantity: 2,
+          },
+        ]),
       },
       {
         order_id: order4,
@@ -258,11 +315,14 @@ module.exports = {
         product_id: productOneId,
         total_price: 10.10,
         quantity: 1,
-        attributes: JSON.stringify(
-          orderProductsAttrFactory([
-            [attributeTypes.sizes, 'P', 5],
-          ]),
-        ),
+        attributes: JSON.stringify([
+          {
+            type: attributeTypes.sizes,
+            name: 'G',
+            price: 15,
+            quantity: 1,
+          },
+        ]),
       },
       {
         order_id: order5,
@@ -288,11 +348,14 @@ module.exports = {
         product_id: productOneId,
         total_price: 10.10,
         quantity: 1,
-        attributes: JSON.stringify(
-          orderProductsAttrFactory([
-            [attributeTypes.sizes, 'P', 5],
-          ]),
-        ),
+        attributes: JSON.stringify([
+          {
+            type: attributeTypes.sizes,
+            name: 'P',
+            price: 5,
+            quantity: 1,
+          },
+        ]),
       },
       {
         order_id: order7,
@@ -305,13 +368,6 @@ module.exports = {
         product_id: productOneId,
         total_price: 10.10,
         quantity: 1,
-        attributes: JSON.stringify(
-          orderProductsAttrFactory([
-            [attributeTypes.sizes, 'M', 10],
-            [attributeTypes.additionals, 'borda catupiry', 4],
-            [attributeTypes.additionals, 'catchup', 0, 5],
-          ]),
-        ),
       },
       {
         order_id: order8,

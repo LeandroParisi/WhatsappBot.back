@@ -1,3 +1,3 @@
-const orderStatus = require('./status');
+const orderStatus = require('./status')
 
-module.exports = { orderStatus };
+module.exports = { orderStatus }

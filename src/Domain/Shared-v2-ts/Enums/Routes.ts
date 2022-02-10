@@ -4,7 +4,6 @@ enum RoutesPath {
   CUSTOMERS = '/customers',
   COUPONS = '/coupons',
   ORDERS = '/orders',
-  ORDERSv2 = '/orders/v2'
 }
 
 export default RoutesPath

@@ -1,15 +1,15 @@
-const { orderStatus } = require('../../../Shared/interfaces/models/Orders');
-const { camelCaseColumn } = require('../../helpers/QueryBuilders/utils');
+const { orderStatus } = require('../../../Shared/interfaces/models/Orders')
+const { camelCaseColumn } = require('../../helpers/QueryBuilders/utils')
 
 const groupOrdersByStatus = (orders) => {
-  const groupedOrders = {};
+  const groupedOrders = {}
 
   orderStatus.forEach((status) => {
     groupedOrders[camelCaseColumn(status)] = orders
-      .filter((order) => order.toJSON().status === status);
-  });
+      .filter((order) => order.toJSON().status === status)
+  })
 
-  return groupedOrders;
-};
+  return groupedOrders
+}
 
-module.exports = groupOrdersByStatus;
+module.exports = groupOrdersByStatus

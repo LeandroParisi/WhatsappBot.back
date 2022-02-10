@@ -7,8 +7,6 @@ import {
   BranchesRouter, CouponsRouter, CustomerAddressesRouter, CustomerRouter, LocationsRouter, MenusRouter, ProductsRouter, PromotionsRouter, UsersRouter,
 } from './Domain/Services'
 
-import { default as OR } from './Domain/Services/Orders/OrdersRouter'
-
 const express = require('express')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
@@ -61,7 +59,6 @@ class Main {
     this.app.use(UsersRouter.basePath, UsersRouter.setRouter())
     this.app.use(BranchesRouter.basePath, BranchesRouter.setRouter())
     this.app.use(this.OrdersRouter.BasePath, this.OrdersRouter.SetRouter())
-    this.app.use(OR.basePath, OR.setRouter())
     this.app.use(MenusRouter.basePath, MenusRouter.setRouter())
     this.app.use(ProductsRouter.basePath, ProductsRouter.setRouter())
     this.app.use(CouponsRouter.basePath, CouponsRouter.setRouter())

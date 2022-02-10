@@ -2,8 +2,6 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 
-const { orderStatus } = require('../Domain/Shared/interfaces/models/Orders')
-
 const createOrders = (sequelize, DataTypes) => {
   const Orders = sequelize.define('Orders', {
     id: {
@@ -41,9 +39,7 @@ const createOrders = (sequelize, DataTypes) => {
       type: DataTypes.DECIMAL(10, 2),
     },
     status: {
-      type: DataTypes.ENUM(
-        ...orderStatus,
-      ),
+      type: DataTypes.INTEGER,
     },
     coupomId: {
       type: DataTypes.INTEGER,
