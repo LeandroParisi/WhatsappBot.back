@@ -1,5 +1,5 @@
 import { Request } from 'express'
-import { OrderStatus } from '../../../../../Data/Entities/Models/Order'
+import { OrderStatus } from '../../../../Data/Entities/Models/Order'
 
 export class SetOrderDTO {
   status : OrderStatus

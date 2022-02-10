@@ -1,10 +1,11 @@
 import { Request, Response } from 'express'
 import Container, { Service } from 'typedi'
-import RoutesPath from '../../../Shared-v2-ts/Enums/Routes'
-import { Routes } from '../../../Shared-v2-ts/Interfaces/IRouteDefinition'
-import AuthenticateUser from '../../../Shared-v2-ts/Middlewares/Validations/AuthenticateUser'
-import { METHODS } from '../../../Shared/libs'
-import BaseRouter from '../../BaseClasses/v2/BaseRouter'
+import RoutesPath from '../../Shared-v2-ts/Enums/Routes'
+import { Routes } from '../../Shared-v2-ts/Interfaces/IRouteDefinition'
+import AuthenticateUser from '../../Shared-v2-ts/Middlewares/Validations/AuthenticateUser'
+import { METHODS } from '../../Shared/libs'
+import BaseRouter from '../BaseClasses/v2/BaseRouter'
+
 import OrdersController from './OrdersController'
 
 @Service()

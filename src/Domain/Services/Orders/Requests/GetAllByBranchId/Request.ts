@@ -1,4 +1,4 @@
-import IAuthenticatedRequest from '../../../../../Shared-v2-ts/Interfaces/ExpressInterfaces/CustomRequests/IAuthenticatedReques'
+import IAuthenticatedRequest from '../../../../Shared-v2-ts/Interfaces/ExpressInterfaces/CustomRequests/IAuthenticatedReques'
 import GetOrdersParam from './Params'
 import GetOrdersQuery from './Query'
 
