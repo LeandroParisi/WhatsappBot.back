@@ -1,20 +1,20 @@
-const { Op } = require('sequelize');
+const { Op } = require('sequelize')
 
 const whereTranslator = (query) => {
-  const translatedQuery = { ...query };
+  const translatedQuery = { ...query }
 
-  const queryKeys = Object.keys(query);
-  const queryValues = Object.values(query);
+  const queryKeys = Object.keys(query)
+  const queryValues = Object.values(query)
 
   queryValues.forEach((value, index) => {
-    const isNegation = /^!/.test(value);
+    const isNegation = /^!/.test(value)
 
     if (isNegation) {
-      const newValue = value.replace('!', '');
-      translatedQuery[queryKeys[index]] = { [Op.ne]: newValue };
+      const newValue = value.replace('!', '')
+      translatedQuery[queryKeys[index]] = { [Op.ne]: newValue }
     }
-  });
-  return translatedQuery;
-};
+  })
+  return translatedQuery
+}
 
-module.exports = whereTranslator;
+module.exports = whereTranslator

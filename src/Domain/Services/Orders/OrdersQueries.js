@@ -11,17 +11,17 @@ const {
   States,
   Cities,
   Countries,
-} = require('../../../models');
-const colBuilder = require('../helpers/QueryBuilders/sequelizeCol');
-const associationsFactory = require('../helpers/QueryBuilders/associationsFactory');
-const productsAssociationsFactory = require('../helpers/defaultAssociations/productsAssociations');
-const { addressIds, timeStamps } = require('../helpers/exclusions');
-const whereTranslator = require('../helpers/QueryBuilders/whereTranslator');
-const QueryInterface = require('../BaseClasses/QueryInterface');
+} = require('../../../models')
+const colBuilder = require('../helpers/QueryBuilders/sequelizeCol')
+const associationsFactory = require('../helpers/QueryBuilders/associationsFactory')
+const productsAssociationsFactory = require('../helpers/defaultAssociations/productsAssociations')
+const { addressIds, timeStamps } = require('../helpers/exclusions')
+const whereTranslator = require('../helpers/QueryBuilders/whereTranslator')
+const QueryInterface = require('../BaseClasses/QueryInterface')
 
 const {
   productsAssociations,
-} = productsAssociationsFactory();
+} = productsAssociationsFactory()
 
 class OrderQueries extends QueryInterface {
   findAll({ query }) {
@@ -35,10 +35,10 @@ class OrderQueries extends QueryInterface {
         column: 'payment_method',
       },
 
-    };
+    }
 
-    const includedAssociations = associationsFactory(associations);
-    const { colInclude } = colBuilder(associations);
+    const includedAssociations = associationsFactory(associations)
+    const { colInclude } = colBuilder(associations)
 
     return {
       where: whereTranslator(query),
@@ -131,9 +131,9 @@ class OrderQueries extends QueryInterface {
         },
       ],
       order: ['createdAt'],
-    };
+    }
   }
 }
-const OrdersQueries = new OrderQueries();
+const OrdersQueries = new OrderQueries()
 
-module.exports = OrdersQueries;
+module.exports = OrdersQueries

@@ -1,8 +1,11 @@
 import { Knex } from 'knex'
 
 import 'dotenv/config'
+import StringParser from '../../../Shared/Parsers/StringParser'
+// TODO
+const knexStringCase = require('knex-stringcase')
 
-const KnexConfig : Knex.Config = {
+const defaultConfig : Knex.Config = {
   client: 'pg',
   connection: {
     host: process.env.DB_HOST,
@@ -16,10 +19,13 @@ const KnexConfig : Knex.Config = {
     min: 2,
     max: 10,
   },
+  debug: true,
   // migrations: {
   //   tableName: 'knex_migrations',
   //   directory: 'migrations',
   // },
 }
+
+const KnexConfig = knexStringCase(defaultConfig)
 
 export default KnexConfig

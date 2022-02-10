@@ -1,7 +1,7 @@
 import { IncomingHttpHeaders } from 'http'
-import IUserToken from '../../IUserToken'
+import IUserToken from '../../../Domain/Shared-v2-ts/Interfaces/IUserToken'
 
-declare module 'express-serve-static-core' {
+declare module 'express' {
   export interface Request {
     headers : IncomingHttpHeaders & {
       auth : string

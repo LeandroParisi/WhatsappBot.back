@@ -2,7 +2,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 
-const { orderStatus } = require('../Domain/Shared/interfaces/models/Orders');
+const { orderStatus } = require('../Domain/Shared/interfaces/models/Orders')
 
 const createOrders = (sequelize, DataTypes) => {
   const Orders = sequelize.define('Orders', {
@@ -63,44 +63,44 @@ const createOrders = (sequelize, DataTypes) => {
     deliveryTime: {
       type: DataTypes.DATE,
     },
-  }, { underscored: true });
+  }, { underscored: true })
 
   Orders.associate = (models) => {
     Orders.belongsTo(models.Customers, {
       as: 'customer',
       foreignKey: 'customerId',
-    });
+    })
     Orders.belongsTo(models.Branches, {
       as: 'branchOrders',
       foreignKey: 'branchId',
-    });
+    })
     Orders.belongsTo(models.DeliveryTypes, {
       as: 'orderDeliveryType',
       foreignKey: 'deliveryTypeId',
-    });
+    })
     Orders.belongsTo(models.PaymentMethods, {
       as: 'orderPaymentMethod',
       foreignKey: 'paymentMethodId',
-    });
+    })
     Orders.belongsTo(models.Coupons, {
       as: 'orderCoupom',
       foreignKey: 'coupomId',
-    });
+    })
     Orders.belongsTo(models.Promotions, {
       as: 'orderPromotion',
       foreignKey: 'promotionId',
-    });
+    })
     Orders.hasMany(models.OrdersProducts, {
       as: 'ordersProducts',
       foreignKey: 'orderId',
-    });
+    })
     Orders.belongsTo(models.CustomerAddresses, {
       as: 'orderAddress',
       foreignKey: 'addressId',
-    });
-  };
+    })
+  }
 
-  return Orders;
-};
+  return Orders
+}
 
-module.exports = createOrders;
+module.exports = createOrders

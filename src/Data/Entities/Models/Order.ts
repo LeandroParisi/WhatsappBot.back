@@ -30,7 +30,8 @@ export default class Order {
 
   totalPrice : number
 
-  status : OrderStatus
+  // TODO
+  status : OrderStatus | number
 
   coupomId : number
 

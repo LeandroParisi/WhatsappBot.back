@@ -1,24 +1,24 @@
-const { v4: uuid } = require('uuid');
+const { v4: uuid } = require('uuid')
 
-const { orderProductsAttrFactory } = require('../src/interfaces/attributes/attributesFactory');
-const attributeTypes = require('../src/interfaces/attributes/attributeTypes');
-const { branchOneId } = require('./20210623221400-populateUsersTable');
-const { productOneId, productTwoId, productThreeId } = require('./20210710183145-populateProductsTable');
-const { customer1, customer2, customer3, customerAddress1, customerAddress2 } = require('./20210711133426-populateCustomersTable');
+const { orderProductsAttrFactory } = require('../src/interfaces/attributes/attributesFactory')
+const attributeTypes = require('../src/interfaces/attributes/attributeTypes')
+const { branchOneId } = require('./20210623221400-populateUsersTable')
+const { productOneId, productTwoId, productThreeId } = require('./20210710183145-populateProductsTable')
+const {
+  customer1, customer2, customer3, customerAddress1, customerAddress2,
+} = require('./20210711133426-populateCustomersTable')
 
-const order1 = uuid();
-const order2 = uuid();
-const order3 = uuid();
-const order4 = uuid();
-const order5 = uuid();
+const order1 = uuid()
+const order2 = uuid()
+const order3 = uuid()
+const order4 = uuid()
+const order5 = uuid()
 
-const order6 = uuid();
-const order7 = uuid();
-const order8 = uuid();
-const order9 = uuid();
-const order10 = uuid();
-
-
+const order6 = uuid()
+const order7 = uuid()
+const order8 = uuid()
+const order9 = uuid()
+const order10 = uuid()
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -157,9 +157,9 @@ module.exports = {
         estimated_delivery_time: '30m',
         comments: 'Entregar na portaria',
       },
-    ]);
+    ])
 
-    await queryInterface.bulkInsert('orders_products', [   
+    await queryInterface.bulkInsert('orders_products', [
       {
         order_id: order1,
         product_id: productOneId,
@@ -169,9 +169,9 @@ module.exports = {
           orderProductsAttrFactory([
             [attributeTypes.sizes, 'M', 10],
             [attributeTypes.additionals, 'borda queijo', 2, 2],
-            [attributeTypes.additionals, 'catchup', 0, 5]
-          ])
-        )
+            [attributeTypes.additionals, 'catchup', 0, 5],
+          ]),
+        ),
       },
       {
         order_id: order1,
@@ -182,9 +182,9 @@ module.exports = {
           orderProductsAttrFactory([
             [attributeTypes.sizes, 'P', 5],
             [attributeTypes.additionals, 'borda queijo', 2, 2],
-            [attributeTypes.additionals, 'catchup', 0, 5]
-          ])
-        )
+            [attributeTypes.additionals, 'catchup', 0, 5],
+          ]),
+        ),
       },
       {
         order_id: order1,
@@ -201,9 +201,9 @@ module.exports = {
           orderProductsAttrFactory([
             [attributeTypes.sizes, 'G', 15],
             [attributeTypes.additionals, 'borda catupiry', 4],
-            [attributeTypes.additionals, 'catchup', 0, 5]
-          ])
-        )
+            [attributeTypes.additionals, 'catchup', 0, 5],
+          ]),
+        ),
       },
       {
         order_id: order2,
@@ -220,8 +220,8 @@ module.exports = {
           orderProductsAttrFactory([
             [attributeTypes.additionals, 'bacon', 5, 2],
             [attributeTypes.additionals, 'carne extra', 6, 1],
-          ])
-        )
+          ]),
+        ),
       },
       {
         order_id: order3,
@@ -232,8 +232,8 @@ module.exports = {
           orderProductsAttrFactory([
             [attributeTypes.additionals, 'bacon', 5, 3],
             [attributeTypes.additionals, 'molho especial', 3],
-          ])
-        )
+          ]),
+        ),
       },
 
       {
@@ -244,8 +244,8 @@ module.exports = {
         attributes: JSON.stringify(
           orderProductsAttrFactory([
             [attributeTypes.sizes, 'M', 10],
-          ])
-        )
+          ]),
+        ),
       },
       {
         order_id: order4,
@@ -261,8 +261,8 @@ module.exports = {
         attributes: JSON.stringify(
           orderProductsAttrFactory([
             [attributeTypes.sizes, 'P', 5],
-          ])
-        )
+          ]),
+        ),
       },
       {
         order_id: order5,
@@ -291,8 +291,8 @@ module.exports = {
         attributes: JSON.stringify(
           orderProductsAttrFactory([
             [attributeTypes.sizes, 'P', 5],
-          ])
-        )
+          ]),
+        ),
       },
       {
         order_id: order7,
@@ -309,9 +309,9 @@ module.exports = {
           orderProductsAttrFactory([
             [attributeTypes.sizes, 'M', 10],
             [attributeTypes.additionals, 'borda catupiry', 4],
-            [attributeTypes.additionals, 'catchup', 0, 5]
-          ])
-        )
+            [attributeTypes.additionals, 'catchup', 0, 5],
+          ]),
+        ),
       },
       {
         order_id: order8,
@@ -337,10 +337,10 @@ module.exports = {
         total_price: 10.10,
         quantity: 1,
       },
-    ]);
+    ])
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('orders', null, {});
+    await queryInterface.bulkDelete('orders', null, {})
   },
-};
+}

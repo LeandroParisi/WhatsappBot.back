@@ -1,11 +1,5 @@
 import { Request } from 'express'
-import { OrderStatus } from '../../../../../Data/Models/Order'
-import { IParams } from '../../../../Shared-v2-ts/Interfaces/ExpressInterfaces/IRequestParams'
-
-export interface SetOrderParams {
-  id : string
-  status : OrderStatus
-}
+import { OrderStatus } from '../../../../../Data/Entities/Models/Order'
 
 export class SetOrderDTO {
   status : OrderStatus
@@ -18,6 +12,9 @@ export class SetOrderDTO {
   }
 }
 
-export default interface SetOrderStatusReq extends Request, IParams<SetOrderParams> {
-
+export default interface SetOrderStatusReq extends Request {
+  params: {
+    'id' : string,
+    'status' : string
+  }
 }

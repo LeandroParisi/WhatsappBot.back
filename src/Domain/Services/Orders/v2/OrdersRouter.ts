@@ -1,6 +1,8 @@
+import { Request, Response } from 'express'
 import Container, { Service } from 'typedi'
 import RoutesPath from '../../../Shared-v2-ts/Enums/Routes'
 import { Routes } from '../../../Shared-v2-ts/Interfaces/IRouteDefinition'
+import AuthenticateUser from '../../../Shared-v2-ts/Middlewares/Validations/AuthenticateUser'
 import { METHODS } from '../../../Shared/libs'
 import BaseRouter from '../../BaseClasses/v2/BaseRouter'
 import OrdersController from './OrdersController'
@@ -12,17 +14,24 @@ export default class OrdersRouter extends BaseRouter<OrdersController> {
    */
   constructor(
   ) {
-    super(RoutesPath.ORDERS)
+    super(RoutesPath.ORDERSv2)
     this.Controller = Container.get(OrdersController)
   }
 
   CreateRoutes() : void {
     const routes : Routes = [
       {
-        Endpoint: 'set-order-status/:id/:status',
-        ExecuteAsync: this.Controller.SetOrderStatus,
-        LocalMiddlewares: [],
+        Endpoint: '/set-order-status/:id/:status',
+        ExecuteAsync: this.Controller.SetOrderStatus(),
+        LocalMiddlewares: [AuthenticateUser],
         Method: METHODS.POST,
+      },
+      {
+        Endpoint: '/',
+        ExecuteAsync: this.Controller.GetAll(),
+        // LocalMiddlewares: [AuthenticateUser],
+        LocalMiddlewares: [],
+        Method: METHODS.GET,
       },
     ]
 
