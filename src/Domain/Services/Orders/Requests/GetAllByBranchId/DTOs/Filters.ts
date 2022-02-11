@@ -1,7 +1,7 @@
-import GetOrdersParam from '../Params'
-import GetOrdersQuery from '../Query'
+import GetAllByBranchParams from '../Params'
+import GetByBranchQuery from '../Query'
 
-export default class GetOrdersFilters {
+export default class GetByBranchFilters {
   branchId : string
 
   status? : Array<number>
@@ -9,7 +9,7 @@ export default class GetOrdersFilters {
   /**
    *
    */
-  constructor(query : GetOrdersQuery, params : GetOrdersParam) {
+  constructor(query : GetByBranchQuery, params : GetAllByBranchParams) {
     this.branchId = params.branchId
     this.status = query.status ? query.status.trim().split(',').map((s) => Number(s)) : null
   }

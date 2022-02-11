@@ -1,7 +1,6 @@
 import { Service } from 'typedi'
-import KnexConnectionFactory from '../../../../Data/DbConnections/Knex/ConnectionFactory/KnexConnectionFactory'
-
-import { SetOrderDTO } from './Requests/SetOrderStatusReq'
+import KnexConnectionFactory from '../../../Data/DbConnections/Knex/ConnectionFactory/KnexConnectionFactory'
+import Order from '../../../Data/Entities/Models/Order'
 
 import OrdersRepositoryAdapter from './OrdersRepositoryAdapter'
 import GetOrdersFilters from './Requests/GetAllByBranchId/DTOs/Filters'
@@ -25,13 +24,15 @@ export default class OrdersRepository {
     return products
   }
 
-  async UpdateOne(id: string, updatePayload: SetOrderDTO) {
+  async UpdateOne(id: string, updatePayload: Order) : Promise<boolean> {
     const dbConnection = KnexConnectionFactory.Create()
 
     const updateQuery = dbConnection('orders')
       .update(updatePayload)
       .where('id', id)
 
-    await updateQuery
+    const result = await updateQuery
+
+    return result === 1
   }
 }

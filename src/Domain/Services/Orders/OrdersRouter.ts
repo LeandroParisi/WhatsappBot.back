@@ -1,4 +1,3 @@
-import { Request, Response } from 'express'
 import Container, { Service } from 'typedi'
 import RoutesPath from '../../Shared-v2-ts/Enums/Routes'
 import { Routes } from '../../Shared-v2-ts/Interfaces/IRouteDefinition'
@@ -22,10 +21,11 @@ export default class OrdersRouter extends BaseRouter<OrdersController> {
   CreateRoutes() : void {
     const routes : Routes = [
       {
-        Endpoint: '/setOrderStatus/:id/:status',
-        ExecuteAsync: this.Controller.SetOrderStatus(),
-        LocalMiddlewares: [AuthenticateUser],
-        Method: METHODS.POST,
+        Endpoint: '/:id',
+        ExecuteAsync: this.Controller.UpdateOne(),
+        // LocalMiddlewares: [AuthenticateUser],
+        LocalMiddlewares: [],
+        Method: METHODS.PUT,
       },
       {
         Endpoint: '/byBranch/:branchId',

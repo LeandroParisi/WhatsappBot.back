@@ -1,6 +1,5 @@
-type GetOrdersParam = {
+type GetByBranchParams = {
   'branchId' : string,
-
 }
 
-export default GetOrdersParam
+export default GetByBranchParams

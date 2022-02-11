@@ -48,19 +48,17 @@ export default abstract class BaseRouter<TController extends BaseController> {
           )
           break
         case 'POST':
-
-          router.post(route.Endpoint, route.ExecuteAsync)
-          // Router.post(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync))
-
+          // router.post(route.Endpoint, route.ExecuteAsync)
+          router.post(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync))
           break
         case 'PUT':
-          // Router.put(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync()))
+          router.put(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync))
           break
         case 'DELETE':
-          // Router.delete(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync))
+          router.delete(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync))
           break
         default:
-            // Throw exception
+          throw new Error()
       }
     })
     return router

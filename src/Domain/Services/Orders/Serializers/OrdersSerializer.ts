@@ -1,8 +1,8 @@
 /* eslint-disable eqeqeq */
 import { Service } from 'typedi'
-import Order, { OrderStatus } from '../../../../../Data/Entities/Models/Order'
-import SystemExtensions from '../../../../Shared-v2-ts/ExtensionMethods/SystemExtensions'
-import IDictionary from '../../../../Shared-v2-ts/Interfaces/SystemInterfaces/IDictionary'
+import { OrderStatus } from '../../../../Data/Entities/Models/Order'
+import SystemExtensions from '../../../Shared-v2-ts/ExtensionMethods/SystemExtensions'
+import IDictionary from '../../../Shared-v2-ts/Interfaces/SystemInterfaces/IDictionary'
 
 @Service()
 export default class OrdersSerializer {

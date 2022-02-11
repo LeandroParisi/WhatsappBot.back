@@ -2,27 +2,15 @@
 import 'reflect-metadata'
 import { Application } from 'express'
 import Container, { Service } from 'typedi'
-import OrdersRouter from './Domain/Services/Orders/v2/OrdersRouter'
 import {
   BranchesRouter, CouponsRouter, CustomerAddressesRouter, CustomerRouter, LocationsRouter, MenusRouter, ProductsRouter, PromotionsRouter, UsersRouter,
 } from './Domain/Services'
+import OrdersRouter from './Domain/Services/Orders/OrdersRouter'
 
 const express = require('express')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const { errorHandler } = require('./Domain/Shared/middlewares/errorHandler/errorHandler')
-// const {
-//   UsersRouter,
-//   BranchesRouter,
-//   OrdersRouter,
-//   MenusRouter,
-//   ProductsRouter,
-//   PromotionsRouter,
-//   CouponsRouter,
-//   CustomerRouter,
-//   CustomerAddressesRouter,
-//   LocationsRouter,
-// } = require('./Domain/Services')
 
 require('dotenv').config()
 

@@ -11,11 +11,11 @@ const {
   Cities,
   Countries,
   Orders,
-} = require('../../../../models')
-const colBuilder = require('../../helpers/QueryBuilders/sequelizeCol')
-const associationsFactory = require('../../helpers/QueryBuilders/associationsFactory')
-const productsAssociationsFactory = require('../../helpers/defaultAssociations/productsAssociations')
-const { addressIds, timeStamps } = require('../../helpers/exclusions')
+} = require('../../../models')
+const colBuilder = require('../helpers/QueryBuilders/sequelizeCol')
+const associationsFactory = require('../helpers/QueryBuilders/associationsFactory')
+const productsAssociationsFactory = require('../helpers/defaultAssociations/productsAssociations')
+const { addressIds, timeStamps } = require('../helpers/exclusions')
 
 class Adapter {
   async GetAll(branchId, status) {

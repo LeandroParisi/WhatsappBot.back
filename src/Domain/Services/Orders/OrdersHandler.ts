@@ -1,12 +1,13 @@
 import { Service } from 'typedi'
-import { OrderStatus } from '../../../../Data/Entities/Models/Order'
-import groupOrdersByStatus from '../serializers/groupOrdersByStatus'
+import Order from '../../../Data/Entities/Models/Order'
+import FireError from '../../Shared-v2-ts/Abstractions/FireError'
+import { ErrorMessages } from '../../Shared-v2-ts/Enums/Messages'
+import { StatusCode } from '../../Shared-v2-ts/Enums/Status'
 import OrdersRepository from './OrdersRepository'
-import GetOrdersFilters from './Requests/GetAllByBranchId/DTOs/Filters'
-import GetOrdersOptions from './Requests/GetAllByBranchId/DTOs/Options'
-import GetOrdersParam from './Requests/GetAllByBranchId/Params'
-import GetOrdersQuery from './Requests/GetAllByBranchId/Query'
-import { SetOrderDTO } from './Requests/SetOrderStatusReq'
+import GetByBranchFilters from './Requests/GetAllByBranchId/DTOs/Filters'
+import GetByBranchOptions from './Requests/GetAllByBranchId/DTOs/Options'
+import GetByBranchParams from './Requests/GetAllByBranchId/Params'
+import GetByBranchQuery from './Requests/GetAllByBranchId/Query'
 import OrdersSerializer from './Serializers/OrdersSerializer'
 
 @Service()
@@ -20,20 +21,21 @@ export default class OrdersHandler {
   ) {
   }
 
-  public async GetAllByBranchId(query : GetOrdersQuery, params : GetOrdersParam) {
-    const options = new GetOrdersOptions(query)
-    const orders = await this.Repository.GetAllByBranchId(new GetOrdersFilters(query, params))
+  public async GetAllByBranchId(query : GetByBranchQuery, params : GetByBranchParams) {
+    const options = new GetByBranchOptions(query)
+    const orders = await this.Repository.GetAllByBranchId(new GetByBranchFilters(query, params))
 
     this.Serializer.GroupOrderByStatus(orders)
 
     return options.shouldGroup ? this.Serializer.GroupOrderByStatus(orders) : orders
   }
 
-  public async SetOrderStatus(id: string, status: OrderStatus) {
-    const updatePayload = new SetOrderDTO(status)
+  public async UpdateOne(id: string, body: Order) : Promise<void> {
+    const isUpdated = this.Repository.UpdateOne(id, body)
 
-    const teste = await this.Repository.UpdateOne(id, updatePayload)
+    if (!isUpdated) throw new FireError(StatusCode.NOT_FOUND, ErrorMessages.NotFound)
   }
+
   // async FindAll({ query }) {
   //   const data = await super.findAll({ query });
   //   return groupOrdersByStatus(data);

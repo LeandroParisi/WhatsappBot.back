@@ -1,12 +1,12 @@
-import GetOrdersQuery from '../Query'
+import GetByBranchQuery from '../Query'
 
-export default class GetOrdersOptions {
+export default class GetByBranchOptions {
   shouldGroup : boolean
 
   /**
    *
    */
-  constructor(query : GetOrdersQuery) {
+  constructor(query : GetByBranchQuery) {
     this.shouldGroup = !!Number(query.groupedByStatus)
   }
 }

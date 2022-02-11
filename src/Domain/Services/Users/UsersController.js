@@ -1,15 +1,15 @@
 /* eslint-disable class-methods-use-this */
-const BaseController = require('../BaseClasses/BaseController');
+const BaseController = require('../BaseClasses/BaseController')
 const {
   METHODS, status, resMessages, errorMessages,
-} = require('../../Shared/libs');
-const { FireError } = require('../../Shared/middlewares/errorHandler/errorHandler');
-const { decode } = require('../../Shared/authentication/jwtConfig');
-const UsersService = require('./UsersService');
+} = require('../../Shared/libs')
+const { FireError } = require('../../Shared/middlewares/errorHandler/errorHandler')
+const { decode } = require('../../Shared/authentication/jwtConfig')
+const UsersService = require('./UsersService')
 
 class UserController extends BaseController {
   constructor(service) {
-    super(service);
+    super(service)
 
     this.newRoutes = {
       botLogin: {
@@ -39,12 +39,13 @@ class UserController extends BaseController {
         handler: this.auth.bind(this),
         localMiddleware: [],
       },
-    };
+    }
   }
 
   async login(req, res) {
-    const payload = req.body;
-    const token = await this.service.login(payload);
+    const payload = req.body
+    const token = await this.service.login(payload)
+    console.log({ token })
     res.cookie(
       'wbt',
       token,
@@ -54,43 +55,43 @@ class UserController extends BaseController {
         sameSite: 'none',
         secure: true,
       },
-    );
-    res.status(status.ok).json({ message: resMessages.loginOK });
+    )
+    res.status(status.ok).json({ message: resMessages.loginOK })
   }
 
   async auth(req, res) {
-    const { wbt } = req.cookies;
-    if (!wbt) throw new FireError(status.unauthorized, errorMessages.expiredSession);
+    const { wbt } = req.cookies
+    if (!wbt) throw new FireError(status.unauthorized, errorMessages.expiredSession)
     try {
-      decode(wbt);
+      decode(wbt)
     } catch (error) {
-      throw new FireError(status.unauthorized, errorMessages.expiredSession);
+      throw new FireError(status.unauthorized, errorMessages.expiredSession)
     }
-    res.status(status.ok).json({ ok: true });
+    res.status(status.ok).json({ ok: true })
   }
 
   async botLogin(req, res) {
-    const payload = req.body;
-    const data = await this.service.botLogin(payload);
-    res.status(status.ok).json({ message: resMessages.loginOK, data });
+    const payload = req.body
+    const data = await this.service.botLogin(payload)
+    res.status(status.ok).json({ message: resMessages.loginOK, data })
   }
 
   async botAuth(req, res) {
-    const { token } = req.body;
-    if (!token) throw new FireError(status.unauthorized, errorMessages.expiredSession);
+    const { token } = req.body
+    if (!token) throw new FireError(status.unauthorized, errorMessages.expiredSession)
     try {
-      decode(token);
+      decode(token)
     } catch (error) {
-      throw new FireError(status.unauthorized, errorMessages.expiredSession);
+      throw new FireError(status.unauthorized, errorMessages.expiredSession)
     }
-    res.status(status.ok).json({ ok: true });
+    res.status(status.ok).json({ ok: true })
   }
 }
 
-const UsersController = new UserController(UsersService);
+const UsersController = new UserController(UsersService)
 
-UsersController.addRoutes(UsersController.newRoutes);
+UsersController.addRoutes(UsersController.newRoutes)
 
-UsersController.removeEndpoints(['deleteOne']);
+UsersController.removeEndpoints(['deleteOne'])
 
-module.exports = UsersController;
+module.exports = UsersController

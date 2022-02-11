@@ -1,6 +1,6 @@
-type GetOrdersQuery = {
+type GetByBranchQuery = {
   'status' : string,
   'groupedByStatus' : string
 }
 
-export default GetOrdersQuery
+export default GetByBranchQuery

@@ -1,10 +1,12 @@
-import { Request, Response } from 'express'
+import { Response } from 'express'
 import { Service } from 'typedi'
 import { StatusCode } from '../../Shared-v2-ts/Enums/Status'
+import { resMessages } from '../../Shared/libs'
+import { FireError } from '../../Shared/middlewares/errorHandler/errorHandler'
 import BaseController from '../BaseClasses/v2/BaseController'
 import OrdersHandler from './OrdersHandler'
-import GetAllOrdersReq from './Requests/GetAllByBranchId/Request'
-import SetOrderStatusReq from './Requests/SetOrderStatusReq'
+import GetByBranchReq from './Requests/GetAllByBranchId/Request'
+import UpdateOrderReq from './Requests/UpdateOne/Request'
 
 @Service()
 export default class OrdersController extends BaseController {
@@ -20,7 +22,7 @@ export default class OrdersController extends BaseController {
   }
 
   GetAllByBranchId() {
-    return async (req : GetAllOrdersReq, res: Response) => {
+    return async (req : GetByBranchReq, res: Response) => {
       const { query } = req
       const { params } = req
       const data = await this.Handler.GetAllByBranchId(query, params)
@@ -28,11 +30,11 @@ export default class OrdersController extends BaseController {
     }
   }
 
-  SetOrderStatus() {
-    return async (req : SetOrderStatusReq, res : Response) => {
-      const { id, status } = req.params
-      // const data = await this.Handler.SetOrderStatus(id, status)
-      res.status(StatusCode.OK).json({ status })
+  UpdateOne() {
+    return async (req : UpdateOrderReq, res : Response) => {
+      const { id } = req.params
+      await this.Handler.UpdateOne(id, req.body)
+      res.status(StatusCode.OK).json({ data: true, message: resMessages.updateSuccess })
     }
   }
 }

@@ -14,7 +14,8 @@
     "unmigrate": "npx sequelize-cli db:migrate:undo:all",
     "db": "npx sequelize-cli db:create",
     "up": "npm run migrate && npm run seed",
-    "down": "npm run unseed && npm run unmigrate"
+    "down": "npm run unseed && npm run unmigrate",
+    "createRoute": "sh ./templates/2.new_route.sh"
   },
   "repository": {
     "type": "git",
