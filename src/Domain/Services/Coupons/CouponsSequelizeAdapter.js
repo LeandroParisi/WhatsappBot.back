@@ -41,27 +41,6 @@ class Adapter {
     return coupons
   }
 
-  async GetCoupomByCodeAndBranch(branchId, coupomCode) {
-    const select = {
-      where: {
-        coupomCode,
-      },
-      include: [
-        {
-          model: Branches,
-          as: 'coupomBranches',
-          through: { attributes: [] },
-          attributes: [],
-          where: {
-            id: branchId,
-          },
-        },
-      ],
-    }
-    const coupom = await Coupons.findOne(select)
-    return coupom
-  }
-
   async GetConditions() {
     const conditions = await Conditions.findAll()
     return conditions

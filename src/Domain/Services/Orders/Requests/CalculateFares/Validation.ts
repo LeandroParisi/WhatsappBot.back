@@ -13,6 +13,7 @@ const orderValidation = Joi.object<Order>({
   comments: Joi.string().optional().allow(null),
   coupomId: Joi.number().optional().allow(null),
   promotionId: Joi.number().optional().allow(null),
+  createdAt: Joi.string().optional().allow(null),
 })
 
 @Service()

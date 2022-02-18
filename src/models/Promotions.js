@@ -26,24 +26,24 @@ const createPromotions = (sequelize, DataTypes) => {
     image: {
       type: DataTypes.STRING,
     },
-  }, { underscored: true });
+  }, { underscored: true })
 
   Promotions.associate = (models) => {
     Promotions.hasMany(models.Orders, {
       as: 'orderPromotion',
       foreignKey: 'promotionId',
-    });
+    })
     Promotions.belongsToMany(models.Branches, {
       as: 'branchesPromotions',
       through: 'BranchesPromotions',
-    });
+    })
     Promotions.hasMany(models.PromotionsProducts, {
       as: 'promotionProducts',
       foreignKey: 'promotionId',
-    });
-  };
+    })
+  }
 
-  return Promotions;
-};
+  return Promotions
+}
 
-module.exports = createPromotions;
+module.exports = createPromotions

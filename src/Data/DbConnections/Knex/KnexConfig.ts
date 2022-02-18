@@ -1,9 +1,18 @@
+/* eslint-disable radix */
 import { Knex } from 'knex'
 
 import 'dotenv/config'
 import StringParser from '../../../Shared/Parsers/StringParser'
 // TODO
 const knexStringCase = require('knex-stringcase')
+
+const pg = require('pg')
+
+pg.types.setTypeParser(pg.types.builtins.INT8, (value: string) => parseInt(value))
+
+pg.types.setTypeParser(pg.types.builtins.FLOAT8, (value: string) => parseFloat(value))
+
+pg.types.setTypeParser(pg.types.builtins.NUMERIC, (value: string) => parseFloat(value))
 
 const defaultConfig : Knex.Config = {
   client: 'pg',

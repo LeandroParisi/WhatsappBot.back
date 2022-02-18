@@ -1,30 +1,30 @@
 /* eslint-disable class-methods-use-this */
-const { Op } = require('sequelize');
+const { Op } = require('sequelize')
 
 const {
   Sequelize,
   Branches,
   Products,
   PromotionsProducts,
-} = require('../../../models');
-const queryWhereFactory = require('../helpers/Factories/queryWhereFactory');
+} = require('../../../models')
+const queryWhereFactory = require('../helpers/Factories/queryWhereFactory')
 
-const { timeStamps } = require('../helpers/exclusions');
-const QueryInterface = require('../BaseClasses/QueryInterface');
+const { timeStamps } = require('../helpers/exclusions')
+const QueryInterface = require('../BaseClasses/QueryInterface')
 
 class PromotionQueries extends QueryInterface {
   findAll({ query, user: { id: userId } }, options = {}) {
-    const sequelizedQuery = queryWhereFactory(query, { table: 'Promotions' });
+    const sequelizedQuery = queryWhereFactory(query, { table: 'Promotions' })
 
     const where = {
       [Op.and]: [
         Sequelize.literal(`"branchesPromotions"."user_id" = '${userId}'`),
       ],
       ...sequelizedQuery,
-    };
+    }
 
     if (options?.branchId) {
-      where[Op.and].push(Sequelize.literal(`"branchesPromotions"."id" = '${options.branchId}'`));
+      where[Op.and].push(Sequelize.literal(`"branchesPromotions"."id" = '${options.branchId}'`))
     }
 
     return {
@@ -60,10 +60,10 @@ class PromotionQueries extends QueryInterface {
           ],
         },
       ],
-    };
+    }
   }
 }
 
-const PromotionsQueries = new PromotionQueries();
+const PromotionsQueries = new PromotionQueries()
 
-module.exports = PromotionsQueries;
+module.exports = PromotionsQueries

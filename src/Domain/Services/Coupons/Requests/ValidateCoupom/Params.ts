@@ -1,6 +1,6 @@
 type ValidateCoupomParams = {
   branchId : string
-  coupomId : string
+  coupomCode : string
 }
 
 export default ValidateCoupomParams

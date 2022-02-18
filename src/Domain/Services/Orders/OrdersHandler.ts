@@ -16,6 +16,12 @@ import OrdersSerializer from './Serializers/OrdersSerializer'
 import BranchesRepository from '../Branches/BranchesRepository'
 import MapBoxDTO from '../../ExternalServices/Matrix/MapBox/Requests/ReqDTO'
 import OrderCalculator from './Helpers/OrderCalculator'
+import DeliveryTypes from '../../../Data/Entities/Enums/DeliveryTypes'
+import CouponsRepository from '../Coupons/CouponsRepository'
+import PromotionsRepository from '../Promotions/PromotionsRepository'
+import DiscountTypes from '../../../Data/Entities/Enums/DiscountTypes'
+import FeeAndDuration from './Interfaces/FeeAndDuration'
+import CalculatedFares from './Requests/CalculateFares/Response'
 
 @Service()
 export default class OrdersHandler {
@@ -29,6 +35,9 @@ export default class OrdersHandler {
     private readonly BranchRepository : BranchesRepository,
     private readonly DistanceCalculator : MapBoxService,
     private readonly GeoCodingService : MapQuestService,
+    private readonly CoupomRepository : CouponsRepository,
+    private readonly PromotionRepository : PromotionsRepository,
+
   ) {
   }
 
@@ -47,7 +56,49 @@ export default class OrdersHandler {
     if (!isUpdated) throw new FireError(StatusCode.NOT_FOUND, ErrorMessages.NotFound)
   }
 
-  public async CalculateFares(body: Order) {
+  public async CalculateFares(order: Order) : Promise<CalculatedFares> {
+    const { estimatedDeliveryDuration, deliveryFee } = await this.CalculateDistanceAndFee(order)
+
+    let subTotal = 0
+
+    console.log({ order })
+
+    if (order.promotionId) {
+      subTotal = await this.GetPromotionPrice(order.promotionId)
+    }
+    if (order.coupomId) {
+      subTotal = await this.CalculateCoupomDiscount(order.coupomId, subTotal)
+    }
+
+    console.log({ subTotal })
+
+    console.log({ deliveryFee })
+
+    const totalPrice = subTotal + deliveryFee
+
+    return {
+      estimatedDeliveryDuration, deliveryFee, subTotal, totalPrice,
+    }
+  }
+
+  private async CalculateCoupomDiscount(coupomId: number, subTotal: number): Promise<number> {
+    const coupom = await this.CoupomRepository.FindOne({ select: ['*'], where: { id: coupomId } })
+
+    if (coupom?.discountType === DiscountTypes.ABSOLUTE_VALUE) {
+      subTotal -= coupom.discount
+    } else if (coupom?.discountType === DiscountTypes.PERCENTAGE) {
+      subTotal *= (100 - coupom.discount) / 100
+    }
+
+    return subTotal
+  }
+
+  private async GetPromotionPrice(id: number) : Promise<number> {
+    const promotion = await this.PromotionRepository.FindOne({ select: ['*'], where: { id } })
+    return promotion.totalPrice
+  }
+
+  private async CalculateDistanceAndFee(body: Order) : Promise<FeeAndDuration> {
     const customerCoordinates = await this.AddressesRepository.GetAddressCoordinates(body.addressId)
 
     const branchCoordinates = await this.BranchRepository.GetBranchLocationAndFees(body.branchId)
@@ -65,13 +116,12 @@ export default class OrdersHandler {
       ),
     )
 
-    const deliveryFee = OrderCalculator.CalculateDeliveryFee(
-      distance.distance, branchCoordinates.deliveryFees,
-    )
+    const deliveryFee = body.deliveryTypeId === DeliveryTypes.DELIVERY
+      ? OrderCalculator.CalculateDeliveryFee(
+        distance.distance, branchCoordinates.deliveryFees,
+      )
+      : 0
 
-    body.estimatedDeliveryDuration = distance.duration
-    body.deliveryFee = deliveryFee
-
-    return body
+    return { estimatedDeliveryDuration: distance.duration, deliveryFee }
   }
 }

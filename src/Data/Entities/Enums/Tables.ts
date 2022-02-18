@@ -4,6 +4,7 @@ const Tables = {
   CUSTOMER_ADDRESSES: 'customer_addresses',
   BRANCHES: 'branches',
   COUPONS: 'coupons',
+  PROMOTIONS: 'promotions',
 } as const
 
 export type TablesKeys = keyof typeof Tables;

@@ -3,6 +3,7 @@ import Coupom from '../../../Data/Entities/Models/Coupom'
 import { StatusCode } from '../../Shared-v2-ts/Enums/Status'
 import { FireError } from '../../Shared/middlewares/errorHandler/errorHandler'
 import CouponsRepository from './CouponsRepository'
+import ValidatedCoupom from './Interfaces/ValidatedCoupom'
 import FindAllCouponsQuery from './Requests/FindAll/Query'
 import ValidateCoupomParams from './Requests/ValidateCoupom/Params'
 
@@ -54,7 +55,11 @@ export default class CouponsHandler {
     return await this.Repository.GetConditions() as any
   }
 
-  async ValidateCoupom(params: ValidateCoupomParams) {
-    return await this.Repository.ValidateCoupom() as any
+  async ValidateCoupom(params: ValidateCoupomParams) : Promise<ValidatedCoupom> {
+    const result = await this.Repository.ValidateCoupom(params)
+
+    if (!result) return { isValid: false }
+
+    return { isValid: true, id: result }
   }
 }

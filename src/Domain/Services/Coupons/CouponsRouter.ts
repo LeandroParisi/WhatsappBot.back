@@ -2,6 +2,7 @@ import Container, { Service } from 'typedi'
 import METHODS from '../../Shared-v2-ts/Enums/Methods'
 import RoutesPath from '../../Shared-v2-ts/Enums/RoutesPath'
 import { Routes } from '../../Shared-v2-ts/Interfaces/IRouteDefinition'
+import AuthenticateUser from '../../Shared-v2-ts/Middlewares/Validations/AuthenticateUser'
 import BaseRouter from '../BaseClasses/v2/BaseRouter'
 import CouponsController from './CouponsController'
 
@@ -22,31 +23,31 @@ export default class CouponsRouter extends BaseRouter<CouponsController> {
         Endpoint: '/activate/:id',
         Method: METHODS.PUT,
         ExecuteAsync: this.Controller.Activate(),
-        LocalMiddlewares: [],
+        LocalMiddlewares: [AuthenticateUser.ExecuteAsync],
       },
       {
         Endpoint: '/deactivate/:id',
         Method: METHODS.PUT,
         ExecuteAsync: this.Controller.DeActivate(),
-        LocalMiddlewares: [],
+        LocalMiddlewares: [AuthenticateUser.ExecuteAsync],
       },
       {
         Endpoint: '/:id',
         Method: METHODS.PUT,
         ExecuteAsync: this.Controller.UpdateOne(),
-        LocalMiddlewares: [],
+        LocalMiddlewares: [AuthenticateUser.ExecuteAsync],
       },
       {
         Endpoint: '/:id',
         Method: METHODS.DELETE,
         ExecuteAsync: this.Controller.DeleteOne(),
-        LocalMiddlewares: [],
+        LocalMiddlewares: [AuthenticateUser.ExecuteAsync],
       },
       {
         Endpoint: '/conditions',
         Method: METHODS.GET,
         ExecuteAsync: this.Controller.GetConditions(),
-        LocalMiddlewares: [],
+        LocalMiddlewares: [AuthenticateUser.ExecuteAsync],
       },
       {
         Endpoint: '/isValid/:branchId/:coupomCode',
@@ -58,13 +59,13 @@ export default class CouponsRouter extends BaseRouter<CouponsController> {
         Endpoint: '/',
         Method: METHODS.GET,
         ExecuteAsync: this.Controller.FindAll(),
-        LocalMiddlewares: [],
+        LocalMiddlewares: [AuthenticateUser.ExecuteAsync],
       },
       {
         Endpoint: '/',
         Method: METHODS.POST,
         ExecuteAsync: this.Controller.Create(),
-        LocalMiddlewares: [],
+        LocalMiddlewares: [AuthenticateUser.ExecuteAsync],
       },
     ]
 
