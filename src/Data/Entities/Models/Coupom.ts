@@ -14,9 +14,11 @@ export default class Coupom {
 
   dateLimit?: string
 
-  distanceLimit?: number
+  distanceLimitInKm?: number
 
   usesLimit?: number
+
+  freeDelivery: boolean
 
   isActive: boolean
 

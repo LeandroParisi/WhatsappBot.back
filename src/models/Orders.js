@@ -50,6 +50,9 @@ const createOrders = (sequelize, DataTypes) => {
     estimatedDeliveryDuration: {
       type: DataTypes.NUMBER,
     },
+    distanceInKm: {
+      type: DataTypes.NUMBER,
+    },
     comments: {
       type: DataTypes.TEXT,
     },

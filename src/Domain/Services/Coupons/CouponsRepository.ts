@@ -27,13 +27,13 @@ export default class CouponsRepository extends BaseRepository<Coupom> {
     return await this.Adapter.GetConditions() as any
   }
 
-  async ValidateCoupom(params: ValidateCoupomParams) : Promise<number | undefined> {
+  async GetCoupomByCode(params: ValidateCoupomParams) : Promise<Coupom | undefined> {
     const dbConnection = KnexConnectionFactory.Create()
 
     console.log({ params })
 
     const select = dbConnection(this.Table)
-      .select('coupons.id as id')
+      .select('*')
       .innerJoin('coupons_branches', 'coupons_branches.coupom_id', 'coupons.id')
       .whereRaw('LOWER(coupom_code) LIKE ?', [`%${params.coupomCode.toLowerCase()}%`])
       .andWhere('coupons_branches.branch_id', params.branchId)
@@ -42,7 +42,7 @@ export default class CouponsRepository extends BaseRepository<Coupom> {
     const result = await select
 
     if (!result) return undefined
-    return result.id
+    return result
   }
 
   async UpdateOne(id : string, payload : Coupom) : Promise<any> {

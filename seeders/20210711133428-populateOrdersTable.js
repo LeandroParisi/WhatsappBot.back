@@ -34,6 +34,7 @@ module.exports = {
         total_price: 60,
         status: 1,
         estimated_delivery_duration: 10,
+        distance_in_km: 5,
         comments: 'Entregar na portaria',
       },
       {
@@ -48,6 +49,7 @@ module.exports = {
         total_price: 40.22,
         status: 1,
         estimated_delivery_duration: 10,
+        distance_in_km: 5,
         comments: 'Entregar na portaria',
       },
       {
@@ -61,6 +63,7 @@ module.exports = {
         total_price: 30,
         status: 1,
         estimated_delivery_duration: 20,
+        distance_in_km: 5,
         comments: 'Entregar na portaria',
       },
       {
@@ -74,6 +77,7 @@ module.exports = {
         total_price: 20.32,
         status: 1,
         estimated_delivery_duration: 30,
+        distance_in_km: 5,
         comments: 'Entregar na portaria',
       },
       {
@@ -87,6 +91,7 @@ module.exports = {
         total_price: 10,
         status: 1,
         estimated_delivery_duration: 30,
+        distance_in_km: 5,
         comments: 'Entregar na portaria',
       },
 
@@ -101,6 +106,7 @@ module.exports = {
         total_price: 60.22,
         status: 1,
         estimated_delivery_duration: 10,
+        distance_in_km: 5,
         comments: 'Entregar na portaria',
       },
       {
@@ -115,6 +121,7 @@ module.exports = {
         total_price: 40.22,
         status: 1,
         estimated_delivery_duration: 10,
+        distance_in_km: 5,
         comments: 'Entregar na portaria',
       },
       {
@@ -128,6 +135,7 @@ module.exports = {
         total_price: 30.55,
         status: 1,
         estimated_delivery_duration: 20,
+        distance_in_km: 5,
         comments: 'Entregar na portaria',
       },
       {
@@ -141,6 +149,7 @@ module.exports = {
         total_price: 20.32,
         status: 1,
         estimated_delivery_duration: 30,
+        distance_in_km: 5,
         comments: 'Entregar na portaria',
       },
       {
@@ -154,6 +163,7 @@ module.exports = {
         total_price: 10.99,
         status: 1,
         estimated_delivery_duration: 30,
+        distance_in_km: 5,
         comments: 'Entregar na portaria',
       },
     ])

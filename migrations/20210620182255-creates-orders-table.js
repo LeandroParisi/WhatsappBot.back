@@ -95,6 +95,10 @@ module.exports = {
           allowNull: true,
           type: Sequelize.INTEGER,
         },
+        distance_in_km: {
+          allowNull: false,
+          type: Sequelize.INTEGER,
+        },
         comments: {
           allowNull: true,
           type: Sequelize.TEXT,

@@ -81,7 +81,7 @@ export default class CouponsController extends BaseController {
 
   ValidateCoupom() {
     return async (req : ValidateCoupomRequest, res : Response) => {
-      const data = await this.Handler.ValidateCoupom(req.params)
+      const data = await this.Handler.ValidateCoupom(req.params, req.body)
       return res.status(StatusCode.OK).json({ data })
     }
   }

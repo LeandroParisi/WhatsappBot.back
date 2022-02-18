@@ -41,6 +41,8 @@ export default class Order {
 
   estimatedDeliveryDuration? : number
 
+  distanceInKm: number
+
   comments? : string
 
   dispatchTime? : string

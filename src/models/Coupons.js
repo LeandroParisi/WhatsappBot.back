@@ -26,11 +26,14 @@ const createCoupons = (sequelize, DataTypes) => {
     dateLimit: {
       type: DataTypes.DATE,
     },
-    distanceLimit: {
+    distanceLimitInKm: {
       type: DataTypes.INTEGER,
     },
     usesLimit: {
       type: DataTypes.INTEGER,
+    },
+    freeDelivery: {
+      type: DataTypes.BOOLEAN,
     },
     isActive: {
       type: DataTypes.BOOLEAN,

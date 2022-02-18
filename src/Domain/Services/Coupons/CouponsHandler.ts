@@ -1,10 +1,14 @@
+/* eslint-disable max-len */
 import { Service } from 'typedi'
 import Coupom from '../../../Data/Entities/Models/Coupom'
+import GenericParser from '../../../Shared/Parsers/GenericParser'
 import { StatusCode } from '../../Shared-v2-ts/Enums/Status'
 import { FireError } from '../../Shared/middlewares/errorHandler/errorHandler'
 import CouponsRepository from './CouponsRepository'
-import ValidatedCoupom from './Interfaces/ValidatedCoupom'
+import CoupomValidator from './Helpers/CoupomValidator'
+import ValidatedCoupom, { CoupomValidation } from './Interfaces/ValidatedCoupom'
 import FindAllCouponsQuery from './Requests/FindAll/Query'
+import ValidateCoupomBody from './Requests/ValidateCoupom/Body'
 import ValidateCoupomParams from './Requests/ValidateCoupom/Params'
 
 @Service()
@@ -55,11 +59,18 @@ export default class CouponsHandler {
     return await this.Repository.GetConditions() as any
   }
 
-  async ValidateCoupom(params: ValidateCoupomParams) : Promise<ValidatedCoupom> {
-    const result = await this.Repository.ValidateCoupom(params)
+  async ValidateCoupom(params: ValidateCoupomParams, body : ValidateCoupomBody) : Promise<ValidatedCoupom> {
+    const coupom = await this.Repository.GetCoupomByCode(params)
 
-    if (!result) return { isValid: false }
+    if (!coupom) {
+      return { isValid: false }
+    }
 
-    return { isValid: true, id: result }
+    const { isValid, validationMessages } = CoupomValidator.IsCoupomValid(coupom, body)
+
+    if (isValid) {
+      return { isValid: true, id: coupom.id, freeDelivery: coupom.freeDelivery }
+    }
+    return { isValid: false, validationMessages }
   }
 }

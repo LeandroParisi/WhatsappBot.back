@@ -57,7 +57,7 @@ export default class OrdersHandler {
   }
 
   public async CalculateFares(order: Order) : Promise<CalculatedFares> {
-    const { estimatedDeliveryDuration, deliveryFee } = await this.CalculateDistanceAndFee(order)
+    const { estimatedDeliveryDuration, deliveryFee, distanceInKm } = await this.CalculateDistanceAndFee(order)
 
     let subTotal = 0
 
@@ -66,32 +66,29 @@ export default class OrdersHandler {
     if (order.promotionId) {
       subTotal = await this.GetPromotionPrice(order.promotionId)
     }
-    if (order.coupomId) {
-      subTotal = await this.CalculateCoupomDiscount(order.coupomId, subTotal)
-    }
-
-    console.log({ subTotal })
-
-    console.log({ deliveryFee })
+    // ISSO SAI DAQUI?
+    // if (order.coupomId) {
+    //   subTotal = await this.CalculateCoupomDiscount(order.coupomId, subTotal)
+    // }
 
     const totalPrice = subTotal + deliveryFee
 
     return {
-      estimatedDeliveryDuration, deliveryFee, subTotal, totalPrice,
+      estimatedDeliveryDuration, deliveryFee, subTotal, totalPrice, distanceInKm,
     }
   }
 
-  private async CalculateCoupomDiscount(coupomId: number, subTotal: number): Promise<number> {
-    const coupom = await this.CoupomRepository.FindOne({ select: ['*'], where: { id: coupomId } })
+  // private async CalculateCoupomDiscount(coupomId: number, subTotal: number): Promise<number> {
+  //   const coupom = await this.CoupomRepository.FindOne({ select: ['*'], where: { id: coupomId } })
 
-    if (coupom?.discountType === DiscountTypes.ABSOLUTE_VALUE) {
-      subTotal -= coupom.discount
-    } else if (coupom?.discountType === DiscountTypes.PERCENTAGE) {
-      subTotal *= (100 - coupom.discount) / 100
-    }
+  //   if (coupom?.discountType === DiscountTypes.ABSOLUTE_VALUE) {
+  //     subTotal -= coupom.discount
+  //   } else if (coupom?.discountType === DiscountTypes.PERCENTAGE) {
+  //     subTotal *= (100 - coupom.discount) / 100
+  //   }
 
-    return subTotal
-  }
+  //   return subTotal
+  // }
 
   private async GetPromotionPrice(id: number) : Promise<number> {
     const promotion = await this.PromotionRepository.FindOne({ select: ['*'], where: { id } })
@@ -122,6 +119,6 @@ export default class OrdersHandler {
       )
       : 0
 
-    return { estimatedDeliveryDuration: distance.duration, deliveryFee }
+    return { estimatedDeliveryDuration: distance.duration, deliveryFee, distanceInKm: distance.distance }
   }
 }
