@@ -3,6 +3,8 @@ import Coupom from '../../../Data/Entities/Models/Coupom'
 import { StatusCode } from '../../Shared-v2-ts/Enums/Status'
 import { FireError } from '../../Shared/middlewares/errorHandler/errorHandler'
 import CouponsRepository from './CouponsRepository'
+import FindAllCouponsQuery from './Requests/FindAll/Query'
+import ValidateCoupomParams from './Requests/ValidateCoupom/Params'
 
 @Service()
 export default class CouponsHandler {
@@ -42,5 +44,17 @@ export default class CouponsHandler {
     const isUpdated = await this.Repository.Insert(payload)
 
     if (!isUpdated) throw new FireError(StatusCode.INTERNAL_SERVER_ERROR, 'Problem inseting coupom')
+  }
+
+  async FindAll(query: FindAllCouponsQuery) : Promise<Coupom[]> {
+    return await this.Repository.FindAll(query) as Coupom[]
+  }
+
+  async GetConditions() {
+    return await this.Repository.GetConditions() as any
+  }
+
+  async ValidateCoupom(params: ValidateCoupomParams) {
+    return await this.Repository.ValidateCoupom() as any
   }
 }

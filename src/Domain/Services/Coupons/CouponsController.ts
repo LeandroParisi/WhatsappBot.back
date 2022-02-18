@@ -8,6 +8,7 @@ import ActivateCoupomRequest from './Requests/Activate/Request'
 import CreateCoupomRequest from './Requests/Create/Request'
 import DeActivateCoupomRequest from './Requests/DeActivate/Request'
 import DeleteCoupomRequest from './Requests/DeleteOne/Request'
+import FindAllCouponsRequest from './Requests/FindAll/Request'
 import UpdateCoupomRequest from './Requests/UpdateOne/Request'
 import ValidateCoupomRequest from './Requests/ValidateCoupom/Request'
 
@@ -56,9 +57,9 @@ export default class CouponsController extends BaseController {
   }
 
   FindAll() {
-    return async (req : Request, res : Response) => {
-      // const { query, user } = req
-      const data = await this.Handler.FindAll({ query: {}, user: {} })
+    return async (req : FindAllCouponsRequest, res : Response) => {
+      const { query } = req
+      const data = await this.Handler.FindAll(query)
       return res.status(StatusCode.OK).json({ data })
     }
   }
@@ -73,8 +74,7 @@ export default class CouponsController extends BaseController {
 
   GetConditions() {
     return async (req : Request, res : Response) => {
-      const payload = req.body
-      const data = await this.Handler.GetConditions(payload)
+      const data = await this.Handler.GetConditions()
       return res.status(StatusCode.OK).json({ data })
     }
   }

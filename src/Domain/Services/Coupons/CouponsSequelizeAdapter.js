@@ -4,12 +4,20 @@ const {
   Branches,
   Conditions,
   Coupons,
+  sequelize,
+  CouponsConditions,
+  CouponsBranches,
 } = require('../../../models')
 const queryWhereFactory = require('../helpers/Factories/queryWhereFactory')
+/* eslint-disable class-methods-use-this */
+
+const { FireError } = require('../../Shared/middlewares/errorHandler/errorHandler')
+const { errorMessages, status } = require('../../Shared/libs')
+const insertMany = require('../helpers/commonQueries/insertMany')
 
 class Adapter {
 // No need to be extended yet
-  async FindAll({ query }) {
+  async FindAll(query) {
     const sequelizedQuery = queryWhereFactory(query, { table: 'Coupons' })
 
     const select = {
@@ -50,6 +58,49 @@ class Adapter {
         },
       ],
     }
+    const coupom = await Coupons.findOne(select)
+    return coupom
+  }
+
+  async GetConditions() {
+    const conditions = await Conditions.findAll()
+    return conditions
+  }
+
+  async UpdateOne(id, body) {
+    const { coupomBranches, coupomConditions } = body
+
+    try {
+      await sequelize.transaction(async (transaction) => {
+        await Coupons.update(body, { where: { id }, transaction })
+
+        await CouponsConditions.destroy({ where: { id } })
+
+        if (coupomConditions.length) {
+          await insertMany(
+            'coupons_conditions',
+            id,
+            ['coupom_id', 'condition_id'],
+            coupomConditions,
+          )
+        }
+
+        await CouponsBranches.destroy({ where: { coupomId: id } })
+
+        if (coupomBranches.length) {
+          await insertMany(
+            'coupons_branches',
+            id,
+            ['coupom_id', 'branch_id'],
+            coupomBranches,
+          )
+        }
+      })
+    } catch (e) {
+      console.log(e)
+      throw new FireError(status.internalError, errorMessages.internalError)
+    }
+    return {}
   }
 }
 

@@ -2,7 +2,7 @@
 enum RoutesPath {
   BRANCHES = '/branches',
   CUSTOMERS = '/customers',
-  COUPONS = '/coupons/v2',
+  COUPONS = '/coupons',
   ORDERS = '/orders',
   CUTOMERS_ADDRESSES = '/customersAddresses'
 }
