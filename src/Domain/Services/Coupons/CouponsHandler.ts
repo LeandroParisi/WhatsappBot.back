@@ -59,6 +59,7 @@ export default class CouponsHandler {
     return await this.Repository.GetConditions() as any
   }
 
+  // teste
   async ValidateCoupom(params: ValidateCoupomParams, body : ValidateCoupomBody) : Promise<ValidatedCoupom> {
     const coupom = await this.Repository.GetCoupomByCode(params)
 
