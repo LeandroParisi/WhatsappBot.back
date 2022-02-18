@@ -91,9 +91,9 @@ module.exports = {
             key: 'id',
           },
         },
-        estimated_delivery_time: {
+        estimated_delivery_duration: {
           allowNull: true,
-          type: Sequelize.STRING,
+          type: Sequelize.INTEGER,
         },
         comments: {
           allowNull: true,

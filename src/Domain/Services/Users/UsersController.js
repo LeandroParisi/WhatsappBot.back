@@ -45,7 +45,6 @@ class UserController extends BaseController {
   async login(req, res) {
     const payload = req.body
     const token = await this.service.login(payload)
-    console.log({ token })
     res.cookie(
       'wbt',
       token,

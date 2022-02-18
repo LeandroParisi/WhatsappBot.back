@@ -1,8 +1,8 @@
-const status = require('./statusDictionary');
+const status = require('./statusDictionary')
 const {
   errorMessages, validationErrors, responseMessages, errorTypes,
-} = require('./messagesDictionary');
-const METHODS = require('./methods');
+} = require('./messagesDictionary')
+const METHODS = require('./methods')
 
 module.exports = {
   status,
@@ -11,4 +11,4 @@ module.exports = {
   validationErrors,
   METHODS,
   errorTypes,
-};
+}

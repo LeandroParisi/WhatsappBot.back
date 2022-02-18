@@ -54,6 +54,8 @@ module.exports = {
         street_number: '123',
         street_complement: '123',
         postal_code: '30220000',
+        lat: -22.925477,
+        lng: -43.205225,
       },
       {
         id: customerAddress2,
@@ -66,6 +68,8 @@ module.exports = {
         street_number: '321',
         street_complement: '321',
         postal_code: '99999999',
+        lat: -22.925477,
+        lng: -43.205225,
       },
     ])
   },

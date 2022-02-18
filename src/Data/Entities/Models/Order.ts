@@ -1,5 +1,7 @@
+/* eslint-disable max-classes-per-file */
 /* eslint-disable no-shadow */
 /* eslint-disable import/prefer-default-export */
+
 export enum OrderStatus {
   PLACED = 1,
   IN_PRODUCTION = 2,
@@ -14,7 +16,7 @@ export default class Order {
 
   customerId : string
 
-  addressId? : string
+  addressId : string
 
   orderNumber : number
 
@@ -37,7 +39,7 @@ export default class Order {
 
   promotionId? : number
 
-  estimatedDeliveryTime? : string
+  estimatedDeliveryDuration? : number
 
   comments? : string
 
@@ -49,3 +51,20 @@ export default class Order {
 
   updatedAt? : string
 }
+
+// class OrderValidator extends Validator<Order> {
+//   /**
+//    *
+//    */
+//   constructor() {
+//     super()
+//     this.ruleFor('id')
+//       .notEmpty()
+
+//     this.ruleFor('addressId')
+//       .notEmpty()
+
+//     this.ruleFor('branchId')
+//       .notEmpty()
+//   }
+// }

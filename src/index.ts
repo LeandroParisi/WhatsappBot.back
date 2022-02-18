@@ -3,9 +3,11 @@ import 'reflect-metadata'
 import { Application } from 'express'
 import Container, { Service } from 'typedi'
 import {
-  BranchesRouter, CouponsRouter, CustomerAddressesRouter, CustomerRouter, LocationsRouter, MenusRouter, ProductsRouter, PromotionsRouter, UsersRouter,
+  BranchesRouter, CustomerRouter, LocationsRouter, MenusRouter, ProductsRouter, PromotionsRouter, UsersRouter,
 } from './Domain/Services'
 import OrdersRouter from './Domain/Services/Orders/OrdersRouter'
+import CustomersAddressesRouter from './Domain/Services/CustomerAddresses/CustomerAddressesRouter'
+import CouponsRouter from './Domain/Services/Coupons/CouponsRouter'
 
 const express = require('express')
 const cookieParser = require('cookie-parser')
@@ -27,6 +29,10 @@ class Main {
 
   private readonly OrdersRouter : OrdersRouter
 
+  private readonly CustomersAddressesRouter : CustomersAddressesRouter
+
+  private readonly CouponsRouter : CouponsRouter
+
   /**
    *
    */
@@ -34,6 +40,8 @@ class Main {
   ) {
     this.app = express()
     this.OrdersRouter = Container.get(OrdersRouter)
+    this.CustomersAddressesRouter = Container.get(CustomersAddressesRouter)
+    this.CouponsRouter = Container.get(CouponsRouter)
   }
 
   public Setup() {
@@ -49,9 +57,9 @@ class Main {
     this.app.use(this.OrdersRouter.BasePath, this.OrdersRouter.SetRouter())
     this.app.use(MenusRouter.basePath, MenusRouter.setRouter())
     this.app.use(ProductsRouter.basePath, ProductsRouter.setRouter())
-    this.app.use(CouponsRouter.basePath, CouponsRouter.setRouter())
+    this.app.use(this.CouponsRouter.BasePath, this.CouponsRouter.SetRouter())
     this.app.use(CustomerRouter.basePath, CustomerRouter.setRouter())
-    this.app.use(CustomerAddressesRouter.basePath, CustomerAddressesRouter.setRouter())
+    this.app.use(this.CustomersAddressesRouter.BasePath, this.CustomersAddressesRouter.SetRouter())
     this.app.use(LocationsRouter.basePath, LocationsRouter.setRouter())
 
     this.app.use(errorHandler)

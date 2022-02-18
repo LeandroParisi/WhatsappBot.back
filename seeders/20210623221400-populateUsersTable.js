@@ -5806,6 +5806,8 @@ module.exports = {
           street_number: '222',
           street_complement: '222',
           postal_code: '12345',
+          lat: -22.925477,
+          lng: -43.205225,
           is_active: true,
           delivery_fees: JSON.stringify({
             type: 'radius',
@@ -5815,7 +5817,7 @@ module.exports = {
               [15, 12],
             ],
           }),
-          whatsapp_number: '553197794403',
+          whatsapp_number: '553182630325',
         },
         {
           id: branchTwoId,
@@ -5830,6 +5832,8 @@ module.exports = {
           street_number: '222',
           street_complement: '222',
           postal_code: '12345',
+          lat: -22.925477,
+          lng: -43.205225,
           is_active: true,
           delivery_fees: JSON.stringify({
             type: 'unique',
@@ -5850,6 +5854,8 @@ module.exports = {
           street_number: '222',
           street_complement: '222',
           postal_code: '12345',
+          lat: -22.925477,
+          lng: -43.205225,
           is_active: true,
           delivery_fees: JSON.stringify({
             type: 'unique',

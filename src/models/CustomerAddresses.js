@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
-const { v4: uuid } = require('uuid');
+const { v4: uuid } = require('uuid')
 
 const createCustomerAddresses = (sequelize, DataTypes) => {
   const CustomerAddresses = sequelize.define('CustomerAddresses', {
@@ -36,44 +36,50 @@ const createCustomerAddresses = (sequelize, DataTypes) => {
     postalCode: {
       type: DataTypes.STRING,
     },
+    lat: {
+      type: DataTypes.DECIMAL(17, 15),
+    },
+    lng: {
+      type: DataTypes.DECIMAL(19, 15),
+    },
     isActive: {
       type: DataTypes.BOOLEAN,
     },
-  }, { underscored: true });
+  }, { underscored: true })
 
   CustomerAddresses.beforeCreate((address) => {
     // eslint-disable-next-line no-empty
     if (!address.id) {
 
     } else {
-      address.id = uuid();
+      address.id = uuid()
     }
-  });
+  })
 
   CustomerAddresses.associate = (models) => {
     CustomerAddresses.belongsTo(models.Customers, {
       as: 'customerAddresses',
       foreignKey: 'customerId',
-    });
+    })
     CustomerAddresses.hasOne(models.Orders, {
       as: 'orderAddress',
       foreignKey: 'addressId',
-    });
+    })
     CustomerAddresses.belongsTo(models.Countries, {
       as: 'addressCountry',
       foreignKey: 'countryId',
-    });
+    })
     CustomerAddresses.belongsTo(models.States, {
       as: 'addressState',
       foreignKey: 'stateId',
-    });
+    })
     CustomerAddresses.belongsTo(models.Cities, {
       as: 'addressCity',
       foreignKey: 'cityId',
-    });
-  };
+    })
+  }
 
-  return CustomerAddresses;
-};
+  return CustomerAddresses
+}
 
-module.exports = createCustomerAddresses;
+module.exports = createCustomerAddresses

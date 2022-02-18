@@ -1,6 +1,6 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const transaction = await queryInterface.sequelize.transaction();
+    const transaction = await queryInterface.sequelize.transaction()
 
     try {
       await queryInterface.createTable('branches', {
@@ -88,15 +88,17 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
+        lat: {
+          allowNull: false,
+          type: Sequelize.DECIMAL(17, 15),
+        },
+        lng: {
+          allowNull: false,
+          type: Sequelize.DECIMAL(19, 15),
+        },
         delivery_fees: {
           allowNull: false,
           type: Sequelize.JSONB,
-          // {
-          //   type: enum('unique', 'neighborhood', 'radius'),
-          //   fees: {
-
-          //   }
-          // }
         },
         logo: {
           type: Sequelize.STRING,
@@ -114,25 +116,22 @@ module.exports = {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-      }, { transaction });
+      }, { transaction })
 
-      await queryInterface.addIndex('branches', ['user_id'], { transaction });
+      await queryInterface.addIndex('branches', ['user_id'], { transaction })
 
-      await queryInterface.addIndex('branches', ['whatsapp_number'], { transaction });
+      await queryInterface.addIndex('branches', ['whatsapp_number'], { transaction })
 
-      await queryInterface.addIndex('branches', ['whatsapp_id'], { transaction });
+      await queryInterface.addIndex('branches', ['whatsapp_id'], { transaction })
 
-      await transaction.commit();
-        
+      await transaction.commit()
     } catch (error) {
-      await transaction.rollback();
-      throw error;
+      await transaction.rollback()
+      throw error
     }
   },
 
-
-
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('branches');
+    await queryInterface.dropTable('branches')
   },
-};
+}

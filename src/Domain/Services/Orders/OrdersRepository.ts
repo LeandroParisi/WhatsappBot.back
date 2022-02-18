@@ -2,7 +2,7 @@ import { Service } from 'typedi'
 import KnexConnectionFactory from '../../../Data/DbConnections/Knex/ConnectionFactory/KnexConnectionFactory'
 import Order from '../../../Data/Entities/Models/Order'
 
-import OrdersRepositoryAdapter from './OrdersRepositoryAdapter'
+import OrdersSequelizeAdapter from './OrdersSequelizeAdapter'
 import GetOrdersFilters from './Requests/GetAllByBranchId/DTOs/Filters'
 
 @Service()
@@ -13,13 +13,13 @@ export default class OrdersRepository {
    *
    */
   constructor() {
-    this.Adapter = OrdersRepositoryAdapter
+    this.Adapter = OrdersSequelizeAdapter
   }
 
   async GetAllByBranchId(query: GetOrdersFilters) {
     const { branchId, status } = query
 
-    const products = await OrdersRepositoryAdapter.GetAll(branchId, status)
+    const products = await OrdersSequelizeAdapter.GetAll(branchId, status)
 
     return products
   }

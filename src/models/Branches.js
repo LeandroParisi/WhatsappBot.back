@@ -1,8 +1,8 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
-const { v4: uuid } = require('uuid');
-const { validationErrors } = require('../Domain/Shared/libs');
+const { v4: uuid } = require('uuid')
+const { validationErrors } = require('../Domain/Shared/libs')
 
 const createBranches = (sequelize, DataTypes) => {
   const Branches = sequelize.define('Branches', {
@@ -57,6 +57,12 @@ const createBranches = (sequelize, DataTypes) => {
     postalCode: {
       type: DataTypes.STRING,
     },
+    lat: {
+      type: DataTypes.DECIMAL(17, 15),
+    },
+    lng: {
+      type: DataTypes.DECIMAL(19, 15),
+    },
     deliveryFees: {
       type: DataTypes.JSONB,
     },
@@ -66,11 +72,11 @@ const createBranches = (sequelize, DataTypes) => {
     isActive: {
       type: DataTypes.BOOLEAN,
     },
-  }, { underscored: true });
+  }, { underscored: true })
 
   Branches.beforeCreate((branch) => {
-    branch.id = uuid();
-  });
+    branch.id = uuid()
+  })
 
   // TODO;
   // Branches.beforeUpdate((branch) => {
@@ -81,55 +87,55 @@ const createBranches = (sequelize, DataTypes) => {
     Branches.belongsTo(models.Users, {
       as: 'userBranches',
       foreignKey: 'userId',
-    });
+    })
     Branches.belongsTo(models.Countries, {
       as: 'branchCountry',
       foreignKey: 'countryId',
-    });
+    })
     Branches.belongsTo(models.States, {
       as: 'branchState',
       foreignKey: 'stateId',
-    });
+    })
     Branches.belongsTo(models.Cities, {
       as: 'branchCity',
       foreignKey: 'cityId',
-    });
+    })
     Branches.belongsToMany(models.DeliveryTypes, {
       through: 'BranchesDeliveryTypes',
       as: 'deliveryTypes',
-    });
+    })
     Branches.belongsToMany(models.PaymentMethods, {
       through: 'BranchesPaymentMethods',
       as: 'paymentMethods',
-    });
+    })
     Branches.hasOne(models.OpeningHours, {
       as: 'openingHours',
       foreignKey: 'branchId',
-    });
+    })
     Branches.belongsToMany(models.Menus, {
       as: 'branchesMenus',
       through: 'BranchesMenus',
-    });
+    })
     Branches.belongsToMany(models.Coupons, {
       as: 'coupomBranches',
       through: 'CouponsBranches',
       foreignKey: 'branch_id',
-    });
+    })
     Branches.hasMany(models.Orders, {
       as: 'branchOrders',
       foreignKey: 'branchId',
-    });
+    })
     Branches.belongsToMany(models.Promotions, {
       as: 'branchesPromotions',
       through: 'BranchesPromotions',
-    });
+    })
     Branches.belongsToMany(models.Products, {
       as: 'branchesProducts',
       through: 'BranchesProducts',
-    });
-  };
+    })
+  }
 
-  return Branches;
-};
+  return Branches
+}
 
-module.exports = createBranches;
+module.exports = createBranches

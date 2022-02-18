@@ -2,8 +2,8 @@
 
 const {
   CustomerAddresses, Countries, Cities, States, Sequelize,
-} = require('../../../models');
-const QueryInterface = require('../BaseClasses/QueryInterface');
+} = require('../../../models')
+const QueryInterface = require('../BaseClasses/QueryInterface')
 
 class CustomerQuery extends QueryInterface {
   findOne(query) {
@@ -43,11 +43,11 @@ class CustomerQuery extends QueryInterface {
           ],
         },
       ],
-    };
+    }
   }
 // No need to be extended yet
 }
 
-const CustomersQuery = new CustomerQuery();
+const CustomersQuery = new CustomerQuery()
 
-module.exports = CustomersQuery;
+module.exports = CustomersQuery

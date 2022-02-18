@@ -2,9 +2,9 @@ import { Response } from 'express'
 import { Service } from 'typedi'
 import { StatusCode } from '../../Shared-v2-ts/Enums/Status'
 import { resMessages } from '../../Shared/libs'
-import { FireError } from '../../Shared/middlewares/errorHandler/errorHandler'
 import BaseController from '../BaseClasses/v2/BaseController'
 import OrdersHandler from './OrdersHandler'
+import CalculateFaresReq from './Requests/CalculateFares/Request'
 import GetByBranchReq from './Requests/GetAllByBranchId/Request'
 import UpdateOrderReq from './Requests/UpdateOne/Request'
 
@@ -17,8 +17,6 @@ export default class OrdersController extends BaseController {
     private readonly Handler : OrdersHandler,
   ) {
     super()
-    // this.GetAll.bind(this)
-    // this.Handler.GetAll.bind(this)
   }
 
   GetAllByBranchId() {
@@ -35,6 +33,13 @@ export default class OrdersController extends BaseController {
       const { id } = req.params
       await this.Handler.UpdateOne(id, req.body)
       res.status(StatusCode.OK).json({ data: true, message: resMessages.updateSuccess })
+    }
+  }
+
+  CalculateFares() {
+    return async (req : CalculateFaresReq, res : Response) => {
+      const data = await this.Handler.CalculateFares(req.body)
+      res.status(StatusCode.OK).json({ data, message: resMessages.updateSuccess })
     }
   }
 }

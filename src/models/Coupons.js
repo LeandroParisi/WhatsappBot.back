@@ -35,26 +35,26 @@ const createCoupons = (sequelize, DataTypes) => {
     isActive: {
       type: DataTypes.BOOLEAN,
     },
-  }, { underscored: true });
+  }, { underscored: true })
 
   Coupons.associate = (models) => {
     Coupons.belongsToMany(models.Branches, {
       as: 'coupomBranches',
       through: 'CouponsBranches',
       foreignKey: 'coupom_id',
-    });
+    })
     Coupons.belongsToMany(models.Conditions, {
       as: 'coupomConditions',
       through: 'CouponsConditions',
       foreignKey: 'coupom_id',
-    });
+    })
     Coupons.hasOne(models.Orders, {
       as: 'orderCoupom',
       foreignKey: 'coupomId',
-    });
-  };
+    })
+  }
 
-  return Coupons;
-};
+  return Coupons
+}
 
-module.exports = createCoupons;
+module.exports = createCoupons

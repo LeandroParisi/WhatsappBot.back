@@ -33,7 +33,7 @@ module.exports = {
         payment_method_id: 1,
         total_price: 60,
         status: 1,
-        estimated_delivery_time: '10m',
+        estimated_delivery_duration: 10,
         comments: 'Entregar na portaria',
       },
       {
@@ -47,7 +47,7 @@ module.exports = {
         payment_method_id: 2,
         total_price: 40.22,
         status: 1,
-        estimated_delivery_time: '10m',
+        estimated_delivery_duration: 10,
         comments: 'Entregar na portaria',
       },
       {
@@ -60,7 +60,7 @@ module.exports = {
         payment_method_id: 2,
         total_price: 30,
         status: 1,
-        estimated_delivery_time: '20m',
+        estimated_delivery_duration: 20,
         comments: 'Entregar na portaria',
       },
       {
@@ -73,7 +73,7 @@ module.exports = {
         payment_method_id: 3,
         total_price: 20.32,
         status: 1,
-        estimated_delivery_time: '30m',
+        estimated_delivery_duration: 30,
         comments: 'Entregar na portaria',
       },
       {
@@ -86,7 +86,7 @@ module.exports = {
         payment_method_id: 4,
         total_price: 10,
         status: 1,
-        estimated_delivery_time: '30m',
+        estimated_delivery_duration: 30,
         comments: 'Entregar na portaria',
       },
 
@@ -100,7 +100,7 @@ module.exports = {
         payment_method_id: 1,
         total_price: 60.22,
         status: 1,
-        estimated_delivery_time: '10m',
+        estimated_delivery_duration: 10,
         comments: 'Entregar na portaria',
       },
       {
@@ -114,7 +114,7 @@ module.exports = {
         payment_method_id: 2,
         total_price: 40.22,
         status: 1,
-        estimated_delivery_time: '10m',
+        estimated_delivery_duration: 10,
         comments: 'Entregar na portaria',
       },
       {
@@ -127,7 +127,7 @@ module.exports = {
         payment_method_id: 3,
         total_price: 30.55,
         status: 1,
-        estimated_delivery_time: '20m',
+        estimated_delivery_duration: 20,
         comments: 'Entregar na portaria',
       },
       {
@@ -140,7 +140,7 @@ module.exports = {
         payment_method_id: 4,
         total_price: 20.32,
         status: 1,
-        estimated_delivery_time: '30m',
+        estimated_delivery_duration: 30,
         comments: 'Entregar na portaria',
       },
       {
@@ -153,7 +153,7 @@ module.exports = {
         payment_method_id: 2,
         total_price: 10.99,
         status: 1,
-        estimated_delivery_time: '30m',
+        estimated_delivery_duration: 30,
         comments: 'Entregar na portaria',
       },
     ])

@@ -47,8 +47,8 @@ const createOrders = (sequelize, DataTypes) => {
     promotionId: {
       type: DataTypes.INTEGER,
     },
-    estimatedDeliveryTime: {
-      type: DataTypes.STRING,
+    estimatedDeliveryDuration: {
+      type: DataTypes.NUMBER,
     },
     comments: {
       type: DataTypes.TEXT,

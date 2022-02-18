@@ -1,8 +1,8 @@
 import { Router } from 'express'
-import RoutesPath from '../../../Shared-v2-ts/Enums/Routes'
+import RoutesPath from '../../../Shared-v2-ts/Enums/RoutesPath'
+import EndpointFn from '../../../Shared-v2-ts/Interfaces/ExpressInterfaces/EndpointFn'
 import IRouteDefinition, { Routes } from '../../../Shared-v2-ts/Interfaces/IRouteDefinition'
 import ErrorCatcher from '../../../Shared-v2-ts/Middlewares/ErrorHandler/ErrorCatcher'
-import IMiddleware from '../../../Shared-v2-ts/Middlewares/Interfaces/IMiddleware'
 import BaseController from './BaseController'
 
 // const { errorCatcher } = require('../../Shared/middlewares/errorHandler/errorHandler')
@@ -30,9 +30,10 @@ export default abstract class BaseRouter<TController extends BaseController> {
     console.log(this.BasePath)
 
     this.CreateRoutes()
+
     this.Routes.forEach((route : IRouteDefinition) => {
-      route.LocalMiddlewares.forEach((middleWare : IMiddleware) => {
-        router.use(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(middleWare.ExecuteAsync))
+      route.LocalMiddlewares.forEach((middleWare : EndpointFn) => {
+        router.use(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(middleWare))
       })
 
       console.log('Criando Rota:')
@@ -58,7 +59,7 @@ export default abstract class BaseRouter<TController extends BaseController> {
           router.delete(route.Endpoint, ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync))
           break
         default:
-          throw new Error()
+          throw new Error('Invalid route method')
       }
     })
     return router

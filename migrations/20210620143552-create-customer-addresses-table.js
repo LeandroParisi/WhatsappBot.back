@@ -1,6 +1,6 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const transaction = await queryInterface.sequelize.transaction();
+    const transaction = await queryInterface.sequelize.transaction()
 
     try {
       await queryInterface.createTable('customer_addresses', {
@@ -64,6 +64,14 @@ module.exports = {
           allowNull: false,
           type: Sequelize.STRING,
         },
+        lat: {
+          allowNull: false,
+          type: Sequelize.DECIMAL(17, 15),
+        },
+        lng: {
+          allowNull: false,
+          type: Sequelize.DECIMAL(19, 15),
+        },
         is_active: {
           allowNull: false,
           type: Sequelize.BOOLEAN,
@@ -77,15 +85,15 @@ module.exports = {
           type: Sequelize.DATE,
           defaultValue: Sequelize.fn('now'),
         },
-      }, { transaction });
-      await transaction.commit();
+      }, { transaction })
+      await transaction.commit()
     } catch (error) {
-      await transaction.rollback();
-      throw error;
+      await transaction.rollback()
+      throw error
     }
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('customer_addresses');
+    await queryInterface.dropTable('customer_addresses')
   },
-};
+}

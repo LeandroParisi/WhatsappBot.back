@@ -17,7 +17,7 @@ export default class ErrorCatcher {
     console.log(error)
 
     if (error instanceof Sequelize.ValidationError) {
-      return ErrorSender.SendValidationError(error, res)
+      return ErrorSender.SendSequelizeValidationError(error, res)
     }
     return ErrorSender.SendCustomError(error, res)
   }

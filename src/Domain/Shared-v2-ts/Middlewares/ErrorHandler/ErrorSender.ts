@@ -25,7 +25,7 @@ export default class ErrorSender {
     })
   }
 
-  static SendValidationError(error : Sequelize.ValidationError, res : Response) : Response {
+  static SendSequelizeValidationError(error : Sequelize.ValidationError, res : Response) : Response {
     const errors = ErrorSender.ExtractValidationErrors(error)
 
     return res
