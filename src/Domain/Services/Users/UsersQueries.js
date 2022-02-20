@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
-const rfr = require('rfr');
-const QueryInterface = require('../BaseClasses/QueryInterface');
+const rfr = require('rfr')
+const QueryInterface = require('../BaseClasses/QueryInterface')
 
 const {
   Branches,
@@ -12,8 +12,8 @@ const {
   OpeningHours,
   PaymentMethods,
   Menus,
-} = rfr('src/models');
-const { addressIds, timeStamps } = require('../helpers/exclusions');
+} = rfr('src/models')
+const { addressIds, timeStamps } = require('../helpers/exclusions')
 
 class UserQueries extends QueryInterface {
   findAll() {
@@ -75,10 +75,10 @@ class UserQueries extends QueryInterface {
           },
         ],
       },
-    };
+    }
   }
 }
 
-const UsersQueries = new UserQueries();
+const UsersQueries = new UserQueries()
 
-module.exports = UsersQueries;
+module.exports = UsersQueries

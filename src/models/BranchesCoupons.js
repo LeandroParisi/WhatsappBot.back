@@ -16,9 +16,9 @@ const createBranchesMenus = (sequelize, DataTypes) => {
       foreignKey: true,
       type: DataTypes.UUID,
     },
-  }, { underscored: true, timestamps: false });
+  }, { underscored: true, timestamps: false })
 
-  return BranchesMenus;
-};
+  return BranchesMenus
+}
 
-module.exports = createBranchesMenus;
+module.exports = createBranchesMenus

@@ -1,19 +1,19 @@
 /* eslint-disable class-methods-use-this */
 
-const { Op } = require('sequelize');
+const { Op } = require('sequelize')
 const {
   Branches,
   Sequelize,
   Categories,
   Menus,
-} = require('../../../models');
-const queryWhereFactory = require('../helpers/Factories/queryWhereFactory');
-const { timeStamps } = require('../helpers/exclusions');
-const QueryInterface = require('../BaseClasses/QueryInterface');
+} = require('../../../models')
+const queryWhereFactory = require('../helpers/Factories/queryWhereFactory')
+const { timeStamps } = require('../helpers/exclusions')
+const QueryInterface = require('../BaseClasses/QueryInterface')
 
 class ProductQueries extends QueryInterface {
   findAll({ query, user: { id: userId } }) {
-    const sequelizedQuery = queryWhereFactory(query, { table: 'Products' });
+    const sequelizedQuery = queryWhereFactory(query, { table: 'Products' })
 
     return {
       where: {
@@ -50,10 +50,10 @@ class ProductQueries extends QueryInterface {
       order: [
         ['name', 'ASC'],
       ],
-    };
+    }
   }
 }
 
-const ProductsQueries = new ProductQueries();
+const ProductsQueries = new ProductQueries()
 
-module.exports = ProductsQueries;
+module.exports = ProductsQueries

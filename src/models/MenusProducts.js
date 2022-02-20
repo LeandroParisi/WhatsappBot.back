@@ -16,9 +16,9 @@ const createMenusProducts = (sequelize, DataTypes) => {
       foreignKey: true,
       type: DataTypes.UUID,
     },
-  }, { underscored: true, timestamps: false });
+  }, { underscored: true, timestamps: false })
 
-  return MenusProducts;
-};
+  return MenusProducts
+}
 
-module.exports = createMenusProducts;
+module.exports = createMenusProducts

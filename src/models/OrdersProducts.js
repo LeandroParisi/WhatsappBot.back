@@ -26,20 +26,20 @@ const createOrdersProducts = (sequelize, DataTypes) => {
     attributes: {
       type: DataTypes.JSONB,
     },
-  }, { underscored: true, timestamps: false });
+  }, { underscored: true, timestamps: false })
 
   OrdersProducts.associate = (models) => {
     OrdersProducts.belongsTo(models.Products, {
       as: 'productsOrders',
       foreignKey: 'productId',
-    });
+    })
     OrdersProducts.belongsTo(models.Orders, {
       as: 'ordersProducts',
       foreignKey: 'orderId',
-    });
-  };
+    })
+  }
 
-  return OrdersProducts;
-};
+  return OrdersProducts
+}
 
-module.exports = createOrdersProducts;
+module.exports = createOrdersProducts

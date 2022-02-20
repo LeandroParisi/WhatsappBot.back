@@ -14,24 +14,24 @@ const createCities = (sequelize, DataTypes) => {
     stateId: {
       type: DataTypes.INTEGER,
     },
-  }, { timestamps: false, underscored: true });
+  }, { timestamps: false, underscored: true })
 
   Cities.associate = (models) => {
     Cities.hasMany(models.Branches, {
       as: 'branchCity',
       foreignKey: 'cityId',
-    });
+    })
     Cities.hasMany(models.CustomerAddresses, {
       as: 'addressCity',
       foreignKey: 'cityId',
-    });
+    })
     Cities.belongsTo(models.States, {
       as: 'stateCities',
       foreignKey: 'stateId',
-    });
-  };
+    })
+  }
 
-  return Cities;
-};
+  return Cities
+}
 
-module.exports = createCities;
+module.exports = createCities

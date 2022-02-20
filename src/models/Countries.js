@@ -11,24 +11,24 @@ const createCountries = (sequelize, DataTypes) => {
     countryName: {
       type: DataTypes.STRING,
     },
-  }, { timestamps: false, underscored: true });
+  }, { timestamps: false, underscored: true })
 
   Countries.associate = (models) => {
     Countries.hasMany(models.Branches, {
       as: 'branchCountry',
       foreignKey: 'countryId',
-    });
+    })
     Countries.hasMany(models.CustomerAddresses, {
       as: 'addressCountry',
       foreignKey: 'countryId',
-    });
+    })
     Countries.hasMany(models.States, {
       as: 'countryStates',
       foreignKey: 'countryId',
-    });
-  };
+    })
+  }
 
-  return Countries;
-};
+  return Countries
+}
 
-module.exports = createCountries;
+module.exports = createCountries

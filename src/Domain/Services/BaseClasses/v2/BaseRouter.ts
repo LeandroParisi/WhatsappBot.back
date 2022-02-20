@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import { Router } from 'express'
 import RoutesPath from '../../../Shared-v2-ts/Enums/RoutesPath'
 import EndpointFn from '../../../Shared-v2-ts/Interfaces/ExpressInterfaces/EndpointFn'
@@ -42,28 +43,36 @@ export default abstract class BaseRouter<TController extends BaseController> {
         case 'GET':
           router.get(
             route.Endpoint,
-            ...route.LocalMiddlewares.map((middleWare : EndpointFn) => ErrorCatcher.ApplyErrorCatcher(middleWare)),
+            ...route.LocalMiddlewares.map(
+              (middleWare : EndpointFn) => ErrorCatcher.ApplyErrorCatcher(middleWare),
+            ),
             ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync),
           )
           break
         case 'POST':
           router.post(
             route.Endpoint,
-            ...route.LocalMiddlewares.map((middleWare : EndpointFn) => ErrorCatcher.ApplyErrorCatcher(middleWare)),
+            ...route.LocalMiddlewares.map(
+              (middleWare : EndpointFn) => ErrorCatcher.ApplyErrorCatcher(middleWare),
+            ),
             ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync),
           )
           break
         case 'PUT':
           router.put(
             route.Endpoint,
-            ...route.LocalMiddlewares.map((middleWare : EndpointFn) => ErrorCatcher.ApplyErrorCatcher(middleWare)),
+            ...route.LocalMiddlewares.map(
+              (middleWare : EndpointFn) => ErrorCatcher.ApplyErrorCatcher(middleWare),
+            ),
             ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync),
           )
           break
         case 'DELETE':
           router.delete(
             route.Endpoint,
-            ...route.LocalMiddlewares.map((middleWare : EndpointFn) => ErrorCatcher.ApplyErrorCatcher(middleWare)),
+            ...route.LocalMiddlewares.map(
+              (middleWare : EndpointFn) => ErrorCatcher.ApplyErrorCatcher(middleWare),
+            ),
             ErrorCatcher.ApplyErrorCatcher(route.ExecuteAsync),
           )
           break

@@ -1,12 +1,12 @@
 const throughAssociationsFactory = (associations) => {
-  const associationsNames = Object.keys(associations);
+  const associationsNames = Object.keys(associations)
 
-  const includedAssociations = [];
+  const includedAssociations = []
 
   associationsNames.forEach((association) => {
     const {
       model, throughAttributes = [], exclude, include, innerAssociations = [],
-    } = associations[association];
+    } = associations[association]
 
     includedAssociations.push({
       model,
@@ -17,10 +17,10 @@ const throughAssociationsFactory = (associations) => {
       through: { attributes: throughAttributes },
       as: association,
       include: innerAssociations,
-    });
-  });
+    })
+  })
 
-  return includedAssociations;
-};
+  return includedAssociations
+}
 
-module.exports = throughAssociationsFactory;
+module.exports = throughAssociationsFactory

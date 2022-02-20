@@ -1,9 +1,20 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable no-shadow */
 import 'reflect-metadata'
 import { Application } from 'express'
 import Container, { Service } from 'typedi'
 import {
-  BranchesRouter, CustomerRouter, LocationsRouter, MenusRouter, ProductsRouter, PromotionsRouter, UsersRouter,
+  BranchesRouter,
+  CustomerRouter, LocationsRouter,
+  MenusRouter,
+  ProductsRouter,
+  PromotionsRouter,
+  UsersRouter,
 } from './Domain/Services'
 import OrdersRouter from './Domain/Services/Orders/OrdersRouter'
 import CustomersAddressesRouter from './Domain/Services/CustomerAddresses/CustomerAddressesRouter'
@@ -13,7 +24,6 @@ import ErrorCatcher from './Domain/Shared-v2-ts/Middlewares/ErrorHandler/ErrorCa
 const express = require('express')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
-const { errorHandler } = require('./Domain/Shared/middlewares/errorHandler/errorHandler')
 
 require('dotenv').config()
 
@@ -40,6 +50,7 @@ class Main {
   constructor(
   ) {
     this.app = express()
+
     this.OrdersRouter = Container.get(OrdersRouter)
     this.CustomersAddressesRouter = Container.get(CustomersAddressesRouter)
     this.CouponsRouter = Container.get(CouponsRouter)

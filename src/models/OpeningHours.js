@@ -28,16 +28,16 @@ const createOpeningHours = (sequelize, DataTypes) => {
     sunday: {
       type: DataTypes.JSONB,
     },
-  }, { underscored: true });
+  }, { underscored: true })
 
   OpeningHours.associate = (models) => {
     OpeningHours.belongsTo(models.Branches, {
       as: 'openingHours',
       foreignKey: 'branchId',
-    });
-  };
+    })
+  }
 
-  return OpeningHours;
-};
+  return OpeningHours
+}
 
-module.exports = createOpeningHours;
+module.exports = createOpeningHours

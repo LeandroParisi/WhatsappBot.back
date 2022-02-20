@@ -20,20 +20,20 @@ const createPromotionsProducts = (sequelize, DataTypes) => {
       type: DataTypes.JSONB,
       defaultValue: JSON.stringify([]),
     },
-  }, { underscored: true, timestamps: false });
+  }, { underscored: true, timestamps: false })
 
   PromotionsProducts.associate = (models) => {
     PromotionsProducts.belongsTo(models.Promotions, {
       as: 'promotionProducts',
       foreignKey: 'promotionId',
-    });
+    })
     PromotionsProducts.belongsTo(models.Products, {
       as: 'productsPromotions',
       foreignKey: 'productId',
-    });
-  };
+    })
+  }
 
-  return PromotionsProducts;
-};
+  return PromotionsProducts
+}
 
-module.exports = createPromotionsProducts;
+module.exports = createPromotionsProducts

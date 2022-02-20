@@ -11,6 +11,6 @@ const status = {
   conflict: 409,
   unprocessableEntity: 422,
   internalError: 500,
-};
+}
 
-module.exports = status;
+module.exports = status

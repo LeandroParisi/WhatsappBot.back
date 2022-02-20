@@ -1,16 +1,16 @@
-const { status } = require('../../Shared/libs');
+const { status } = require('../../Shared/libs')
 
-const BaseController = require('../BaseClasses/BaseController');
-const LocationsService = require('./LocationsServices');
+const BaseController = require('../BaseClasses/BaseController')
+const LocationsService = require('./LocationsServices')
 
 class Controller extends BaseController {
   async findAll(_req, res) {
-    const data = await this.service.findAll();
-    res.status(status.ok).json({ data });
+    const data = await this.service.findAll()
+    res.status(status.ok).json({ data })
   }
 }
 
-const LocationsController = new Controller(LocationsService);
+const LocationsController = new Controller(LocationsService)
 
 LocationsController.removeEndpoints([
   'deleteOne',
@@ -21,7 +21,7 @@ LocationsController.removeEndpoints([
   'updateOne',
   'deleteOne',
   'create',
-]);
+])
 // LocationsController.addMiddlewares('all', [authenticateUser]);
 
-module.exports = LocationsController;
+module.exports = LocationsController

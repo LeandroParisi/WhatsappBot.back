@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import ICoordinates from '../../../Interfaces/ICoordinates'
 
 export interface IProvidedLocation {

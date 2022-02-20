@@ -1,6 +1,6 @@
 const attributeTypes = {
   sizes: 'sizes',
   additionals: 'additionals',
-};
+}
 
-module.exports = attributeTypes;
+module.exports = attributeTypes

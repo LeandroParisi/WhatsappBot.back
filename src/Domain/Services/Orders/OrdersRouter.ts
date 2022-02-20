@@ -4,7 +4,6 @@ import { Routes } from '../../Shared-v2-ts/Interfaces/IRouteDefinition'
 import AuthenticateUser from '../../Shared-v2-ts/Middlewares/Validations/AuthenticateUser'
 import { METHODS } from '../../Shared/libs'
 import BaseRouter from '../BaseClasses/v2/BaseRouter'
-
 import OrdersController from './OrdersController'
 import CalculateFaresValidation from './Requests/CalculateFares/Validation'
 import RegisterOrderValidation from './Requests/RegisterOrder/Validation'
@@ -17,6 +16,7 @@ export default class OrdersRouter extends BaseRouter<OrdersController> {
   constructor(
   ) {
     super(RoutesPath.ORDERS)
+
     this.Controller = Container.get(OrdersController)
   }
 

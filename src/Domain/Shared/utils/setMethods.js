@@ -2,12 +2,12 @@
 const isSuperset = (set, subset) => {
   for (const elem of subset) {
     if (!set.has(Number(elem))) {
-      return false;
+      return false
     }
   }
-  return true;
-};
+  return true
+}
 
 module.exports = {
   isSuperset,
-};
+}

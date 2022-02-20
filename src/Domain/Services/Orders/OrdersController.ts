@@ -11,7 +11,6 @@ import UpdateOrderReq from './Requests/UpdateOne/Request'
 
 @Service()
 export default class OrdersController extends BaseController {
-
   /**
    *
    */
@@ -48,7 +47,7 @@ export default class OrdersController extends BaseController {
   RegisterOrder() {
     return async (req : RegisterOrderReq, res : Response) => {
       await this.Handler.RegisterOrder(req.body)
-      res.status(StatusCode.OK).json({ data : 'OK', message: resMessages.updateSuccess })
+      res.status(StatusCode.OK).json({ data: 'OK', message: resMessages.updateSuccess })
     }
   }
 }

@@ -1,23 +1,23 @@
 const {
   sequelize, PromotionsProducts, BranchesPromotions, Promotions,
-} = require('../../../models');
-const PromotionsQueries = require('./PromotionsQueries');
-const { FireError } = require('../../Shared/middlewares/errorHandler/errorHandler');
-const { status, errorMessages } = require('../../Shared/libs');
-const BaseService = require('../BaseClasses/BaseService');
-const insertMany = require('../helpers/commonQueries/insertMany');
+} = require('../../../models')
+const PromotionsQueries = require('./PromotionsQueries')
+const { FireError } = require('../../Shared/middlewares/errorHandler/errorHandler')
+const { status, errorMessages } = require('../../Shared/libs')
+const BaseService = require('../BaseClasses/BaseService')
+const insertMany = require('../helpers/commonQueries/insertMany')
 
 class PromotionService extends BaseService {
   async updateOne(id, body) {
-    const { promotionProducts, branchesPromotions } = body;
+    const { promotionProducts, branchesPromotions } = body
 
     try {
       await sequelize.transaction(async (transaction) => {
         await this.model.update(
           this.queries.updateOne(body), { where: { id }, transaction },
-        );
+        )
 
-        await PromotionsProducts.destroy({ where: { promotionId: id } });
+        await PromotionsProducts.destroy({ where: { promotionId: id } })
 
         if (promotionProducts.length) {
           await insertMany(
@@ -31,10 +31,10 @@ class PromotionService extends BaseService {
                   JSON.stringify(attributes),
                 ]
               )),
-          );
+          )
         }
 
-        await BranchesPromotions.destroy({ where: { promotionId: id } });
+        await BranchesPromotions.destroy({ where: { promotionId: id } })
 
         if (branchesPromotions.length) {
           await insertMany(
@@ -42,24 +42,24 @@ class PromotionService extends BaseService {
             id,
             ['promotion_id', 'branch_id'],
             branchesPromotions,
-          );
+          )
         }
-      });
+      })
     } catch (e) {
-      throw new FireError(status.internalError, errorMessages.internalError);
+      throw new FireError(status.internalError, errorMessages.internalError)
     }
-    return {};
+    return {}
   }
 
   async create({ body }) {
-    const requestBody = body;
-    delete requestBody.id;
+    const requestBody = body
+    delete requestBody.id
 
-    const { promotionProducts, branchesPromotions } = requestBody;
+    const { promotionProducts, branchesPromotions } = requestBody
 
-    const { id } = await this.model.create(this.queries.create(requestBody));
+    const { id } = await this.model.create(this.queries.create(requestBody))
 
-    if (!id) throw new FireError(status.notFound, errorMessages.notFound);
+    if (!id) throw new FireError(status.notFound, errorMessages.notFound)
 
     try {
       await sequelize.transaction(async () => {
@@ -75,7 +75,7 @@ class PromotionService extends BaseService {
                   JSON.stringify(attributes),
                 ]
               )),
-          );
+          )
         }
 
         if (branchesPromotions.length) {
@@ -84,17 +84,17 @@ class PromotionService extends BaseService {
             id,
             ['promotion_id', 'branch_id'],
             branchesPromotions,
-          );
+          )
         }
-      });
+      })
     } catch (e) {
-      throw new FireError(status.internalError, errorMessages.internalError);
+      throw new FireError(status.internalError, errorMessages.internalError)
     }
-    return {};
+    return {}
   }
 // No need to be extended yet
 }
 
-const PromotionsService = new PromotionService(Promotions, PromotionsQueries);
+const PromotionsService = new PromotionService(Promotions, PromotionsQueries)
 
-module.exports = PromotionsService;
+module.exports = PromotionsService

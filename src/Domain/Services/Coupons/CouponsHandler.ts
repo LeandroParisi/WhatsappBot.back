@@ -52,11 +52,11 @@ export default class CouponsHandler {
   }
 
   async FindAll(query: FindAllCouponsQuery) : Promise<Coupom[]> {
-    return await this.Repository.FindAll(query) as Coupom[]
+    return await this.Repository.FindAll(query)
   }
 
   async GetConditions() {
-    return await this.Repository.GetConditions() as any
+    return await this.Repository.GetConditions()
   }
 
   // teste

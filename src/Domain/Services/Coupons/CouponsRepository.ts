@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-return-await */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Service } from 'typedi'
 import KnexConnectionFactory from '../../../Data/DbConnections/Knex/ConnectionFactory/KnexConnectionFactory'
 import Tables from '../../../Data/Entities/Enums/Tables'
@@ -24,7 +29,7 @@ export default class CouponsRepository extends BaseRepository<Coupom> {
   }
 
   async GetConditions() : Promise<any> {
-    return await this.Adapter.GetConditions() as any
+    return await this.Adapter.GetConditions()
   }
 
   async GetCoupomByCode(params: ValidateCoupomParams) : Promise<Coupom | undefined> {
@@ -39,13 +44,13 @@ export default class CouponsRepository extends BaseRepository<Coupom> {
       .andWhere('coupons_branches.branch_id', params.branchId)
       .first()
 
-    const result = await select
+    const result = await select as Coupom
 
     if (!result) return undefined
     return result
   }
 
   async UpdateOne(id : string, payload : Coupom) : Promise<any> {
-    return await this.Adapter.UpdateOne(id, payload) as any
+    return await this.Adapter.UpdateOne(id, payload)
   }
 }

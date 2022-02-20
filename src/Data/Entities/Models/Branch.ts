@@ -1,4 +1,4 @@
-import DeliveryFeeTypes, { DeliveryFeeTypesKeys, DeliveryFeeTypesValues } from '../Enums/DeliveryFeeTypes'
+import DeliveryFeeTypes from '../Enums/DeliveryFeeTypes'
 
 export interface UniqueDeliveryFee {
   type: typeof DeliveryFeeTypes.UNIQUE,

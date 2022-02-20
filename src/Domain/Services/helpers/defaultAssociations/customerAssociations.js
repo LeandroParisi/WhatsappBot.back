@@ -2,9 +2,9 @@ const {
   Countries,
   States,
   Cities,
-} = require('../../../../models');
-const associationsFactory = require('../QueryBuilders/associationsFactory');
-const colBuilder = require('../QueryBuilders/sequelizeCol');
+} = require('../../../../models')
+const associationsFactory = require('../QueryBuilders/associationsFactory')
+const colBuilder = require('../QueryBuilders/sequelizeCol')
 
 const customerAssociationsFactory = () => {
   const associations = {
@@ -21,16 +21,16 @@ const customerAssociationsFactory = () => {
       model: Cities,
       column: 'city_name',
     },
-  };
+  }
 
-  const includedAssociations = associationsFactory(associations);
+  const includedAssociations = associationsFactory(associations)
 
-  const { colInclude } = colBuilder(associations);
+  const { colInclude } = colBuilder(associations)
 
   return {
     customerAssociations: includedAssociations,
     customerInclude: colInclude,
-  };
-};
+  }
+}
 
-module.exports = customerAssociationsFactory;
+module.exports = customerAssociationsFactory

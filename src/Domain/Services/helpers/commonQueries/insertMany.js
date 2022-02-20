@@ -1,9 +1,9 @@
-const { sequelize, Sequelize } = require('../../../../models');
+const { sequelize, Sequelize } = require('../../../../models')
 
 const insertMany = async (tableName, id, columnNames, payload) => {
-  let treatedPayload = [...payload];
+  let treatedPayload = [...payload]
   if (typeof treatedPayload[0] !== typeof []) {
-    treatedPayload = treatedPayload.map((el) => [el]);
+    treatedPayload = treatedPayload.map((el) => [el])
   }
 
   await sequelize.query(`
@@ -12,7 +12,7 @@ const insertMany = async (tableName, id, columnNames, payload) => {
   {
     replacements: treatedPayload.map((dt) => ([id, ...dt])),
     type: Sequelize.QueryTypes.INSERT,
-  });
-};
+  })
+}
 
-module.exports = insertMany;
+module.exports = insertMany

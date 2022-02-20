@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Response } from 'express'
 import { Service } from 'typedi'
 import Sequelize from 'sequelize'
@@ -12,13 +13,13 @@ export default class ErrorSender {
   static SendCustomError(error : FireError, res : Response) : Response {
     const { statusCode, message } = error
 
-    console.log("Sending error")
+    console.log('Sending error')
 
     if (!statusCode) {
       return res.status(StatusCode.INTERNAL_SERVER_ERROR).json({
         type: ErrorTypes.CustomError,
         error: ErrorMessages.InternalError,
-        innerError: error.innerError || null
+        innerError: error.innerError || null,
       })
     }
 

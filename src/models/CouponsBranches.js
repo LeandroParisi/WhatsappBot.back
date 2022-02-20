@@ -16,9 +16,9 @@ const createCouponsBranches = (sequelize, DataTypes) => {
       foreignKey: true,
       type: DataTypes.INTEGER,
     },
-  }, { underscored: true, timestamps: false });
+  }, { underscored: true, timestamps: false })
 
-  return CouponsBranches;
-};
+  return CouponsBranches
+}
 
-module.exports = createCouponsBranches;
+module.exports = createCouponsBranches

@@ -34,7 +34,7 @@ export default class MapBoxService {
    * @returns <IDirectionRoute>: by default distance is in KM and duration in minutes
    */
   public async GetDirections(dto : MapBoxDTO, options? : IOptions) : Promise<IDirectionRoute> {
-    const definitiveOptions = this.GetDirectionOptions(options)
+    const definitiveOptions = MapBoxService.GetDirectionOptions(options)
 
     const { query, params } = new MapBoxReq(dto)
 
@@ -45,15 +45,19 @@ export default class MapBoxService {
       },
     )
 
-    return this.FormatResponse(definitiveOptions, response)
+    return MapBoxService.FormatResponse(definitiveOptions, response)
   }
 
-  private FormatResponse(options: IOptions, response: IDirectionsResponse) {
+  static FormatResponse(options: IOptions, response: IDirectionsResponse) {
     const { routes } = response
 
     const directionRoute : IDirectionRoute = {
-      distance: (routes.map((r : IRoute) => r.distance).reduce((a, b) => a + b, 0) / routes.length) || 0,
-      duration: (routes.map((r : IRoute) => r.duration).reduce((a, b) => a + b, 0) / routes.length) || 0,
+      distance: (
+        routes.map((r : IRoute) => r.distance).reduce((a, b) => a + b, 0) / routes.length
+      ) || 0,
+      duration: (
+        routes.map((r : IRoute) => r.duration).reduce((a, b) => a + b, 0) / routes.length
+      ) || 0,
     }
 
     if (options.distanceInKilometers) {
@@ -70,7 +74,7 @@ export default class MapBoxService {
     return directionRoute
   }
 
-  private GetDirectionOptions(options: IOptions): IOptions {
+  static GetDirectionOptions(options: IOptions): IOptions {
     const defaultOptions : IOptions = {
       distanceInKilometers: true,
       durationInMinutes: true,

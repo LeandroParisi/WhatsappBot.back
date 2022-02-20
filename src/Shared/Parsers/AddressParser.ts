@@ -1,5 +1,4 @@
 import AddressDTO from '../../Data/Entities/DTOs/AddressDTO'
-import Address from '../../Data/Entities/Models/Address'
 import StaticImplements from '../Anotations/StaticImplements'
 
 @StaticImplements()

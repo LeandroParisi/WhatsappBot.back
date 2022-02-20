@@ -13,16 +13,16 @@ const createCategories = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.STRING,
     },
-  }, { underscored: true });
+  }, { underscored: true })
 
   Categories.associate = (models) => {
     Categories.hasMany(models.Products, {
       as: 'productCategory',
       foreignKey: 'categoryId',
-    });
-  };
+    })
+  }
 
-  return Categories;
-};
+  return Categories
+}
 
-module.exports = createCategories;
+module.exports = createCategories

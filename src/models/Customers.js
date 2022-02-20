@@ -2,8 +2,8 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
-const { v4: uuid } = require('uuid');
-const { validationErrors } = require('../Domain/Shared/libs');
+const { v4: uuid } = require('uuid')
+const { validationErrors } = require('../Domain/Shared/libs')
 
 const createCustomers = (sequelize, DataTypes) => {
   const Customers = sequelize.define('Customers', {
@@ -41,25 +41,25 @@ const createCustomers = (sequelize, DataTypes) => {
     isActive: {
       type: DataTypes.BOOLEAN,
     },
-  }, { underscored: true });
+  }, { underscored: true })
 
   Customers.beforeCreate((customer) => {
-    customer.id = uuid();
-    customer.whatsappNumber = customer.whatsappId.split('@')[0];
-  });
+    customer.id = uuid()
+    customer.whatsappNumber = customer.whatsappId.split('@')[0]
+  })
 
   Customers.associate = (models) => {
     Customers.hasMany(models.Orders, {
       as: 'customer',
       foreignKey: 'customerId',
-    });
+    })
     Customers.hasMany(models.CustomerAddresses, {
       as: 'customerAddresses',
       foreignKey: 'customerId',
-    });
-  };
+    })
+  }
 
-  return Customers;
-};
+  return Customers
+}
 
-module.exports = createCustomers;
+module.exports = createCustomers

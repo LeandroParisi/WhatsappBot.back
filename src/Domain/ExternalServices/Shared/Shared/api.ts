@@ -1,4 +1,8 @@
-import { AxiosResponse } from 'axios'
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Service } from 'typedi'
 import FireError from '../../../Shared-v2-ts/Abstractions/FireError'
 

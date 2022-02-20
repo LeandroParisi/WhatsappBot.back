@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable radix */
 import { Knex } from 'knex'
 
 import 'dotenv/config'
-import StringParser from '../../../Shared/Parsers/StringParser'
-// TODO
+
 const knexStringCase = require('knex-stringcase')
 
 const pg = require('pg')

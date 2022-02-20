@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/require-await */
 import 'dotenv/config'
 import { NextFunction, Request, Response } from 'express'
 import FireError from '../../Abstractions/FireError'

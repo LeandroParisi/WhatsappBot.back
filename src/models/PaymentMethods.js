@@ -12,20 +12,20 @@ const createPaymentMethods = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.STRING,
     },
-  }, { underscored: true, timestamps: false });
+  }, { underscored: true, timestamps: false })
 
   PaymentMethods.associate = (models) => {
     PaymentMethods.belongsToMany(models.Branches, {
       through: 'BranchesPaymentMethods',
       as: 'paymentMethods',
-    });
+    })
     PaymentMethods.hasMany(models.Orders, {
       as: 'orderPaymentMethod',
       foreignKey: 'paymentMethodId',
-    });
-  };
+    })
+  }
 
-  return PaymentMethods;
-};
+  return PaymentMethods
+}
 
-module.exports = createPaymentMethods;
+module.exports = createPaymentMethods

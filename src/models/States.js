@@ -17,28 +17,28 @@ const createStates = (sequelize, DataTypes) => {
     countryId: {
       type: DataTypes.INTEGER,
     },
-  }, { timestamps: false, underscored: true });
+  }, { timestamps: false, underscored: true })
 
   States.associate = (models) => {
     States.hasMany(models.Branches, {
       as: 'branchState',
       foreignKey: 'stateId',
-    });
+    })
     States.hasMany(models.CustomerAddresses, {
       as: 'addressState',
       foreignKey: 'stateId',
-    });
+    })
     States.hasMany(models.Cities, {
       as: 'stateCities',
       foreignKey: 'stateId',
-    });
+    })
     States.belongsTo(models.Countries, {
       as: 'countryState',
       foreignKey: 'countryId',
-    });
-  };
+    })
+  }
 
-  return States;
-};
+  return States
+}
 
-module.exports = createStates;
+module.exports = createStates

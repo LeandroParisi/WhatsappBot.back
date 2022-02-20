@@ -1,14 +1,14 @@
 /* eslint-disable class-methods-use-this */
-const rfr = require('rfr');
-const QueryInterface = require('../BaseClasses/QueryInterface');
+const rfr = require('rfr')
+const QueryInterface = require('../BaseClasses/QueryInterface')
 
-const { Branches, Products } = rfr('src/models');
-const { timeStamps } = require('../helpers/exclusions');
-const queryWhereFactory = require('../helpers/Factories/queryWhereFactory');
+const { Branches, Products } = rfr('src/models')
+const { timeStamps } = require('../helpers/exclusions')
+const queryWhereFactory = require('../helpers/Factories/queryWhereFactory')
 
 class MenuQueries extends QueryInterface {
   findAll({ query }) {
-    const sequelizedQuery = queryWhereFactory(query, { table: 'Menus' });
+    const sequelizedQuery = queryWhereFactory(query, { table: 'Menus' })
 
     return {
       where: { ...sequelizedQuery },
@@ -32,10 +32,10 @@ class MenuQueries extends QueryInterface {
       order: [
         ['menuName', 'ASC'],
       ],
-    };
+    }
   }
 }
 
-const MenusQueries = new MenuQueries();
+const MenusQueries = new MenuQueries()
 
-module.exports = MenusQueries;
+module.exports = MenusQueries

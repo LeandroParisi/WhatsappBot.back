@@ -16,9 +16,9 @@ const createBranchesDeliveryTypes = (sequelize, DataTypes) => {
       foreignKey: true,
       type: DataTypes.INTEGER,
     },
-  }, { underscored: true, timestamps: false });
+  }, { underscored: true, timestamps: false })
 
-  return BranchesDeliveryTypes;
-};
+  return BranchesDeliveryTypes
+}
 
-module.exports = createBranchesDeliveryTypes;
+module.exports = createBranchesDeliveryTypes

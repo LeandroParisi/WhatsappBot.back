@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable no-param-reassign */
 import { Service } from 'typedi'
 import Order, { OrderStatus } from '../../../Data/Entities/Models/Order'
@@ -19,14 +21,11 @@ import OrderCalculator from './Helpers/OrderCalculator'
 import DeliveryTypes from '../../../Data/Entities/Enums/DeliveryTypes'
 import CouponsRepository from '../Coupons/CouponsRepository'
 import PromotionsRepository from '../Promotions/PromotionsRepository'
-import DiscountTypes from '../../../Data/Entities/Enums/DiscountTypes'
 import FeeAndDuration from './Interfaces/FeeAndDuration'
 import CalculatedFares from './Requests/CalculateFares/Response'
-import RegisterOrderRes from './Requests/RegisterOrder/Response'
 
 @Service()
 export default class OrdersHandler {
-
   /**
    *
    */
@@ -53,7 +52,7 @@ export default class OrdersHandler {
   }
 
   public async UpdateOne(id: string, body: Order) : Promise<void> {
-    const isUpdated = this.Repository.UpdateOne(id, body)
+    const isUpdated = await this.Repository.UpdateOne(id, body)
 
     if (!isUpdated) throw new FireError(StatusCode.NOT_FOUND, ErrorMessages.NotFound)
   }
@@ -80,17 +79,15 @@ export default class OrdersHandler {
     try {
       const isCreated = await this.Repository.Insert(body)
       if (!isCreated) {
-        throw new FireError(StatusCode.CONFLICT, "Unable to create order, probably it was already created")
+        throw new FireError(StatusCode.CONFLICT, 'Unable to create order, probably it was already created')
       }
-
-    } catch(error) {
+    } catch (error) {
       throw new FireError(
         StatusCode.INTERNAL_SERVER_ERROR,
-        "Unable to create order.",
-        error
+        'Unable to create order.',
+        error,
       )
     }
-
   }
 
   private async GetPromotionPrice(id: number) : Promise<number> {

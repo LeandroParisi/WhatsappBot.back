@@ -16,9 +16,9 @@ const createBranchesPaymentMethods = (sequelize, DataTypes) => {
       foreignKey: true,
       type: DataTypes.INTEGER,
     },
-  }, { underscored: true, timestamps: false });
+  }, { underscored: true, timestamps: false })
 
-  return BranchesPaymentMethods;
-};
+  return BranchesPaymentMethods
+}
 
-module.exports = createBranchesPaymentMethods;
+module.exports = createBranchesPaymentMethods

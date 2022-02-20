@@ -1,8 +1,8 @@
 const {
   Categories,
-} = require('../../../../models');
-const associationsFactory = require('../QueryBuilders/associationsFactory');
-const colBuilder = require('../QueryBuilders/sequelizeCol');
+} = require('../../../../models')
+const associationsFactory = require('../QueryBuilders/associationsFactory')
+const colBuilder = require('../QueryBuilders/sequelizeCol')
 
 const productsAssociationsFactory = () => {
   const associations = {
@@ -10,16 +10,16 @@ const productsAssociationsFactory = () => {
       model: Categories,
       column: 'category_name',
     },
-  };
+  }
 
-  const includedAssociations = associationsFactory(associations);
+  const includedAssociations = associationsFactory(associations)
 
-  const { colInclude } = colBuilder(associations);
+  const { colInclude } = colBuilder(associations)
 
   return {
     productsAssociations: includedAssociations,
     productsInclude: colInclude,
-  };
-};
+  }
+}
 
-module.exports = productsAssociationsFactory;
+module.exports = productsAssociationsFactory

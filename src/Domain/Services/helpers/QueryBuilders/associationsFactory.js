@@ -1,20 +1,20 @@
 const associationsFactory = (associations) => {
-  const associationsNames = Object.keys(associations);
+  const associationsNames = Object.keys(associations)
 
-  const includedAssociations = [];
+  const includedAssociations = []
 
   associationsNames.forEach((association) => {
-    const { model, attributes = [], options = {} } = associations[association];
+    const { model, attributes = [], options = {} } = associations[association]
 
     includedAssociations.push({
       model,
       attributes,
       as: association,
       ...options,
-    });
-  });
+    })
+  })
 
-  return includedAssociations;
-};
+  return includedAssociations
+}
 
-module.exports = associationsFactory;
+module.exports = associationsFactory

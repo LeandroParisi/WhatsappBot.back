@@ -1,15 +1,15 @@
 const queryAttributesFactory = ({ columns }) => {
-  let attributes = [];
+  let attributes = []
 
   if (columns) {
-    attributes = columns.split(',');
+    attributes = columns.split(',')
   }
 
   if (attributes.length) {
-    return attributes;
+    return attributes
   }
 
-  return null;
-};
+  return null
+}
 
-module.exports = queryAttributesFactory;
+module.exports = queryAttributesFactory

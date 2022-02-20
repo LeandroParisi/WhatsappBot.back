@@ -1,6 +1,6 @@
-const BaseRouter = require('../BaseClasses/BaseRouter');
-const UsersController = require('./UsersController');
+const BaseRouter = require('../BaseClasses/BaseRouter')
+const UsersController = require('./UsersController')
 
-const UsersRouter = new BaseRouter('/users', UsersController.getRoutes());
+const UsersRouter = new BaseRouter('/users', UsersController.getRoutes())
 
-module.exports = UsersRouter;
+module.exports = UsersRouter

@@ -3,6 +3,6 @@ const METHODS = {
   POST: 'POST',
   DELETE: 'DELETE',
   GET: 'GET',
-};
+}
 
-module.exports = METHODS;
+module.exports = METHODS

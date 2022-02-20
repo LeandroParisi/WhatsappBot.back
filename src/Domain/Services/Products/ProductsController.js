@@ -1,12 +1,12 @@
-const authenticateUser = require('../../Shared/middlewares/validations/authenticateUser');
+const authenticateUser = require('../../Shared/middlewares/validations/authenticateUser')
 
-const BaseController = require('../BaseClasses/BaseController');
-const { METHODS, status } = require('../../Shared/libs');
-const ProductsService = require('./ProductsService');
+const BaseController = require('../BaseClasses/BaseController')
+const { METHODS, status } = require('../../Shared/libs')
+const ProductsService = require('./ProductsService')
 
 class ProductController extends BaseController {
   constructor(service) {
-    super(service);
+    super(service)
 
     this.newRoutes = {
       getCategories: {
@@ -15,18 +15,18 @@ class ProductController extends BaseController {
         handler: this.getCategories.bind(this),
         localMiddleware: [],
       },
-    };
+    }
   }
 
   async getCategories(_req, res) {
-    const data = await this.service.getCategories();
-    res.status(status.ok).json({ data });
+    const data = await this.service.getCategories()
+    res.status(status.ok).json({ data })
   }
 }
 
-const ProductsController = new ProductController(ProductsService);
+const ProductsController = new ProductController(ProductsService)
 
-ProductsController.addRoutes(ProductsController.newRoutes);
-ProductsController.addMiddlewares('all', [authenticateUser]);
+ProductsController.addRoutes(ProductsController.newRoutes)
+ProductsController.addMiddlewares('all', [authenticateUser])
 
-module.exports = ProductsController;
+module.exports = ProductsController

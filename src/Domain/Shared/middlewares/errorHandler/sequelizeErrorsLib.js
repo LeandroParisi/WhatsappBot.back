@@ -4,7 +4,7 @@ const defaultErrorsDict = {
   'cnpj must be unique': 'CNPJ já cadastrado em nosso sistema',
   'whatsapp_number must be unique': 'Número de whatsapp já cadastrado em nosso sistema, é necessário ter um número único para cada estabelecimento',
   'whatsapp_id must be unique': 'Número de whatsapp já cadastrado em nosso sistema, é necessário ter um número único para cada estabelecimento',
-};
+}
 
 const defaultPathDict = {
   whatsapp_number: 'whatsappNumber',
@@ -15,9 +15,9 @@ const defaultPathDict = {
   owner_last_name: 'ownerLastName',
   owner_cpf: 'ownerCpf',
   bot_name: 'botName',
-};
+}
 
 module.exports = {
   defaultErrorsDict,
   defaultPathDict,
-};
+}

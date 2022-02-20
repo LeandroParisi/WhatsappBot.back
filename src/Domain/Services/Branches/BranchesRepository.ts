@@ -1,9 +1,6 @@
 import { Service } from 'typedi'
-import KnexConnectionFactory from '../../../Data/DbConnections/Knex/ConnectionFactory/KnexConnectionFactory'
 import Tables from '../../../Data/Entities/Enums/Tables'
-import Address from '../../../Data/Entities/Models/Address'
 import Branch, { DeliveryFees } from '../../../Data/Entities/Models/Branch'
-import ICoordinates from '../../ExternalServices/Interfaces/ICoordinates'
 import BaseRepository from '../BaseClasses/v2/BaseRepository'
 
 export interface LocationAndFees {

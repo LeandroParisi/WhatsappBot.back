@@ -3,9 +3,9 @@ const {
   States,
   Cities,
   OpeningHours,
-} = require('../../../../models');
-const associationsFactory = require('../QueryBuilders/associationsFactory');
-const colBuilder = require('../QueryBuilders/sequelizeCol');
+} = require('../../../../models')
+const associationsFactory = require('../QueryBuilders/associationsFactory')
+const colBuilder = require('../QueryBuilders/sequelizeCol')
 
 const branchesAssociationsFactory = () => {
   const associations = {
@@ -26,16 +26,16 @@ const branchesAssociationsFactory = () => {
       model: OpeningHours,
       attributes: ['monday', 'thursday', 'wednesday', 'tuesday', 'friday', 'saturday', 'sunday'],
     },
-  };
+  }
 
-  const includedAssociations = associationsFactory(associations);
+  const includedAssociations = associationsFactory(associations)
 
-  const { colInclude } = colBuilder(associations);
+  const { colInclude } = colBuilder(associations)
 
   return {
     branchesAssociations: includedAssociations,
     branchesInclude: colInclude,
-  };
-};
+  }
+}
 
-module.exports = branchesAssociationsFactory;
+module.exports = branchesAssociationsFactory

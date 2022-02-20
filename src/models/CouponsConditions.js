@@ -16,9 +16,9 @@ const createCouponsConditions = (sequelize, DataTypes) => {
       foreignKey: true,
       type: DataTypes.INTEGER,
     },
-  }, { underscored: true, timestamps: false });
+  }, { underscored: true, timestamps: false })
 
-  return CouponsConditions;
-};
+  return CouponsConditions
+}
 
-module.exports = createCouponsConditions;
+module.exports = createCouponsConditions

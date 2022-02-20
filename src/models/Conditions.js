@@ -11,17 +11,17 @@ const createConditions = (sequelize, DataTypes) => {
     name: {
       type: DataTypes.STRING,
     },
-  }, { underscored: true, timestamps: false });
+  }, { underscored: true, timestamps: false })
 
   Conditions.associate = (models) => {
     Conditions.belongsToMany(models.Coupons, {
       as: 'coupomConditions',
       through: 'CouponsConditions',
       foreignKey: 'condition_id',
-    });
-  };
+    })
+  }
 
-  return Conditions;
-};
+  return Conditions
+}
 
-module.exports = createConditions;
+module.exports = createConditions

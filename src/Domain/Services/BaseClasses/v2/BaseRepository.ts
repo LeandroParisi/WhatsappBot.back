@@ -1,4 +1,3 @@
-import { Knex } from 'knex'
 import KnexConnectionFactory from '../../../../Data/DbConnections/Knex/ConnectionFactory/KnexConnectionFactory'
 import { TablesValues } from '../../../../Data/Entities/Enums/Tables'
 
@@ -51,9 +50,9 @@ export default abstract class BaseRepository<Entity> {
     const findQuery = dbConnection(this.Table)
       .select(...options.select).where({ ...options.where }).first()
 
-    const foundEntity = await findQuery
+    const foundEntity = await findQuery as Entity
 
-    return foundEntity as Entity
+    return foundEntity
   }
 
   async Activate<T>(id : T) : Promise<boolean> {

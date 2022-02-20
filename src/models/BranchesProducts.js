@@ -16,9 +16,9 @@ const createBranchesProducts = (sequelize, DataTypes) => {
       foreignKey: true,
       type: DataTypes.UUID,
     },
-  }, { underscored: true, timestamps: false });
+  }, { underscored: true, timestamps: false })
 
-  return BranchesProducts;
-};
+  return BranchesProducts
+}
 
-module.exports = createBranchesProducts;
+module.exports = createBranchesProducts

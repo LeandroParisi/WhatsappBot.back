@@ -1,34 +1,34 @@
-const rfr = require('rfr');
-const { errorMessages, status } = require('../../Shared/libs');
-const { FireError } = require('../../Shared/middlewares/errorHandler/errorHandler');
-const { sequelize, Sequelize } = require('../../../models');
+const rfr = require('rfr')
+const { errorMessages, status } = require('../../Shared/libs')
+const { FireError } = require('../../Shared/middlewares/errorHandler/errorHandler')
+const { sequelize, Sequelize } = require('../../../models')
 
 const {
   Branches, BranchesDeliveryTypes, BranchesPaymentMethods, OpeningHours,
-} = rfr('src/models');
-const BaseService = require('../BaseClasses/BaseService');
-const insertMany = require('../helpers/commonQueries/insertMany');
-const BranchesQueries = require('./BranchesQueries');
+} = rfr('src/models')
+const BaseService = require('../BaseClasses/BaseService')
+const insertMany = require('../helpers/commonQueries/insertMany')
+const BranchesQueries = require('./BranchesQueries')
 
 class BranchServices extends BaseService {
   async findAll({ user, query }) {
-    const data = await this.model.findAll(this.queries.findAll({ id: user.id, query }));
+    const data = await this.model.findAll(this.queries.findAll({ id: user.id, query }))
 
-    return data;
+    return data
   }
 
   async updateOne(id, payload) {
-    const { deliveryTypes, paymentMethods, openingHours } = payload;
+    const { deliveryTypes, paymentMethods, openingHours } = payload
 
     try {
       await sequelize.transaction(async (transaction) => {
         await this.model.update(
           this.queries.updateOne(payload), { where: { id }, transaction },
-        );
+        )
 
-        await OpeningHours.update({ ...openingHours }, { where: { branchId: id } });
+        await OpeningHours.update({ ...openingHours }, { where: { branchId: id } })
 
-        await BranchesDeliveryTypes.destroy({ where: { branchId: id } });
+        await BranchesDeliveryTypes.destroy({ where: { branchId: id } })
 
         if (deliveryTypes.length) {
           await insertMany(
@@ -36,10 +36,10 @@ class BranchServices extends BaseService {
             id,
             ['branch_id', 'delivery_type_id'],
             deliveryTypes,
-          );
+          )
         }
 
-        await BranchesPaymentMethods.destroy({ where: { branchId: id } });
+        await BranchesPaymentMethods.destroy({ where: { branchId: id } })
 
         if (paymentMethods.length) {
           await insertMany(
@@ -47,26 +47,26 @@ class BranchServices extends BaseService {
             id,
             ['branch_id', 'payment_method_id'],
             paymentMethods,
-          );
+          )
         }
-      });
+      })
     } catch (e) {
-      throw new FireError(status.internalError, errorMessages.internalError);
+      throw new FireError(status.internalError, errorMessages.internalError)
     }
-    return {};
+    return {}
   }
 
   async create({ body, user: { id: userId } }) {
-    const { deliveryTypes, paymentMethods, openingHours } = body;
-    const payload = { ...body, userId };
+    const { deliveryTypes, paymentMethods, openingHours } = body
+    const payload = { ...body, userId }
 
-    const { id } = await this.model.create(this.queries.create(payload));
+    const { id } = await this.model.create(this.queries.create(payload))
 
-    if (!id) throw new FireError(status.notFound, errorMessages.notFound);
+    if (!id) throw new FireError(status.notFound, errorMessages.notFound)
 
     try {
       await sequelize.transaction(async (transaction) => {
-        await OpeningHours.create({ branchId: id, ...openingHours }, { transaction });
+        await OpeningHours.create({ branchId: id, ...openingHours }, { transaction })
 
         await sequelize.query(`
           INSERT INTO branches_delivery_types (branch_id, delivery_type_id)
@@ -74,7 +74,7 @@ class BranchServices extends BaseService {
         {
           replacements: deliveryTypes.map((dt) => ([id, dt])),
           type: Sequelize.QueryTypes.INSERT,
-        });
+        })
 
         await sequelize.query(`
           INSERT INTO branches_payment_methods (branch_id, payment_method_id)
@@ -82,14 +82,14 @@ class BranchServices extends BaseService {
         {
           replacements: paymentMethods.map((pm) => ([id, pm])),
           type: Sequelize.QueryTypes.INSERT,
-        });
-      });
+        })
+      })
     } catch (error) {
-      throw new FireError(status.internalError, errorMessages.internalError);
+      throw new FireError(status.internalError, errorMessages.internalError)
     }
-    return {};
+    return {}
   }
 }
-const BranchesService = new BranchServices(Branches, BranchesQueries);
+const BranchesService = new BranchServices(Branches, BranchesQueries)
 
-module.exports = BranchesService;
+module.exports = BranchesService

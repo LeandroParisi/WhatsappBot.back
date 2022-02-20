@@ -1,6 +1,6 @@
-const BaseRouter = require('../BaseClasses/BaseRouter');
-const BranchesController = require('./BranchesController');
+const BaseRouter = require('../BaseClasses/BaseRouter')
+const BranchesController = require('./BranchesController')
 
-const BranchesRouter = new BaseRouter('/branches', BranchesController.getRoutes());
+const BranchesRouter = new BaseRouter('/branches', BranchesController.getRoutes())
 
-module.exports = BranchesRouter;
+module.exports = BranchesRouter
