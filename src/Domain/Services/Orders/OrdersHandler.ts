@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { Service } from 'typedi'
-import Order from '../../../Data/Entities/Models/Order'
+import Order, { OrderStatus } from '../../../Data/Entities/Models/Order'
 import MapQuestService from '../../ExternalServices/GeoCoding/MapQuest/Service'
 import MapBoxService from '../../ExternalServices/Matrix/MapBox/Service'
 import FireError from '../../Shared-v2-ts/Abstractions/FireError'
@@ -22,9 +22,11 @@ import PromotionsRepository from '../Promotions/PromotionsRepository'
 import DiscountTypes from '../../../Data/Entities/Enums/DiscountTypes'
 import FeeAndDuration from './Interfaces/FeeAndDuration'
 import CalculatedFares from './Requests/CalculateFares/Response'
+import RegisterOrderRes from './Requests/RegisterOrder/Response'
 
 @Service()
 export default class OrdersHandler {
+
   /**
    *
    */
@@ -61,15 +63,9 @@ export default class OrdersHandler {
 
     let subTotal = 0
 
-    console.log({ order })
-
     if (order.promotionId) {
       subTotal = await this.GetPromotionPrice(order.promotionId)
     }
-    // ISSO SAI DAQUI?
-    // if (order.coupomId) {
-    //   subTotal = await this.CalculateCoupomDiscount(order.coupomId, subTotal)
-    // }
 
     const totalPrice = subTotal + deliveryFee
 
@@ -78,17 +74,24 @@ export default class OrdersHandler {
     }
   }
 
-  // private async CalculateCoupomDiscount(coupomId: number, subTotal: number): Promise<number> {
-  //   const coupom = await this.CoupomRepository.FindOne({ select: ['*'], where: { id: coupomId } })
+  public async RegisterOrder(body: Order) : Promise<void> {
+    body.status = OrderStatus.PLACED
 
-  //   if (coupom?.discountType === DiscountTypes.ABSOLUTE_VALUE) {
-  //     subTotal -= coupom.discount
-  //   } else if (coupom?.discountType === DiscountTypes.PERCENTAGE) {
-  //     subTotal *= (100 - coupom.discount) / 100
-  //   }
+    try {
+      const isCreated = await this.Repository.Insert(body)
+      if (!isCreated) {
+        throw new FireError(StatusCode.CONFLICT, "Unable to create order, probably it was already created")
+      }
 
-  //   return subTotal
-  // }
+    } catch(error) {
+      throw new FireError(
+        StatusCode.INTERNAL_SERVER_ERROR,
+        "Unable to create order.",
+        error
+      )
+    }
+
+  }
 
   private async GetPromotionPrice(id: number) : Promise<number> {
     const promotion = await this.PromotionRepository.FindOne({ select: ['*'], where: { id } })

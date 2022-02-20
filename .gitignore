@@ -20,3 +20,5 @@ setup
 .env.test.local
 .env.production.local
 
+TESTING/
+

@@ -12,16 +12,20 @@ export default class ErrorSender {
   static SendCustomError(error : FireError, res : Response) : Response {
     const { statusCode, message } = error
 
+    console.log("Sending error")
+
     if (!statusCode) {
       return res.status(StatusCode.INTERNAL_SERVER_ERROR).json({
         type: ErrorTypes.CustomError,
         error: ErrorMessages.InternalError,
+        innerError: error.innerError || null
       })
     }
 
     return res.status(statusCode).json({
       type: ErrorTypes.CustomError,
       error: message,
+      innerError: error.innerError || null,
     })
   }
 

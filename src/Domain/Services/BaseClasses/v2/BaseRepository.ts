@@ -1,3 +1,4 @@
+import { Knex } from 'knex'
 import KnexConnectionFactory from '../../../../Data/DbConnections/Knex/ConnectionFactory/KnexConnectionFactory'
 import { TablesValues } from '../../../../Data/Entities/Enums/Tables'
 
@@ -33,17 +34,15 @@ export default abstract class BaseRepository<Entity> {
     return result === 1
   }
 
-  async Insert(entity : Entity) : Promise<any> {
+  async Insert(entity : Entity) : Promise<boolean> {
     const dbConnection = KnexConnectionFactory.Create()
 
     const updateQuery = dbConnection(this.Table)
       .insert(entity)
 
-    const result = await updateQuery
+    const result = await updateQuery as undefined as { rowCount: number }
 
-    console.log({ result })
-
-    return result
+    return result.rowCount === 1
   }
 
   async FindOne(options : FindOptions) : Promise<Entity> {

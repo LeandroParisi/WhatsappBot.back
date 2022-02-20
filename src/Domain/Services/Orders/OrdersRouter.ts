@@ -7,7 +7,7 @@ import BaseRouter from '../BaseClasses/v2/BaseRouter'
 
 import OrdersController from './OrdersController'
 import CalculateFaresValidation from './Requests/CalculateFares/Validation'
-// import CalculateFaresValidation from './Requests/CalculateFares/CalculateFaresValidation'
+import RegisterOrderValidation from './Requests/RegisterOrder/Validation'
 
 @Service()
 export default class OrdersRouter extends BaseRouter<OrdersController> {
@@ -42,6 +42,14 @@ export default class OrdersRouter extends BaseRouter<OrdersController> {
         ExecuteAsync: this.Controller.GetAllByBranchId(),
         LocalMiddlewares: [AuthenticateUser.ExecuteAsync],
         Method: METHODS.GET,
+      },
+      {
+        Endpoint: '/register',
+        ExecuteAsync: this.Controller.RegisterOrder(),
+        LocalMiddlewares: [
+          Container.get(RegisterOrderValidation).ExecuteAsync(),
+        ],
+        Method: METHODS.POST,
       },
     ]
 

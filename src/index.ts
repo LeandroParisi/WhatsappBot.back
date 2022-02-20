@@ -8,6 +8,7 @@ import {
 import OrdersRouter from './Domain/Services/Orders/OrdersRouter'
 import CustomersAddressesRouter from './Domain/Services/CustomerAddresses/CustomerAddressesRouter'
 import CouponsRouter from './Domain/Services/Coupons/CouponsRouter'
+import ErrorCatcher from './Domain/Shared-v2-ts/Middlewares/ErrorHandler/ErrorCatcher'
 
 const express = require('express')
 const cookieParser = require('cookie-parser')
@@ -62,7 +63,7 @@ class Main {
     this.app.use(this.CustomersAddressesRouter.BasePath, this.CustomersAddressesRouter.SetRouter())
     this.app.use(LocationsRouter.basePath, LocationsRouter.setRouter())
 
-    this.app.use(errorHandler)
+    this.app.use(ErrorCatcher.HandleError)
 
     this.app.listen(Main.PORT, () => console.log(`listening to port ${Main.PORT}`))
   }
