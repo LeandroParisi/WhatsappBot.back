@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
@@ -9,6 +10,7 @@ import Order from '../../../Data/Entities/Models/Order'
 import BaseRepository from '../BaseClasses/v2/BaseRepository'
 
 import OrdersSequelizeAdapter from './OrdersSequelizeAdapter'
+import GetAllByBranchAndCustomerFilter from './Requests/GetAllByBranchAndCustomerId/DTOs/Filters'
 
 import GetOrdersFilters from './Requests/GetAllByBranchId/DTOs/Filters'
 
@@ -30,6 +32,23 @@ export default class OrdersRepository extends BaseRepository<Order> {
     const products = await this.Adapter.GetAll(branchId, status)
 
     return products
+  }
+
+  async GetByBranchAndCustomer(filters: GetAllByBranchAndCustomerFilter) : Promise<Order[]> {
+    const dbConnection = KnexConnectionFactory.Create()
+
+    const selectQuery = dbConnection(this.Table)
+      .select('*')
+      .where('branch_id', filters.branchId)
+      .andWhere('customer_id', filters.customerId)
+
+    if (filters.status) {
+      selectQuery.whereIn('status', filters.status)
+    }
+
+    const result = await selectQuery
+
+    return result as Order[]
   }
 
   async UpdateOne(id: string, updatePayload: Order) : Promise<boolean> {

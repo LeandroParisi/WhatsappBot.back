@@ -1,10 +1,12 @@
-import { Response, Request } from 'express'
+import { Response } from 'express'
 import { Service } from 'typedi'
+import Order from '../../../Data/Entities/Models/Order'
 import { StatusCode } from '../../Shared-v2-ts/Enums/Status'
 import { resMessages } from '../../Shared/libs'
 import BaseController from '../BaseClasses/v2/BaseController'
 import OrdersHandler from './OrdersHandler'
 import CalculateFaresReq from './Requests/CalculateFares/Request'
+import GetByBranchAndCustomerReq from './Requests/GetAllByBranchAndCustomerId/Request'
 import GetByBranchReq from './Requests/GetAllByBranchId/Request'
 import RegisterOrderReq from './Requests/RegisterOrder/Request'
 import UpdateOrderReq from './Requests/UpdateOne/Request'
@@ -24,7 +26,15 @@ export default class OrdersController extends BaseController {
     return async (req : GetByBranchReq, res: Response) => {
       const { query } = req
       const { params } = req
-      const data = await this.Handler.GetAllByBranchId(query, params)
+      const data = await this.Handler.GetAllByBranchId(query, params) as Order[]
+      res.status(StatusCode.OK).json({ data })
+    }
+  }
+
+  GetAllByBranchAndCustomerId() {
+    return async (req : GetByBranchAndCustomerReq, res: Response) => {
+      const { params, query } = req
+      const data = await this.Handler.GetAllByBranchAndCustomerId(params, query)
       res.status(StatusCode.OK).json({ data })
     }
   }

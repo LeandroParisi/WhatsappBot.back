@@ -93,11 +93,11 @@ module.exports = {
         },
         estimated_delivery_duration: {
           allowNull: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.DECIMAL(10, 2),
         },
         distance_in_km: {
           allowNull: false,
-          type: Sequelize.INTEGER,
+          type: Sequelize.DECIMAL(10, 2),
         },
         comments: {
           allowNull: true,

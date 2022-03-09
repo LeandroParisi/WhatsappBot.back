@@ -2,12 +2,15 @@
 /* eslint-disable no-shadow */
 /* eslint-disable import/prefer-default-export */
 
-export enum OrderStatus {
-  PLACED = 1,
-  IN_PRODUCTION = 2,
-  DISPATCHED = 3,
-  FULLFILLED = 4,
-}
+export const OrderStatus = {
+  PLACED: 1,
+  IN_PRODUCTION: 2,
+  DISPATCHED: 3,
+  FULLFILLED: 4,
+} as const
+
+export type OrderStatusKeys = keyof typeof OrderStatus;
+export type OrderStatusValues = typeof OrderStatus[OrderStatusKeys];
 
 export default class Order {
   id : string

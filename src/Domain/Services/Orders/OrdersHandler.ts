@@ -23,6 +23,9 @@ import CouponsRepository from '../Coupons/CouponsRepository'
 import PromotionsRepository from '../Promotions/PromotionsRepository'
 import FeeAndDuration from './Interfaces/FeeAndDuration'
 import CalculatedFares from './Requests/CalculateFares/Response'
+import GetByBranchAndCustomerParams from './Requests/GetAllByBranchAndCustomerId/Params'
+import GetByBranchAndCustomerQuery from './Requests/GetAllByBranchAndCustomerId/Query'
+import GetAllByBranchAndCustomerFilter from './Requests/GetAllByBranchAndCustomerId/DTOs/Filters'
 
 @Service()
 export default class OrdersHandler {
@@ -49,6 +52,14 @@ export default class OrdersHandler {
     this.Serializer.GroupOrderByStatus(orders)
 
     return options.shouldGroup ? this.Serializer.GroupOrderByStatus(orders) : orders
+  }
+
+  public async GetAllByBranchAndCustomerId(
+    params: GetByBranchAndCustomerParams,
+    query: GetByBranchAndCustomerQuery,
+  ) : Promise<Order[]> {
+    const orders = await this.Repository.GetByBranchAndCustomer(new GetAllByBranchAndCustomerFilter(query, params))
+    return orders
   }
 
   public async UpdateOne(id: string, body: Order) : Promise<void> {

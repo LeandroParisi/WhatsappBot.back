@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable class-methods-use-this */
 /* eslint-disable eqeqeq */
 import { Service } from 'typedi'
-import { OrderStatus } from '../../../../Data/Entities/Models/Order'
-import SystemExtensions from '../../../Shared-v2-ts/ExtensionMethods/SystemExtensions'
+import { OrderStatus, OrderStatusValues } from '../../../../Data/Entities/Models/Order'
 import IDictionary from '../../../Shared-v2-ts/Interfaces/SystemInterfaces/IDictionary'
 
 @Service()
@@ -9,7 +12,7 @@ export default class OrdersSerializer {
   GroupOrderByStatus(orders: any) {
     const groupedOrders : IDictionary<object> = {}
 
-    const orderStatus = SystemExtensions.GetEnumValues(OrderStatus)
+    const orderStatus : Array<OrderStatusValues> = Object.values(OrderStatus)
 
     orderStatus.forEach((status) => {
       groupedOrders[status] = orders
