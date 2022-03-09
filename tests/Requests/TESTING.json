@@ -1,0 +1,23 @@
+{
+  "id" : "string",
+  "branchId" : "string",
+  "customerId" : "string",
+  "addressId" : "string",
+  "orderNumber" : 1,
+  "subTotal" : 1,
+  "deliveryTypeId" : 1,
+  "deliveryFee" : 1,
+  "paymentMethodId" : 1,
+  "discount" : 1,
+  "totalPrice" : 1,
+  "status" : 1,
+  "coupomId" : 1,
+  "promotionId" : 1,
+  "estimatedDeliveryDuration" : 1,
+  "distanceInKm": 1,
+  "comments" : "string",
+  "dispatchTime" : "string",
+  "deliveryTime" : "string",
+  "createdAt" : "string",
+  "updatedAt" : "string"
+}
