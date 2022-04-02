@@ -45,6 +45,7 @@ const createCustomers = (sequelize, DataTypes) => {
 
   Customers.beforeCreate((customer) => {
     customer.id = uuid()
+
     customer.whatsappNumber = customer.whatsappId.split('@')[0]
   })
 
