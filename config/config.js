@@ -5,14 +5,14 @@ module.exports = {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: 'whatsapp_bot_development',
-    host: process.env.DB_HOST,
+    host: process.env.HOSTNAME,
     dialect: 'postgres',
   },
   development: {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DATABASE_NAME,
-    host: process.env.DB_HOST,
+    host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
     dialectOptions: {
@@ -26,7 +26,7 @@ module.exports = {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DATABASE_NAME,
-    host: process.env.DB_HOST,
+    host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
     dialectOptions: {

@@ -20,7 +20,7 @@ pg.types.setTypeParser(pg.types.builtins.NUMERIC, (value: string) => parseFloat(
 const defaultConfig : Knex.Config = {
   client: 'pg',
   connection: {
-    host: process.env.DB_HOST,
+    host: process.env.HOSTNAME,
     // port: process.env.PORT, // pg default port is 3306?
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
