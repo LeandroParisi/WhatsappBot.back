@@ -20,7 +20,7 @@ pg.types.setTypeParser(pg.types.builtins.NUMERIC, (value: string) => parseFloat(
 const connection = process.env.DATABASE_URL
   ? {
     connectionString: process.env.DATABASE_URL,
-    ssl: false,
+    ssl: true,
   }
   : {
     host: process.env.HOSTNAME,
