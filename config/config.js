@@ -8,6 +8,7 @@ module.exports = {
     host: process.env.HOSTNAME,
     dialect: 'postgres',
   },
+
   development: {
     username: process.env.DATABASE_URL.split('//')[1].split(':')[0],
     password: process.env.DB_PASSWORD.split(':')[2].split('@')[0],
