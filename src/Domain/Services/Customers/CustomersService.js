@@ -16,21 +16,21 @@ class CustomerService extends BaseService {
       customerInfo.dataValues.customerAddresses = []
     }
 
-    // const dbConnection = KnexConnectionFactory.Create()
+    const dbConnection = KnexConnectionFactory.Create()
 
-    // const findQuery = dbConnection(Tables.ORDERS)
-    //   .select()
-    //   .where({ customer_id: customerInfo.id })
-    //   .whereIn('status', [OrderStatus.PLACED, OrderStatus.IN_PRODUCTION, OrderStatus.DISPATCHED])
-    //   .first()
+    const findQuery = dbConnection(Tables.ORDERS)
+      .select()
+      .where({ customer_id: customerInfo.id })
+      .whereIn('status', [OrderStatus.PLACED, OrderStatus.IN_PRODUCTION, OrderStatus.DISPATCHED])
+      .first()
 
-    // const hasOrders = !!(await findQuery)
+    const hasOrders = !!(await findQuery)
 
     return {
       customerInfo,
-      // information: {
-      //   hasOrders,
-      // },
+      information: {
+        hasOrders,
+      },
     }
   }
 // No need to be extended yet
