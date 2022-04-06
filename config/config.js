@@ -15,12 +15,6 @@ module.exports = {
     host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
-      },
-    },
   },
   production: {
     username: process.env.DB_USER,
@@ -29,11 +23,5 @@ module.exports = {
     host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
-      },
-    },
   },
 }
