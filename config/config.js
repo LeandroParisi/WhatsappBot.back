@@ -11,7 +11,7 @@ module.exports = {
   development: {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env.DATABASE_NAME,
+    database: `${process.env.DATABASE_NAME}&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory`,
     host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
@@ -19,7 +19,7 @@ module.exports = {
   production: {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env.DATABASE_NAME,
+    database: `${process.env.DATABASE_NAME}&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory`,
     host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
