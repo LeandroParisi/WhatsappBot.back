@@ -10,7 +10,7 @@ module.exports = {
   },
 
   development: {
-    use_env_variable: process.env.DATABASE_URL,
+    useEnvVariable: process.env.DATABASE_URL,
     dialect: 'postgres',
     protocol: 'postgres',
   },
