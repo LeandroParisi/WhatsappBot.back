@@ -1,4 +1,5 @@
 require('dotenv/config')
+const fs = require('fs')
 
 module.exports = {
   local: {
@@ -18,7 +19,7 @@ module.exports = {
     dialectOptions: {
       ssl: {
         require: true,
-        rejectUnauthorized: false,
+        ca: fs.readFileSync(`${__dirname}/sa-east-1-bundle.pem`),
       },
     },
   },
@@ -32,7 +33,7 @@ module.exports = {
     dialectOptions: {
       ssl: {
         require: true,
-        rejectUnauthorized: false,
+        ca: fs.readFileSync(`${__dirname}/sa-east-1-bundle.pem`),
       },
     },
   },
