@@ -11,6 +11,8 @@ module.exports = {
 
   development: {
     useEnvVariable: process.env.DATABASE_URL,
+    dialect: 'postgres',
+    protocol: 'postgres',
   },
 
   production: {
