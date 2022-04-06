@@ -17,16 +17,18 @@ pg.types.setTypeParser(pg.types.builtins.FLOAT8, (value: string) => parseFloat(v
 
 pg.types.setTypeParser(pg.types.builtins.NUMERIC, (value: string) => parseFloat(value))
 
+const connection = process.env.DATABASE_URL || {
+  host: process.env.HOSTNAME,
+  // port: process.env.PORT, // pg default port is 3306?
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  timezone: 'utc',
+}
+
 const defaultConfig : Knex.Config = {
   client: 'pg',
-  connection: {
-    host: process.env.HOSTNAME,
-    // port: process.env.PORT, // pg default port is 3306?
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    timezone: 'utc',
-  },
+  connection,
   pool: {
     min: 2,
     max: 10,
