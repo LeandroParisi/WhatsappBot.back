@@ -12,11 +12,10 @@ module.exports = {
   development: {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env.DATABASE_NAME,
+    database: `${process.env.DATABASE_NAME}?sslmode=no-verify`,
     host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
-    ssl: true,
     dialectOptions: {
       ssl: {
         require: true,
@@ -26,11 +25,10 @@ module.exports = {
   production: {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env.DATABASE_NAME,
+    database: `${process.env.DATABASE_NAME}?sslmode=no-verify`,
     host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
-    ssl: true,
     dialectOptions: {
       ssl: {
         require: true,
