@@ -1,5 +1,4 @@
 require('dotenv/config')
-const fs = require('fs')
 
 module.exports = {
   local: {
@@ -12,26 +11,28 @@ module.exports = {
   development: {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: `${process.env.DATABASE_NAME}?sslmode=no-verify`,
+    database: process.env.DATABASE_NAME,
     host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
     dialectOptions: {
       ssl: {
         require: true,
+        rejectUnauthorized: false,
       },
     },
   },
   production: {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: `${process.env.DATABASE_NAME}?sslmode=no-verify`,
+    database: process.env.DATABASE_NAME,
     host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
     dialectOptions: {
       ssl: {
         require: true,
+        rejectUnauthorized: false,
       },
     },
   },
