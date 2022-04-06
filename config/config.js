@@ -16,10 +16,10 @@ module.exports = {
     host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
+    ssl: true,
     dialectOptions: {
       ssl: {
         require: true,
-        ca: fs.readFileSync(`${__dirname}/sa-east-1-bundle.pem`),
       },
     },
   },
@@ -30,10 +30,10 @@ module.exports = {
     host: process.env.HOSTNAME,
     dialect: 'postgres',
     protocol: 'postgres',
+    ssl: true,
     dialectOptions: {
       ssl: {
         require: true,
-        ca: fs.readFileSync(`${__dirname}/sa-east-1-bundle.pem`),
       },
     },
   },
