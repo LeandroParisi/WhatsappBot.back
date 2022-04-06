@@ -1,4 +1,11 @@
 {
+  "local": {
+    "username": "leandro_parisi",
+    "password": "123deolivera4",
+    "database": "whatsapp_bot_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
   "development": {
     "use_env_variable": "DATABASE_URL",
     "dialect": "postgres",
