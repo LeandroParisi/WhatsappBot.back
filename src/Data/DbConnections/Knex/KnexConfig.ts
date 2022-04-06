@@ -17,12 +17,16 @@ pg.types.setTypeParser(pg.types.builtins.FLOAT8, (value: string) => parseFloat(v
 
 pg.types.setTypeParser(pg.types.builtins.NUMERIC, (value: string) => parseFloat(value))
 
-const connection = process.env.DATABASE_URL
-  ? {
-    connectionString: process.env.DATABASE_URL,
-    ssl: true,
-  }
-  : {
+const { parse } = require('pg-connection-string')
+
+let connection
+
+if (process.env.DATABASE_URL) {
+  const pgconfig = parse(process.env.DATABASE_URL)
+  pgconfig.ssl = { rejectUnauthorized: false }
+  connection = pgconfig
+} else {
+  connection = {
     host: process.env.HOSTNAME,
     // port: process.env.PORT, // pg default port is 3306?
     user: process.env.DB_USER,
@@ -30,6 +34,7 @@ const connection = process.env.DATABASE_URL
     database: process.env.DB_NAME,
     timezone: 'utc',
   }
+}
 
 const defaultConfig : Knex.Config = {
   client: 'pg',
