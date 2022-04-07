@@ -13,7 +13,7 @@ module.exports = {
       },
       {
         id: 3,
-        name: 'distance_limit',
+        name: 'distance_limit_in_km',
       },
       {
         id: 4,
