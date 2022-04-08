@@ -2,7 +2,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction()
     try {
-      await queryInterface.createTable('orders', {
+      await queryInterface.createTable('Orders', {
         id: {
           allowNull: false,
           primaryKey: true,
@@ -121,9 +121,9 @@ module.exports = {
         },
       }, { transaction })
 
-      await queryInterface.addIndex('orders', ['branch_id'], { transaction })
+      await queryInterface.addIndex('Orders', ['branch_id'], { transaction })
 
-      await queryInterface.addIndex('orders', ['order_number'], { transaction })
+      await queryInterface.addIndex('Orders', ['order_number'], { transaction })
 
       await transaction.commit()
     } catch (error) {
@@ -133,6 +133,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('orders')
+    await queryInterface.dropTable('Orders')
   },
 }

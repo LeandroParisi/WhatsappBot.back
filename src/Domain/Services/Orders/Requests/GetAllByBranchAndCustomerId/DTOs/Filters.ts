@@ -6,7 +6,7 @@ export default class GetAllByBranchAndCustomerFilter {
 
   customerId : string
 
-  status? : Array<number>
+  status : Array<number> | null
 
   /**
    *

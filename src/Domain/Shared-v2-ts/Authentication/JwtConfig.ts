@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
 import jwt, { JwtPayload } from 'jsonwebtoken'
 import IUserToken from '../Interfaces/IUserToken'
 
@@ -32,11 +33,11 @@ export default class JwtConfig {
 
   static GenerateToken(user : IUserToken, jwtConfig : object) : string {
     const payload = JwtConfig.CreateJWTPayload(user)
-    const token = jwt.sign(payload, JwtConfig.SECRET, jwtConfig)
+    const token = jwt.sign(payload, JwtConfig.SECRET as string, jwtConfig)
     return token
   }
 
   static Decode(token : string) : JwtPayload {
-    return JwtConfig.JWT.verify(token, JwtConfig.SECRET) as JwtPayload
+    return JwtConfig.JWT.verify(token, JwtConfig.SECRET as string) as JwtPayload
   }
 }

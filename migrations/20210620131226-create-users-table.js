@@ -3,7 +3,7 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('users', {
+      await queryInterface.createTable('Users', {
         id: {
           allowNull: false,
           primaryKey: true,
@@ -76,7 +76,7 @@ module.exports = {
         },
       }, { transaction });
 
-      await queryInterface.addIndex('users', ['cnpj'], { transaction });
+      await queryInterface.addIndex('Users', ['cnpj'], { transaction });
 
       await transaction.commit();
     } catch (error) {
@@ -86,6 +86,6 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    await queryInterface.dropTable('users');
+    await queryInterface.dropTable('Users');
   },
 };

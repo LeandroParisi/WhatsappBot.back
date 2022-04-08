@@ -3,7 +3,7 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction()
 
     try {
-      await queryInterface.createTable('branches', {
+      await queryInterface.createTable('Branches', {
         id: {
           allowNull: false,
           primaryKey: true,
@@ -118,11 +118,11 @@ module.exports = {
         },
       }, { transaction })
 
-      await queryInterface.addIndex('branches', ['user_id'], { transaction })
+      await queryInterface.addIndex('Branches', ['user_id'], { transaction })
 
-      await queryInterface.addIndex('branches', ['whatsapp_number'], { transaction })
+      await queryInterface.addIndex('Branches', ['whatsapp_number'], { transaction })
 
-      await queryInterface.addIndex('branches', ['whatsapp_id'], { transaction })
+      await queryInterface.addIndex('Branches', ['whatsapp_id'], { transaction })
 
       await transaction.commit()
     } catch (error) {
@@ -132,6 +132,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('branches')
+    await queryInterface.dropTable('Branches')
   },
 }

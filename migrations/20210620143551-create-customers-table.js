@@ -3,7 +3,7 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction()
 
     try {
-      await queryInterface.createTable('customers', {
+      await queryInterface.createTable('Customers', {
         id: {
           allowNull: false,
           primaryKey: true,

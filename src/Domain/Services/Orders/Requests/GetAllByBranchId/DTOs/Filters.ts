@@ -4,7 +4,7 @@ import GetByBranchQuery from '../Query'
 export default class GetByBranchFilters {
   branchId : string
 
-  status? : Array<number>
+  status : Array<number> | null
 
   /**
    *

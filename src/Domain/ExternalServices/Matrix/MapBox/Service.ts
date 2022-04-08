@@ -74,7 +74,7 @@ export default class MapBoxService {
     return directionRoute
   }
 
-  static GetDirectionOptions(options: IOptions): IOptions {
+  static GetDirectionOptions(options?: IOptions): IOptions {
     const defaultOptions : IOptions = {
       distanceInKilometers: true,
       durationInMinutes: true,

@@ -8,7 +8,7 @@ require('dotenv').config()
 
 @StaticImplements<IExternalApiConfig>()
 export default class MapBoxConfig {
-  static API_KEY = process.env.MAP_BOX_API_KEY
+  static API_KEY = process.env.MAP_BOX_API_KEY as unknown as string
 
   static BASE_URL = 'https://api.mapbox.com/'
 }

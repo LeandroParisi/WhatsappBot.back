@@ -3,7 +3,7 @@ module.exports = {
     const transaction = await queryInterface.sequelize.transaction();
 
     try {
-      await queryInterface.createTable('branches_payment_methods', {
+      await queryInterface.createTable('Branches_Payment_Methods', {
         id: {
           type: Sequelize.INTEGER,
           primaryKey: true,
@@ -41,6 +41,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('branches_payment_methods');
+    await queryInterface.dropTable('Branches_Payment_Methods');
   },
 };
