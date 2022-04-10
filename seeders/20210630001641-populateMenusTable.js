@@ -1,6 +1,6 @@
 const { v4: uuid } = require('uuid')
 
-const { branchOneId, branchTwoId } = require('./20210623221400-populateUsersTable')
+const { branchOneId, branchTwoId,branchThreeId, branchFourId, branchFiveId } = require('./20210623221400-populateUsersTable')
 
 const menuOne = uuid()
 const menuTwo = uuid()
@@ -86,6 +86,38 @@ module.exports = {
       {
         branch_id: branchTwoId,
         menu_id: menuSeven,
+      },
+      {
+        branch_id: branchThreeId,
+        menu_id: menuOne,
+      },
+      {
+        branch_id: branchThreeId,
+        menu_id: menuTwo,
+      },
+      {
+        branch_id: branchFourId,
+        menu_id: menuOne,
+      },
+      {
+        branch_id: branchFourId,
+        menu_id: menuTwo,
+      },
+      {
+        branch_id: branchFiveId,
+        menu_id: menuOne,
+      },
+      {
+        branch_id: branchFiveId,
+        menu_id: menuTwo,
+      },
+      {
+        branch_id: branchOneId,
+        menu_id: menuOne,
+      },
+      {
+        branch_id: branchOneId,
+        menu_id: menuTwo,
       },
     ])
   },

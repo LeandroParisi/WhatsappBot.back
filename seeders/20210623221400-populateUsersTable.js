@@ -9,6 +9,9 @@ const userTwoId = uuid()
 const branchOneId = uuid()
 const branchTwoId = uuid()
 const branchThreeId = uuid()
+const branchFourId = uuid()
+const branchFiveId = uuid()
+
 
 module.exports = {
   up: async (queryInterface, _Sequelize) => {
@@ -5840,10 +5843,54 @@ module.exports = {
             type: 'unique',
             fees: 5,
           }),
-          whatsapp_number: '551166625766',
+          whatsapp_number: '5511966625766',
         },
         {
           id: branchThreeId,
+          user_id: userTwoId,
+          manager_name: 'Leandro',
+          branch_name: 'Quintal da Dirce 2000',
+          country_id: 1,
+          state_id: 1,
+          city_id: 2,
+          neighborhood: 'Minha Kombi',
+          street: 'rua da kombui',
+          street_number: '222',
+          street_complement: '222',
+          postal_code: '12345',
+          lat: -22.925477,
+          lng: -43.205225,
+          is_active: true,
+          delivery_fees: JSON.stringify({
+            type: 'unique',
+            fees: 5,
+          }),
+          whatsapp_number: '5551985076390',
+        },
+        {
+          id: branchFourId,
+          user_id: userId,
+          manager_name: 'Leandro',
+          branch_name: 'Quintal da Dirce 2000',
+          country_id: 1,
+          state_id: 1,
+          city_id: 2,
+          neighborhood: 'Minha Kombi',
+          street: 'rua da kombui',
+          street_number: '222',
+          street_complement: '222',
+          postal_code: '12345',
+          lat: -22.925477,
+          lng: -43.205225,
+          is_active: true,
+          delivery_fees: JSON.stringify({
+            type: 'unique',
+            fees: 5,
+          }),
+          whatsapp_number: '551166625766',
+        },
+        {
+          id: branchFiveId,
           user_id: userTwoId,
           manager_name: 'Leandro',
           branch_name: 'Quintal da Dirce 2000',
@@ -5878,4 +5925,6 @@ module.exports = {
   branchOneId,
   branchTwoId,
   branchThreeId,
+  branchFourId,
+  branchFiveId
 }

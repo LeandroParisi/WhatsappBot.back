@@ -3,6 +3,8 @@ const {
   branchOneId,
   branchTwoId,
   branchThreeId,
+  branchFourId,
+  branchFiveId
 } = require('./20210623221400-populateUsersTable')
 
 const {
@@ -152,6 +154,16 @@ module.exports = {
       {
         promotion_id: promotionOneId,
         branch_id: branchTwoId,
+      },
+      {
+        promotion_id: promotionOneId,
+        branch_id: branchThreeId,
+      },      {
+        promotion_id: promotionOneId,
+        branch_id: branchFourId,
+      },      {
+        promotion_id: promotionOneId,
+        branch_id: branchFiveId,
       },
     ])
   },
