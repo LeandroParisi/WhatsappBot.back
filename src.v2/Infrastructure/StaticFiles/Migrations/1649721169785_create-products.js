@@ -2,6 +2,8 @@
 
 exports.shorthands = undefined;
 
+
+
 exports.up = pgm => {
   pgm.sql(`
   CREATE TABLE public.products (

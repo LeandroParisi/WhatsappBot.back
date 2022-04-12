@@ -9,6 +9,11 @@ exports.up = pgm => {
       category_name varchar(50) NOT NULL,
       CONSTRAINT categories_pkey PRIMARY KEY (id)
     );
+
+    INSERT INTO public.categories (category_name) VALUES
+	 ('Comida'),
+	 ('Sucos'),
+	 ('Bebidas alcoólicas');
   `)
 };
 
