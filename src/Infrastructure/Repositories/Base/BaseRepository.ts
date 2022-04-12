@@ -27,6 +27,13 @@ export default class BaseRepository<
     return entity
   }
 
+  public async Find(where : Where, pool : Pool) : Promise<Selectables[]> {
+    const entity = await db
+      .select(this.TableName, where).run(pool)
+
+    return entity as Selectables[]
+  }
+
   public async Update(update : Updates, where : Where, pool : Pool) {
     const entity = await db
       .update(this.TableName, update, where).run(pool)
