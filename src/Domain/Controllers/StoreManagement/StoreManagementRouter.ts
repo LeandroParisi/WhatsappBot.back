@@ -29,6 +29,6 @@ export default class StoreManagementRouter extends BaseRoute {
   }
 
   CreateCouponsRoutes() {
-    this.Route.get('/coupons')
+    this.Route.get('/coupons', this.Controller.)
   }
 }
