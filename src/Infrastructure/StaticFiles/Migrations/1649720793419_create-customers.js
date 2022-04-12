@@ -6,24 +6,24 @@ exports.up = pgm => {
   pgm.sql(`
   CREATE TABLE public.customers (
     id uuid NOT NULL,
-    whatsappNumber varchar(30) NOT NULL,
-    whatsappId varchar(35) NULL,
+    whatsapp_number varchar(30) NOT NULL,
+    whatsapp_id varchar(35) NULL,
     email varchar(80) NOT NULL,
-    firstName varchar(35) NOT NULL,
-    middleName varchar(55) NULL,
-    lastName varchar(35) NOT NULL,
+    first_name varchar(35) NOT NULL,
+    middle_name varchar(55) NULL,
+    last_name varchar(35) NOT NULL,
     cpf varchar(25) NULL,
-    isActive bool NOT NULL DEFAULT true,
-    updatedAt timestamptz NULL DEFAULT now(),
-    createdAt timestamptz NULL DEFAULT now(),
+    is_active bool NOT NULL DEFAULT true,
+    updated_at timestamptz NULL DEFAULT now(),
+    created_at timestamptz NULL DEFAULT now(),
     CONSTRAINT customers_email_key UNIQUE (email),
     CONSTRAINT customers_pkey PRIMARY KEY (id),
-    CONSTRAINT customers_whatsapp_id_key UNIQUE (whatsappId),
-    CONSTRAINT customers_whatsapp_number_key UNIQUE (whatsappNumber)
+    CONSTRAINT customers_whatsapp_id_key UNIQUE (whatsapp_id),
+    CONSTRAINT customers_whatsapp_number_key UNIQUE (whatsapp_number)
   );
   CREATE INDEX customers_cpf ON public.customers USING btree (cpf);
-  CREATE INDEX customers_whatsapp_id ON public.customers USING btree (whatsappId);
-  CREATE INDEX customers_whatsapp_number ON public.customers USING btree (whatsappNumber);
+  CREATE INDEX customers_whatsapp_id ON public.customers USING btree (whatsapp_id);
+  CREATE INDEX customers_whatsapp_number ON public.customers USING btree (whatsapp_number);
   `)
 };
 

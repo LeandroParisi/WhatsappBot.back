@@ -40,53 +40,53 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **branches.userid**
+      * **branches.user_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      userid: string;
+      user_id: string;
       /**
-      * **branches.whatsappnumber**
+      * **branches.whatsapp_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      whatsappnumber: string;
+      whatsapp_number: string;
       /**
-      * **branches.whatsappid**
+      * **branches.whatsapp_id**
       * - `varchar` in database
       * - Nullable, no default
       */
-      whatsappid: string | null;
+      whatsapp_id: string | null;
       /**
-      * **branches.managername**
+      * **branches.manager_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      managername: string;
+      manager_name: string;
       /**
-      * **branches.branchname**
+      * **branches.branch_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      branchname: string;
+      branch_name: string;
       /**
-      * **branches.countryid**
+      * **branches.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid: number;
+      country_id: number;
       /**
-      * **branches.stateid**
+      * **branches.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid: number;
+      state_id: number;
       /**
-      * **branches.cityid**
+      * **branches.city_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      cityid: number;
+      city_id: number;
       /**
       * **branches.neighborhood**
       * - `varchar` in database
@@ -100,23 +100,23 @@ declare module 'zapatos/schema' {
       */
       street: string;
       /**
-      * **branches.streetnumber**
+      * **branches.street_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetnumber: string;
+      street_number: string;
       /**
-      * **branches.streetcomplement**
+      * **branches.street_complement**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetcomplement: string;
+      street_complement: string;
       /**
-      * **branches.postalcode**
+      * **branches.postal_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      postalcode: string;
+      postal_code: string;
       /**
       * **branches.lat**
       * - `numeric` in database
@@ -130,11 +130,11 @@ declare module 'zapatos/schema' {
       */
       lng: number;
       /**
-      * **branches.deliveryfees**
+      * **branches.delivery_fees**
       * - `deliveryFeesJsonb` (base type: `jsonb`) in database
       * - `NOT NULL`, no default
       */
-      deliveryfees: c.PgDeliveryFeesJsonb;
+      delivery_fees: c.PgDeliveryFeesJsonb;
       /**
       * **branches.logo**
       * - `varchar` in database
@@ -142,23 +142,23 @@ declare module 'zapatos/schema' {
       */
       logo: string | null;
       /**
-      * **branches.isactive**
+      * **branches.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **branches.updatedat**
+      * **branches.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: Date | null;
+      updated_at: Date | null;
       /**
-      * **branches.createdat**
+      * **branches.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: Date | null;
+      created_at: Date | null;
     }
     export interface JSONSelectable {
       /**
@@ -168,53 +168,53 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **branches.userid**
+      * **branches.user_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      userid: string;
+      user_id: string;
       /**
-      * **branches.whatsappnumber**
+      * **branches.whatsapp_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      whatsappnumber: string;
+      whatsapp_number: string;
       /**
-      * **branches.whatsappid**
+      * **branches.whatsapp_id**
       * - `varchar` in database
       * - Nullable, no default
       */
-      whatsappid: string | null;
+      whatsapp_id: string | null;
       /**
-      * **branches.managername**
+      * **branches.manager_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      managername: string;
+      manager_name: string;
       /**
-      * **branches.branchname**
+      * **branches.branch_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      branchname: string;
+      branch_name: string;
       /**
-      * **branches.countryid**
+      * **branches.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid: number;
+      country_id: number;
       /**
-      * **branches.stateid**
+      * **branches.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid: number;
+      state_id: number;
       /**
-      * **branches.cityid**
+      * **branches.city_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      cityid: number;
+      city_id: number;
       /**
       * **branches.neighborhood**
       * - `varchar` in database
@@ -228,23 +228,23 @@ declare module 'zapatos/schema' {
       */
       street: string;
       /**
-      * **branches.streetnumber**
+      * **branches.street_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetnumber: string;
+      street_number: string;
       /**
-      * **branches.streetcomplement**
+      * **branches.street_complement**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetcomplement: string;
+      street_complement: string;
       /**
-      * **branches.postalcode**
+      * **branches.postal_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      postalcode: string;
+      postal_code: string;
       /**
       * **branches.lat**
       * - `numeric` in database
@@ -258,11 +258,11 @@ declare module 'zapatos/schema' {
       */
       lng: number;
       /**
-      * **branches.deliveryfees**
+      * **branches.delivery_fees**
       * - `deliveryFeesJsonb` (base type: `jsonb`) in database
       * - `NOT NULL`, no default
       */
-      deliveryfees: c.PgDeliveryFeesJsonb;
+      delivery_fees: c.PgDeliveryFeesJsonb;
       /**
       * **branches.logo**
       * - `varchar` in database
@@ -270,23 +270,23 @@ declare module 'zapatos/schema' {
       */
       logo: string | null;
       /**
-      * **branches.isactive**
+      * **branches.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **branches.updatedat**
+      * **branches.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: db.TimestampTzString | null;
+      updated_at: db.TimestampTzString | null;
       /**
-      * **branches.createdat**
+      * **branches.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: db.TimestampTzString | null;
+      created_at: db.TimestampTzString | null;
     }
     export interface Whereable {
       /**
@@ -296,53 +296,53 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.userid**
+      * **branches.user_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      userid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      user_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.whatsappnumber**
+      * **branches.whatsapp_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      whatsappnumber?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      whatsapp_number?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.whatsappid**
+      * **branches.whatsapp_id**
       * - `varchar` in database
       * - Nullable, no default
       */
-      whatsappid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      whatsapp_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.managername**
+      * **branches.manager_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      managername?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      manager_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.branchname**
+      * **branches.branch_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      branchname?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      branch_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.countryid**
+      * **branches.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      country_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.stateid**
+      * **branches.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      state_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.cityid**
+      * **branches.city_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      cityid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      city_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
       * **branches.neighborhood**
       * - `varchar` in database
@@ -356,23 +356,23 @@ declare module 'zapatos/schema' {
       */
       street?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.streetnumber**
+      * **branches.street_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetnumber?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      street_number?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.streetcomplement**
+      * **branches.street_complement**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetcomplement?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      street_complement?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.postalcode**
+      * **branches.postal_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      postalcode?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      postal_code?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
       * **branches.lat**
       * - `numeric` in database
@@ -386,11 +386,11 @@ declare module 'zapatos/schema' {
       */
       lng?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.deliveryfees**
+      * **branches.delivery_fees**
       * - `deliveryFeesJsonb` (base type: `jsonb`) in database
       * - `NOT NULL`, no default
       */
-      deliveryfees?: c.PgDeliveryFeesJsonb | db.Parameter<c.PgDeliveryFeesJsonb> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, c.PgDeliveryFeesJsonb | db.Parameter<c.PgDeliveryFeesJsonb> | db.SQLFragment | db.ParentColumn>;
+      delivery_fees?: c.PgDeliveryFeesJsonb | db.Parameter<c.PgDeliveryFeesJsonb> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, c.PgDeliveryFeesJsonb | db.Parameter<c.PgDeliveryFeesJsonb> | db.SQLFragment | db.ParentColumn>;
       /**
       * **branches.logo**
       * - `varchar` in database
@@ -398,23 +398,23 @@ declare module 'zapatos/schema' {
       */
       logo?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.isactive**
+      * **branches.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
+      is_active?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.updatedat**
+      * **branches.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches.createdat**
+      * **branches.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -424,53 +424,53 @@ declare module 'zapatos/schema' {
       */
       id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches.userid**
+      * **branches.user_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      userid: string | db.Parameter<string> | db.SQLFragment;
+      user_id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches.whatsappnumber**
+      * **branches.whatsapp_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      whatsappnumber: string | db.Parameter<string> | db.SQLFragment;
+      whatsapp_number: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches.whatsappid**
+      * **branches.whatsapp_id**
       * - `varchar` in database
       * - Nullable, no default
       */
-      whatsappid?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
+      whatsapp_id?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **branches.managername**
+      * **branches.manager_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      managername: string | db.Parameter<string> | db.SQLFragment;
+      manager_name: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches.branchname**
+      * **branches.branch_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      branchname: string | db.Parameter<string> | db.SQLFragment;
+      branch_name: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches.countryid**
+      * **branches.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid: number | db.Parameter<number> | db.SQLFragment;
+      country_id: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **branches.stateid**
+      * **branches.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid: number | db.Parameter<number> | db.SQLFragment;
+      state_id: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **branches.cityid**
+      * **branches.city_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      cityid: number | db.Parameter<number> | db.SQLFragment;
+      city_id: number | db.Parameter<number> | db.SQLFragment;
       /**
       * **branches.neighborhood**
       * - `varchar` in database
@@ -484,23 +484,23 @@ declare module 'zapatos/schema' {
       */
       street: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches.streetnumber**
+      * **branches.street_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetnumber: string | db.Parameter<string> | db.SQLFragment;
+      street_number: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches.streetcomplement**
+      * **branches.street_complement**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetcomplement: string | db.Parameter<string> | db.SQLFragment;
+      street_complement: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches.postalcode**
+      * **branches.postal_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      postalcode: string | db.Parameter<string> | db.SQLFragment;
+      postal_code: string | db.Parameter<string> | db.SQLFragment;
       /**
       * **branches.lat**
       * - `numeric` in database
@@ -514,11 +514,11 @@ declare module 'zapatos/schema' {
       */
       lng: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **branches.deliveryfees**
+      * **branches.delivery_fees**
       * - `deliveryFeesJsonb` (base type: `jsonb`) in database
       * - `NOT NULL`, no default
       */
-      deliveryfees: c.PgDeliveryFeesJsonb | db.Parameter<c.PgDeliveryFeesJsonb> | db.SQLFragment;
+      delivery_fees: c.PgDeliveryFeesJsonb | db.Parameter<c.PgDeliveryFeesJsonb> | db.SQLFragment;
       /**
       * **branches.logo**
       * - `varchar` in database
@@ -526,23 +526,23 @@ declare module 'zapatos/schema' {
       */
       logo?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **branches.isactive**
+      * **branches.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
       /**
-      * **branches.updatedat**
+      * **branches.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **branches.createdat**
+      * **branches.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -552,53 +552,53 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches.userid**
+      * **branches.user_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      userid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      user_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches.whatsappnumber**
+      * **branches.whatsapp_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      whatsappnumber?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      whatsapp_number?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches.whatsappid**
+      * **branches.whatsapp_id**
       * - `varchar` in database
       * - Nullable, no default
       */
-      whatsappid?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
+      whatsapp_id?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **branches.managername**
+      * **branches.manager_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      managername?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      manager_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches.branchname**
+      * **branches.branch_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      branchname?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      branch_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches.countryid**
+      * **branches.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      country_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **branches.stateid**
+      * **branches.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      state_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **branches.cityid**
+      * **branches.city_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      cityid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      city_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
       * **branches.neighborhood**
       * - `varchar` in database
@@ -612,23 +612,23 @@ declare module 'zapatos/schema' {
       */
       street?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches.streetnumber**
+      * **branches.street_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetnumber?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      street_number?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches.streetcomplement**
+      * **branches.street_complement**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetcomplement?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      street_complement?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches.postalcode**
+      * **branches.postal_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      postalcode?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      postal_code?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
       * **branches.lat**
       * - `numeric` in database
@@ -642,11 +642,11 @@ declare module 'zapatos/schema' {
       */
       lng?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **branches.deliveryfees**
+      * **branches.delivery_fees**
       * - `deliveryFeesJsonb` (base type: `jsonb`) in database
       * - `NOT NULL`, no default
       */
-      deliveryfees?: c.PgDeliveryFeesJsonb | db.Parameter<c.PgDeliveryFeesJsonb> | db.SQLFragment | db.SQLFragment<any, c.PgDeliveryFeesJsonb | db.Parameter<c.PgDeliveryFeesJsonb> | db.SQLFragment>;
+      delivery_fees?: c.PgDeliveryFeesJsonb | db.Parameter<c.PgDeliveryFeesJsonb> | db.SQLFragment | db.SQLFragment<any, c.PgDeliveryFeesJsonb | db.Parameter<c.PgDeliveryFeesJsonb> | db.SQLFragment>;
       /**
       * **branches.logo**
       * - `varchar` in database
@@ -654,23 +654,23 @@ declare module 'zapatos/schema' {
       */
       logo?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **branches.isactive**
+      * **branches.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
       /**
-      * **branches.updatedat**
+      * **branches.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **branches.createdat**
+      * **branches.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
     }
     export type UniqueIndex = 'branches_pkey' | 'branches_whatsapp_id_key' | 'branches_whatsapp_number_key';
     export type Column = keyof Selectable;
@@ -693,17 +693,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **branches_delivery_types.branchid**
+      * **branches_delivery_types.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **branches_delivery_types.deliverytypeid**
+      * **branches_delivery_types.delivery_type_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      deliverytypeid: number;
+      delivery_type_id: number;
     }
     export interface JSONSelectable {
       /**
@@ -713,17 +713,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **branches_delivery_types.branchid**
+      * **branches_delivery_types.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **branches_delivery_types.deliverytypeid**
+      * **branches_delivery_types.delivery_type_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      deliverytypeid: number;
+      delivery_type_id: number;
     }
     export interface Whereable {
       /**
@@ -733,17 +733,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches_delivery_types.branchid**
+      * **branches_delivery_types.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches_delivery_types.deliverytypeid**
+      * **branches_delivery_types.delivery_type_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      deliverytypeid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      delivery_type_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -753,17 +753,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **branches_delivery_types.branchid**
+      * **branches_delivery_types.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string | db.Parameter<string> | db.SQLFragment;
+      branch_id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches_delivery_types.deliverytypeid**
+      * **branches_delivery_types.delivery_type_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      deliverytypeid: number | db.Parameter<number> | db.SQLFragment;
+      delivery_type_id: number | db.Parameter<number> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -773,17 +773,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **branches_delivery_types.branchid**
+      * **branches_delivery_types.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches_delivery_types.deliverytypeid**
+      * **branches_delivery_types.delivery_type_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      deliverytypeid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      delivery_type_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
     }
     export type UniqueIndex = 'branches_delivery_types_pkey';
     export type Column = keyof Selectable;
@@ -806,17 +806,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **branches_menus.branchid**
+      * **branches_menus.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **branches_menus.menuid**
+      * **branches_menus.menu_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      menuid: string;
+      menu_id: string;
     }
     export interface JSONSelectable {
       /**
@@ -826,17 +826,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **branches_menus.branchid**
+      * **branches_menus.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **branches_menus.menuid**
+      * **branches_menus.menu_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      menuid: string;
+      menu_id: string;
     }
     export interface Whereable {
       /**
@@ -846,17 +846,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches_menus.branchid**
+      * **branches_menus.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches_menus.menuid**
+      * **branches_menus.menu_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      menuid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      menu_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -866,17 +866,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **branches_menus.branchid**
+      * **branches_menus.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string | db.Parameter<string> | db.SQLFragment;
+      branch_id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches_menus.menuid**
+      * **branches_menus.menu_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      menuid: string | db.Parameter<string> | db.SQLFragment;
+      menu_id: string | db.Parameter<string> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -886,17 +886,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **branches_menus.branchid**
+      * **branches_menus.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches_menus.menuid**
+      * **branches_menus.menu_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      menuid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      menu_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
     }
     export type UniqueIndex = 'branches_menus_pkey';
     export type Column = keyof Selectable;
@@ -919,17 +919,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **branches_payment_methods.branchid**
+      * **branches_payment_methods.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **branches_payment_methods.paymentmethodid**
+      * **branches_payment_methods.payment_method_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      paymentmethodid: number;
+      payment_method_id: number;
     }
     export interface JSONSelectable {
       /**
@@ -939,17 +939,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **branches_payment_methods.branchid**
+      * **branches_payment_methods.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **branches_payment_methods.paymentmethodid**
+      * **branches_payment_methods.payment_method_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      paymentmethodid: number;
+      payment_method_id: number;
     }
     export interface Whereable {
       /**
@@ -959,17 +959,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches_payment_methods.branchid**
+      * **branches_payment_methods.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches_payment_methods.paymentmethodid**
+      * **branches_payment_methods.payment_method_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      paymentmethodid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      payment_method_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -979,17 +979,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **branches_payment_methods.branchid**
+      * **branches_payment_methods.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string | db.Parameter<string> | db.SQLFragment;
+      branch_id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches_payment_methods.paymentmethodid**
+      * **branches_payment_methods.payment_method_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      paymentmethodid: number | db.Parameter<number> | db.SQLFragment;
+      payment_method_id: number | db.Parameter<number> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -999,17 +999,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **branches_payment_methods.branchid**
+      * **branches_payment_methods.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches_payment_methods.paymentmethodid**
+      * **branches_payment_methods.payment_method_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      paymentmethodid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      payment_method_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
     }
     export type UniqueIndex = 'branches_payment_methods_pkey';
     export type Column = keyof Selectable;
@@ -1032,17 +1032,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **branches_products.branchid**
+      * **branches_products.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **branches_products.productid**
+      * **branches_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string;
+      product_id: string;
     }
     export interface JSONSelectable {
       /**
@@ -1052,17 +1052,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **branches_products.branchid**
+      * **branches_products.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **branches_products.productid**
+      * **branches_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string;
+      product_id: string;
     }
     export interface Whereable {
       /**
@@ -1072,17 +1072,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches_products.branchid**
+      * **branches_products.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches_products.productid**
+      * **branches_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      product_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -1092,17 +1092,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **branches_products.branchid**
+      * **branches_products.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string | db.Parameter<string> | db.SQLFragment;
+      branch_id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches_products.productid**
+      * **branches_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string | db.Parameter<string> | db.SQLFragment;
+      product_id: string | db.Parameter<string> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -1112,17 +1112,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **branches_products.branchid**
+      * **branches_products.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches_products.productid**
+      * **branches_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      product_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
     }
     export type UniqueIndex = 'branches_products_pkey';
     export type Column = keyof Selectable;
@@ -1145,17 +1145,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **branches_promotions.branchid**
+      * **branches_promotions.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **branches_promotions.promotionid**
+      * **branches_promotions.promotion_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      promotionid: number;
+      promotion_id: number;
     }
     export interface JSONSelectable {
       /**
@@ -1165,17 +1165,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **branches_promotions.branchid**
+      * **branches_promotions.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **branches_promotions.promotionid**
+      * **branches_promotions.promotion_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      promotionid: number;
+      promotion_id: number;
     }
     export interface Whereable {
       /**
@@ -1185,17 +1185,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches_promotions.branchid**
+      * **branches_promotions.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **branches_promotions.promotionid**
+      * **branches_promotions.promotion_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      promotionid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      promotion_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -1205,17 +1205,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **branches_promotions.branchid**
+      * **branches_promotions.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string | db.Parameter<string> | db.SQLFragment;
+      branch_id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **branches_promotions.promotionid**
+      * **branches_promotions.promotion_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      promotionid: number | db.Parameter<number> | db.SQLFragment;
+      promotion_id: number | db.Parameter<number> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -1225,17 +1225,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **branches_promotions.branchid**
+      * **branches_promotions.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **branches_promotions.promotionid**
+      * **branches_promotions.promotion_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      promotionid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      promotion_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
     }
     export type UniqueIndex = 'branches_promotions_pkey';
     export type Column = keyof Selectable;
@@ -1258,11 +1258,11 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **categories.categoryname**
+      * **categories.category_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      categoryname: string;
+      category_name: string;
     }
     export interface JSONSelectable {
       /**
@@ -1272,11 +1272,11 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **categories.categoryname**
+      * **categories.category_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      categoryname: string;
+      category_name: string;
     }
     export interface Whereable {
       /**
@@ -1286,11 +1286,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **categories.categoryname**
+      * **categories.category_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      categoryname?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      category_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -1300,11 +1300,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **categories.categoryname**
+      * **categories.category_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      categoryname: string | db.Parameter<string> | db.SQLFragment;
+      category_name: string | db.Parameter<string> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -1314,11 +1314,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **categories.categoryname**
+      * **categories.category_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      categoryname?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      category_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
     }
     export type UniqueIndex = 'categories_pkey';
     export type Column = keyof Selectable;
@@ -1341,17 +1341,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **cities.cityname**
+      * **cities.city_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      cityname: string;
+      city_name: string;
       /**
-      * **cities.stateid**
+      * **cities.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid: number;
+      state_id: number;
     }
     export interface JSONSelectable {
       /**
@@ -1361,17 +1361,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **cities.cityname**
+      * **cities.city_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      cityname: string;
+      city_name: string;
       /**
-      * **cities.stateid**
+      * **cities.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid: number;
+      state_id: number;
     }
     export interface Whereable {
       /**
@@ -1381,17 +1381,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **cities.cityname**
+      * **cities.city_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      cityname?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      city_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **cities.stateid**
+      * **cities.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      state_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -1401,17 +1401,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **cities.cityname**
+      * **cities.city_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      cityname: string | db.Parameter<string> | db.SQLFragment;
+      city_name: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **cities.stateid**
+      * **cities.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid: number | db.Parameter<number> | db.SQLFragment;
+      state_id: number | db.Parameter<number> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -1421,17 +1421,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **cities.cityname**
+      * **cities.city_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      cityname?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      city_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **cities.stateid**
+      * **cities.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      state_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
     }
     export type UniqueIndex = 'cities_pkey';
     export type Column = keyof Selectable;
@@ -1537,11 +1537,11 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **countries.countryname**
+      * **countries.country_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      countryname: string;
+      country_name: string;
     }
     export interface JSONSelectable {
       /**
@@ -1551,11 +1551,11 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **countries.countryname**
+      * **countries.country_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      countryname: string;
+      country_name: string;
     }
     export interface Whereable {
       /**
@@ -1565,11 +1565,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **countries.countryname**
+      * **countries.country_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      countryname?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      country_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -1579,11 +1579,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **countries.countryname**
+      * **countries.country_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      countryname: string | db.Parameter<string> | db.SQLFragment;
+      country_name: string | db.Parameter<string> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -1593,11 +1593,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **countries.countryname**
+      * **countries.country_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      countryname?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      country_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
     }
     export type UniqueIndex = 'countries_pkey';
     export type Column = keyof Selectable;
@@ -1620,17 +1620,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **coupons.coupomcode**
+      * **coupons.coupom_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      coupomcode: string;
+      coupom_code: string;
       /**
-      * **coupons.discounttype**
+      * **coupons.discount_type**
       * - `enum_coupons_discount_type` in database
       * - `NOT NULL`, no default
       */
-      discounttype: enum_coupons_discount_type;
+      discount_type: enum_coupons_discount_type;
       /**
       * **coupons.discount**
       * - `numeric` in database
@@ -1644,53 +1644,53 @@ declare module 'zapatos/schema' {
       */
       used: number | null;
       /**
-      * **coupons.pricelimit**
+      * **coupons.price_limit**
       * - `numeric` in database
       * - Nullable, no default
       */
-      pricelimit: number | null;
+      price_limit: number | null;
       /**
-      * **coupons.datelimit**
+      * **coupons.date_limit**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      datelimit: Date | null;
+      date_limit: Date | null;
       /**
-      * **coupons.distancelimitinkm**
+      * **coupons.distance_limit_in_km**
       * - `int4` in database
       * - Nullable, no default
       */
-      distancelimitinkm: number | null;
+      distance_limit_in_km: number | null;
       /**
-      * **coupons.useslimit**
+      * **coupons.uses_limit**
       * - `int4` in database
       * - Nullable, no default
       */
-      useslimit: number | null;
+      uses_limit: number | null;
       /**
-      * **coupons.freedelivery**
+      * **coupons.free_delivery**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      freedelivery: boolean;
+      free_delivery: boolean;
       /**
-      * **coupons.isactive**
+      * **coupons.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **coupons.updatedat**
+      * **coupons.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: Date | null;
+      updated_at: Date | null;
       /**
-      * **coupons.createdat**
+      * **coupons.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: Date | null;
+      created_at: Date | null;
     }
     export interface JSONSelectable {
       /**
@@ -1700,17 +1700,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **coupons.coupomcode**
+      * **coupons.coupom_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      coupomcode: string;
+      coupom_code: string;
       /**
-      * **coupons.discounttype**
+      * **coupons.discount_type**
       * - `enum_coupons_discount_type` in database
       * - `NOT NULL`, no default
       */
-      discounttype: enum_coupons_discount_type;
+      discount_type: enum_coupons_discount_type;
       /**
       * **coupons.discount**
       * - `numeric` in database
@@ -1724,53 +1724,53 @@ declare module 'zapatos/schema' {
       */
       used: number | null;
       /**
-      * **coupons.pricelimit**
+      * **coupons.price_limit**
       * - `numeric` in database
       * - Nullable, no default
       */
-      pricelimit: number | null;
+      price_limit: number | null;
       /**
-      * **coupons.datelimit**
+      * **coupons.date_limit**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      datelimit: db.TimestampTzString | null;
+      date_limit: db.TimestampTzString | null;
       /**
-      * **coupons.distancelimitinkm**
+      * **coupons.distance_limit_in_km**
       * - `int4` in database
       * - Nullable, no default
       */
-      distancelimitinkm: number | null;
+      distance_limit_in_km: number | null;
       /**
-      * **coupons.useslimit**
+      * **coupons.uses_limit**
       * - `int4` in database
       * - Nullable, no default
       */
-      useslimit: number | null;
+      uses_limit: number | null;
       /**
-      * **coupons.freedelivery**
+      * **coupons.free_delivery**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      freedelivery: boolean;
+      free_delivery: boolean;
       /**
-      * **coupons.isactive**
+      * **coupons.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **coupons.updatedat**
+      * **coupons.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: db.TimestampTzString | null;
+      updated_at: db.TimestampTzString | null;
       /**
-      * **coupons.createdat**
+      * **coupons.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: db.TimestampTzString | null;
+      created_at: db.TimestampTzString | null;
     }
     export interface Whereable {
       /**
@@ -1780,17 +1780,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons.coupomcode**
+      * **coupons.coupom_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      coupomcode?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      coupom_code?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons.discounttype**
+      * **coupons.discount_type**
       * - `enum_coupons_discount_type` in database
       * - `NOT NULL`, no default
       */
-      discounttype?: enum_coupons_discount_type | db.Parameter<enum_coupons_discount_type> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, enum_coupons_discount_type | db.Parameter<enum_coupons_discount_type> | db.SQLFragment | db.ParentColumn>;
+      discount_type?: enum_coupons_discount_type | db.Parameter<enum_coupons_discount_type> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, enum_coupons_discount_type | db.Parameter<enum_coupons_discount_type> | db.SQLFragment | db.ParentColumn>;
       /**
       * **coupons.discount**
       * - `numeric` in database
@@ -1804,53 +1804,53 @@ declare module 'zapatos/schema' {
       */
       used?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons.pricelimit**
+      * **coupons.price_limit**
       * - `numeric` in database
       * - Nullable, no default
       */
-      pricelimit?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      price_limit?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons.datelimit**
+      * **coupons.date_limit**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      datelimit?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      date_limit?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons.distancelimitinkm**
+      * **coupons.distance_limit_in_km**
       * - `int4` in database
       * - Nullable, no default
       */
-      distancelimitinkm?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      distance_limit_in_km?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons.useslimit**
+      * **coupons.uses_limit**
       * - `int4` in database
       * - Nullable, no default
       */
-      useslimit?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      uses_limit?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons.freedelivery**
+      * **coupons.free_delivery**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      freedelivery?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
+      free_delivery?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons.isactive**
+      * **coupons.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
+      is_active?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons.updatedat**
+      * **coupons.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons.createdat**
+      * **coupons.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -1860,17 +1860,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **coupons.coupomcode**
+      * **coupons.coupom_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      coupomcode: string | db.Parameter<string> | db.SQLFragment;
+      coupom_code: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **coupons.discounttype**
+      * **coupons.discount_type**
       * - `enum_coupons_discount_type` in database
       * - `NOT NULL`, no default
       */
-      discounttype: enum_coupons_discount_type | db.Parameter<enum_coupons_discount_type> | db.SQLFragment;
+      discount_type: enum_coupons_discount_type | db.Parameter<enum_coupons_discount_type> | db.SQLFragment;
       /**
       * **coupons.discount**
       * - `numeric` in database
@@ -1884,53 +1884,53 @@ declare module 'zapatos/schema' {
       */
       used?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **coupons.pricelimit**
+      * **coupons.price_limit**
       * - `numeric` in database
       * - Nullable, no default
       */
-      pricelimit?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
+      price_limit?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **coupons.datelimit**
+      * **coupons.date_limit**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      datelimit?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      date_limit?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **coupons.distancelimitinkm**
+      * **coupons.distance_limit_in_km**
       * - `int4` in database
       * - Nullable, no default
       */
-      distancelimitinkm?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
+      distance_limit_in_km?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **coupons.useslimit**
+      * **coupons.uses_limit**
       * - `int4` in database
       * - Nullable, no default
       */
-      useslimit?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
+      uses_limit?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **coupons.freedelivery**
+      * **coupons.free_delivery**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      freedelivery?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
+      free_delivery?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
       /**
-      * **coupons.isactive**
+      * **coupons.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
       /**
-      * **coupons.updatedat**
+      * **coupons.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **coupons.createdat**
+      * **coupons.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -1940,17 +1940,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **coupons.coupomcode**
+      * **coupons.coupom_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      coupomcode?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      coupom_code?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **coupons.discounttype**
+      * **coupons.discount_type**
       * - `enum_coupons_discount_type` in database
       * - `NOT NULL`, no default
       */
-      discounttype?: enum_coupons_discount_type | db.Parameter<enum_coupons_discount_type> | db.SQLFragment | db.SQLFragment<any, enum_coupons_discount_type | db.Parameter<enum_coupons_discount_type> | db.SQLFragment>;
+      discount_type?: enum_coupons_discount_type | db.Parameter<enum_coupons_discount_type> | db.SQLFragment | db.SQLFragment<any, enum_coupons_discount_type | db.Parameter<enum_coupons_discount_type> | db.SQLFragment>;
       /**
       * **coupons.discount**
       * - `numeric` in database
@@ -1964,53 +1964,53 @@ declare module 'zapatos/schema' {
       */
       used?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **coupons.pricelimit**
+      * **coupons.price_limit**
       * - `numeric` in database
       * - Nullable, no default
       */
-      pricelimit?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
+      price_limit?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **coupons.datelimit**
+      * **coupons.date_limit**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      datelimit?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      date_limit?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **coupons.distancelimitinkm**
+      * **coupons.distance_limit_in_km**
       * - `int4` in database
       * - Nullable, no default
       */
-      distancelimitinkm?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
+      distance_limit_in_km?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **coupons.useslimit**
+      * **coupons.uses_limit**
       * - `int4` in database
       * - Nullable, no default
       */
-      useslimit?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
+      uses_limit?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **coupons.freedelivery**
+      * **coupons.free_delivery**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      freedelivery?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
+      free_delivery?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
       /**
-      * **coupons.isactive**
+      * **coupons.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
       /**
-      * **coupons.updatedat**
+      * **coupons.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **coupons.createdat**
+      * **coupons.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
     }
     export type UniqueIndex = 'coupons_pkey';
     export type Column = keyof Selectable;
@@ -2033,17 +2033,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **coupons_branches.coupomid**
+      * **coupons_branches.coupom_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      coupomid: number;
+      coupom_id: number;
       /**
-      * **coupons_branches.branchid**
+      * **coupons_branches.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
     }
     export interface JSONSelectable {
       /**
@@ -2053,17 +2053,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **coupons_branches.coupomid**
+      * **coupons_branches.coupom_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      coupomid: number;
+      coupom_id: number;
       /**
-      * **coupons_branches.branchid**
+      * **coupons_branches.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
     }
     export interface Whereable {
       /**
@@ -2073,17 +2073,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons_branches.coupomid**
+      * **coupons_branches.coupom_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      coupomid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      coupom_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons_branches.branchid**
+      * **coupons_branches.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -2093,17 +2093,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **coupons_branches.coupomid**
+      * **coupons_branches.coupom_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      coupomid: number | db.Parameter<number> | db.SQLFragment;
+      coupom_id: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **coupons_branches.branchid**
+      * **coupons_branches.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string | db.Parameter<string> | db.SQLFragment;
+      branch_id: string | db.Parameter<string> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -2113,17 +2113,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **coupons_branches.coupomid**
+      * **coupons_branches.coupom_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      coupomid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      coupom_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **coupons_branches.branchid**
+      * **coupons_branches.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
     }
     export type UniqueIndex = 'coupons_branches_pkey';
     export type Column = keyof Selectable;
@@ -2146,17 +2146,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **coupons_conditions.coupomid**
+      * **coupons_conditions.coupom_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      coupomid: number;
+      coupom_id: number;
       /**
-      * **coupons_conditions.conditionid**
+      * **coupons_conditions.condition_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      conditionid: number;
+      condition_id: number;
     }
     export interface JSONSelectable {
       /**
@@ -2166,17 +2166,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **coupons_conditions.coupomid**
+      * **coupons_conditions.coupom_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      coupomid: number;
+      coupom_id: number;
       /**
-      * **coupons_conditions.conditionid**
+      * **coupons_conditions.condition_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      conditionid: number;
+      condition_id: number;
     }
     export interface Whereable {
       /**
@@ -2186,17 +2186,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons_conditions.coupomid**
+      * **coupons_conditions.coupom_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      coupomid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      coupom_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **coupons_conditions.conditionid**
+      * **coupons_conditions.condition_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      conditionid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      condition_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -2206,17 +2206,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **coupons_conditions.coupomid**
+      * **coupons_conditions.coupom_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      coupomid: number | db.Parameter<number> | db.SQLFragment;
+      coupom_id: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **coupons_conditions.conditionid**
+      * **coupons_conditions.condition_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      conditionid: number | db.Parameter<number> | db.SQLFragment;
+      condition_id: number | db.Parameter<number> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -2226,17 +2226,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **coupons_conditions.coupomid**
+      * **coupons_conditions.coupom_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      coupomid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      coupom_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **coupons_conditions.conditionid**
+      * **coupons_conditions.condition_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      conditionid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      condition_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
     }
     export type UniqueIndex = 'coupons_conditions_pkey';
     export type Column = keyof Selectable;
@@ -2259,29 +2259,29 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **customer_addresses.customerid**
+      * **customer_addresses.customer_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      customerid: string;
+      customer_id: string;
       /**
-      * **customer_addresses.countryid**
+      * **customer_addresses.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid: number;
+      country_id: number;
       /**
-      * **customer_addresses.stateid**
+      * **customer_addresses.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid: number;
+      state_id: number;
       /**
-      * **customer_addresses.cityid**
+      * **customer_addresses.city_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      cityid: number;
+      city_id: number;
       /**
       * **customer_addresses.neighborhood**
       * - `varchar` in database
@@ -2295,23 +2295,23 @@ declare module 'zapatos/schema' {
       */
       street: string;
       /**
-      * **customer_addresses.streetnumber**
+      * **customer_addresses.street_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetnumber: string;
+      street_number: string;
       /**
-      * **customer_addresses.streetcomplement**
+      * **customer_addresses.street_complement**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetcomplement: string;
+      street_complement: string;
       /**
-      * **customer_addresses.postalcode**
+      * **customer_addresses.postal_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      postalcode: string;
+      postal_code: string;
       /**
       * **customer_addresses.lat**
       * - `numeric` in database
@@ -2325,23 +2325,23 @@ declare module 'zapatos/schema' {
       */
       lng: number;
       /**
-      * **customer_addresses.isactive**
+      * **customer_addresses.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **customer_addresses.updatedat**
+      * **customer_addresses.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: Date | null;
+      updated_at: Date | null;
       /**
-      * **customer_addresses.createdat**
+      * **customer_addresses.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: Date | null;
+      created_at: Date | null;
     }
     export interface JSONSelectable {
       /**
@@ -2351,29 +2351,29 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **customer_addresses.customerid**
+      * **customer_addresses.customer_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      customerid: string;
+      customer_id: string;
       /**
-      * **customer_addresses.countryid**
+      * **customer_addresses.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid: number;
+      country_id: number;
       /**
-      * **customer_addresses.stateid**
+      * **customer_addresses.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid: number;
+      state_id: number;
       /**
-      * **customer_addresses.cityid**
+      * **customer_addresses.city_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      cityid: number;
+      city_id: number;
       /**
       * **customer_addresses.neighborhood**
       * - `varchar` in database
@@ -2387,23 +2387,23 @@ declare module 'zapatos/schema' {
       */
       street: string;
       /**
-      * **customer_addresses.streetnumber**
+      * **customer_addresses.street_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetnumber: string;
+      street_number: string;
       /**
-      * **customer_addresses.streetcomplement**
+      * **customer_addresses.street_complement**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetcomplement: string;
+      street_complement: string;
       /**
-      * **customer_addresses.postalcode**
+      * **customer_addresses.postal_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      postalcode: string;
+      postal_code: string;
       /**
       * **customer_addresses.lat**
       * - `numeric` in database
@@ -2417,23 +2417,23 @@ declare module 'zapatos/schema' {
       */
       lng: number;
       /**
-      * **customer_addresses.isactive**
+      * **customer_addresses.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **customer_addresses.updatedat**
+      * **customer_addresses.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: db.TimestampTzString | null;
+      updated_at: db.TimestampTzString | null;
       /**
-      * **customer_addresses.createdat**
+      * **customer_addresses.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: db.TimestampTzString | null;
+      created_at: db.TimestampTzString | null;
     }
     export interface Whereable {
       /**
@@ -2443,29 +2443,29 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customer_addresses.customerid**
+      * **customer_addresses.customer_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      customerid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      customer_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customer_addresses.countryid**
+      * **customer_addresses.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      country_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customer_addresses.stateid**
+      * **customer_addresses.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      state_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customer_addresses.cityid**
+      * **customer_addresses.city_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      cityid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      city_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
       * **customer_addresses.neighborhood**
       * - `varchar` in database
@@ -2479,23 +2479,23 @@ declare module 'zapatos/schema' {
       */
       street?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customer_addresses.streetnumber**
+      * **customer_addresses.street_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetnumber?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      street_number?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customer_addresses.streetcomplement**
+      * **customer_addresses.street_complement**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetcomplement?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      street_complement?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customer_addresses.postalcode**
+      * **customer_addresses.postal_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      postalcode?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      postal_code?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
       * **customer_addresses.lat**
       * - `numeric` in database
@@ -2509,23 +2509,23 @@ declare module 'zapatos/schema' {
       */
       lng?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customer_addresses.isactive**
+      * **customer_addresses.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
+      is_active?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customer_addresses.updatedat**
+      * **customer_addresses.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customer_addresses.createdat**
+      * **customer_addresses.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -2535,29 +2535,29 @@ declare module 'zapatos/schema' {
       */
       id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **customer_addresses.customerid**
+      * **customer_addresses.customer_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      customerid: string | db.Parameter<string> | db.SQLFragment;
+      customer_id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **customer_addresses.countryid**
+      * **customer_addresses.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid: number | db.Parameter<number> | db.SQLFragment;
+      country_id: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **customer_addresses.stateid**
+      * **customer_addresses.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid: number | db.Parameter<number> | db.SQLFragment;
+      state_id: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **customer_addresses.cityid**
+      * **customer_addresses.city_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      cityid: number | db.Parameter<number> | db.SQLFragment;
+      city_id: number | db.Parameter<number> | db.SQLFragment;
       /**
       * **customer_addresses.neighborhood**
       * - `varchar` in database
@@ -2571,23 +2571,23 @@ declare module 'zapatos/schema' {
       */
       street: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **customer_addresses.streetnumber**
+      * **customer_addresses.street_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetnumber: string | db.Parameter<string> | db.SQLFragment;
+      street_number: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **customer_addresses.streetcomplement**
+      * **customer_addresses.street_complement**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetcomplement: string | db.Parameter<string> | db.SQLFragment;
+      street_complement: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **customer_addresses.postalcode**
+      * **customer_addresses.postal_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      postalcode: string | db.Parameter<string> | db.SQLFragment;
+      postal_code: string | db.Parameter<string> | db.SQLFragment;
       /**
       * **customer_addresses.lat**
       * - `numeric` in database
@@ -2601,23 +2601,23 @@ declare module 'zapatos/schema' {
       */
       lng: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **customer_addresses.isactive**
+      * **customer_addresses.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
       /**
-      * **customer_addresses.updatedat**
+      * **customer_addresses.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **customer_addresses.createdat**
+      * **customer_addresses.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -2627,29 +2627,29 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **customer_addresses.customerid**
+      * **customer_addresses.customer_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      customerid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      customer_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **customer_addresses.countryid**
+      * **customer_addresses.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      country_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **customer_addresses.stateid**
+      * **customer_addresses.state_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      stateid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      state_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **customer_addresses.cityid**
+      * **customer_addresses.city_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      cityid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      city_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
       * **customer_addresses.neighborhood**
       * - `varchar` in database
@@ -2663,23 +2663,23 @@ declare module 'zapatos/schema' {
       */
       street?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **customer_addresses.streetnumber**
+      * **customer_addresses.street_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetnumber?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      street_number?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **customer_addresses.streetcomplement**
+      * **customer_addresses.street_complement**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      streetcomplement?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      street_complement?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **customer_addresses.postalcode**
+      * **customer_addresses.postal_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      postalcode?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      postal_code?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
       * **customer_addresses.lat**
       * - `numeric` in database
@@ -2693,23 +2693,23 @@ declare module 'zapatos/schema' {
       */
       lng?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **customer_addresses.isactive**
+      * **customer_addresses.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
       /**
-      * **customer_addresses.updatedat**
+      * **customer_addresses.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **customer_addresses.createdat**
+      * **customer_addresses.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
     }
     export type UniqueIndex = 'customer_addresses_pkey';
     export type Column = keyof Selectable;
@@ -2732,17 +2732,17 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **customers.whatsappnumber**
+      * **customers.whatsapp_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      whatsappnumber: string;
+      whatsapp_number: string;
       /**
-      * **customers.whatsappid**
+      * **customers.whatsapp_id**
       * - `varchar` in database
       * - Nullable, no default
       */
-      whatsappid: string | null;
+      whatsapp_id: string | null;
       /**
       * **customers.email**
       * - `varchar` in database
@@ -2750,23 +2750,23 @@ declare module 'zapatos/schema' {
       */
       email: string;
       /**
-      * **customers.firstname**
+      * **customers.first_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      firstname: string;
+      first_name: string;
       /**
-      * **customers.middlename**
+      * **customers.middle_name**
       * - `varchar` in database
       * - Nullable, no default
       */
-      middlename: string | null;
+      middle_name: string | null;
       /**
-      * **customers.lastname**
+      * **customers.last_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      lastname: string;
+      last_name: string;
       /**
       * **customers.cpf**
       * - `varchar` in database
@@ -2774,23 +2774,23 @@ declare module 'zapatos/schema' {
       */
       cpf: string | null;
       /**
-      * **customers.isactive**
+      * **customers.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **customers.updatedat**
+      * **customers.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: Date | null;
+      updated_at: Date | null;
       /**
-      * **customers.createdat**
+      * **customers.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: Date | null;
+      created_at: Date | null;
     }
     export interface JSONSelectable {
       /**
@@ -2800,17 +2800,17 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **customers.whatsappnumber**
+      * **customers.whatsapp_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      whatsappnumber: string;
+      whatsapp_number: string;
       /**
-      * **customers.whatsappid**
+      * **customers.whatsapp_id**
       * - `varchar` in database
       * - Nullable, no default
       */
-      whatsappid: string | null;
+      whatsapp_id: string | null;
       /**
       * **customers.email**
       * - `varchar` in database
@@ -2818,23 +2818,23 @@ declare module 'zapatos/schema' {
       */
       email: string;
       /**
-      * **customers.firstname**
+      * **customers.first_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      firstname: string;
+      first_name: string;
       /**
-      * **customers.middlename**
+      * **customers.middle_name**
       * - `varchar` in database
       * - Nullable, no default
       */
-      middlename: string | null;
+      middle_name: string | null;
       /**
-      * **customers.lastname**
+      * **customers.last_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      lastname: string;
+      last_name: string;
       /**
       * **customers.cpf**
       * - `varchar` in database
@@ -2842,23 +2842,23 @@ declare module 'zapatos/schema' {
       */
       cpf: string | null;
       /**
-      * **customers.isactive**
+      * **customers.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **customers.updatedat**
+      * **customers.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: db.TimestampTzString | null;
+      updated_at: db.TimestampTzString | null;
       /**
-      * **customers.createdat**
+      * **customers.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: db.TimestampTzString | null;
+      created_at: db.TimestampTzString | null;
     }
     export interface Whereable {
       /**
@@ -2868,17 +2868,17 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customers.whatsappnumber**
+      * **customers.whatsapp_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      whatsappnumber?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      whatsapp_number?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customers.whatsappid**
+      * **customers.whatsapp_id**
       * - `varchar` in database
       * - Nullable, no default
       */
-      whatsappid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      whatsapp_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
       * **customers.email**
       * - `varchar` in database
@@ -2886,23 +2886,23 @@ declare module 'zapatos/schema' {
       */
       email?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customers.firstname**
+      * **customers.first_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      firstname?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      first_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customers.middlename**
+      * **customers.middle_name**
       * - `varchar` in database
       * - Nullable, no default
       */
-      middlename?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      middle_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customers.lastname**
+      * **customers.last_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      lastname?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      last_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
       * **customers.cpf**
       * - `varchar` in database
@@ -2910,23 +2910,23 @@ declare module 'zapatos/schema' {
       */
       cpf?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customers.isactive**
+      * **customers.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
+      is_active?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customers.updatedat**
+      * **customers.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **customers.createdat**
+      * **customers.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -2936,17 +2936,17 @@ declare module 'zapatos/schema' {
       */
       id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **customers.whatsappnumber**
+      * **customers.whatsapp_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      whatsappnumber: string | db.Parameter<string> | db.SQLFragment;
+      whatsapp_number: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **customers.whatsappid**
+      * **customers.whatsapp_id**
       * - `varchar` in database
       * - Nullable, no default
       */
-      whatsappid?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
+      whatsapp_id?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
       /**
       * **customers.email**
       * - `varchar` in database
@@ -2954,23 +2954,23 @@ declare module 'zapatos/schema' {
       */
       email: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **customers.firstname**
+      * **customers.first_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      firstname: string | db.Parameter<string> | db.SQLFragment;
+      first_name: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **customers.middlename**
+      * **customers.middle_name**
       * - `varchar` in database
       * - Nullable, no default
       */
-      middlename?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
+      middle_name?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **customers.lastname**
+      * **customers.last_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      lastname: string | db.Parameter<string> | db.SQLFragment;
+      last_name: string | db.Parameter<string> | db.SQLFragment;
       /**
       * **customers.cpf**
       * - `varchar` in database
@@ -2978,23 +2978,23 @@ declare module 'zapatos/schema' {
       */
       cpf?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **customers.isactive**
+      * **customers.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
       /**
-      * **customers.updatedat**
+      * **customers.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **customers.createdat**
+      * **customers.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -3004,17 +3004,17 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **customers.whatsappnumber**
+      * **customers.whatsapp_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      whatsappnumber?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      whatsapp_number?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **customers.whatsappid**
+      * **customers.whatsapp_id**
       * - `varchar` in database
       * - Nullable, no default
       */
-      whatsappid?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
+      whatsapp_id?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
       * **customers.email**
       * - `varchar` in database
@@ -3022,23 +3022,23 @@ declare module 'zapatos/schema' {
       */
       email?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **customers.firstname**
+      * **customers.first_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      firstname?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      first_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **customers.middlename**
+      * **customers.middle_name**
       * - `varchar` in database
       * - Nullable, no default
       */
-      middlename?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
+      middle_name?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **customers.lastname**
+      * **customers.last_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      lastname?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      last_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
       * **customers.cpf**
       * - `varchar` in database
@@ -3046,23 +3046,23 @@ declare module 'zapatos/schema' {
       */
       cpf?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **customers.isactive**
+      * **customers.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
       /**
-      * **customers.updatedat**
+      * **customers.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **customers.createdat**
+      * **customers.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
     }
     export type UniqueIndex = 'customers_email_key' | 'customers_pkey' | 'customers_whatsapp_id_key' | 'customers_whatsapp_number_key';
     export type Column = keyof Selectable;
@@ -3085,11 +3085,11 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **delivery_types.deliverytype**
+      * **delivery_types.delivery_type**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      deliverytype: string;
+      delivery_type: string;
     }
     export interface JSONSelectable {
       /**
@@ -3099,11 +3099,11 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **delivery_types.deliverytype**
+      * **delivery_types.delivery_type**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      deliverytype: string;
+      delivery_type: string;
     }
     export interface Whereable {
       /**
@@ -3113,11 +3113,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **delivery_types.deliverytype**
+      * **delivery_types.delivery_type**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      deliverytype?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      delivery_type?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -3127,11 +3127,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **delivery_types.deliverytype**
+      * **delivery_types.delivery_type**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      deliverytype: string | db.Parameter<string> | db.SQLFragment;
+      delivery_type: string | db.Parameter<string> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -3141,11 +3141,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **delivery_types.deliverytype**
+      * **delivery_types.delivery_type**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      deliverytype?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      delivery_type?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
     }
     export type UniqueIndex = 'delivery_types_pkey';
     export type Column = keyof Selectable;
@@ -3168,11 +3168,11 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **menus.menuname**
+      * **menus.menu_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      menuname: string;
+      menu_name: string;
       /**
       * **menus.image**
       * - `varchar` in database
@@ -3186,23 +3186,23 @@ declare module 'zapatos/schema' {
       */
       description: string | null;
       /**
-      * **menus.isactive**
+      * **menus.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **menus.updatedat**
+      * **menus.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: Date | null;
+      updated_at: Date | null;
       /**
-      * **menus.createdat**
+      * **menus.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: Date | null;
+      created_at: Date | null;
     }
     export interface JSONSelectable {
       /**
@@ -3212,11 +3212,11 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **menus.menuname**
+      * **menus.menu_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      menuname: string;
+      menu_name: string;
       /**
       * **menus.image**
       * - `varchar` in database
@@ -3230,23 +3230,23 @@ declare module 'zapatos/schema' {
       */
       description: string | null;
       /**
-      * **menus.isactive**
+      * **menus.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **menus.updatedat**
+      * **menus.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: db.TimestampTzString | null;
+      updated_at: db.TimestampTzString | null;
       /**
-      * **menus.createdat**
+      * **menus.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: db.TimestampTzString | null;
+      created_at: db.TimestampTzString | null;
     }
     export interface Whereable {
       /**
@@ -3256,11 +3256,11 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **menus.menuname**
+      * **menus.menu_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      menuname?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      menu_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
       * **menus.image**
       * - `varchar` in database
@@ -3274,23 +3274,23 @@ declare module 'zapatos/schema' {
       */
       description?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **menus.isactive**
+      * **menus.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
+      is_active?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **menus.updatedat**
+      * **menus.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **menus.createdat**
+      * **menus.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -3300,11 +3300,11 @@ declare module 'zapatos/schema' {
       */
       id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **menus.menuname**
+      * **menus.menu_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      menuname: string | db.Parameter<string> | db.SQLFragment;
+      menu_name: string | db.Parameter<string> | db.SQLFragment;
       /**
       * **menus.image**
       * - `varchar` in database
@@ -3318,23 +3318,23 @@ declare module 'zapatos/schema' {
       */
       description?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **menus.isactive**
+      * **menus.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
       /**
-      * **menus.updatedat**
+      * **menus.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **menus.createdat**
+      * **menus.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -3344,11 +3344,11 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **menus.menuname**
+      * **menus.menu_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      menuname?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      menu_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
       * **menus.image**
       * - `varchar` in database
@@ -3362,23 +3362,23 @@ declare module 'zapatos/schema' {
       */
       description?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **menus.isactive**
+      * **menus.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
       /**
-      * **menus.updatedat**
+      * **menus.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **menus.createdat**
+      * **menus.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
     }
     export type UniqueIndex = 'menus_pkey';
     export type Column = keyof Selectable;
@@ -3401,17 +3401,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **menus_products.menuid**
+      * **menus_products.menu_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      menuid: string;
+      menu_id: string;
       /**
-      * **menus_products.productid**
+      * **menus_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string;
+      product_id: string;
     }
     export interface JSONSelectable {
       /**
@@ -3421,17 +3421,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **menus_products.menuid**
+      * **menus_products.menu_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      menuid: string;
+      menu_id: string;
       /**
-      * **menus_products.productid**
+      * **menus_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string;
+      product_id: string;
     }
     export interface Whereable {
       /**
@@ -3441,17 +3441,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **menus_products.menuid**
+      * **menus_products.menu_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      menuid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      menu_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **menus_products.productid**
+      * **menus_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      product_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -3461,17 +3461,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **menus_products.menuid**
+      * **menus_products.menu_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      menuid: string | db.Parameter<string> | db.SQLFragment;
+      menu_id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **menus_products.productid**
+      * **menus_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string | db.Parameter<string> | db.SQLFragment;
+      product_id: string | db.Parameter<string> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -3481,17 +3481,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **menus_products.menuid**
+      * **menus_products.menu_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      menuid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      menu_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **menus_products.productid**
+      * **menus_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      product_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
     }
     export type UniqueIndex = 'menus_products_pkey';
     export type Column = keyof Selectable;
@@ -3514,11 +3514,11 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **opening_hours.branchid**
+      * **opening_hours.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
       * **opening_hours.monday**
       * - `openingHours` (base type: `jsonb`) in database
@@ -3562,17 +3562,17 @@ declare module 'zapatos/schema' {
       */
       sunday: c.PgOpeningHours | null;
       /**
-      * **opening_hours.updatedat**
+      * **opening_hours.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: Date | null;
+      updated_at: Date | null;
       /**
-      * **opening_hours.createdat**
+      * **opening_hours.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: Date | null;
+      created_at: Date | null;
     }
     export interface JSONSelectable {
       /**
@@ -3582,11 +3582,11 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **opening_hours.branchid**
+      * **opening_hours.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
       * **opening_hours.monday**
       * - `openingHours` (base type: `jsonb`) in database
@@ -3630,17 +3630,17 @@ declare module 'zapatos/schema' {
       */
       sunday: c.PgOpeningHours | null;
       /**
-      * **opening_hours.updatedat**
+      * **opening_hours.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: db.TimestampTzString | null;
+      updated_at: db.TimestampTzString | null;
       /**
-      * **opening_hours.createdat**
+      * **opening_hours.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: db.TimestampTzString | null;
+      created_at: db.TimestampTzString | null;
     }
     export interface Whereable {
       /**
@@ -3650,11 +3650,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **opening_hours.branchid**
+      * **opening_hours.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
       * **opening_hours.monday**
       * - `openingHours` (base type: `jsonb`) in database
@@ -3698,17 +3698,17 @@ declare module 'zapatos/schema' {
       */
       sunday?: c.PgOpeningHours | db.Parameter<c.PgOpeningHours> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, c.PgOpeningHours | db.Parameter<c.PgOpeningHours> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **opening_hours.updatedat**
+      * **opening_hours.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **opening_hours.createdat**
+      * **opening_hours.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -3718,11 +3718,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **opening_hours.branchid**
+      * **opening_hours.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string | db.Parameter<string> | db.SQLFragment;
+      branch_id: string | db.Parameter<string> | db.SQLFragment;
       /**
       * **opening_hours.monday**
       * - `openingHours` (base type: `jsonb`) in database
@@ -3766,17 +3766,17 @@ declare module 'zapatos/schema' {
       */
       sunday?: c.PgOpeningHours | db.Parameter<c.PgOpeningHours> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **opening_hours.updatedat**
+      * **opening_hours.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **opening_hours.createdat**
+      * **opening_hours.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -3786,11 +3786,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **opening_hours.branchid**
+      * **opening_hours.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
       * **opening_hours.monday**
       * - `openingHours` (base type: `jsonb`) in database
@@ -3834,17 +3834,17 @@ declare module 'zapatos/schema' {
       */
       sunday?: c.PgOpeningHours | db.Parameter<c.PgOpeningHours> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, c.PgOpeningHours | db.Parameter<c.PgOpeningHours> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **opening_hours.updatedat**
+      * **opening_hours.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **opening_hours.createdat**
+      * **opening_hours.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
     }
     export type UniqueIndex = 'opening_hours_pkey';
     export type Column = keyof Selectable;
@@ -3867,53 +3867,53 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **orders.branchid**
+      * **orders.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **orders.customerid**
+      * **orders.customer_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      customerid: string;
+      customer_id: string;
       /**
-      * **orders.addressid**
+      * **orders.address_id**
       * - `uuid` in database
       * - Nullable, no default
       */
-      addressid: string | null;
+      address_id: string | null;
       /**
-      * **orders.ordernumber**
+      * **orders.order_number**
       * - `int4` in database
-      * - `NOT NULL`, default: `nextval('orders_ordernumber_seq'::regclass)`
+      * - `NOT NULL`, default: `nextval('orders_order_number_seq'::regclass)`
       */
-      ordernumber: number;
+      order_number: number;
       /**
-      * **orders.subtotal**
+      * **orders.sub_total**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      subtotal: number;
+      sub_total: number;
       /**
-      * **orders.deliverytypeid**
+      * **orders.delivery_type_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      deliverytypeid: number;
+      delivery_type_id: number;
       /**
-      * **orders.deliveryfee**
+      * **orders.delivery_fee**
       * - `numeric` in database
       * - `NOT NULL`, default: `0`
       */
-      deliveryfee: number;
+      delivery_fee: number;
       /**
-      * **orders.paymentmethodid**
+      * **orders.payment_method_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      paymentmethodid: number;
+      payment_method_id: number;
       /**
       * **orders.discount**
       * - `numeric` in database
@@ -3921,11 +3921,11 @@ declare module 'zapatos/schema' {
       */
       discount: number;
       /**
-      * **orders.totalprice**
+      * **orders.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice: number;
+      total_price: number;
       /**
       * **orders.status**
       * - `int4` in database
@@ -3933,29 +3933,29 @@ declare module 'zapatos/schema' {
       */
       status: number;
       /**
-      * **orders.coupomid**
+      * **orders.coupom_id**
       * - `int4` in database
       * - Nullable, no default
       */
-      coupomid: number | null;
+      coupom_id: number | null;
       /**
-      * **orders.promotionid**
+      * **orders.promotion_id**
       * - `int4` in database
       * - Nullable, no default
       */
-      promotionid: number | null;
+      promotion_id: number | null;
       /**
-      * **orders.estimateddeliveryduration**
+      * **orders.estimated_delivery_duration**
       * - `numeric` in database
       * - Nullable, no default
       */
-      estimateddeliveryduration: number | null;
+      estimated_delivery_duration: number | null;
       /**
-      * **orders.distanceinkm**
+      * **orders.distance_in_km**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      distanceinkm: number;
+      distance_in_km: number;
       /**
       * **orders.comments**
       * - `text` in database
@@ -3963,29 +3963,29 @@ declare module 'zapatos/schema' {
       */
       comments: string | null;
       /**
-      * **orders.dispatchtime**
+      * **orders.dispatch_time**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      dispatchtime: Date | null;
+      dispatch_time: Date | null;
       /**
-      * **orders.deliverytime**
+      * **orders.delivery_time**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      deliverytime: Date | null;
+      delivery_time: Date | null;
       /**
-      * **orders.updatedat**
+      * **orders.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: Date | null;
+      updated_at: Date | null;
       /**
-      * **orders.createdat**
+      * **orders.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: Date | null;
+      created_at: Date | null;
     }
     export interface JSONSelectable {
       /**
@@ -3995,53 +3995,53 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **orders.branchid**
+      * **orders.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string;
+      branch_id: string;
       /**
-      * **orders.customerid**
+      * **orders.customer_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      customerid: string;
+      customer_id: string;
       /**
-      * **orders.addressid**
+      * **orders.address_id**
       * - `uuid` in database
       * - Nullable, no default
       */
-      addressid: string | null;
+      address_id: string | null;
       /**
-      * **orders.ordernumber**
+      * **orders.order_number**
       * - `int4` in database
-      * - `NOT NULL`, default: `nextval('orders_ordernumber_seq'::regclass)`
+      * - `NOT NULL`, default: `nextval('orders_order_number_seq'::regclass)`
       */
-      ordernumber: number;
+      order_number: number;
       /**
-      * **orders.subtotal**
+      * **orders.sub_total**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      subtotal: number;
+      sub_total: number;
       /**
-      * **orders.deliverytypeid**
+      * **orders.delivery_type_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      deliverytypeid: number;
+      delivery_type_id: number;
       /**
-      * **orders.deliveryfee**
+      * **orders.delivery_fee**
       * - `numeric` in database
       * - `NOT NULL`, default: `0`
       */
-      deliveryfee: number;
+      delivery_fee: number;
       /**
-      * **orders.paymentmethodid**
+      * **orders.payment_method_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      paymentmethodid: number;
+      payment_method_id: number;
       /**
       * **orders.discount**
       * - `numeric` in database
@@ -4049,11 +4049,11 @@ declare module 'zapatos/schema' {
       */
       discount: number;
       /**
-      * **orders.totalprice**
+      * **orders.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice: number;
+      total_price: number;
       /**
       * **orders.status**
       * - `int4` in database
@@ -4061,29 +4061,29 @@ declare module 'zapatos/schema' {
       */
       status: number;
       /**
-      * **orders.coupomid**
+      * **orders.coupom_id**
       * - `int4` in database
       * - Nullable, no default
       */
-      coupomid: number | null;
+      coupom_id: number | null;
       /**
-      * **orders.promotionid**
+      * **orders.promotion_id**
       * - `int4` in database
       * - Nullable, no default
       */
-      promotionid: number | null;
+      promotion_id: number | null;
       /**
-      * **orders.estimateddeliveryduration**
+      * **orders.estimated_delivery_duration**
       * - `numeric` in database
       * - Nullable, no default
       */
-      estimateddeliveryduration: number | null;
+      estimated_delivery_duration: number | null;
       /**
-      * **orders.distanceinkm**
+      * **orders.distance_in_km**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      distanceinkm: number;
+      distance_in_km: number;
       /**
       * **orders.comments**
       * - `text` in database
@@ -4091,29 +4091,29 @@ declare module 'zapatos/schema' {
       */
       comments: string | null;
       /**
-      * **orders.dispatchtime**
+      * **orders.dispatch_time**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      dispatchtime: db.TimestampTzString | null;
+      dispatch_time: db.TimestampTzString | null;
       /**
-      * **orders.deliverytime**
+      * **orders.delivery_time**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      deliverytime: db.TimestampTzString | null;
+      delivery_time: db.TimestampTzString | null;
       /**
-      * **orders.updatedat**
+      * **orders.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: db.TimestampTzString | null;
+      updated_at: db.TimestampTzString | null;
       /**
-      * **orders.createdat**
+      * **orders.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: db.TimestampTzString | null;
+      created_at: db.TimestampTzString | null;
     }
     export interface Whereable {
       /**
@@ -4123,53 +4123,53 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.branchid**
+      * **orders.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.customerid**
+      * **orders.customer_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      customerid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      customer_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.addressid**
+      * **orders.address_id**
       * - `uuid` in database
       * - Nullable, no default
       */
-      addressid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      address_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.ordernumber**
+      * **orders.order_number**
       * - `int4` in database
-      * - `NOT NULL`, default: `nextval('orders_ordernumber_seq'::regclass)`
+      * - `NOT NULL`, default: `nextval('orders_order_number_seq'::regclass)`
       */
-      ordernumber?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      order_number?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.subtotal**
+      * **orders.sub_total**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      subtotal?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      sub_total?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.deliverytypeid**
+      * **orders.delivery_type_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      deliverytypeid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      delivery_type_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.deliveryfee**
+      * **orders.delivery_fee**
       * - `numeric` in database
       * - `NOT NULL`, default: `0`
       */
-      deliveryfee?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      delivery_fee?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.paymentmethodid**
+      * **orders.payment_method_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      paymentmethodid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      payment_method_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
       * **orders.discount**
       * - `numeric` in database
@@ -4177,11 +4177,11 @@ declare module 'zapatos/schema' {
       */
       discount?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.totalprice**
+      * **orders.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      total_price?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
       * **orders.status**
       * - `int4` in database
@@ -4189,29 +4189,29 @@ declare module 'zapatos/schema' {
       */
       status?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.coupomid**
+      * **orders.coupom_id**
       * - `int4` in database
       * - Nullable, no default
       */
-      coupomid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      coupom_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.promotionid**
+      * **orders.promotion_id**
       * - `int4` in database
       * - Nullable, no default
       */
-      promotionid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      promotion_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.estimateddeliveryduration**
+      * **orders.estimated_delivery_duration**
       * - `numeric` in database
       * - Nullable, no default
       */
-      estimateddeliveryduration?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      estimated_delivery_duration?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.distanceinkm**
+      * **orders.distance_in_km**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      distanceinkm?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      distance_in_km?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
       * **orders.comments**
       * - `text` in database
@@ -4219,29 +4219,29 @@ declare module 'zapatos/schema' {
       */
       comments?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.dispatchtime**
+      * **orders.dispatch_time**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      dispatchtime?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      dispatch_time?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.deliverytime**
+      * **orders.delivery_time**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      deliverytime?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      delivery_time?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.updatedat**
+      * **orders.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders.createdat**
+      * **orders.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -4251,53 +4251,53 @@ declare module 'zapatos/schema' {
       */
       id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **orders.branchid**
+      * **orders.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid: string | db.Parameter<string> | db.SQLFragment;
+      branch_id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **orders.customerid**
+      * **orders.customer_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      customerid: string | db.Parameter<string> | db.SQLFragment;
+      customer_id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **orders.addressid**
+      * **orders.address_id**
       * - `uuid` in database
       * - Nullable, no default
       */
-      addressid?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
+      address_id?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **orders.ordernumber**
+      * **orders.order_number**
       * - `int4` in database
-      * - `NOT NULL`, default: `nextval('orders_ordernumber_seq'::regclass)`
+      * - `NOT NULL`, default: `nextval('orders_order_number_seq'::regclass)`
       */
-      ordernumber?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
+      order_number?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **orders.subtotal**
+      * **orders.sub_total**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      subtotal: number | db.Parameter<number> | db.SQLFragment;
+      sub_total: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **orders.deliverytypeid**
+      * **orders.delivery_type_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      deliverytypeid: number | db.Parameter<number> | db.SQLFragment;
+      delivery_type_id: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **orders.deliveryfee**
+      * **orders.delivery_fee**
       * - `numeric` in database
       * - `NOT NULL`, default: `0`
       */
-      deliveryfee?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
+      delivery_fee?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **orders.paymentmethodid**
+      * **orders.payment_method_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      paymentmethodid: number | db.Parameter<number> | db.SQLFragment;
+      payment_method_id: number | db.Parameter<number> | db.SQLFragment;
       /**
       * **orders.discount**
       * - `numeric` in database
@@ -4305,11 +4305,11 @@ declare module 'zapatos/schema' {
       */
       discount?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **orders.totalprice**
+      * **orders.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice: number | db.Parameter<number> | db.SQLFragment;
+      total_price: number | db.Parameter<number> | db.SQLFragment;
       /**
       * **orders.status**
       * - `int4` in database
@@ -4317,29 +4317,29 @@ declare module 'zapatos/schema' {
       */
       status: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **orders.coupomid**
+      * **orders.coupom_id**
       * - `int4` in database
       * - Nullable, no default
       */
-      coupomid?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
+      coupom_id?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **orders.promotionid**
+      * **orders.promotion_id**
       * - `int4` in database
       * - Nullable, no default
       */
-      promotionid?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
+      promotion_id?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **orders.estimateddeliveryduration**
+      * **orders.estimated_delivery_duration**
       * - `numeric` in database
       * - Nullable, no default
       */
-      estimateddeliveryduration?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
+      estimated_delivery_duration?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **orders.distanceinkm**
+      * **orders.distance_in_km**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      distanceinkm: number | db.Parameter<number> | db.SQLFragment;
+      distance_in_km: number | db.Parameter<number> | db.SQLFragment;
       /**
       * **orders.comments**
       * - `text` in database
@@ -4347,29 +4347,29 @@ declare module 'zapatos/schema' {
       */
       comments?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **orders.dispatchtime**
+      * **orders.dispatch_time**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      dispatchtime?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      dispatch_time?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **orders.deliverytime**
+      * **orders.delivery_time**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      deliverytime?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      delivery_time?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **orders.updatedat**
+      * **orders.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **orders.createdat**
+      * **orders.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -4379,53 +4379,53 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **orders.branchid**
+      * **orders.branch_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      branchid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      branch_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **orders.customerid**
+      * **orders.customer_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      customerid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      customer_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **orders.addressid**
+      * **orders.address_id**
       * - `uuid` in database
       * - Nullable, no default
       */
-      addressid?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
+      address_id?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders.ordernumber**
+      * **orders.order_number**
       * - `int4` in database
-      * - `NOT NULL`, default: `nextval('orders_ordernumber_seq'::regclass)`
+      * - `NOT NULL`, default: `nextval('orders_order_number_seq'::regclass)`
       */
-      ordernumber?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
+      order_number?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders.subtotal**
+      * **orders.sub_total**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      subtotal?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      sub_total?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **orders.deliverytypeid**
+      * **orders.delivery_type_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      deliverytypeid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      delivery_type_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **orders.deliveryfee**
+      * **orders.delivery_fee**
       * - `numeric` in database
       * - `NOT NULL`, default: `0`
       */
-      deliveryfee?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
+      delivery_fee?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders.paymentmethodid**
+      * **orders.payment_method_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      paymentmethodid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      payment_method_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
       * **orders.discount**
       * - `numeric` in database
@@ -4433,11 +4433,11 @@ declare module 'zapatos/schema' {
       */
       discount?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders.totalprice**
+      * **orders.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      total_price?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
       * **orders.status**
       * - `int4` in database
@@ -4445,29 +4445,29 @@ declare module 'zapatos/schema' {
       */
       status?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **orders.coupomid**
+      * **orders.coupom_id**
       * - `int4` in database
       * - Nullable, no default
       */
-      coupomid?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
+      coupom_id?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders.promotionid**
+      * **orders.promotion_id**
       * - `int4` in database
       * - Nullable, no default
       */
-      promotionid?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
+      promotion_id?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders.estimateddeliveryduration**
+      * **orders.estimated_delivery_duration**
       * - `numeric` in database
       * - Nullable, no default
       */
-      estimateddeliveryduration?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
+      estimated_delivery_duration?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders.distanceinkm**
+      * **orders.distance_in_km**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      distanceinkm?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      distance_in_km?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
       * **orders.comments**
       * - `text` in database
@@ -4475,29 +4475,29 @@ declare module 'zapatos/schema' {
       */
       comments?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders.dispatchtime**
+      * **orders.dispatch_time**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      dispatchtime?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      dispatch_time?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders.deliverytime**
+      * **orders.delivery_time**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      deliverytime?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      delivery_time?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders.updatedat**
+      * **orders.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders.createdat**
+      * **orders.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
     }
     export type UniqueIndex = 'orders_pkey';
     export type Column = keyof Selectable;
@@ -4520,17 +4520,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **orders_products.orderid**
+      * **orders_products.order_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      orderid: string;
+      order_id: string;
       /**
-      * **orders_products.productid**
+      * **orders_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string;
+      product_id: string;
       /**
       * **orders_products.quantity**
       * - `int4` in database
@@ -4538,11 +4538,11 @@ declare module 'zapatos/schema' {
       */
       quantity: number;
       /**
-      * **orders_products.totalprice**
+      * **orders_products.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice: number;
+      total_price: number;
       /**
       * **orders_products.attributes**
       * - `productAttributes` (base type: `jsonb`) in database
@@ -4558,17 +4558,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **orders_products.orderid**
+      * **orders_products.order_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      orderid: string;
+      order_id: string;
       /**
-      * **orders_products.productid**
+      * **orders_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string;
+      product_id: string;
       /**
       * **orders_products.quantity**
       * - `int4` in database
@@ -4576,11 +4576,11 @@ declare module 'zapatos/schema' {
       */
       quantity: number;
       /**
-      * **orders_products.totalprice**
+      * **orders_products.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice: number;
+      total_price: number;
       /**
       * **orders_products.attributes**
       * - `productAttributes` (base type: `jsonb`) in database
@@ -4596,17 +4596,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders_products.orderid**
+      * **orders_products.order_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      orderid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      order_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders_products.productid**
+      * **orders_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      product_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
       * **orders_products.quantity**
       * - `int4` in database
@@ -4614,11 +4614,11 @@ declare module 'zapatos/schema' {
       */
       quantity?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **orders_products.totalprice**
+      * **orders_products.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      total_price?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
       * **orders_products.attributes**
       * - `productAttributes` (base type: `jsonb`) in database
@@ -4634,17 +4634,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **orders_products.orderid**
+      * **orders_products.order_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      orderid: string | db.Parameter<string> | db.SQLFragment;
+      order_id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **orders_products.productid**
+      * **orders_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string | db.Parameter<string> | db.SQLFragment;
+      product_id: string | db.Parameter<string> | db.SQLFragment;
       /**
       * **orders_products.quantity**
       * - `int4` in database
@@ -4652,11 +4652,11 @@ declare module 'zapatos/schema' {
       */
       quantity?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **orders_products.totalprice**
+      * **orders_products.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice: number | db.Parameter<number> | db.SQLFragment;
+      total_price: number | db.Parameter<number> | db.SQLFragment;
       /**
       * **orders_products.attributes**
       * - `productAttributes` (base type: `jsonb`) in database
@@ -4672,17 +4672,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders_products.orderid**
+      * **orders_products.order_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      orderid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      order_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **orders_products.productid**
+      * **orders_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      product_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
       * **orders_products.quantity**
       * - `int4` in database
@@ -4690,11 +4690,11 @@ declare module 'zapatos/schema' {
       */
       quantity?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **orders_products.totalprice**
+      * **orders_products.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      total_price?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
       * **orders_products.attributes**
       * - `productAttributes` (base type: `jsonb`) in database
@@ -4723,11 +4723,11 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **payment_methods.paymentmethod**
+      * **payment_methods.payment_method**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      paymentmethod: string;
+      payment_method: string;
     }
     export interface JSONSelectable {
       /**
@@ -4737,11 +4737,11 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **payment_methods.paymentmethod**
+      * **payment_methods.payment_method**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      paymentmethod: string;
+      payment_method: string;
     }
     export interface Whereable {
       /**
@@ -4751,11 +4751,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **payment_methods.paymentmethod**
+      * **payment_methods.payment_method**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      paymentmethod?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      payment_method?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -4765,11 +4765,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **payment_methods.paymentmethod**
+      * **payment_methods.payment_method**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      paymentmethod: string | db.Parameter<string> | db.SQLFragment;
+      payment_method: string | db.Parameter<string> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -4779,11 +4779,11 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **payment_methods.paymentmethod**
+      * **payment_methods.payment_method**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      paymentmethod?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      payment_method?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
     }
     export type UniqueIndex = 'payment_methods_pkey';
     export type Column = keyof Selectable;
@@ -4919,11 +4919,11 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **products.categoryid**
+      * **products.category_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      categoryid: number;
+      category_id: number;
       /**
       * **products.name**
       * - `varchar` in database
@@ -4943,11 +4943,11 @@ declare module 'zapatos/schema' {
       */
       attributes: c.PgAttributes;
       /**
-      * **products.baseprice**
+      * **products.base_price**
       * - `numeric` in database
       * - Nullable, no default
       */
-      baseprice: number | null;
+      base_price: number | null;
       /**
       * **products.description**
       * - `text` in database
@@ -4967,23 +4967,23 @@ declare module 'zapatos/schema' {
       */
       avaiability: number[];
       /**
-      * **products.isactive**
+      * **products.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **products.updatedat**
+      * **products.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: Date | null;
+      updated_at: Date | null;
       /**
-      * **products.createdat**
+      * **products.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: Date | null;
+      created_at: Date | null;
     }
     export interface JSONSelectable {
       /**
@@ -4993,11 +4993,11 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **products.categoryid**
+      * **products.category_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      categoryid: number;
+      category_id: number;
       /**
       * **products.name**
       * - `varchar` in database
@@ -5017,11 +5017,11 @@ declare module 'zapatos/schema' {
       */
       attributes: c.PgAttributes;
       /**
-      * **products.baseprice**
+      * **products.base_price**
       * - `numeric` in database
       * - Nullable, no default
       */
-      baseprice: number | null;
+      base_price: number | null;
       /**
       * **products.description**
       * - `text` in database
@@ -5041,23 +5041,23 @@ declare module 'zapatos/schema' {
       */
       avaiability: number[];
       /**
-      * **products.isactive**
+      * **products.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **products.updatedat**
+      * **products.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: db.TimestampTzString | null;
+      updated_at: db.TimestampTzString | null;
       /**
-      * **products.createdat**
+      * **products.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: db.TimestampTzString | null;
+      created_at: db.TimestampTzString | null;
     }
     export interface Whereable {
       /**
@@ -5067,11 +5067,11 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **products.categoryid**
+      * **products.category_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      categoryid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      category_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
       * **products.name**
       * - `varchar` in database
@@ -5091,11 +5091,11 @@ declare module 'zapatos/schema' {
       */
       attributes?: c.PgAttributes | db.Parameter<c.PgAttributes> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, c.PgAttributes | db.Parameter<c.PgAttributes> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **products.baseprice**
+      * **products.base_price**
       * - `numeric` in database
       * - Nullable, no default
       */
-      baseprice?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      base_price?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
       * **products.description**
       * - `text` in database
@@ -5115,23 +5115,23 @@ declare module 'zapatos/schema' {
       */
       avaiability?: number[] | db.Parameter<number[]> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number[] | db.Parameter<number[]> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **products.isactive**
+      * **products.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
+      is_active?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **products.updatedat**
+      * **products.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **products.createdat**
+      * **products.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -5141,11 +5141,11 @@ declare module 'zapatos/schema' {
       */
       id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **products.categoryid**
+      * **products.category_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      categoryid: number | db.Parameter<number> | db.SQLFragment;
+      category_id: number | db.Parameter<number> | db.SQLFragment;
       /**
       * **products.name**
       * - `varchar` in database
@@ -5165,11 +5165,11 @@ declare module 'zapatos/schema' {
       */
       attributes?: c.PgAttributes | db.Parameter<c.PgAttributes> | db.DefaultType | db.SQLFragment;
       /**
-      * **products.baseprice**
+      * **products.base_price**
       * - `numeric` in database
       * - Nullable, no default
       */
-      baseprice?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
+      base_price?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment;
       /**
       * **products.description**
       * - `text` in database
@@ -5189,23 +5189,23 @@ declare module 'zapatos/schema' {
       */
       avaiability?: number[] | db.Parameter<number[]> | db.DefaultType | db.SQLFragment;
       /**
-      * **products.isactive**
+      * **products.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
       /**
-      * **products.updatedat**
+      * **products.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **products.createdat**
+      * **products.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -5215,11 +5215,11 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **products.categoryid**
+      * **products.category_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      categoryid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      category_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
       * **products.name**
       * - `varchar` in database
@@ -5239,11 +5239,11 @@ declare module 'zapatos/schema' {
       */
       attributes?: c.PgAttributes | db.Parameter<c.PgAttributes> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, c.PgAttributes | db.Parameter<c.PgAttributes> | db.DefaultType | db.SQLFragment>;
       /**
-      * **products.baseprice**
+      * **products.base_price**
       * - `numeric` in database
       * - Nullable, no default
       */
-      baseprice?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
+      base_price?: number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | null | db.DefaultType | db.SQLFragment>;
       /**
       * **products.description**
       * - `text` in database
@@ -5263,23 +5263,23 @@ declare module 'zapatos/schema' {
       */
       avaiability?: number[] | db.Parameter<number[]> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number[] | db.Parameter<number[]> | db.DefaultType | db.SQLFragment>;
       /**
-      * **products.isactive**
+      * **products.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
       /**
-      * **products.updatedat**
+      * **products.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **products.createdat**
+      * **products.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
     }
     export type UniqueIndex = 'products_pkey';
     export type Column = keyof Selectable;
@@ -5308,17 +5308,17 @@ declare module 'zapatos/schema' {
       */
       name: string;
       /**
-      * **promotions.totalprice**
+      * **promotions.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice: number;
+      total_price: number;
       /**
-      * **promotions.duedate**
+      * **promotions.due_date**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      duedate: Date | null;
+      due_date: Date | null;
       /**
       * **promotions.avaiability**
       * - `_int4` in database
@@ -5326,11 +5326,11 @@ declare module 'zapatos/schema' {
       */
       avaiability: number[] | null;
       /**
-      * **promotions.isactive**
+      * **promotions.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
       * **promotions.image**
       * - `varchar` in database
@@ -5338,17 +5338,17 @@ declare module 'zapatos/schema' {
       */
       image: string | null;
       /**
-      * **promotions.updatedat**
+      * **promotions.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: Date | null;
+      updated_at: Date | null;
       /**
-      * **promotions.createdat**
+      * **promotions.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: Date | null;
+      created_at: Date | null;
     }
     export interface JSONSelectable {
       /**
@@ -5364,17 +5364,17 @@ declare module 'zapatos/schema' {
       */
       name: string;
       /**
-      * **promotions.totalprice**
+      * **promotions.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice: number;
+      total_price: number;
       /**
-      * **promotions.duedate**
+      * **promotions.due_date**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      duedate: db.TimestampTzString | null;
+      due_date: db.TimestampTzString | null;
       /**
       * **promotions.avaiability**
       * - `_int4` in database
@@ -5382,11 +5382,11 @@ declare module 'zapatos/schema' {
       */
       avaiability: number[] | null;
       /**
-      * **promotions.isactive**
+      * **promotions.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
       * **promotions.image**
       * - `varchar` in database
@@ -5394,17 +5394,17 @@ declare module 'zapatos/schema' {
       */
       image: string | null;
       /**
-      * **promotions.updatedat**
+      * **promotions.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: db.TimestampTzString | null;
+      updated_at: db.TimestampTzString | null;
       /**
-      * **promotions.createdat**
+      * **promotions.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: db.TimestampTzString | null;
+      created_at: db.TimestampTzString | null;
     }
     export interface Whereable {
       /**
@@ -5420,17 +5420,17 @@ declare module 'zapatos/schema' {
       */
       name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **promotions.totalprice**
+      * **promotions.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      total_price?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **promotions.duedate**
+      * **promotions.due_date**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      duedate?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      due_date?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
       * **promotions.avaiability**
       * - `_int4` in database
@@ -5438,11 +5438,11 @@ declare module 'zapatos/schema' {
       */
       avaiability?: number[] | db.Parameter<number[]> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number[] | db.Parameter<number[]> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **promotions.isactive**
+      * **promotions.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
+      is_active?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
       /**
       * **promotions.image**
       * - `varchar` in database
@@ -5450,17 +5450,17 @@ declare module 'zapatos/schema' {
       */
       image?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **promotions.updatedat**
+      * **promotions.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **promotions.createdat**
+      * **promotions.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -5476,17 +5476,17 @@ declare module 'zapatos/schema' {
       */
       name: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **promotions.totalprice**
+      * **promotions.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice: number | db.Parameter<number> | db.SQLFragment;
+      total_price: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **promotions.duedate**
+      * **promotions.due_date**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      duedate?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      due_date?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
       * **promotions.avaiability**
       * - `_int4` in database
@@ -5494,11 +5494,11 @@ declare module 'zapatos/schema' {
       */
       avaiability?: number[] | db.Parameter<number[]> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **promotions.isactive**
+      * **promotions.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
       /**
       * **promotions.image**
       * - `varchar` in database
@@ -5506,17 +5506,17 @@ declare module 'zapatos/schema' {
       */
       image?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **promotions.updatedat**
+      * **promotions.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **promotions.createdat**
+      * **promotions.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -5532,17 +5532,17 @@ declare module 'zapatos/schema' {
       */
       name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **promotions.totalprice**
+      * **promotions.total_price**
       * - `numeric` in database
       * - `NOT NULL`, no default
       */
-      totalprice?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      total_price?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **promotions.duedate**
+      * **promotions.due_date**
       * - `timestamptz` in database
       * - Nullable, no default
       */
-      duedate?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      due_date?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
       * **promotions.avaiability**
       * - `_int4` in database
@@ -5550,11 +5550,11 @@ declare module 'zapatos/schema' {
       */
       avaiability?: number[] | db.Parameter<number[]> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number[] | db.Parameter<number[]> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **promotions.isactive**
+      * **promotions.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
       /**
       * **promotions.image**
       * - `varchar` in database
@@ -5562,17 +5562,17 @@ declare module 'zapatos/schema' {
       */
       image?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **promotions.updatedat**
+      * **promotions.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **promotions.createdat**
+      * **promotions.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
     }
     export type UniqueIndex = 'promotions_pkey';
     export type Column = keyof Selectable;
@@ -5595,17 +5595,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **promotions_products.promotionid**
+      * **promotions_products.promotion_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      promotionid: number;
+      promotion_id: number;
       /**
-      * **promotions_products.productid**
+      * **promotions_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string;
+      product_id: string;
       /**
       * **promotions_products.attributes**
       * - `productAttributes` (base type: `jsonb`) in database
@@ -5621,17 +5621,17 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **promotions_products.promotionid**
+      * **promotions_products.promotion_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      promotionid: number;
+      promotion_id: number;
       /**
-      * **promotions_products.productid**
+      * **promotions_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string;
+      product_id: string;
       /**
       * **promotions_products.attributes**
       * - `productAttributes` (base type: `jsonb`) in database
@@ -5647,17 +5647,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **promotions_products.promotionid**
+      * **promotions_products.promotion_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      promotionid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      promotion_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **promotions_products.productid**
+      * **promotions_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      product_id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
       * **promotions_products.attributes**
       * - `productAttributes` (base type: `jsonb`) in database
@@ -5673,17 +5673,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **promotions_products.promotionid**
+      * **promotions_products.promotion_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      promotionid: number | db.Parameter<number> | db.SQLFragment;
+      promotion_id: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **promotions_products.productid**
+      * **promotions_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid: string | db.Parameter<string> | db.SQLFragment;
+      product_id: string | db.Parameter<string> | db.SQLFragment;
       /**
       * **promotions_products.attributes**
       * - `productAttributes` (base type: `jsonb`) in database
@@ -5699,17 +5699,17 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **promotions_products.promotionid**
+      * **promotions_products.promotion_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      promotionid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      promotion_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **promotions_products.productid**
+      * **promotions_products.product_id**
       * - `uuid` in database
       * - `NOT NULL`, no default
       */
-      productid?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      product_id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
       * **promotions_products.attributes**
       * - `productAttributes` (base type: `jsonb`) in database
@@ -5821,23 +5821,23 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **states.statename**
+      * **states.state_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      statename: string;
+      state_name: string;
       /**
-      * **states.statecode**
+      * **states.state_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      statecode: string;
+      state_code: string;
       /**
-      * **states.countryid**
+      * **states.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid: number;
+      country_id: number;
     }
     export interface JSONSelectable {
       /**
@@ -5847,23 +5847,23 @@ declare module 'zapatos/schema' {
       */
       id: number;
       /**
-      * **states.statename**
+      * **states.state_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      statename: string;
+      state_name: string;
       /**
-      * **states.statecode**
+      * **states.state_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      statecode: string;
+      state_code: string;
       /**
-      * **states.countryid**
+      * **states.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid: number;
+      country_id: number;
     }
     export interface Whereable {
       /**
@@ -5873,23 +5873,23 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **states.statename**
+      * **states.state_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      statename?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      state_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **states.statecode**
+      * **states.state_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      statecode?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      state_code?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **states.countryid**
+      * **states.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      country_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -5899,23 +5899,23 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment;
       /**
-      * **states.statename**
+      * **states.state_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      statename: string | db.Parameter<string> | db.SQLFragment;
+      state_name: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **states.statecode**
+      * **states.state_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      statecode: string | db.Parameter<string> | db.SQLFragment;
+      state_code: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **states.countryid**
+      * **states.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid: number | db.Parameter<number> | db.SQLFragment;
+      country_id: number | db.Parameter<number> | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -5925,23 +5925,23 @@ declare module 'zapatos/schema' {
       */
       id?: number | db.Parameter<number> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.DefaultType | db.SQLFragment>;
       /**
-      * **states.statename**
+      * **states.state_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      statename?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      state_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **states.statecode**
+      * **states.state_code**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      statecode?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      state_code?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **states.countryid**
+      * **states.country_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      countryid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      country_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
     }
     export type UniqueIndex = 'states_pkey';
     export type Column = keyof Selectable;
@@ -5964,17 +5964,17 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **users.phonenumber**
+      * **users.phone_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      phonenumber: string;
+      phone_number: string;
       /**
-      * **users.bussinessname**
+      * **users.bussiness_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      bussinessname: string;
+      bussiness_name: string;
       /**
       * **users.cnpj**
       * - `varchar` in database
@@ -5988,29 +5988,29 @@ declare module 'zapatos/schema' {
       */
       email: string;
       /**
-      * **users.ownerfirstname**
+      * **users.owner_first_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownerfirstname: string;
+      owner_first_name: string;
       /**
-      * **users.ownermiddlename**
+      * **users.owner_middle_name**
       * - `varchar` in database
       * - Nullable, no default
       */
-      ownermiddlename: string | null;
+      owner_middle_name: string | null;
       /**
-      * **users.ownerlastname**
+      * **users.owner_last_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownerlastname: string;
+      owner_last_name: string;
       /**
-      * **users.ownercpf**
+      * **users.owner_cpf**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownercpf: string;
+      owner_cpf: string;
       /**
       * **users.password**
       * - `varchar` in database
@@ -6018,11 +6018,11 @@ declare module 'zapatos/schema' {
       */
       password: string;
       /**
-      * **users.botname**
+      * **users.bot_name**
       * - `varchar` in database
       * - `NOT NULL`, default: `'Walle'::character varying`
       */
-      botname: string;
+      bot_name: string;
       /**
       * **users.logo**
       * - `varchar` in database
@@ -6030,29 +6030,29 @@ declare module 'zapatos/schema' {
       */
       logo: string | null;
       /**
-      * **users.roleid**
+      * **users.role_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      roleid: number;
+      role_id: number;
       /**
-      * **users.isactive**
+      * **users.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **users.updatedat**
+      * **users.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: Date | null;
+      updated_at: Date | null;
       /**
-      * **users.createdat**
+      * **users.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: Date | null;
+      created_at: Date | null;
     }
     export interface JSONSelectable {
       /**
@@ -6062,17 +6062,17 @@ declare module 'zapatos/schema' {
       */
       id: string;
       /**
-      * **users.phonenumber**
+      * **users.phone_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      phonenumber: string;
+      phone_number: string;
       /**
-      * **users.bussinessname**
+      * **users.bussiness_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      bussinessname: string;
+      bussiness_name: string;
       /**
       * **users.cnpj**
       * - `varchar` in database
@@ -6086,29 +6086,29 @@ declare module 'zapatos/schema' {
       */
       email: string;
       /**
-      * **users.ownerfirstname**
+      * **users.owner_first_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownerfirstname: string;
+      owner_first_name: string;
       /**
-      * **users.ownermiddlename**
+      * **users.owner_middle_name**
       * - `varchar` in database
       * - Nullable, no default
       */
-      ownermiddlename: string | null;
+      owner_middle_name: string | null;
       /**
-      * **users.ownerlastname**
+      * **users.owner_last_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownerlastname: string;
+      owner_last_name: string;
       /**
-      * **users.ownercpf**
+      * **users.owner_cpf**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownercpf: string;
+      owner_cpf: string;
       /**
       * **users.password**
       * - `varchar` in database
@@ -6116,11 +6116,11 @@ declare module 'zapatos/schema' {
       */
       password: string;
       /**
-      * **users.botname**
+      * **users.bot_name**
       * - `varchar` in database
       * - `NOT NULL`, default: `'Walle'::character varying`
       */
-      botname: string;
+      bot_name: string;
       /**
       * **users.logo**
       * - `varchar` in database
@@ -6128,29 +6128,29 @@ declare module 'zapatos/schema' {
       */
       logo: string | null;
       /**
-      * **users.roleid**
+      * **users.role_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      roleid: number;
+      role_id: number;
       /**
-      * **users.isactive**
+      * **users.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive: boolean;
+      is_active: boolean;
       /**
-      * **users.updatedat**
+      * **users.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat: db.TimestampTzString | null;
+      updated_at: db.TimestampTzString | null;
       /**
-      * **users.createdat**
+      * **users.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat: db.TimestampTzString | null;
+      created_at: db.TimestampTzString | null;
     }
     export interface Whereable {
       /**
@@ -6160,17 +6160,17 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **users.phonenumber**
+      * **users.phone_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      phonenumber?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      phone_number?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **users.bussinessname**
+      * **users.bussiness_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      bussinessname?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      bussiness_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
       * **users.cnpj**
       * - `varchar` in database
@@ -6184,29 +6184,29 @@ declare module 'zapatos/schema' {
       */
       email?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **users.ownerfirstname**
+      * **users.owner_first_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownerfirstname?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      owner_first_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **users.ownermiddlename**
+      * **users.owner_middle_name**
       * - `varchar` in database
       * - Nullable, no default
       */
-      ownermiddlename?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      owner_middle_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **users.ownerlastname**
+      * **users.owner_last_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownerlastname?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      owner_last_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **users.ownercpf**
+      * **users.owner_cpf**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownercpf?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      owner_cpf?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
       * **users.password**
       * - `varchar` in database
@@ -6214,11 +6214,11 @@ declare module 'zapatos/schema' {
       */
       password?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **users.botname**
+      * **users.bot_name**
       * - `varchar` in database
       * - `NOT NULL`, default: `'Walle'::character varying`
       */
-      botname?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
+      bot_name?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
       * **users.logo**
       * - `varchar` in database
@@ -6226,29 +6226,29 @@ declare module 'zapatos/schema' {
       */
       logo?: string | db.Parameter<string> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **users.roleid**
+      * **users.role_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      roleid?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
+      role_id?: number | db.Parameter<number> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **users.isactive**
+      * **users.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
+      is_active?: boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **users.updatedat**
+      * **users.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
       /**
-      * **users.createdat**
+      * **users.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | db.SQLFragment | db.ParentColumn>;
     }
     export interface Insertable {
       /**
@@ -6258,17 +6258,17 @@ declare module 'zapatos/schema' {
       */
       id: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **users.phonenumber**
+      * **users.phone_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      phonenumber: string | db.Parameter<string> | db.SQLFragment;
+      phone_number: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **users.bussinessname**
+      * **users.bussiness_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      bussinessname: string | db.Parameter<string> | db.SQLFragment;
+      bussiness_name: string | db.Parameter<string> | db.SQLFragment;
       /**
       * **users.cnpj**
       * - `varchar` in database
@@ -6282,29 +6282,29 @@ declare module 'zapatos/schema' {
       */
       email: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **users.ownerfirstname**
+      * **users.owner_first_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownerfirstname: string | db.Parameter<string> | db.SQLFragment;
+      owner_first_name: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **users.ownermiddlename**
+      * **users.owner_middle_name**
       * - `varchar` in database
       * - Nullable, no default
       */
-      ownermiddlename?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
+      owner_middle_name?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **users.ownerlastname**
+      * **users.owner_last_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownerlastname: string | db.Parameter<string> | db.SQLFragment;
+      owner_last_name: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **users.ownercpf**
+      * **users.owner_cpf**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownercpf: string | db.Parameter<string> | db.SQLFragment;
+      owner_cpf: string | db.Parameter<string> | db.SQLFragment;
       /**
       * **users.password**
       * - `varchar` in database
@@ -6312,11 +6312,11 @@ declare module 'zapatos/schema' {
       */
       password: string | db.Parameter<string> | db.SQLFragment;
       /**
-      * **users.botname**
+      * **users.bot_name**
       * - `varchar` in database
       * - `NOT NULL`, default: `'Walle'::character varying`
       */
-      botname?: string | db.Parameter<string> | db.DefaultType | db.SQLFragment;
+      bot_name?: string | db.Parameter<string> | db.DefaultType | db.SQLFragment;
       /**
       * **users.logo**
       * - `varchar` in database
@@ -6324,29 +6324,29 @@ declare module 'zapatos/schema' {
       */
       logo?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **users.roleid**
+      * **users.role_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      roleid: number | db.Parameter<number> | db.SQLFragment;
+      role_id: number | db.Parameter<number> | db.SQLFragment;
       /**
-      * **users.isactive**
+      * **users.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment;
       /**
-      * **users.updatedat**
+      * **users.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
       /**
-      * **users.createdat**
+      * **users.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment;
     }
     export interface Updatable {
       /**
@@ -6356,17 +6356,17 @@ declare module 'zapatos/schema' {
       */
       id?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **users.phonenumber**
+      * **users.phone_number**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      phonenumber?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      phone_number?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **users.bussinessname**
+      * **users.bussiness_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      bussinessname?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      bussiness_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
       * **users.cnpj**
       * - `varchar` in database
@@ -6380,29 +6380,29 @@ declare module 'zapatos/schema' {
       */
       email?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **users.ownerfirstname**
+      * **users.owner_first_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownerfirstname?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      owner_first_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **users.ownermiddlename**
+      * **users.owner_middle_name**
       * - `varchar` in database
       * - Nullable, no default
       */
-      ownermiddlename?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
+      owner_middle_name?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **users.ownerlastname**
+      * **users.owner_last_name**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownerlastname?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      owner_last_name?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **users.ownercpf**
+      * **users.owner_cpf**
       * - `varchar` in database
       * - `NOT NULL`, no default
       */
-      ownercpf?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
+      owner_cpf?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
       * **users.password**
       * - `varchar` in database
@@ -6410,11 +6410,11 @@ declare module 'zapatos/schema' {
       */
       password?: string | db.Parameter<string> | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.SQLFragment>;
       /**
-      * **users.botname**
+      * **users.bot_name**
       * - `varchar` in database
       * - `NOT NULL`, default: `'Walle'::character varying`
       */
-      botname?: string | db.Parameter<string> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.DefaultType | db.SQLFragment>;
+      bot_name?: string | db.Parameter<string> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | db.DefaultType | db.SQLFragment>;
       /**
       * **users.logo**
       * - `varchar` in database
@@ -6422,29 +6422,29 @@ declare module 'zapatos/schema' {
       */
       logo?: string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, string | db.Parameter<string> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **users.roleid**
+      * **users.role_id**
       * - `int4` in database
       * - `NOT NULL`, no default
       */
-      roleid?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
+      role_id?: number | db.Parameter<number> | db.SQLFragment | db.SQLFragment<any, number | db.Parameter<number> | db.SQLFragment>;
       /**
-      * **users.isactive**
+      * **users.is_active**
       * - `bool` in database
       * - `NOT NULL`, default: `true`
       */
-      isactive?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
+      is_active?: boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment | db.SQLFragment<any, boolean | db.Parameter<boolean> | db.DefaultType | db.SQLFragment>;
       /**
-      * **users.updatedat**
+      * **users.updated_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      updatedat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      updated_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
       /**
-      * **users.createdat**
+      * **users.created_at**
       * - `timestamptz` in database
       * - Nullable, default: `now()`
       */
-      createdat?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
+      created_at?: (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment | db.SQLFragment<any, (db.TimestampTzString | Date) | db.Parameter<(db.TimestampTzString | Date)> | null | db.DefaultType | db.SQLFragment>;
     }
     export type UniqueIndex = 'users_cnpj_key' | 'users_email_key' | 'users_owner_cpf_key' | 'users_phone_number_key' | 'users_pkey';
     export type Column = keyof Selectable;

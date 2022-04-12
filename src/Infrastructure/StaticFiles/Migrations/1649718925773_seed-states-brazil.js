@@ -4,7 +4,7 @@ exports.shorthands = undefined;
 
 exports.up = pgm => {
   pgm.sql(`
-    INSERT INTO public.states (stateName,stateCode,countryId) VALUES
+    INSERT INTO public.states (state_name,state_code,country_id) VALUES
       ('Acre','AC',1),
       ('Alagoas','AL',1),
       ('Amazonas','AM',1),

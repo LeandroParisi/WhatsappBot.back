@@ -6,11 +6,11 @@ exports.up = pgm => {
   pgm.sql(`
     CREATE TABLE public.delivery_types (
       id serial NOT NULL,
-      deliveryType varchar(50) NOT NULL,
+      delivery_type varchar(50) NOT NULL,
       CONSTRAINT delivery_types_pkey PRIMARY KEY (id)
     );
 
-    INSERT INTO public.delivery_types (deliveryType) 
+    INSERT INTO public.delivery_types (delivery_type) 
       VALUES
         ('delivery'),
         ('counter_pickup'),

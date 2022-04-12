@@ -6,11 +6,11 @@ exports.up = pgm => {
   pgm.sql(`
     CREATE TABLE public.countries (
       id serial NOT NULL,
-      countryName varchar(45) NOT NULL,
+      country_name varchar(45) NOT NULL,
       CONSTRAINT countries_pkey PRIMARY KEY (id)
     );
 
-    INSERT INTO public.countries (countryName) VALUES ('Brazil');
+    INSERT INTO public.countries (country_name) VALUES ('Brazil');
   `)
 };
 

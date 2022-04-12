@@ -7,8 +7,8 @@ exports.up = pgm => {
 
   CREATE TABLE public.promotions_products (
     id serial NOT NULL,
-    promotionId int4 NOT NULL,
-    productId uuid NOT NULL,
+    promotion_id int4 NOT NULL,
+    product_id uuid NOT NULL,
     "attributes" "productAttributes" NOT NULL DEFAULT '"[]"'::jsonb,
     CONSTRAINT promotions_products_pkey PRIMARY KEY (id)
   );
@@ -16,12 +16,12 @@ exports.up = pgm => {
   
   ALTER TABLE public.promotions_products 
     ADD CONSTRAINT promotions_products_product_id_fkey 
-    FOREIGN KEY (productId) 
+    FOREIGN KEY (product_id) 
     REFERENCES public.products(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
   ALTER TABLE public.promotions_products 
     ADD CONSTRAINT promotions_products_promotion_id_fkey 
-    FOREIGN KEY (promotionId) 
+    FOREIGN KEY (promotion_id) 
     REFERENCES public.promotions(id) ON DELETE CASCADE ON UPDATE CASCADE;
 
   `)

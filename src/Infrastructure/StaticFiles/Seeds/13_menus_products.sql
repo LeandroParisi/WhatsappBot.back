@@ -1,4 +1,4 @@
-INSERT INTO public.menus_products (menuId,productId) VALUES
+INSERT INTO public.menus_products (menu_id,product_id) VALUES
 	 ('8dc8285c-993a-406e-9d03-50d6ac3fb2fb'::uuid,'38363877-1ccd-4b14-acd9-02079ed1c835'::uuid),
 	 ('8dc8285c-993a-406e-9d03-50d6ac3fb2fb'::uuid,'fcda17d7-5855-4e2b-be5e-658b27e4262a'::uuid),
 	 ('8dc8285c-993a-406e-9d03-50d6ac3fb2fb'::uuid,'2838e2bb-08bc-4ec6-b7bd-b07ad9c67c39'::uuid),
