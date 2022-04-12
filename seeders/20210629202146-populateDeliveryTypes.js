@@ -2,18 +2,6 @@ const { branchOneId, branchTwoId } = require('./20210623221400-populateUsersTabl
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('delivery_types', [
-      {
-        delivery_type: 'delivery',
-      },
-      {
-        delivery_type: 'counter_pickup',
-      },
-      {
-        delivery_type: 'on_spot_consumption',
-      },
-    ])
-
     await queryInterface.bulkInsert('branches_delivery_types', [
       {
         branch_id: branchOneId,
