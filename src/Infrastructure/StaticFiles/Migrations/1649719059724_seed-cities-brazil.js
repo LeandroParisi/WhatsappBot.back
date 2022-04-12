@@ -4,7 +4,7 @@ exports.shorthands = undefined;
 
 exports.up = pgm => {
   pgm.sql(`
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Belo Horizonte',11),
     ('Acrelândia',1),
     ('Assis Brasil',1),
@@ -15,7 +15,7 @@ exports.up = pgm => {
     ('Epitaciolândia',1),
     ('Feijó',1),
     ('Jordão',1);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mâncio Lima',1),
     ('Manoel Urbano',1),
     ('Marechal Thaumaturgo',1),
@@ -26,7 +26,7 @@ exports.up = pgm => {
     ('Rodrigues Alves',1),
     ('Santa Rosa do Purus',1),
     ('Sena Madureira',1);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Senador Guiomard',1),
     ('Tarauacá',1),
     ('Xapuri',1),
@@ -37,7 +37,7 @@ exports.up = pgm => {
     ('Barra de Santo Antônio',2),
     ('Barra de São Miguel',2),
     ('Batalha',2);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Belém',2),
     ('Belo Monte',2),
     ('Boca da Mata',2),
@@ -48,7 +48,7 @@ exports.up = pgm => {
     ('Campo Alegre',2),
     ('Campo Grande',2),
     ('Canapi',2);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Capela',2),
     ('Carneiros',2),
     ('Chã Preta',2),
@@ -59,7 +59,7 @@ exports.up = pgm => {
     ('Craíbas',2),
     ('Delmiro Gouveia',2),
     ('Dois Riachos',2);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Estrela de Alagoas',2),
     ('Feira Grande',2),
     ('Feliz Deserto',2),
@@ -70,7 +70,7 @@ exports.up = pgm => {
     ('Igreja Nova',2),
     ('Inhapi',2),
     ('Jacaré dos Homens',2);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jacuípe',2),
     ('Japaratinga',2),
     ('Jaramataia',2),
@@ -81,7 +81,7 @@ exports.up = pgm => {
     ('Lagoa da Canoa',2),
     ('Limoeiro de Anadia',2),
     ('Maceió',2);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Major Isidoro',2),
     ('Mar Vermelho',2),
     ('Maragogi',2),
@@ -92,7 +92,7 @@ exports.up = pgm => {
     ('Matriz de Camaragibe',2),
     ('Messias',2),
     ('Minador do Negrão',2);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Monteirópolis',2),
     ('Murici',2),
     ('Novo Lino',2),
@@ -103,7 +103,7 @@ exports.up = pgm => {
     ('Ouro Branco',2),
     ('Palestina',2),
     ('Palmeira dos Índios',2);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pão de Açúcar',2),
     ('Pariconha',2),
     ('Paripueira',2),
@@ -114,7 +114,7 @@ exports.up = pgm => {
     ('Pilar',2),
     ('Pindoba',2),
     ('Piranhas',2);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Poço das Trincheiras',2),
     ('Porto Calvo',2),
     ('Porto de Pedras',2),
@@ -125,7 +125,7 @@ exports.up = pgm => {
     ('Santa Luzia do Norte',2),
     ('Santana do Ipanema',2),
     ('Santana do Mundaú',2);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Brás',2),
     ('São José da Laje',2),
     ('São José da Tapera',2),
@@ -136,7 +136,7 @@ exports.up = pgm => {
     ('Satuba',2),
     ('Senador Rui Palmeira',2),
     ('Tanque d''Arca',2);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Taquarana',2),
     ('Teotônio Vilela',2),
     ('Traipu',2),
@@ -147,7 +147,7 @@ exports.up = pgm => {
     ('Anamã',3),
     ('Anori',3),
     ('Apuí',3);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Atalaia do Norte',3),
     ('Autazes',3),
     ('Barcelos',3),
@@ -158,7 +158,7 @@ exports.up = pgm => {
     ('Boca do Acre',3),
     ('Borba',3),
     ('Caapiranga',3);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Canutama',3),
     ('Carauari',3),
     ('Careiro',3),
@@ -169,7 +169,7 @@ exports.up = pgm => {
     ('Envira',3),
     ('Fonte Boa',3),
     ('Guajará',3);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Humaitá',3),
     ('Ipixuna',3),
     ('Iranduba',3),
@@ -180,7 +180,7 @@ exports.up = pgm => {
     ('Juruá',3),
     ('Jutaí',3),
     ('Lábrea',3);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Manacapuru',3),
     ('Manaquiri',3),
     ('Manaus',3),
@@ -191,7 +191,7 @@ exports.up = pgm => {
     ('Nova Olinda do Norte',3),
     ('Novo Airão',3),
     ('Novo Aripuanã',3);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Parintins',3),
     ('Pauini',3),
     ('Presidente Figueiredo',3),
@@ -202,7 +202,7 @@ exports.up = pgm => {
     ('São Paulo de Olivença',3),
     ('São Sebastião do Uatumã',3),
     ('Silves',3);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Tabatinga',3),
     ('Tapauá',3),
     ('Tefé',3),
@@ -213,7 +213,7 @@ exports.up = pgm => {
     ('Amapá',4),
     ('Calçoene',4),
     ('Cutias',4);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ferreira Gomes',4),
     ('Itaubal',4),
     ('Laranjal do Jari',4),
@@ -224,7 +224,7 @@ exports.up = pgm => {
     ('Porto Grande',4),
     ('Pracuúba',4),
     ('Santana',4);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Serra do Navio',4),
     ('Tartarugalzinho',4),
     ('Vitória do Jari',4),
@@ -235,7 +235,7 @@ exports.up = pgm => {
     ('Água Fria',5),
     ('Aiquara',5),
     ('Alagoinhas',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Alcobaça',5),
     ('Almadina',5),
     ('Amargosa',5),
@@ -246,7 +246,7 @@ exports.up = pgm => {
     ('Andorinha',5),
     ('Angical',5),
     ('Anguera',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Antas',5),
     ('Antônio Cardoso',5),
     ('Antônio Gonçalves',5),
@@ -257,7 +257,7 @@ exports.up = pgm => {
     ('Araci',5),
     ('Aramari',5),
     ('Arataca',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Aratuípe',5),
     ('Aurelino Leal',5),
     ('Baianópolis',5),
@@ -268,7 +268,7 @@ exports.up = pgm => {
     ('Barra do Choça',5),
     ('Barra do Mendes',5),
     ('Barra do Rocha',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Barreiras',5),
     ('Barro Alto',5),
     ('Barrocas',5),
@@ -279,7 +279,7 @@ exports.up = pgm => {
     ('Boa Nova',5),
     ('Boa Vista do Tupim',5),
     ('Bom Jesus da Lapa',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bom Jesus da Serra',5),
     ('Boninal',5),
     ('Bonito',5),
@@ -290,7 +290,7 @@ exports.up = pgm => {
     ('Brotas de Macaúbas',5),
     ('Brumado',5),
     ('Buerarema',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Buritirama',5),
     ('Caatiba',5),
     ('Cabaceiras do Paraguaçu',5),
@@ -301,7 +301,7 @@ exports.up = pgm => {
     ('Caetité',5),
     ('Cafarnaum',5),
     ('Cairu',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Caldeirão Grande',5),
     ('Camacan',5),
     ('Camaçari',5),
@@ -312,7 +312,7 @@ exports.up = pgm => {
     ('Canarana',5),
     ('Canavieiras',5),
     ('Candeal',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Candeias',5),
     ('Candiba',5),
     ('Cândido Sales',5),
@@ -323,7 +323,7 @@ exports.up = pgm => {
     ('Caraíbas',5),
     ('Caravelas',5),
     ('Cardeal da Silva',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Carinhanha',5),
     ('Casa Nova',5),
     ('Castro Alves',5),
@@ -334,7 +334,7 @@ exports.up = pgm => {
     ('Chorrochó',5),
     ('Cícero Dantas',5),
     ('Cipó',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Coaraci',5),
     ('Cocos',5),
     ('Conceição da Feira',5),
@@ -345,7 +345,7 @@ exports.up = pgm => {
     ('Condeúba',5),
     ('Contendas do Sincorá',5),
     ('Coração de Maria',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cordeiros',5),
     ('Coribe',5),
     ('Coronel João Sá',5),
@@ -356,7 +356,7 @@ exports.up = pgm => {
     ('Cristópolis',5),
     ('Cruz das Almas',5),
     ('Curaçá',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Dário Meira',5),
     ('Dias d''Ávila',5),
     ('Dom Basílio',5),
@@ -367,7 +367,7 @@ exports.up = pgm => {
     ('Érico Cardoso',5),
     ('Esplanada',5),
     ('Euclides da Cunha',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Eunápolis',5),
     ('Fátima',5),
     ('Feira da Mata',5),
@@ -378,7 +378,7 @@ exports.up = pgm => {
     ('Formosa do Rio Preto',5),
     ('Gandu',5),
     ('Gavião',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Gentio do Ouro',5),
     ('Glória',5),
     ('Gongogi',5),
@@ -389,7 +389,7 @@ exports.up = pgm => {
     ('Heliópolis',5),
     ('Iaçu',5),
     ('Ibiassucê',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ibicaraí',5),
     ('Ibicoara',5),
     ('Ibicuí',5),
@@ -400,7 +400,7 @@ exports.up = pgm => {
     ('Ibirapuã',5),
     ('Ibirataia',5),
     ('Ibitiara',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ibititá',5),
     ('Ibotirama',5),
     ('Ichu',5),
@@ -411,7 +411,7 @@ exports.up = pgm => {
     ('Inhambupe',5),
     ('Ipecaetá',5),
     ('Ipiaú',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ipirá',5),
     ('Ipupiara',5),
     ('Irajuba',5),
@@ -422,7 +422,7 @@ exports.up = pgm => {
     ('Itabela',5),
     ('Itaberaba',5),
     ('Itabuna',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itacaré',5),
     ('Itaeté',5),
     ('Itagi',5),
@@ -433,7 +433,7 @@ exports.up = pgm => {
     ('Itajuípe',5),
     ('Itamaraju',5),
     ('Itamari',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itambé',5),
     ('Itanagra',5),
     ('Itanhém',5),
@@ -444,7 +444,7 @@ exports.up = pgm => {
     ('Itapicuru',5),
     ('Itapitanga',5),
     ('Itaquara',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itarantim',5),
     ('Itatim',5),
     ('Itiruçu',5),
@@ -455,7 +455,7 @@ exports.up = pgm => {
     ('Iuiú',5),
     ('Jaborandi',5),
     ('Jacaraci',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jacobina',5),
     ('Jaguaquara',5),
     ('Jaguarari',5),
@@ -466,7 +466,7 @@ exports.up = pgm => {
     ('Jiquiriçá',5),
     ('Jitaúna',5),
     ('João Dourado',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Juazeiro',5),
     ('Jucuruçu',5),
     ('Jussara',5),
@@ -477,7 +477,7 @@ exports.up = pgm => {
     ('Laje',5),
     ('Lajedão',5),
     ('Lajedinho',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lajedo do Tabocal',5),
     ('Lamarão',5),
     ('Lapão',5),
@@ -488,7 +488,7 @@ exports.up = pgm => {
     ('Luís Eduardo Magalhães',5),
     ('Macajuba',5),
     ('Macarani',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Macaúbas',5),
     ('Macururé',5),
     ('Madre de Deus',5),
@@ -499,7 +499,7 @@ exports.up = pgm => {
     ('Malhada de Pedras',5),
     ('Manoel Vitorino',5),
     ('Mansidão',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Maracás',5),
     ('Maragogipe',5),
     ('Maraú',5),
@@ -510,7 +510,7 @@ exports.up = pgm => {
     ('Medeiros Neto',5),
     ('Miguel Calmon',5),
     ('Milagres',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mirangaba',5),
     ('Mirante',5),
     ('Monte Santo',5),
@@ -521,7 +521,7 @@ exports.up = pgm => {
     ('Mucuri',5),
     ('Mulungu do Morro',5),
     ('Mundo Novo',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Muniz Ferreira',5),
     ('Muquém de São Francisco',5),
     ('Muritiba',5),
@@ -532,7 +532,7 @@ exports.up = pgm => {
     ('Nova Canaã',5),
     ('Nova Fátima',5),
     ('Nova Ibiá',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Nova Itarana',5),
     ('Nova Redenção',5),
     ('Nova Soure',5),
@@ -543,7 +543,7 @@ exports.up = pgm => {
     ('Oliveira dos Brejinhos',5),
     ('Ouriçangas',5),
     ('Ourolândia',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Palmas de Monte Alto',5),
     ('Palmeiras',5),
     ('Paramirim',5),
@@ -554,7 +554,7 @@ exports.up = pgm => {
     ('Pé de Serra',5),
     ('Pedrão',5),
     ('Pedro Alexandre',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Piatã',5),
     ('Pilão Arcado',5),
     ('Pindaí',5),
@@ -565,7 +565,7 @@ exports.up = pgm => {
     ('Piritiba',5),
     ('Planaltino',5),
     ('Planalto',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Poções',5),
     ('Pojuca',5),
     ('Ponto Novo',5),
@@ -576,7 +576,7 @@ exports.up = pgm => {
     ('Presidente Jânio Quadros',5),
     ('Presidente Tancredo Neves',5),
     ('Queimadas',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Quijingue',5),
     ('Quixabeira',5),
     ('Rafael Jambeiro',5),
@@ -587,7 +587,7 @@ exports.up = pgm => {
     ('Riacho de Santana',5),
     ('Ribeira do Amparo',5),
     ('Ribeira do Pombal',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ribeirão do Largo',5),
     ('Rio de Contas',5),
     ('Rio do Antônio',5),
@@ -598,7 +598,7 @@ exports.up = pgm => {
     ('Salinas da Margarida',5),
     ('Salvador',5),
     ('Santa Bárbara',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Brígida',5),
     ('Santa Cruz Cabrália',5),
     ('Santa Cruz da Vitória',5),
@@ -609,7 +609,7 @@ exports.up = pgm => {
     ('Santa Teresinha',5),
     ('Santaluz',5),
     ('Santana',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santanópolis',5),
     ('Santo Amaro',5),
     ('Santo Antônio de Jesus',5),
@@ -620,7 +620,7 @@ exports.up = pgm => {
     ('São Félix',5),
     ('São Félix do Coribe',5),
     ('São Francisco do Conde',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Gabriel',5),
     ('São Gonçalo dos Campos',5),
     ('São José da Vitória',5),
@@ -631,7 +631,7 @@ exports.up = pgm => {
     ('Sátiro Dias',5),
     ('Saubara',5),
     ('Saúde',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Seabra',5),
     ('Sebastião Laranjeiras',5),
     ('Senhor do Bonfim',5),
@@ -642,7 +642,7 @@ exports.up = pgm => {
     ('Serrinha',5),
     ('Serrolândia',5),
     ('Simões Filho',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Sítio do Mato',5),
     ('Sítio do Quinto',5),
     ('Sobradinho',5),
@@ -653,7 +653,7 @@ exports.up = pgm => {
     ('Tanquinho',5),
     ('Taperoá',5),
     ('Tapiramutá',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Teixeira de Freitas',5),
     ('Teodoro Sampaio',5),
     ('Teofilândia',5),
@@ -664,7 +664,7 @@ exports.up = pgm => {
     ('Uauá',5),
     ('Ubaíra',5),
     ('Ubaitaba',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ubatã',5),
     ('Uibaí',5),
     ('Umburanas',5),
@@ -675,7 +675,7 @@ exports.up = pgm => {
     ('Valença',5),
     ('Valente',5),
     ('Várzea da Roça',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Várzea do Poço',5),
     ('Várzea Nova',5),
     ('Varzedo',5),
@@ -686,7 +686,7 @@ exports.up = pgm => {
     ('Wanderley',5),
     ('Wenceslau Guimarães',5),
     ('Xique-Xique',5);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Abaiara',6),
     ('Acarapé',6),
     ('Acaraú',6),
@@ -697,7 +697,7 @@ exports.up = pgm => {
     ('Alto Santo',6),
     ('Amontada',6),
     ('Antonina do Norte',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Apuiarés',6),
     ('Aquiraz',6),
     ('Aracati',6),
@@ -708,7 +708,7 @@ exports.up = pgm => {
     ('Arneiroz',6),
     ('Assaré',6),
     ('Aurora',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Baixio',6),
     ('Banabuiú',6),
     ('Barbalha',6),
@@ -719,7 +719,7 @@ exports.up = pgm => {
     ('Beberibe',6),
     ('Bela Cruz',6),
     ('Boa Viagem',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Brejo Santo',6),
     ('Camocim',6),
     ('Campos Sales',6),
@@ -730,7 +730,7 @@ exports.up = pgm => {
     ('Caririaçu',6),
     ('Cariús',6),
     ('Carnaubal',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cascavel',6),
     ('Catarina',6),
     ('Catunda',6),
@@ -741,7 +741,7 @@ exports.up = pgm => {
     ('Chorozinho',6),
     ('Coreaú',6),
     ('Crateús',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Crato',6),
     ('Croatá',6),
     ('Cruz',6),
@@ -752,7 +752,7 @@ exports.up = pgm => {
     ('Forquilha',6),
     ('Fortaleza',6),
     ('Fortim',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Frecheirinha',6),
     ('General Sampaio',6),
     ('Graça',6),
@@ -763,7 +763,7 @@ exports.up = pgm => {
     ('Guaraciaba do Norte',6),
     ('Guaramiranga',6),
     ('Hidrolândia',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Horizonte',6),
     ('Ibaretama',6),
     ('Ibiapina',6),
@@ -774,7 +774,7 @@ exports.up = pgm => {
     ('Independência',6),
     ('Ipaporanga',6),
     ('Ipaumirim',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ipu',6),
     ('Ipueiras',6),
     ('Iracema',6),
@@ -785,7 +785,7 @@ exports.up = pgm => {
     ('Itapipoca',6),
     ('Itapiúna',6),
     ('Itarema',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itatira',6),
     ('Jaguaretama',6),
     ('Jaguaribara',6),
@@ -796,7 +796,7 @@ exports.up = pgm => {
     ('Jijoca de Jericoaroara',6),
     ('Juazeiro do Norte',6),
     ('Jucás',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lavras da Mangabeira',6),
     ('Limoeiro do Norte',6),
     ('Madalena',6),
@@ -807,7 +807,7 @@ exports.up = pgm => {
     ('Massapê',6),
     ('Mauriti',6),
     ('Meruoca',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Milagres',6),
     ('Milhã',6),
     ('Miraíma',6),
@@ -818,7 +818,7 @@ exports.up = pgm => {
     ('Moraújo',6),
     ('Morrinhos',6),
     ('Mucambo',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mulungu',6),
     ('Nova Olinda',6),
     ('Nova Russas',6),
@@ -829,7 +829,7 @@ exports.up = pgm => {
     ('Pacatuba',6),
     ('Pacoti',6),
     ('Pacujá',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Palhano',6),
     ('Palmácia',6),
     ('Paracuru',6),
@@ -840,7 +840,7 @@ exports.up = pgm => {
     ('Penaforte',6),
     ('Pentecoste',6),
     ('Pereiro',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pindoretama',6),
     ('Piquet Carneiro',6),
     ('Pires Ferreira',6),
@@ -851,7 +851,7 @@ exports.up = pgm => {
     ('Quiterianópolis',6),
     ('Quixadá',6),
     ('Quixelô',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Quixeramobim',6),
     ('Quixeré',6),
     ('Redenção',6),
@@ -862,7 +862,7 @@ exports.up = pgm => {
     ('Santa Quitéria',6),
     ('Santana do Acaraú',6),
     ('Santana do Cariri',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Benedito',6),
     ('São Gonçalo do Amarante',6),
     ('São João do Jaguaribe',6),
@@ -873,7 +873,7 @@ exports.up = pgm => {
     ('Solonópole',6),
     ('Tabuleiro do Norte',6),
     ('Tamboril',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Tarrafas',6),
     ('Tauá',6),
     ('Tejuçuoca',6),
@@ -884,7 +884,7 @@ exports.up = pgm => {
     ('Umari',6),
     ('Umirim',6),
     ('Uruburetama',6);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Uruoca',6),
     ('Varjota',6),
     ('Várzea Alegre',6),
@@ -895,7 +895,7 @@ exports.up = pgm => {
     ('Ceilândia',7),
     ('Gama',7),
     ('Guará',7);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Plano Piloto',7),
     ('Planaltina',7),
     ('Recanto das Emas',7),
@@ -906,7 +906,7 @@ exports.up = pgm => {
     ('Água Doce do Norte',8),
     ('Águia Branca',8),
     ('Alegre',8);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Alfredo Chaves',8),
     ('Alto Rio Novo',8),
     ('Anchieta',8),
@@ -917,7 +917,7 @@ exports.up = pgm => {
     ('Barra de São Francisco',8),
     ('Boa Esperança',8),
     ('Bom Jesus do Norte',8);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Brejetuba',8),
     ('Cachoeiro de Itapemirim',8),
     ('Cariacica',8),
@@ -928,7 +928,7 @@ exports.up = pgm => {
     ('Divino de São Lourenço',8),
     ('Domingos Martins',8),
     ('Dores do Rio Preto',8);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ecoporanga',8),
     ('Fundão',8),
     ('Governador Lindenberg',8),
@@ -939,7 +939,7 @@ exports.up = pgm => {
     ('Ibitirama',8),
     ('Iconha',8),
     ('Irupi',8);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itaguaçu',8),
     ('Itapemirim',8),
     ('Itarana',8),
@@ -950,7 +950,7 @@ exports.up = pgm => {
     ('Laranja da Terra',8),
     ('Linhares',8),
     ('Mantenópolis',8);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Marataizes',8),
     ('Marechal Floriano',8),
     ('Marilândia',8),
@@ -961,7 +961,7 @@ exports.up = pgm => {
     ('Muqui',8),
     ('Nova Venécia',8),
     ('Pancas',8);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pedro Canário',8),
     ('Pinheiros',8),
     ('Piúma',8),
@@ -972,7 +972,7 @@ exports.up = pgm => {
     ('Santa Leopoldina',8),
     ('Santa Maria de Jetibá',8),
     ('Santa Teresa',8);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Domingos do Norte',8),
     ('São Gabriel da Palha',8),
     ('São José do Calçado',8),
@@ -983,7 +983,7 @@ exports.up = pgm => {
     ('Vargem Alta',8),
     ('Venda Nova do Imigrante',8),
     ('Viana',8);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Vila Pavão',8),
     ('Vila Valério',8),
     ('Vila Velha',8),
@@ -994,7 +994,7 @@ exports.up = pgm => {
     ('Adelândia',9),
     ('Água Fria de Goiás',9),
     ('Água Limpa',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Águas Lindas de Goiás',9),
     ('Alexânia',9),
     ('Aloândia',9),
@@ -1005,7 +1005,7 @@ exports.up = pgm => {
     ('Americano do Brasil',9),
     ('Amorinópolis',9),
     ('Anápolis',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Anhanguera',9),
     ('Anicuns',9),
     ('Aparecida de Goiânia',9),
@@ -1016,7 +1016,7 @@ exports.up = pgm => {
     ('Aragoiânia',9),
     ('Araguapaz',9),
     ('Arenópolis',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Aruanã',9),
     ('Aurilândia',9),
     ('Avelinópolis',9),
@@ -1027,7 +1027,7 @@ exports.up = pgm => {
     ('Bom Jesus de Goiás',9),
     ('Bonfinópolis',9),
     ('Bonópolis',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Brazabrantes',9),
     ('Britânia',9),
     ('Buriti Alegre',9),
@@ -1038,7 +1038,7 @@ exports.up = pgm => {
     ('Cachoeira de Goiás',9),
     ('Cachoeira Dourada',9),
     ('Caçu',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Caiapônia',9),
     ('Caldas Novas',9),
     ('Caldazinha',9),
@@ -1049,7 +1049,7 @@ exports.up = pgm => {
     ('Campos Limpo de Goiás',9),
     ('Campos Belos',9),
     ('Campos Verdes',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Carmo do Rio Verde',9),
     ('Castelândia',9),
     ('Catalão',9),
@@ -1060,7 +1060,7 @@ exports.up = pgm => {
     ('Chapadão do Céu',9),
     ('Cidade Ocidental',9),
     ('Cocalzinho de Goiás',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Colinas do Sul',9),
     ('Córrego do Ouro',9),
     ('Corumbá de Goiás',9),
@@ -1071,7 +1071,7 @@ exports.up = pgm => {
     ('Cromínia',9),
     ('Cumari',9),
     ('Damianópolis',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Damolândia',9),
     ('Davinópolis',9),
     ('Diorama',9),
@@ -1082,7 +1082,7 @@ exports.up = pgm => {
     ('Estrela do Norte',9),
     ('Faina',9),
     ('Fazenda Nova',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Firminópolis',9),
     ('Flores de Goiás',9),
     ('Formosa',9),
@@ -1093,7 +1093,7 @@ exports.up = pgm => {
     ('Goianésia',9),
     ('Goiânia',9),
     ('Goianira',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Goiás',9),
     ('Goiatuba',9),
     ('Gouvelândia',9),
@@ -1104,7 +1104,7 @@ exports.up = pgm => {
     ('Heitoraí',9),
     ('Hidrolândia',9),
     ('Hidrolina',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Iaciara',9),
     ('Inaciolândia',9),
     ('Indiara',9),
@@ -1115,7 +1115,7 @@ exports.up = pgm => {
     ('Israelândia',9),
     ('Itaberaí',9),
     ('Itaguari',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itaguaru',9),
     ('Itajá',9),
     ('Itapaci',9),
@@ -1126,7 +1126,7 @@ exports.up = pgm => {
     ('Itumbiara',9),
     ('Ivolândia',9),
     ('Jandaia',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jaraguá',9),
     ('Jataí',9),
     ('Jaupaci',9),
@@ -1137,7 +1137,7 @@ exports.up = pgm => {
     ('Leopoldo de Bulhões',9),
     ('Luziânia',9),
     ('Mairipotaba',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mambaí',9),
     ('Mara Rosa',9),
     ('Marzagão',9),
@@ -1148,7 +1148,7 @@ exports.up = pgm => {
     ('Mineiros',9),
     ('Moiporá',9),
     ('Monte Alegre de Goiás',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Montes Claros de Goiás',9),
     ('Montividiu',9),
     ('Montividiu do Norte',9),
@@ -1159,7 +1159,7 @@ exports.up = pgm => {
     ('Mundo Novo',9),
     ('Mutunópolis',9),
     ('Nazário',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Nerópolis',9),
     ('Niquelândia',9),
     ('Nova América',9),
@@ -1170,7 +1170,7 @@ exports.up = pgm => {
     ('Nova Roma',9),
     ('Nova Veneza',9),
     ('Novo Brasil',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Novo Gama',9),
     ('Novo Planalto',9),
     ('Orizona',9),
@@ -1181,7 +1181,7 @@ exports.up = pgm => {
     ('Palmeiras de Goiás',9),
     ('Palmelo',9),
     ('Palminópolis',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Panamá',9),
     ('Paranaiguara',9),
     ('Paraúna',9),
@@ -1192,7 +1192,7 @@ exports.up = pgm => {
     ('Piranhas',9),
     ('Pirenópolis',9),
     ('Pires do Rio',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Planaltina',9),
     ('Pontalina',9),
     ('Porangatu',9),
@@ -1203,7 +1203,7 @@ exports.up = pgm => {
     ('Quirinópolis',9),
     ('Rialma',9),
     ('Rianápolis',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Rio Quente',9),
     ('Rio Verde',9),
     ('Rubiataba',9),
@@ -1214,7 +1214,7 @@ exports.up = pgm => {
     ('Santa Helena de Goiás',9),
     ('Santa Isabel',9),
     ('Santa Rita do Araguaia',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Rita do Novo Destino',9),
     ('Santa Rosa de Goiás',9),
     ('Santa Tereza de Goiás',9),
@@ -1225,7 +1225,7 @@ exports.up = pgm => {
     ('São Domingos',9),
     ('São Francisco de Goiás',9),
     ('São João d''Aliança',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São João da Paraúna',9),
     ('São Luís de Montes Belos',9),
     ('São Luíz do Norte',9),
@@ -1236,7 +1236,7 @@ exports.up = pgm => {
     ('Senador Canedo',9),
     ('Serranópolis',9),
     ('Silvânia',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Simolândia',9),
     ('Sítio d''Abadia',9),
     ('Taquaral de Goiás',9),
@@ -1247,7 +1247,7 @@ exports.up = pgm => {
     ('Trombas',9),
     ('Turvânia',9),
     ('Turvelândia',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Uirapuru',9),
     ('Uruaçu',9),
     ('Uruana',9),
@@ -1258,7 +1258,7 @@ exports.up = pgm => {
     ('Vicentinópolis',9),
     ('Vila Boa',9),
     ('Vila Propício',9);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Açailândia',10),
     ('Afonso Cunha',10),
     ('Água Doce do Maranhão',10),
@@ -1269,7 +1269,7 @@ exports.up = pgm => {
     ('Alto Alegre do Pindaré',10),
     ('Alto Parnaíba',10),
     ('Amapá do Maranhão',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Amarante do Maranhão',10),
     ('Anajatuba',10),
     ('Anapurus',10),
@@ -1280,7 +1280,7 @@ exports.up = pgm => {
     ('Arari',10),
     ('Axixá',10),
     ('Bacabal',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bacabeira',10),
     ('Bacuri',10),
     ('Bacurituba',10),
@@ -1291,7 +1291,7 @@ exports.up = pgm => {
     ('Bela Vista do Maranhão',10),
     ('Belágua',10),
     ('Benedito Leite',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bequimão',10),
     ('Bernardo do Mearim',10),
     ('Boa Vista do Gurupi',10),
@@ -1302,7 +1302,7 @@ exports.up = pgm => {
     ('Brejo de Areia',10),
     ('Buriti',10),
     ('Buriti Bravo',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Buriticupu',10),
     ('Buritirana',10),
     ('Cachoeira Grande',10),
@@ -1313,7 +1313,7 @@ exports.up = pgm => {
     ('Cantanhede',10),
     ('Capinzal do Norte',10),
     ('Carolina',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Carutapera',10),
     ('Caxias',10),
     ('Cedral',10),
@@ -1324,7 +1324,7 @@ exports.up = pgm => {
     ('Cidelândia',10),
     ('Codó',10),
     ('Coelho Neto',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Colinas',10),
     ('Conceição do Lago-Açu',10),
     ('Coroatá',10),
@@ -1335,7 +1335,7 @@ exports.up = pgm => {
     ('Esperantinópolis',10),
     ('Estreito',10),
     ('Feira Nova do Maranhão',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Fernando Falcão',10),
     ('Formosa da Serra Negra',10),
     ('Fortaleza dos Nogueiras',10),
@@ -1346,7 +1346,7 @@ exports.up = pgm => {
     ('Governador Edison Lobão',10),
     ('Governador Eugênio Barros',10),
     ('Governador Luiz Rocha',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Governador Newton Bello',10),
     ('Governador Nunes Freire',10),
     ('Graça Aranha',10),
@@ -1357,7 +1357,7 @@ exports.up = pgm => {
     ('Igarapé do Meio',10),
     ('Igarapé Grande',10),
     ('Imperatriz',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itaipava do Grajaú',10),
     ('Itapecuru Mirim',10),
     ('Itinga do Maranhão',10),
@@ -1368,7 +1368,7 @@ exports.up = pgm => {
     ('Junco do Maranhão',10),
     ('Lago da Pedra',10),
     ('Lago do Junco',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lago dos Rodrigues',10),
     ('Lago Verde',10),
     ('Lagoa do Mato',10),
@@ -1379,7 +1379,7 @@ exports.up = pgm => {
     ('Luís Domingues',10),
     ('Magalhães de Almeida',10),
     ('Maracaçumé',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Marajá do Sena',10),
     ('Maranhãozinho',10),
     ('Mata Roma',10),
@@ -1390,7 +1390,7 @@ exports.up = pgm => {
     ('Mirador',10),
     ('Miranda do Norte',10),
     ('Mirinzal',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Monção',10),
     ('Montes Altos',10),
     ('Morros',10),
@@ -1401,7 +1401,7 @@ exports.up = pgm => {
     ('Olho d''Água das Cunhãs',10),
     ('Olinda Nova do Maranhão',10),
     ('Paço do Lumiar',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Palmeirândia',10),
     ('Paraibano',10),
     ('Parnarama',10),
@@ -1412,7 +1412,7 @@ exports.up = pgm => {
     ('Pedreiras',10),
     ('Pedro do Rosário',10),
     ('Penalva',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Peri Mirim',10),
     ('Peritoró',10),
     ('Pindaré Mirim',10),
@@ -1423,7 +1423,7 @@ exports.up = pgm => {
     ('Porto Franco',10),
     ('Porto Rico do Maranhão',10),
     ('Presidente Dutra',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Presidente Juscelino',10),
     ('Presidente Médici',10),
     ('Presidente Sarney',10),
@@ -1434,7 +1434,7 @@ exports.up = pgm => {
     ('Ribamar Fiquene',10),
     ('Rosário',10),
     ('Sambaíba',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Filomena do Maranhão',10),
     ('Santa Helena',10),
     ('Santa Inês',10),
@@ -1445,7 +1445,7 @@ exports.up = pgm => {
     ('Santana do Maranhão',10),
     ('Santo Amaro do Maranhão',10),
     ('Santo Antônio dos Lopes',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Benedito do Rio Preto',10),
     ('São Bento',10),
     ('São Bernardo',10),
@@ -1456,7 +1456,7 @@ exports.up = pgm => {
     ('São Francisco do Maranhão',10),
     ('São João Batista',10),
     ('São João do Carú',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São João do Paraíso',10),
     ('São João do Soter',10),
     ('São João dos Patos',10),
@@ -1467,7 +1467,7 @@ exports.up = pgm => {
     ('São Mateus do Maranhão',10),
     ('São Pedro da Água Branca',10),
     ('São Pedro dos Crentes',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Raimundo das Mangabeiras',10),
     ('São Raimundo do Doca Bezerra',10),
     ('São Roberto',10),
@@ -1478,7 +1478,7 @@ exports.up = pgm => {
     ('Serrano do Maranhão',10),
     ('Sítio Novo',10),
     ('Sucupira do Norte',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Sucupira do Riachão',10),
     ('Tasso Fragoso',10),
     ('Timbiras',10),
@@ -1489,7 +1489,7 @@ exports.up = pgm => {
     ('Turiaçu',10),
     ('Turilândia',10),
     ('Tutóia',10);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Urbano Santos',10),
     ('Vargem Grande',10),
     ('Viana',10),
@@ -1500,7 +1500,7 @@ exports.up = pgm => {
     ('Abadia dos Dourados',11),
     ('Abaeté',11),
     ('Abre Campo',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Acaiaca',11),
     ('Açucena',11),
     ('Água Boa',11),
@@ -1511,7 +1511,7 @@ exports.up = pgm => {
     ('Aimorés',11),
     ('Aiuruoca',11),
     ('Alagoa',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Albertina',11),
     ('Além Paraíba',11),
     ('Alfenas',11),
@@ -1522,7 +1522,7 @@ exports.up = pgm => {
     ('Alterosa',11),
     ('Alto Caparaó',11),
     ('Alto Jequitibá',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Alto Rio Doce',11),
     ('Alvarenga',11),
     ('Alvinópolis',11),
@@ -1533,7 +1533,7 @@ exports.up = pgm => {
     ('Angelândia',11),
     ('Antônio Carlos',11),
     ('Antônio Dias',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Antônio Prado de Minas',11),
     ('Araçaí',11),
     ('Aracitaba',11),
@@ -1544,7 +1544,7 @@ exports.up = pgm => {
     ('Araporã',11),
     ('Arapuá',11),
     ('Araújos',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Araxá',11),
     ('Arceburgo',11),
     ('Arcos',11),
@@ -1555,7 +1555,7 @@ exports.up = pgm => {
     ('Astolfo Dutra',11),
     ('Ataléia',11),
     ('Augusto de Lima',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Baependi',11),
     ('Baldim',11),
     ('Bambuí',11),
@@ -1566,7 +1566,7 @@ exports.up = pgm => {
     ('Barbacena',11),
     ('Barra Longa',11),
     ('Barroso',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bela Vista de Minas',11),
     ('Belmiro Braga',11),
     ('Belo Horizonte',11),
@@ -1577,7 +1577,7 @@ exports.up = pgm => {
     ('Bertópolis',11),
     ('Betim',11),
     ('Bias Fortes',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bicas',11),
     ('Biquinhas',11),
     ('Boa Esperança',11),
@@ -1588,7 +1588,7 @@ exports.up = pgm => {
     ('Bom Jesus da Penha',11),
     ('Bom Jesus do Amparo',11),
     ('Bom Jesus do Galho',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bom Repouso',11),
     ('Bom Sucesso',11),
     ('Bonfim',11),
@@ -1599,7 +1599,7 @@ exports.up = pgm => {
     ('Botumirim',11),
     ('Brás Pires',11),
     ('Brasilândia de Minas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Brasília de Minas',11),
     ('Brasópolis',11),
     ('Braúnas',11),
@@ -1610,7 +1610,7 @@ exports.up = pgm => {
     ('Buritis',11),
     ('Buritizeiro',11),
     ('Cabeceira Grande',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cabo Verde',11),
     ('Cachoeira da Prata',11),
     ('Cachoeira de Minas',11),
@@ -1621,7 +1621,7 @@ exports.up = pgm => {
     ('Caiana',11),
     ('Cajuri',11),
     ('Caldas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Camacho',11),
     ('Camanducaia',11),
     ('Cambuí',11),
@@ -1632,7 +1632,7 @@ exports.up = pgm => {
     ('Campina Verde',11),
     ('Campo Azul',11),
     ('Campo Belo',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Campo do Meio',11),
     ('Campo Florido',11),
     ('Campos Altos',11),
@@ -1643,7 +1643,7 @@ exports.up = pgm => {
     ('Candeias',11),
     ('Cantagalo',11),
     ('Caparaó',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Capela Nova',11),
     ('Capelinha',11),
     ('Capetinga',11),
@@ -1654,7 +1654,7 @@ exports.up = pgm => {
     ('Capitólio',11),
     ('Caputira',11),
     ('Caraí',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Caranaíba',11),
     ('Carandaí',11),
     ('Carangola',11),
@@ -1665,7 +1665,7 @@ exports.up = pgm => {
     ('Carmésia',11),
     ('Carmo da Cachoeira',11),
     ('Carmo da Mata',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Carmo de Minas',11),
     ('Carmo do Cajuru',11),
     ('Carmo do Paranaíba',11),
@@ -1676,7 +1676,7 @@ exports.up = pgm => {
     ('Carvalhópolis',11),
     ('Carvalhos',11),
     ('Casa Grande',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cascalho Rico',11),
     ('Cássia',11),
     ('Cataguases',11),
@@ -1687,7 +1687,7 @@ exports.up = pgm => {
     ('Caxambu',11),
     ('Cedro do Abaeté',11),
     ('Central de Minas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Centralina',11),
     ('Chácara',11),
     ('Chalé',11),
@@ -1698,7 +1698,7 @@ exports.up = pgm => {
     ('Claraval',11),
     ('Claro dos Poções',11),
     ('Cláudio',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Coimbra',11),
     ('Coluna',11),
     ('Comendador Gomes',11),
@@ -1709,7 +1709,7 @@ exports.up = pgm => {
     ('Conceição das Pedras',11),
     ('Conceição de Ipanema',11),
     ('Conceição do Mato Dentro',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Conceição do Pará',11),
     ('Conceição do Rio Verde',11),
     ('Conceição dos Ouros',11),
@@ -1720,7 +1720,7 @@ exports.up = pgm => {
     ('Congonhas do Norte',11),
     ('Conquista',11),
     ('Conselheiro Lafaiete',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Conselheiro Pena',11),
     ('Consolação',11),
     ('Contagem',11),
@@ -1731,7 +1731,7 @@ exports.up = pgm => {
     ('Corinto',11),
     ('Coroaci',11),
     ('Coromandel',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Coronel Fabriciano',11),
     ('Coronel Murta',11),
     ('Coronel Pacheco',11),
@@ -1742,7 +1742,7 @@ exports.up = pgm => {
     ('Córrego Novo',11),
     ('Couto de Magalhães de Minas',11),
     ('Crisólita',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cristais',11),
     ('Cristália',11),
     ('Cristiano Otoni',11),
@@ -1753,7 +1753,7 @@ exports.up = pgm => {
     ('Cuparaque',11),
     ('Curral de Dentro',11),
     ('Curvelo',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Datas',11),
     ('Delfim Moreira',11),
     ('Delfinópolis',11),
@@ -1764,7 +1764,7 @@ exports.up = pgm => {
     ('Diamantina',11),
     ('Diogo de Vasconcelos',11),
     ('Dionísio',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Divinésia',11),
     ('Divino',11),
     ('Divino das Laranjeiras',11),
@@ -1775,7 +1775,7 @@ exports.up = pgm => {
     ('Divisópolis',11),
     ('Dom Bosco',11),
     ('Dom Cavati',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Dom Joaquim',11),
     ('Dom Silvério',11),
     ('Dom Viçoso',11),
@@ -1786,7 +1786,7 @@ exports.up = pgm => {
     ('Dores do Turvo',11),
     ('Doresópolis',11),
     ('Douradoquara',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Durandé',11),
     ('Elói Mendes',11),
     ('Engenheiro Caldas',11),
@@ -1797,7 +1797,7 @@ exports.up = pgm => {
     ('Esmeraldas',11),
     ('Espera Feliz',11),
     ('Espinosa',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Espírito Santo do Dourado',11),
     ('Estiva',11),
     ('Estrela Dalva',11),
@@ -1808,7 +1808,7 @@ exports.up = pgm => {
     ('Extrema',11),
     ('Fama',11),
     ('Faria Lemos',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Felício dos Santos',11),
     ('Felisburgo',11),
     ('Felixlândia',11),
@@ -1819,7 +1819,7 @@ exports.up = pgm => {
     ('Formiga',11),
     ('Formoso',11),
     ('Fortaleza de Minas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Fortuna de Minas',11),
     ('Francisco Badaró',11),
     ('Francisco Dumont',11),
@@ -1830,7 +1830,7 @@ exports.up = pgm => {
     ('Frei Lagonegro',11),
     ('Fronteira',11),
     ('Fronteira dos Vales',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Fruta de Leite',11),
     ('Frutal',11),
     ('Funilândia',11),
@@ -1841,7 +1841,7 @@ exports.up = pgm => {
     ('Goianá',11),
     ('Gonçalves',11),
     ('Gonzaga',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Gouveia',11),
     ('Governador Valadares',11),
     ('Grão Mogol',11),
@@ -1852,7 +1852,7 @@ exports.up = pgm => {
     ('Guaraciama',11),
     ('Guaranésia',11),
     ('Guarani',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Guarará',11),
     ('Guarda-Mor',11),
     ('Guaxupé',11),
@@ -1863,7 +1863,7 @@ exports.up = pgm => {
     ('Heliodora',11),
     ('Iapu',11),
     ('Ibertioga',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ibiá',11),
     ('Ibiaí',11),
     ('Ibiracatu',11),
@@ -1874,7 +1874,7 @@ exports.up = pgm => {
     ('Icaraí de Minas',11),
     ('Igarapé',11),
     ('Igaratinga',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Iguatama',11),
     ('Ijaci',11),
     ('Ilicínea',11),
@@ -1885,7 +1885,7 @@ exports.up = pgm => {
     ('Ingaí',11),
     ('Inhapim',11),
     ('Inhaúma',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Inimutaba',11),
     ('Ipaba',11),
     ('Ipanema',11),
@@ -1896,7 +1896,7 @@ exports.up = pgm => {
     ('Itabira',11),
     ('Itabirinha de Mantena',11),
     ('Itabirito',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itacambira',11),
     ('Itacarambi',11),
     ('Itaguara',11),
@@ -1907,7 +1907,7 @@ exports.up = pgm => {
     ('Itambacuri',11),
     ('Itambé do Mato Dentro',11),
     ('Itamogi',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itamonte',11),
     ('Itanhandu',11),
     ('Itanhomi',11),
@@ -1918,7 +1918,7 @@ exports.up = pgm => {
     ('Itatiaiuçu',11),
     ('Itaú de Minas',11),
     ('Itaúna',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itaverava',11),
     ('Itinga',11),
     ('Itueta',11),
@@ -1929,7 +1929,7 @@ exports.up = pgm => {
     ('Jaboticatubas',11),
     ('Jacinto',11),
     ('Jacuí',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jacutinga',11),
     ('Jaguaraçu',11),
     ('Jaíba',11),
@@ -1940,7 +1940,7 @@ exports.up = pgm => {
     ('Japonvar',11),
     ('Jeceaba',11),
     ('Jenipapo de Minas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jequeri',11),
     ('Jequitaí',11),
     ('Jequitibá',11),
@@ -1951,7 +1951,7 @@ exports.up = pgm => {
     ('João Monlevade',11),
     ('João Pinheiro',11),
     ('Joaquim Felício',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jordânia',11),
     ('José Gonçalves de Minas',11),
     ('José Raydan',11),
@@ -1962,7 +1962,7 @@ exports.up = pgm => {
     ('Juruaia',11),
     ('Juvenília',11),
     ('Ladainha',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lagamar',11),
     ('Lagoa da Prata',11),
     ('Lagoa dos Patos',11),
@@ -1973,7 +1973,7 @@ exports.up = pgm => {
     ('Lajinha',11),
     ('Lambari',11),
     ('Lamim',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Laranjal',11),
     ('Lassance',11),
     ('Lavras',11),
@@ -1984,7 +1984,7 @@ exports.up = pgm => {
     ('Lima Duarte',11),
     ('Limeira do Oeste',11),
     ('Lontra',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Luisburgo',11),
     ('Luislândia',11),
     ('Luminárias',11),
@@ -1995,7 +1995,7 @@ exports.up = pgm => {
     ('Malacacheta',11),
     ('Mamonas',11),
     ('Manga',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Manhuaçu',11),
     ('Manhumirim',11),
     ('Mantena',11),
@@ -2006,7 +2006,7 @@ exports.up = pgm => {
     ('Marilac',11),
     ('Mário Campos',11),
     ('Maripá de Minas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Marliéria',11),
     ('Marmelópolis',11),
     ('Martinho Campos',11),
@@ -2017,7 +2017,7 @@ exports.up = pgm => {
     ('Mathias Lobato',11),
     ('Matias Barbosa',11),
     ('Matias Cardoso',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Matipó',11),
     ('Mato Verde',11),
     ('Matozinhos',11),
@@ -2028,7 +2028,7 @@ exports.up = pgm => {
     ('Mercês',11),
     ('Mesquita',11),
     ('Minas Novas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Minduri',11),
     ('Mirabela',11),
     ('Miradouro',11),
@@ -2039,7 +2039,7 @@ exports.up = pgm => {
     ('Monjolos',11),
     ('Monsenhor Paulo',11),
     ('Montalvânia',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Monte Alegre de Minas',11),
     ('Monte Azul',11),
     ('Monte Belo',11),
@@ -2050,7 +2050,7 @@ exports.up = pgm => {
     ('Montes Claros',11),
     ('Montezuma',11),
     ('Morada Nova de Minas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Morro da Garça',11),
     ('Morro do Pilar',11),
     ('Munhoz',11),
@@ -2061,7 +2061,7 @@ exports.up = pgm => {
     ('Nanuque',11),
     ('Naque',11),
     ('Natalândia',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Natércia',11),
     ('Nazareno',11),
     ('Nepomuceno',11),
@@ -2072,7 +2072,7 @@ exports.up = pgm => {
     ('Nova Módica',11),
     ('Nova Ponte',11),
     ('Nova Porteirinha',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Nova Resende',11),
     ('Nova Serrana',11),
     ('Nova União',11),
@@ -2083,7 +2083,7 @@ exports.up = pgm => {
     ('Olhos-d''Água',11),
     ('Olímpio Noronha',11),
     ('Oliveira',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Oliveira Fortes',11),
     ('Onça de Pitangui',11),
     ('Oratórios',11),
@@ -2094,7 +2094,7 @@ exports.up = pgm => {
     ('Ouro Verde de Minas',11),
     ('Padre Carvalho',11),
     ('Padre Paraíso',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pai Pedro',11),
     ('Paineiras',11),
     ('Pains',11),
@@ -2105,7 +2105,7 @@ exports.up = pgm => {
     ('Pará de Minas',11),
     ('Paracatu',11),
     ('Paraguaçu',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Paraisópolis',11),
     ('Paraopeba',11),
     ('Passa Quatro',11),
@@ -2116,7 +2116,7 @@ exports.up = pgm => {
     ('Patis',11),
     ('Patos de Minas',11),
     ('Patrocínio',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Patrocínio do Muriaé',11),
     ('Paula Cândido',11),
     ('Paulistas',11),
@@ -2127,7 +2127,7 @@ exports.up = pgm => {
     ('Pedra do Anta',11),
     ('Pedra do Indaiá',11),
     ('Pedra Dourada',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pedralva',11),
     ('Pedras de Maria da Cruz',11),
     ('Pedrinópolis',11),
@@ -2138,7 +2138,7 @@ exports.up = pgm => {
     ('Perdigão',11),
     ('Perdizes',11),
     ('Perdões',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Periquito',11),
     ('Pescador',11),
     ('Piau',11),
@@ -2149,7 +2149,7 @@ exports.up = pgm => {
     ('Pimenta',11),
     ('Pingo-d''Água',11),
     ('Pintópolis',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Piracema',11),
     ('Pirajuba',11),
     ('Piranga',11),
@@ -2160,7 +2160,7 @@ exports.up = pgm => {
     ('Piraúba',11),
     ('Pitangui',11),
     ('Piumhi',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Planura',11),
     ('Poço Fundo',11),
     ('Poços de Caldas',11),
@@ -2171,7 +2171,7 @@ exports.up = pgm => {
     ('Ponto dos Volantes',11),
     ('Porteirinha',11),
     ('Porto Firme',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Poté',11),
     ('Pouso Alegre',11),
     ('Pouso Alto',11),
@@ -2182,7 +2182,7 @@ exports.up = pgm => {
     ('Presidente Bernardes',11),
     ('Presidente Juscelino',11),
     ('Presidente Kubitschek',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Presidente Olegário',11),
     ('Prudente de Morais',11),
     ('Quartel Geral',11),
@@ -2193,7 +2193,7 @@ exports.up = pgm => {
     ('Reduto',11),
     ('Resende Costa',11),
     ('Resplendor',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ressaquinha',11),
     ('Riachinho',11),
     ('Riacho dos Machados',11),
@@ -2204,7 +2204,7 @@ exports.up = pgm => {
     ('Rio do Prado',11),
     ('Rio Doce',11),
     ('Rio Espera',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Rio Manso',11),
     ('Rio Novo',11),
     ('Rio Paranaíba',11),
@@ -2215,7 +2215,7 @@ exports.up = pgm => {
     ('Rio Vermelho',11),
     ('Ritápolis',11),
     ('Rochedo de Minas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Rodeiro',11),
     ('Romaria',11),
     ('Rosário da Limeira',11),
@@ -2226,7 +2226,7 @@ exports.up = pgm => {
     ('Sacramento',11),
     ('Salinas',11),
     ('Salto da Divisa',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Bárbara',11),
     ('Santa Bárbara do Leste',11),
     ('Santa Bárbara do Monte Verde',11),
@@ -2237,7 +2237,7 @@ exports.up = pgm => {
     ('Santa Efigênia de Minas',11),
     ('Santa Fé de Minas',11),
     ('Santa Helena de Minas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Juliana',11),
     ('Santa Luzia',11),
     ('Santa Margarida',11),
@@ -2248,7 +2248,7 @@ exports.up = pgm => {
     ('Santa Rita de Ibitipoca',11),
     ('Santa Rita de Jacutinga',11),
     ('Santa Rita de Minas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Rita do Itueto',11),
     ('Santa Rita do Sapucaí',11),
     ('Santa Rosa da Serra',11),
@@ -2259,7 +2259,7 @@ exports.up = pgm => {
     ('Santana do Deserto',11),
     ('Santana do Garambéu',11),
     ('Santana do Jacaré',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santana do Manhuaçu',11),
     ('Santana do Paraíso',11),
     ('Santana do Riacho',11),
@@ -2270,7 +2270,7 @@ exports.up = pgm => {
     ('Santo Antônio do Itambé',11),
     ('Santo Antônio do Jacinto',11),
     ('Santo Antônio do Monte',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santo Antônio do Retiro',11),
     ('Santo Antônio do Rio Abaixo',11),
     ('Santo Hipólito',11),
@@ -2281,7 +2281,7 @@ exports.up = pgm => {
     ('São Domingos do Prata',11),
     ('São Félix de Minas',11),
     ('São Francisco',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Francisco de Paula',11),
     ('São Francisco de Sales',11),
     ('São Francisco do Glória',11),
@@ -2292,7 +2292,7 @@ exports.up = pgm => {
     ('São Gonçalo do Pará',11),
     ('São Gonçalo do Rio Abaixo',11),
     ('São Gonçalo do Rio Preto',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Gonçalo do Sapucaí',11),
     ('São Gotardo',11),
     ('São João Batista do Glória',11),
@@ -2303,7 +2303,7 @@ exports.up = pgm => {
     ('São João del Rei',11),
     ('São João do Manhuaçu',11),
     ('São João do Manteninha',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São João do Oriente',11),
     ('São João do Pacuí',11),
     ('São João do Paraíso',11),
@@ -2314,7 +2314,7 @@ exports.up = pgm => {
     ('São José da Lapa',11),
     ('São José da Safira',11),
     ('São José da Varginha',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São José do Alegre',11),
     ('São José do Divino',11),
     ('São José do Goiabal',11),
@@ -2325,7 +2325,7 @@ exports.up = pgm => {
     ('São Pedro da União',11),
     ('São Pedro do Suaçuí',11),
     ('São Pedro dos Ferros',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Romão',11),
     ('São Roque de Minas',11),
     ('São Sebastião da Bela Vista',11),
@@ -2336,7 +2336,7 @@ exports.up = pgm => {
     ('São Sebastião do Paraíso',11),
     ('São Sebastião do Rio Preto',11),
     ('São Sebastião do Rio Verde',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Thomé das Letras',11),
     ('São Tiago',11),
     ('São Tomás de Aquino',11),
@@ -2347,7 +2347,7 @@ exports.up = pgm => {
     ('Sem-Peixe',11),
     ('Senador Amaral',11),
     ('Senador Cortes',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Senador Firmino',11),
     ('Senador José Bento',11),
     ('Senador Modestino Gonçalves',11),
@@ -2358,7 +2358,7 @@ exports.up = pgm => {
     ('Seritinga',11),
     ('Serra Azul de Minas',11),
     ('Serra da Saudade',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Serra do Salitre',11),
     ('Serra dos Aimorés',11),
     ('Serrania',11),
@@ -2369,7 +2369,7 @@ exports.up = pgm => {
     ('Setubinha',11),
     ('Silveirânia',11),
     ('Silvianópolis',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Simão Pereira',11),
     ('Simonésia',11),
     ('Sobrália',11),
@@ -2380,7 +2380,7 @@ exports.up = pgm => {
     ('Tapira',11),
     ('Tapiraí',11),
     ('Taquaraçu de Minas',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Tarumirim',11),
     ('Teixeiras',11),
     ('Teófilo Otoni',11),
@@ -2391,7 +2391,7 @@ exports.up = pgm => {
     ('Tocos do Moji',11),
     ('Toledo',11),
     ('Tombos',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Três Corações',11),
     ('Três Marias',11),
     ('Três Pontas',11),
@@ -2402,7 +2402,7 @@ exports.up = pgm => {
     ('Ubá',11),
     ('Ubaí',11),
     ('Ubaporanga',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Uberaba',11),
     ('Uberlândia',11),
     ('Umburatiba',11),
@@ -2413,7 +2413,7 @@ exports.up = pgm => {
     ('Urucuia',11),
     ('Vargem Alegre',11),
     ('Vargem Bonita',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Vargem Grande do Rio Pardo',11),
     ('Varginha',11),
     ('Varjão de Minas',11),
@@ -2424,7 +2424,7 @@ exports.up = pgm => {
     ('Veredinha',11),
     ('Veríssimo',11),
     ('Vermelho Novo',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Vespasiano',11),
     ('Viçosa',11),
     ('Vieiras',11),
@@ -2435,7 +2435,7 @@ exports.up = pgm => {
     ('Visconde do Rio Branco',11),
     ('Volta Grande',11),
     ('Wenceslau Braz',11);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Água Clara',12),
     ('Alcinópolis',12),
     ('Amambaí',12),
@@ -2446,7 +2446,7 @@ exports.up = pgm => {
     ('Aparecida do Taboado',12),
     ('Aquidauana',12),
     ('Aral Moreira',12);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bandeirantes',12),
     ('Bataguassu',12),
     ('Bataiporã',12),
@@ -2457,7 +2457,7 @@ exports.up = pgm => {
     ('Caarapó',12),
     ('Camapuã',12),
     ('Campo Grande',12);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Caracol',12),
     ('Cassilândia',12),
     ('Chapadão do Sul',12),
@@ -2468,7 +2468,7 @@ exports.up = pgm => {
     ('Coxim',12),
     ('Deodápolis',12),
     ('Dois Irmãos do Buriti',12);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Douradina',12),
     ('Dourados',12),
     ('Eldorado',12),
@@ -2479,7 +2479,7 @@ exports.up = pgm => {
     ('Inocência',12),
     ('Itaporã',12),
     ('Itaquiraí',12);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ivinhema',12),
     ('Japorã',12),
     ('Jaraguari',12),
@@ -2490,7 +2490,7 @@ exports.up = pgm => {
     ('Laguna Carapã',12),
     ('Maracaju',12),
     ('Miranda',12);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mundo Novo',12),
     ('Naviraí',12),
     ('Nioaque',12),
@@ -2501,7 +2501,7 @@ exports.up = pgm => {
     ('Paranhos',12),
     ('Pedro Gomes',12),
     ('Ponta Porã',12);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Porto Murtinho',12),
     ('Ribas do Rio Pardo',12),
     ('Rio Brilhante',12),
@@ -2512,7 +2512,7 @@ exports.up = pgm => {
     ('São Gabriel do Oeste',12),
     ('Selvíria',12),
     ('Sete Quedas',12);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Sidrolândia',12),
     ('Sonora',12),
     ('Tacuru',12),
@@ -2523,7 +2523,7 @@ exports.up = pgm => {
     ('Acorizal',13),
     ('Água Boa',13),
     ('Alta Floresta',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Alto Araguaia',13),
     ('Alto Boa Vista',13),
     ('Alto Garças',13),
@@ -2534,7 +2534,7 @@ exports.up = pgm => {
     ('Araguainha',13),
     ('Araputanga',13),
     ('Arenápolis',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Aripuanã',13),
     ('Barão de Melgaço',13),
     ('Barra do Bugres',13),
@@ -2545,7 +2545,7 @@ exports.up = pgm => {
     ('Campinápolis',13),
     ('Campo Novo do Parecis',13),
     ('Campo Verde',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Campos de Júlio',13),
     ('Canabrava do Norte',13),
     ('Canarana',13),
@@ -2556,7 +2556,7 @@ exports.up = pgm => {
     ('Cocalinho',13),
     ('Colíder',13),
     ('Colniza',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Comodoro',13),
     ('Confresa',13),
     ('Conquista d''Oeste',13),
@@ -2567,7 +2567,7 @@ exports.up = pgm => {
     ('Diamantino',13),
     ('Dom Aquino',13),
     ('Feliz Natal',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Figueirópolis d''Oeste',13),
     ('Gaúcha do Norte',13),
     ('General Carneiro',13),
@@ -2578,7 +2578,7 @@ exports.up = pgm => {
     ('Itaúba',13),
     ('Itiquira',13),
     ('Jaciara',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jangada',13),
     ('Jauru',13),
     ('Juara',13),
@@ -2589,7 +2589,7 @@ exports.up = pgm => {
     ('Lucas do Rio Verde',13),
     ('Luciára',13),
     ('Marcelândia',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Matupá',13),
     ('Mirassol d''Oeste',13),
     ('Nobres',13),
@@ -2600,7 +2600,7 @@ exports.up = pgm => {
     ('Nova Canãa do Norte',13),
     ('Nova Guarita',13),
     ('Nova Lacerda',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Nova Marilândia',13),
     ('Nova Maringá',13),
     ('Nova Monte Verde',13),
@@ -2611,7 +2611,7 @@ exports.up = pgm => {
     ('Nova Ubiratã',13),
     ('Nova Xavantina',13),
     ('Novo Horizonte do Norte',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Novo Mundo',13),
     ('Novo Santo Antônio',13),
     ('Novo São Joaquim',13),
@@ -2622,7 +2622,7 @@ exports.up = pgm => {
     ('Planalto da Serra',13),
     ('Poconé',13),
     ('Pontal do Araguaia',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ponte Branca',13),
     ('Pontes e Lacerda',13),
     ('Porto Alegre do Norte',13),
@@ -2633,7 +2633,7 @@ exports.up = pgm => {
     ('Primavera do Leste',13),
     ('Querência',13),
     ('Reserva do Cabaçal',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ribeirão Cascalheira',13),
     ('Ribeirãozinho',13),
     ('Rio Branco',13),
@@ -2644,7 +2644,7 @@ exports.up = pgm => {
     ('Santa Carmem',13),
     ('Santa Cruz do Xingu',13),
     ('Santa Rita do Trivelato',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Terezinha',13),
     ('Santo Afonso',13),
     ('Santo Antônio do Leste',13),
@@ -2655,7 +2655,7 @@ exports.up = pgm => {
     ('São José do Xingu',13),
     ('São José dos Quatro Marcos',13),
     ('São Pedro da Cipa',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Sapezal',13),
     ('Serra Nova Dourada',13),
     ('Sinop',13),
@@ -2666,7 +2666,7 @@ exports.up = pgm => {
     ('Terra Nova do Norte',13),
     ('Tesouro',13),
     ('Torixoréu',13);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('União do Sul',13),
     ('Vale de São Domingos',13),
     ('Várzea Grande',13),
@@ -2677,7 +2677,7 @@ exports.up = pgm => {
     ('Abel Figueiredo',14),
     ('Acará',14),
     ('Afuá',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Água Azul do Norte',14),
     ('Alenquer',14),
     ('Almeirim',14),
@@ -2688,7 +2688,7 @@ exports.up = pgm => {
     ('Augusto Corrêa',14),
     ('Aurora do Pará',14),
     ('Aveiro',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bagre',14),
     ('Baião',14),
     ('Bannach',14),
@@ -2699,7 +2699,7 @@ exports.up = pgm => {
     ('Bom Jesus do Tocantins',14),
     ('Bonito',14),
     ('Bragança',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Brasil Novo',14),
     ('Brejo Grande do Araguaia',14),
     ('Breu Branco',14),
@@ -2710,7 +2710,7 @@ exports.up = pgm => {
     ('Cametá',14),
     ('Canaã dos Carajás',14),
     ('Capanema',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Capitão Poço',14),
     ('Castanhal',14),
     ('Chaves',14),
@@ -2721,7 +2721,7 @@ exports.up = pgm => {
     ('Curionópolis',14),
     ('Curralinho',14),
     ('Curuá',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Curuçá',14),
     ('Dom Eliseu',14),
     ('Eldorado dos Carajás',14),
@@ -2732,7 +2732,7 @@ exports.up = pgm => {
     ('Gurupá',14),
     ('Igarapé-Açu',14),
     ('Igarapé-Miri',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Inhangapi',14),
     ('Ipixuna do Pará',14),
     ('Irituia',14),
@@ -2743,7 +2743,7 @@ exports.up = pgm => {
     ('Juruti',14),
     ('Limoeiro do Ajuru',14),
     ('Mãe do Rio',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Magalhães Barata',14),
     ('Marabá',14),
     ('Maracanã',14),
@@ -2754,7 +2754,7 @@ exports.up = pgm => {
     ('Mocajuba',14),
     ('Moju',14),
     ('Monte Alegre',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Muaná',14),
     ('Nova Esperança do Piriá',14),
     ('Nova Ipixuna',14),
@@ -2765,7 +2765,7 @@ exports.up = pgm => {
     ('Oeiras do Pará',14),
     ('Oriximiná',14),
     ('Ourém',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ourilândia do Norte',14),
     ('Pacajá',14),
     ('Palestina do Pará',14),
@@ -2776,7 +2776,7 @@ exports.up = pgm => {
     ('Piçarra',14),
     ('Placas',14),
     ('Ponta de Pedras',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Portel',14),
     ('Porto de Moz',14),
     ('Prainha',14),
@@ -2787,7 +2787,7 @@ exports.up = pgm => {
     ('Rondon do Pará',14),
     ('Rurópolis',14),
     ('Salinópolis',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Salvaterra',14),
     ('Santa Bárbara do Pará',14),
     ('Santa Cruz do Arari',14),
@@ -2798,7 +2798,7 @@ exports.up = pgm => {
     ('Santana do Araguaia',14),
     ('Santarém',14),
     ('Santarém Novo',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santo Antônio do Tauá',14),
     ('São Caetano de Odivela',14),
     ('São Domingos do Araguaia',14),
@@ -2809,7 +2809,7 @@ exports.up = pgm => {
     ('São João da Ponta',14),
     ('São João de Pirabas',14),
     ('São João do Araguaia',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Miguel do Guamá',14),
     ('São Sebastião da Boa Vista',14),
     ('Sapucaia',14),
@@ -2820,7 +2820,7 @@ exports.up = pgm => {
     ('Terra Santa',14),
     ('Tomé-Açu',14),
     ('Tracuateua',14);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Trairão',14),
     ('Tucumã',14),
     ('Tucuruí',14),
@@ -2831,7 +2831,7 @@ exports.up = pgm => {
     ('Vitória do Xingu',14),
     ('Xinguara',14),
     ('Água Branca',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Aguiar',15),
     ('Alagoa Grande',15),
     ('Alagoa Nova',15),
@@ -2842,7 +2842,7 @@ exports.up = pgm => {
     ('Amparo',15),
     ('Aparecida',15),
     ('Araçagi',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Arara',15),
     ('Araruna',15),
     ('Areia',15),
@@ -2853,7 +2853,7 @@ exports.up = pgm => {
     ('Baía da Traição',15),
     ('Bananeiras',15),
     ('Baraúna',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Barra de Santa Rosa',15),
     ('Barra de Santana',15),
     ('Barra de São Miguel',15),
@@ -2864,7 +2864,7 @@ exports.up = pgm => {
     ('Boa Ventura',15),
     ('Boa Vista',15),
     ('Bom Jesus',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bom Sucesso',15),
     ('Bonito de Santa Fé',15),
     ('Boqueirão',15),
@@ -2875,7 +2875,7 @@ exports.up = pgm => {
     ('Cabaceiras',15),
     ('Cabedelo',15),
     ('Cachoeira dos Índios',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cacimba de Areia',15),
     ('Cacimba de Dentro',15),
     ('Cacimbas',15),
@@ -2886,7 +2886,7 @@ exports.up = pgm => {
     ('Camalaú',15),
     ('Campina Grande',15),
     ('Campo de Santana',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Capim',15),
     ('Caraúbas',15),
     ('Carrapateira',15),
@@ -2897,7 +2897,7 @@ exports.up = pgm => {
     ('Conceição',15),
     ('Condado',15),
     ('Conde',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Congo',15),
     ('Coremas',15),
     ('Coxixola',15),
@@ -2908,7 +2908,7 @@ exports.up = pgm => {
     ('Cuitegi',15),
     ('Curral de Cima',15),
     ('Curral Velho',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Damião',15),
     ('Desterro',15),
     ('Diamante',15),
@@ -2919,7 +2919,7 @@ exports.up = pgm => {
     ('Fagundes',15),
     ('Frei Martinho',15),
     ('Gado Bravo',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Guarabira',15),
     ('Gurinhém',15),
     ('Gurjão',15),
@@ -2930,7 +2930,7 @@ exports.up = pgm => {
     ('Itabaiana',15),
     ('Itaporanga',15),
     ('Itapororoca',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itatuba',15),
     ('Jacaraú',15),
     ('Jericó',15),
@@ -2941,7 +2941,7 @@ exports.up = pgm => {
     ('Juripiranga',15),
     ('Juru',15),
     ('Lagoa',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lagoa de Dentro',15),
     ('Lagoa Seca',15),
     ('Lastro',15),
@@ -2952,7 +2952,7 @@ exports.up = pgm => {
     ('Malta',15),
     ('Mamanguape',15),
     ('Manaíra',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Marcação',15),
     ('Mari',15),
     ('Marizópolis',15),
@@ -2963,7 +2963,7 @@ exports.up = pgm => {
     ('Maturéia',15),
     ('Mogeiro',15),
     ('Montadas',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Monte Horebe',15),
     ('Monteiro',15),
     ('Mulungu',15),
@@ -2974,7 +2974,7 @@ exports.up = pgm => {
     ('Nova Palmeira',15),
     ('Olho d''Água',15),
     ('Olivedos',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ouro Velho',15),
     ('Parari',15),
     ('Passagem',15),
@@ -2985,7 +2985,7 @@ exports.up = pgm => {
     ('Pedras de Fogo',15),
     ('Pedro Régis',15),
     ('Piancó',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Picuí',15),
     ('Pilar',15),
     ('Pilões',15),
@@ -2996,7 +2996,7 @@ exports.up = pgm => {
     ('Poço Dantas',15),
     ('Poço de José de Moura',15),
     ('Pombal',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Prata',15),
     ('Princesa Isabel',15),
     ('Puxinanã',15),
@@ -3007,7 +3007,7 @@ exports.up = pgm => {
     ('Riachão do Bacamarte',15),
     ('Riachão do Poço',15),
     ('Riacho de Santo Antônio',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Riacho dos Cavalos',15),
     ('Rio Tinto',15),
     ('Salgadinho',15),
@@ -3018,7 +3018,7 @@ exports.up = pgm => {
     ('Santa Inês',15),
     ('Santa Luzia',15),
     ('Santa Rita',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Teresinha',15),
     ('Santana de Mangueira',15),
     ('Santana dos Garrotes',15),
@@ -3029,7 +3029,7 @@ exports.up = pgm => {
     ('São Domingos de Pombal',15),
     ('São Domingos do Cariri',15),
     ('São Francisco',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São João do Cariri',15),
     ('São João do Rio do Peixe',15),
     ('São João do Tigre',15),
@@ -3040,7 +3040,7 @@ exports.up = pgm => {
     ('São José de Princesa',15),
     ('São José do Bonfim',15),
     ('São José do Brejo do Cruz',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São José do Sabugi',15),
     ('São José dos Cordeiros',15),
     ('São José dos Ramos',15),
@@ -3051,7 +3051,7 @@ exports.up = pgm => {
     ('Sapé',15),
     ('Seridó',15),
     ('Serra Branca',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Serra da Raiz',15),
     ('Serra Grande',15),
     ('Serra Redonda',15),
@@ -3062,7 +3062,7 @@ exports.up = pgm => {
     ('Soledade',15),
     ('Sossêgo',15),
     ('Sousa',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Sumé',15),
     ('Taperoá',15),
     ('Tavares',15),
@@ -3073,7 +3073,7 @@ exports.up = pgm => {
     ('Umbuzeiro',15),
     ('Várzea',15),
     ('Vieirópolis',15);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Vista Serrana',15),
     ('Zabelê',15),
     ('Abreu e Lima',16),
@@ -3084,7 +3084,7 @@ exports.up = pgm => {
     ('Águas Belas',16),
     ('Alagoinha',16),
     ('Aliança',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Altinho',16),
     ('Amaraji',16),
     ('Angelim',16),
@@ -3095,7 +3095,7 @@ exports.up = pgm => {
     ('Barreiros',16),
     ('Belém de Maria',16),
     ('Belém de São Francisco',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Belo Jardim',16),
     ('Betânia',16),
     ('Bezerros',16),
@@ -3106,7 +3106,7 @@ exports.up = pgm => {
     ('Brejão',16),
     ('Brejinho',16),
     ('Brejo da Madre de Deus',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Buenos Aires',16),
     ('Buíque',16),
     ('Cabo de Santo Agostinho',16),
@@ -3117,7 +3117,7 @@ exports.up = pgm => {
     ('Calumbi',16),
     ('Camaragibe',16),
     ('Camocim de São Félix',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Camutanga',16),
     ('Canhotinho',16),
     ('Capoeiras',16),
@@ -3128,7 +3128,7 @@ exports.up = pgm => {
     ('Casinhas',16),
     ('Catende',16),
     ('Cedro',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Chã de Alegria',16),
     ('Chã Grande',16),
     ('Condado',16),
@@ -3139,7 +3139,7 @@ exports.up = pgm => {
     ('Custódia',16),
     ('Dormentes',16),
     ('Escada',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Exu',16),
     ('Feira Nova',16),
     ('Fernando de Noronha',16),
@@ -3150,7 +3150,7 @@ exports.up = pgm => {
     ('Gameleira',16),
     ('Garanhuns',16),
     ('Glória do Goitá',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Goiana',16),
     ('Granito',16),
     ('Gravatá',16),
@@ -3161,7 +3161,7 @@ exports.up = pgm => {
     ('Iguaraci',16),
     ('Inajá',16),
     ('Ingazeira',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ipojuca',16),
     ('Ipubi',16),
     ('Itacuruba',16),
@@ -3172,7 +3172,7 @@ exports.up = pgm => {
     ('Itapissuma',16),
     ('Itaquitinga',16),
     ('Jaboatão dos Guararapes',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jaqueira',16),
     ('Jataúba',16),
     ('Jatobá',16),
@@ -3183,7 +3183,7 @@ exports.up = pgm => {
     ('Jurema',16),
     ('Lagoa do Carro',16),
     ('Lagoa do Itaenga',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lagoa do Ouro',16),
     ('Lagoa dos Gatos',16),
     ('Lagoa Grande',16),
@@ -3194,7 +3194,7 @@ exports.up = pgm => {
     ('Manari',16),
     ('Maraial',16),
     ('Mirandiba',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Moreilândia',16),
     ('Moreno',16),
     ('Nazaré da Mata',16),
@@ -3205,7 +3205,7 @@ exports.up = pgm => {
     ('Palmares',16),
     ('Palmeirina',16),
     ('Panelas',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Paranatama',16),
     ('Parnamirim',16),
     ('Passira',16),
@@ -3216,7 +3216,7 @@ exports.up = pgm => {
     ('Petrolândia',16),
     ('Petrolina',16),
     ('Poção',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pombos',16),
     ('Primavera',16),
     ('Quipapá',16),
@@ -3227,7 +3227,7 @@ exports.up = pgm => {
     ('Rio Formoso',16),
     ('Sairé',16),
     ('Salgadinho',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Salgueiro',16),
     ('Saloá',16),
     ('Sanharó',16),
@@ -3238,7 +3238,7 @@ exports.up = pgm => {
     ('Santa Maria da Boa Vista',16),
     ('Santa Maria do Cambucá',16),
     ('Santa Terezinha',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Benedito do Sul',16),
     ('São Bento do Una',16),
     ('São Caitano',16),
@@ -3249,7 +3249,7 @@ exports.up = pgm => {
     ('São José do Egito',16),
     ('São Lourenço da Mata',16),
     ('São Vicente Ferrer',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Serra Talhada',16),
     ('Serrita',16),
     ('Sertânia',16),
@@ -3260,7 +3260,7 @@ exports.up = pgm => {
     ('Tacaimbó',16),
     ('Tacaratu',16),
     ('Tamandaré',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Taquaritinga do Norte',16),
     ('Terezinha',16),
     ('Terra Nova',16),
@@ -3271,7 +3271,7 @@ exports.up = pgm => {
     ('Triunfo',16),
     ('Tupanatinga',16),
     ('Tuparetama',16);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Venturosa',16),
     ('Verdejante',16),
     ('Vertente do Lério',16),
@@ -3282,7 +3282,7 @@ exports.up = pgm => {
     ('Acauã',17),
     ('Agricolândia',17),
     ('Água Branca',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Alagoinha do Piauí',17),
     ('Alegrete do Piauí',17),
     ('Alto Longá',17),
@@ -3293,7 +3293,7 @@ exports.up = pgm => {
     ('Anísio de Abreu',17),
     ('Antônio Almeida',17),
     ('Aroazes',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Arraial',17),
     ('Assunção do Piauí',17),
     ('Avelino Lopes',17),
@@ -3304,7 +3304,7 @@ exports.up = pgm => {
     ('Barro Duro',17),
     ('Batalha',17),
     ('Bela Vista do Piauí',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Belém do Piauí',17),
     ('Beneditinos',17),
     ('Bertolínia',17),
@@ -3315,7 +3315,7 @@ exports.up = pgm => {
     ('Bom Princípio do Piauí',17),
     ('Bonfim do Piauí',17),
     ('Boqueirão do Piauí',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Brasileira',17),
     ('Brejo do Piauí',17),
     ('Buriti dos Lopes',17),
@@ -3326,7 +3326,7 @@ exports.up = pgm => {
     ('Caldeirão Grande do Piauí',17),
     ('Campinas do Piauí',17),
     ('Campo Alegre do Fidalgo',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Campo Grande do Piauí',17),
     ('Campo Largo do Piauí',17),
     ('Campo Maior',17),
@@ -3337,7 +3337,7 @@ exports.up = pgm => {
     ('Caracol',17),
     ('Caraúbas do Piauí',17),
     ('Caridade do Piauí',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Castelo do Piauí',17),
     ('Caxingó',17),
     ('Cocal',17),
@@ -3348,7 +3348,7 @@ exports.up = pgm => {
     ('Colônia do Piauí',17),
     ('Conceição do Canindé',17),
     ('Coronel José Dias',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Corrente',17),
     ('Cristalândia do Piauí',17),
     ('Cristino Castro',17),
@@ -3359,7 +3359,7 @@ exports.up = pgm => {
     ('Demerval Lobão',17),
     ('Dirceu Arcoverde',17),
     ('Dom Expedito Lopes',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Dom Inocêncio',17),
     ('Domingos Mourão',17),
     ('Elesbão Veloso',17),
@@ -3370,7 +3370,7 @@ exports.up = pgm => {
     ('Floresta do Piauí',17),
     ('Floriano',17),
     ('Francinópolis',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Francisco Ayres',17),
     ('Francisco Macedo',17),
     ('Francisco Santos',17),
@@ -3381,7 +3381,7 @@ exports.up = pgm => {
     ('Guaribas',17),
     ('Hugo Napoleão',17),
     ('Ilha Grande',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Inhuma',17),
     ('Ipiranga do Piauí',17),
     ('Isaías Coelho',17),
@@ -3392,7 +3392,7 @@ exports.up = pgm => {
     ('Jardim do Mulato',17),
     ('Jatobá do Piauí',17),
     ('Jerumenha',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('João Costa',17),
     ('Joaquim Pires',17),
     ('Joca Marques',17),
@@ -3403,7 +3403,7 @@ exports.up = pgm => {
     ('Lagoa Alegre',17),
     ('Lagoa de São Francisco',17),
     ('Lagoa do Barro do Piauí',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lagoa do Piauí',17),
     ('Lagoa do Sítio',17),
     ('Lagoinha do Piauí',17),
@@ -3414,7 +3414,7 @@ exports.up = pgm => {
     ('Manoel Emídio',17),
     ('Marcolândia',17),
     ('Marcos Parente',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Massapê do Piauí',17),
     ('Matias Olímpio',17),
     ('Miguel Alves',17),
@@ -3425,7 +3425,7 @@ exports.up = pgm => {
     ('Monte Alegre do Piauí',17),
     ('Morro Cabeça no Tempo',17),
     ('Morro do Chapéu do Piauí',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Murici dos Portelas',17),
     ('Nazaré do Piauí',17),
     ('Nossa Senhora de Nazaré',17),
@@ -3436,7 +3436,7 @@ exports.up = pgm => {
     ('Oeiras',17),
     ('Olho d''Água do Piauí',17),
     ('Padre Marcos',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Paes Landim',17),
     ('Pajeú do Piauí',17),
     ('Palmeira do Piauí',17),
@@ -3447,7 +3447,7 @@ exports.up = pgm => {
     ('Passagem Franca do Piauí',17),
     ('Patos do Piauí',17),
     ('Pau d''Arco do Piauí',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Paulistana',17),
     ('Pavussu',17),
     ('Pedro II',17),
@@ -3458,7 +3458,7 @@ exports.up = pgm => {
     ('Piracuruca',17),
     ('Piripiri',17),
     ('Porto',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Porto Alegre do Piauí',17),
     ('Prata do Piauí',17),
     ('Queimada Nova',17),
@@ -3469,7 +3469,7 @@ exports.up = pgm => {
     ('Ribeiro Gonçalves',17),
     ('Rio Grande do Piauí',17),
     ('Santa Cruz do Piauí',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Cruz dos Milagres',17),
     ('Santa Filomena',17),
     ('Santa Luz',17),
@@ -3480,7 +3480,7 @@ exports.up = pgm => {
     ('Santo Inácio do Piauí',17),
     ('São Braz do Piauí',17),
     ('São Félix do Piauí',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Francisco de Assis do Piauí',17),
     ('São Francisco do Piauí',17),
     ('São Gonçalo do Gurguéia',17),
@@ -3491,7 +3491,7 @@ exports.up = pgm => {
     ('São João da Varjota',17),
     ('São João do Arraial',17),
     ('São João do Piauí',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São José do Divino',17),
     ('São José do Peixe',17),
     ('São José do Piauí',17),
@@ -3502,7 +3502,7 @@ exports.up = pgm => {
     ('São Miguel do Fidalgo',17),
     ('São Miguel do Tapuio',17),
     ('São Pedro do Piauí',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Raimundo Nonato',17),
     ('Sebastião Barros',17),
     ('Sebastião Leal',17),
@@ -3513,7 +3513,7 @@ exports.up = pgm => {
     ('Sussuapara',17),
     ('Tamboril do Piauí',17),
     ('Tanque do Piauí',17);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Teresina',17),
     ('União',17),
     ('Uruçuí',17),
@@ -3524,7 +3524,7 @@ exports.up = pgm => {
     ('Vila Nova do Piauí',17),
     ('Wall Ferraz',17),
     ('Abatiá',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Adrianópolis',18),
     ('Agudos do Sul',18),
     ('Almirante Tamandaré',18),
@@ -3535,7 +3535,7 @@ exports.up = pgm => {
     ('Alvorada do Sul',18),
     ('Amaporã',18),
     ('Ampére',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Anahy',18),
     ('Andirá',18),
     ('Ângulo',18),
@@ -3546,7 +3546,7 @@ exports.up = pgm => {
     ('Arapoti',18),
     ('Arapuã',18),
     ('Araruna',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Araucária',18),
     ('Ariranha do Ivaí',18),
     ('Assaí',18),
@@ -3557,7 +3557,7 @@ exports.up = pgm => {
     ('Bandeirantes',18),
     ('Barbosa Ferraz',18),
     ('Barra do Jacaré',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Barracão',18),
     ('Bela Vista da Caroba',18),
     ('Bela Vista do Paraíso',18),
@@ -3568,7 +3568,7 @@ exports.up = pgm => {
     ('Boa Vista da Aparecida',18),
     ('Bocaiúva do Sul',18),
     ('Bom Jesus do Sul',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bom Sucesso',18),
     ('Bom Sucesso do Sul',18),
     ('Borrazópolis',18),
@@ -3579,7 +3579,7 @@ exports.up = pgm => {
     ('Cafezal do Sul',18),
     ('Califórnia',18),
     ('Cambará',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cambé',18),
     ('Cambira',18),
     ('Campina da Lagoa',18),
@@ -3590,7 +3590,7 @@ exports.up = pgm => {
     ('Campo Largo',18),
     ('Campo Magro',18),
     ('Campo Mourão',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cândido de Abreu',18),
     ('Candói',18),
     ('Cantagalo',18),
@@ -3601,7 +3601,7 @@ exports.up = pgm => {
     ('Cascavel',18),
     ('Castro',18),
     ('Catanduvas',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Centenário do Sul',18),
     ('Cerro Azul',18),
     ('Céu Azul',18),
@@ -3612,7 +3612,7 @@ exports.up = pgm => {
     ('Colombo',18),
     ('Colorado',18),
     ('Congonhinhas',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Conselheiro Mairinck',18),
     ('Contenda',18),
     ('Corbélia',18),
@@ -3623,7 +3623,7 @@ exports.up = pgm => {
     ('Cruz Machado',18),
     ('Cruzeiro do Iguaçu',18),
     ('Cruzeiro do Oeste',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cruzeiro do Sul',18),
     ('Cruzmaltina',18),
     ('Curitiba',18),
@@ -3634,7 +3634,7 @@ exports.up = pgm => {
     ('Dois Vizinhos',18),
     ('Douradina',18),
     ('Doutor Camargo',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Doutor Ulysses',18),
     ('Enéas Marques',18),
     ('Engenheiro Beltrão',18),
@@ -3645,7 +3645,7 @@ exports.up = pgm => {
     ('Faxinal',18),
     ('Fazenda Rio Grande',18),
     ('Fênix',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Fernandes Pinheiro',18),
     ('Figueira',18),
     ('Flor da Serra do Sul',18),
@@ -3656,7 +3656,7 @@ exports.up = pgm => {
     ('Formosa do Oeste',18),
     ('Foz do Iguaçu',18),
     ('Foz do Jordão',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Francisco Alves',18),
     ('Francisco Beltrão',18),
     ('General Carneiro',18),
@@ -3667,7 +3667,7 @@ exports.up = pgm => {
     ('Guaíra',18),
     ('Guairaçá',18),
     ('Guamiranga',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Guapirama',18),
     ('Guaporema',18),
     ('Guaraci',18),
@@ -3678,7 +3678,7 @@ exports.up = pgm => {
     ('Honório Serpa',18),
     ('Ibaiti',18),
     ('Ibema',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ibiporã',18),
     ('Icaraíma',18),
     ('Iguaraçu',18),
@@ -3689,7 +3689,7 @@ exports.up = pgm => {
     ('Inajá',18),
     ('Indianópolis',18),
     ('Ipiranga',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Iporã',18),
     ('Iracema do Oeste',18),
     ('Irati',18),
@@ -3700,7 +3700,7 @@ exports.up = pgm => {
     ('Itambé',18),
     ('Itapejara d''Oeste',18),
     ('Itaperuçu',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itaúna do Sul',18),
     ('Ivaí',18),
     ('Ivaiporã',18),
@@ -3711,7 +3711,7 @@ exports.up = pgm => {
     ('Jaguapitã',18),
     ('Jaguariaíva',18),
     ('Jandaia do Sul',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Janiópolis',18),
     ('Japira',18),
     ('Japurá',18),
@@ -3722,7 +3722,7 @@ exports.up = pgm => {
     ('Joaquim Távora',18),
     ('Jundiaí do Sul',18),
     ('Juranda',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jussara',18),
     ('Kaloré',18),
     ('Lapa',18),
@@ -3733,7 +3733,7 @@ exports.up = pgm => {
     ('Lindoeste',18),
     ('Loanda',18),
     ('Lobato',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Londrina',18),
     ('Luiziana',18),
     ('Lunardelli',18),
@@ -3744,7 +3744,7 @@ exports.up = pgm => {
     ('Mandaguari',18),
     ('Mandirituba',18),
     ('Manfrinópolis',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mangueirinha',18),
     ('Manoel Ribas',18),
     ('Marechal Cândido Rondon',18),
@@ -3755,7 +3755,7 @@ exports.up = pgm => {
     ('Mariluz',18),
     ('Maringá',18),
     ('Mariópolis',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Maripá',18),
     ('Marmeleiro',18),
     ('Marquinho',18),
@@ -3766,7 +3766,7 @@ exports.up = pgm => {
     ('Mauá da Serra',18),
     ('Medianeira',18),
     ('Mercedes',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mirador',18),
     ('Miraselva',18),
     ('Missal',18),
@@ -3777,7 +3777,7 @@ exports.up = pgm => {
     ('Nova Aliança do Ivaí',18),
     ('Nova América da Colina',18),
     ('Nova Aurora',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Nova Cantu',18),
     ('Nova Esperança',18),
     ('Nova Esperança do Sudoeste',18),
@@ -3788,7 +3788,7 @@ exports.up = pgm => {
     ('Nova Prata do Iguaçu',18),
     ('Nova Santa Bárbara',18),
     ('Nova Santa Rosa',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Nova Tebas',18),
     ('Novo Itacolomi',18),
     ('Ortigueira',18),
@@ -3799,7 +3799,7 @@ exports.up = pgm => {
     ('Palmeira',18),
     ('Palmital',18),
     ('Palotina',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Paraíso do Norte',18),
     ('Paranacity',18),
     ('Paranaguá',18),
@@ -3810,7 +3810,7 @@ exports.up = pgm => {
     ('Paula Freitas',18),
     ('Paulo Frontin',18),
     ('Peabiru',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Perobal',18),
     ('Pérola',18),
     ('Pérola d''Oeste',18),
@@ -3821,7 +3821,7 @@ exports.up = pgm => {
     ('Pinhão',18),
     ('Piraí do Sul',18),
     ('Piraquara',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pitanga',18),
     ('Pitangueiras',18),
     ('Planaltina do Paraná',18),
@@ -3832,7 +3832,7 @@ exports.up = pgm => {
     ('Porto Amazonas',18),
     ('Porto Barreiro',18),
     ('Porto Rico',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Porto Vitória',18),
     ('Prado Ferreira',18),
     ('Pranchita',18),
@@ -3843,7 +3843,7 @@ exports.up = pgm => {
     ('Quatiguá',18),
     ('Quatro Barras',18),
     ('Quatro Pontes',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Quedas do Iguaçu',18),
     ('Querência do Norte',18),
     ('Quinta do Sol',18),
@@ -3854,7 +3854,7 @@ exports.up = pgm => {
     ('Realeza',18),
     ('Rebouças',18),
     ('Renascença',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Reserva',18),
     ('Reserva do Iguaçu',18),
     ('Ribeirão Claro',18),
@@ -3865,7 +3865,7 @@ exports.up = pgm => {
     ('Rio Branco do Ivaí',18),
     ('Rio Branco do Sul',18),
     ('Rio Negro',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Rolândia',18),
     ('Roncador',18),
     ('Rondon',18),
@@ -3876,7 +3876,7 @@ exports.up = pgm => {
     ('Salto do Lontra',18),
     ('Santa Amélia',18),
     ('Santa Cecília do Pavão',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Cruz Monte Castelo',18),
     ('Santa Fé',18),
     ('Santa Helena',18),
@@ -3887,7 +3887,7 @@ exports.up = pgm => {
     ('Santa Maria do Oeste',18),
     ('Santa Mariana',18),
     ('Santa Mônica',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Tereza do Oeste',18),
     ('Santa Terezinha de Itaipu',18),
     ('Santana do Itararé',18),
@@ -3898,7 +3898,7 @@ exports.up = pgm => {
     ('Santo Inácio',18),
     ('São Carlos do Ivaí',18),
     ('São Jerônimo da Serra',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São João',18),
     ('São João do Caiuá',18),
     ('São João do Ivaí',18),
@@ -3909,7 +3909,7 @@ exports.up = pgm => {
     ('São José da Boa Vista',18),
     ('São José das Palmeiras',18),
     ('São José dos Pinhais',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Manoel do Paraná',18),
     ('São Mateus do Sul',18),
     ('São Miguel do Iguaçu',18),
@@ -3920,7 +3920,7 @@ exports.up = pgm => {
     ('São Tomé',18),
     ('Sapopema',18),
     ('Sarandi',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Saudade do Iguaçu',18),
     ('Sengés',18),
     ('Serranópolis do Iguaçu',18),
@@ -3931,7 +3931,7 @@ exports.up = pgm => {
     ('Tamarana',18),
     ('Tamboara',18),
     ('Tapejara',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Tapira',18),
     ('Teixeira Soares',18),
     ('Telêmaco Borba',18),
@@ -3942,7 +3942,7 @@ exports.up = pgm => {
     ('Tijucas do Sul',18),
     ('Toledo',18),
     ('Tomazina',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Três Barras do Paraná',18),
     ('Tunas do Paraná',18),
     ('Tuneiras do Oeste',18),
@@ -3953,7 +3953,7 @@ exports.up = pgm => {
     ('União da Vitória',18),
     ('Uniflor',18),
     ('Uraí',18);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ventania',18),
     ('Vera Cruz do Oeste',18),
     ('Verê',18),
@@ -3964,7 +3964,7 @@ exports.up = pgm => {
     ('Xambrê',18),
     ('Angra dos Reis',19),
     ('Aperibé',19);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Araruama',19),
     ('Areal',19),
     ('Armação de Búzios',19),
@@ -3975,7 +3975,7 @@ exports.up = pgm => {
     ('Bom Jardim',19),
     ('Bom Jesus do Itabapoana',19),
     ('Cabo Frio',19);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cachoeiras de Macacu',19),
     ('Cambuci',19),
     ('Campos dos Goytacazes',19),
@@ -3986,7 +3986,7 @@ exports.up = pgm => {
     ('Casimiro de Abreu',19),
     ('Comendador Levy Gasparian',19),
     ('Conceição de Macabu',19);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cordeiro',19),
     ('Duas Barras',19),
     ('Duque de Caxias',19),
@@ -3997,7 +3997,7 @@ exports.up = pgm => {
     ('Itaguaí',19),
     ('Italva',19),
     ('Itaocara',19);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itaperuna',19),
     ('Itatiaia',19),
     ('Japeri',19),
@@ -4008,7 +4008,7 @@ exports.up = pgm => {
     ('Mangaratiba',19),
     ('Maricá',19),
     ('Mendes',19);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mesquita',19),
     ('Miguel Pereira',19),
     ('Miracema',19),
@@ -4019,7 +4019,7 @@ exports.up = pgm => {
     ('Nova Iguaçu',19),
     ('Paracambi',19),
     ('Paraíba do Sul',19);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Parati',19),
     ('Paty do Alferes',19),
     ('Petrópolis',19),
@@ -4030,7 +4030,7 @@ exports.up = pgm => {
     ('Quatis',19),
     ('Queimados',19),
     ('Quissamã',19);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Resende',19),
     ('Rio Bonito',19),
     ('Rio Claro',19),
@@ -4041,7 +4041,7 @@ exports.up = pgm => {
     ('Santo Antônio de Pádua',19),
     ('São Fidélis',19),
     ('São Francisco de Itabapoana',19);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Gonçalo',19),
     ('São João da Barra',19),
     ('São João de Meriti',19),
@@ -4052,7 +4052,7 @@ exports.up = pgm => {
     ('Sapucaia',19),
     ('Saquarema',19),
     ('Seropédica',19);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Silva Jardim',19),
     ('Sumidouro',19),
     ('Tanguá',19),
@@ -4063,7 +4063,7 @@ exports.up = pgm => {
     ('Varre-Sai',19),
     ('Vassouras',19),
     ('Volta Redonda',19);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Acari',20),
     ('Açu',20),
     ('Afonso Bezerra',20),
@@ -4074,7 +4074,7 @@ exports.up = pgm => {
     ('Angicos',20),
     ('Antônio Martins',20),
     ('Apodi',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Areia Branca',20),
     ('Arês',20),
     ('Augusto Severo',20),
@@ -4085,7 +4085,7 @@ exports.up = pgm => {
     ('Bodó',20),
     ('Bom Jesus',20),
     ('Brejinho',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Caiçara do Norte',20),
     ('Caiçara do Rio do Vento',20),
     ('Caicó',20),
@@ -4096,7 +4096,7 @@ exports.up = pgm => {
     ('Carnaubais',20),
     ('Ceará-Mirim',20),
     ('Cerro Corá',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Coronel Ezequiel',20),
     ('Coronel João Pessoa',20),
     ('Cruzeta',20),
@@ -4107,7 +4107,7 @@ exports.up = pgm => {
     ('Espírito Santo',20),
     ('Extremoz',20),
     ('Felipe Guerra',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Fernando Pedroza',20),
     ('Florânia',20),
     ('Francisco Dantas',20),
@@ -4118,7 +4118,7 @@ exports.up = pgm => {
     ('Grossos',20),
     ('Guamaré',20),
     ('Ielmo Marinho',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ipanguaçu',20),
     ('Ipueira',20),
     ('Itajá',20),
@@ -4129,7 +4129,7 @@ exports.up = pgm => {
     ('Januário Cicco',20),
     ('Japi',20),
     ('Jardim de Angicos',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jardim de Piranhas',20),
     ('Jardim do Seridó',20),
     ('João Câmara',20),
@@ -4140,7 +4140,7 @@ exports.up = pgm => {
     ('Lagoa d''Anta',20),
     ('Lagoa de Pedras',20),
     ('Lagoa de Velhos',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lagoa Nova',20),
     ('Lagoa Salgada',20),
     ('Lajes',20),
@@ -4151,7 +4151,7 @@ exports.up = pgm => {
     ('Macau',20),
     ('Major Sales',20),
     ('Marcelino Vieira',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Martins',20),
     ('Maxaranguape',20),
     ('Messias Targino',20),
@@ -4162,7 +4162,7 @@ exports.up = pgm => {
     ('Natal',20),
     ('Nísia Floresta',20),
     ('Nova Cruz',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Olho-d''Água do Borges',20),
     ('Ouro Branco',20),
     ('Paraná',20),
@@ -4173,7 +4173,7 @@ exports.up = pgm => {
     ('Passa e Fica',20),
     ('Passagem',20),
     ('Patu',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pau dos Ferros',20),
     ('Pedra Grande',20),
     ('Pedra Preta',20),
@@ -4184,7 +4184,7 @@ exports.up = pgm => {
     ('Poço Branco',20),
     ('Portalegre',20),
     ('Porto do Mangue',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Presidente Juscelino',20),
     ('Pureza',20),
     ('Rafael Fernandes',20),
@@ -4195,7 +4195,7 @@ exports.up = pgm => {
     ('Rio do Fogo',20),
     ('Rodolfo Fernandes',20),
     ('Ruy Barbosa',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Cruz',20),
     ('Santa Maria',20),
     ('Santana do Matos',20),
@@ -4206,7 +4206,7 @@ exports.up = pgm => {
     ('São Fernando',20),
     ('São Francisco do Oeste',20),
     ('São Gonçalo do Amarante',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São João do Sabugi',20),
     ('São José de Mipibu',20),
     ('São José do Campestre',20),
@@ -4217,7 +4217,7 @@ exports.up = pgm => {
     ('São Pedro',20),
     ('São Rafael',20),
     ('São Tomé',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Vicente',20),
     ('Senador Elói de Souza',20),
     ('Senador Georgino Avelino',20),
@@ -4228,7 +4228,7 @@ exports.up = pgm => {
     ('Serrinha dos Pintos',20),
     ('Severiano Melo',20),
     ('Sítio Novo',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Taboleiro Grande',20),
     ('Taipu',20),
     ('Tangará',20),
@@ -4239,7 +4239,7 @@ exports.up = pgm => {
     ('Timbaúba dos Batistas',20),
     ('Touros',20),
     ('Triunfo Potiguar',20);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Umarizal',20),
     ('Upanema',20),
     ('Várzea',20),
@@ -4250,7 +4250,7 @@ exports.up = pgm => {
     ('Alta Floresta d''Oeste',21),
     ('Alto Alegre do Parecis',21),
     ('Alto Paraíso',21);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Alvorada d''Oeste',21),
     ('Ariquemes',21),
     ('Buritis',21),
@@ -4261,7 +4261,7 @@ exports.up = pgm => {
     ('Candeias do Jamari',21),
     ('Castanheiras',21),
     ('Cerejeiras',21);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Chupinguaia',21),
     ('Colorado do Oeste',21),
     ('Corumbiara',21),
@@ -4272,7 +4272,7 @@ exports.up = pgm => {
     ('Guajará-Mirim',21),
     ('Itapuã do Oeste',21),
     ('Jaru',21);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ji-Paraná',21),
     ('Machadinho d''Oeste',21),
     ('Ministro Andreazza',21),
@@ -4283,7 +4283,7 @@ exports.up = pgm => {
     ('Nova União',21),
     ('Novo Horizonte do Oeste',21),
     ('Ouro Preto do Oeste',21);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Parecis',21),
     ('Pimenta Bueno',21),
     ('Pimenteiras do Oeste',21),
@@ -4294,7 +4294,7 @@ exports.up = pgm => {
     ('Rolim de Moura',21),
     ('Santa Luzia d''Oeste',21),
     ('São Felipe d''Oeste',21);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Francisco do Guaporé',21),
     ('São Miguel do Guaporé',21),
     ('Seringueiras',21),
@@ -4305,7 +4305,7 @@ exports.up = pgm => {
     ('Vale do Paraíso',21),
     ('Vilhena',21),
     ('Alto Alegre',22);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Amajari',22),
     ('Boa Vista',22),
     ('Bonfim',22),
@@ -4316,7 +4316,7 @@ exports.up = pgm => {
     ('Mucajaí',22),
     ('Normandia',22),
     ('Pacaraima',22);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Rorainópolis',22),
     ('São João da Baliza',22),
     ('São Luiz',22),
@@ -4327,7 +4327,7 @@ exports.up = pgm => {
     ('Ajuricaba',23),
     ('Alecrim',23),
     ('Alegrete',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Alegria',23),
     ('Almirante Tamandaré do Sul',23),
     ('Alpestre',23),
@@ -4338,7 +4338,7 @@ exports.up = pgm => {
     ('Ametista do Sul',23),
     ('André da Rocha',23),
     ('Anta Gorda',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Antônio Prado',23),
     ('Arambaré',23),
     ('Araricá',23),
@@ -4349,7 +4349,7 @@ exports.up = pgm => {
     ('Arroio do Tigre',23),
     ('Arroio dos Ratos',23),
     ('Arroio Grande',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Arvorezinha',23),
     ('Augusto Pestana',23),
     ('Áurea',23),
@@ -4360,7 +4360,7 @@ exports.up = pgm => {
     ('Barão do Triunfo',23),
     ('Barra do Guarita',23),
     ('Barra do Quaraí',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Barra do Ribeiro',23),
     ('Barra do Rio Azul',23),
     ('Barra Funda',23),
@@ -4371,7 +4371,7 @@ exports.up = pgm => {
     ('Boa Vista das Missões',23),
     ('Boa Vista do Buricá',23),
     ('Boa Vista do Cadeado',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Boa Vista do Incra',23),
     ('Boa Vista do Sul',23),
     ('Bom Jesus',23),
@@ -4382,7 +4382,7 @@ exports.up = pgm => {
     ('Bossoroca',23),
     ('Bozano',23),
     ('Braga',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Brochier',23),
     ('Butiá',23),
     ('Caçapava do Sul',23),
@@ -4393,7 +4393,7 @@ exports.up = pgm => {
     ('Caibaté',23),
     ('Caiçara',23),
     ('Camaquã',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Camargo',23),
     ('Cambará do Sul',23),
     ('Campestre da Serra',23),
@@ -4404,7 +4404,7 @@ exports.up = pgm => {
     ('Campos Borges',23),
     ('Candelária',23),
     ('Cândido Godói',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Candiota',23),
     ('Canela',23),
     ('Canguçu',23),
@@ -4415,7 +4415,7 @@ exports.up = pgm => {
     ('Capão do Cipó',23),
     ('Capão do Leão',23),
     ('Capela de Santana',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Capitão',23),
     ('Capivari do Sul',23),
     ('Caraá',23),
@@ -4426,7 +4426,7 @@ exports.up = pgm => {
     ('Caseiros',23),
     ('Catuípe',23),
     ('Caxias do Sul',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Centenário',23),
     ('Cerrito',23),
     ('Cerro Branco',23),
@@ -4437,7 +4437,7 @@ exports.up = pgm => {
     ('Charqueadas',23),
     ('Charrua',23),
     ('Chiapeta',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Chuí',23),
     ('Chuvisca',23),
     ('Cidreira',23),
@@ -4448,7 +4448,7 @@ exports.up = pgm => {
     ('Constantina',23),
     ('Coqueiro Baixo',23),
     ('Coqueiros do Sul',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Coronel Barros',23),
     ('Coronel Bicaco',23),
     ('Coronel Pilar',23),
@@ -4459,7 +4459,7 @@ exports.up = pgm => {
     ('Cristal do Sul',23),
     ('Cruz Alta',23),
     ('Cruzaltense',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cruzeiro do Sul',23),
     ('David Canabarro',23),
     ('Derrubadas',23),
@@ -4470,7 +4470,7 @@ exports.up = pgm => {
     ('Dois Lajeados',23),
     ('Dom Feliciano',23),
     ('Dom Pedrito',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Dom Pedro de Alcântara',23),
     ('Dona Francisca',23),
     ('Doutor Maurício Cardoso',23),
@@ -4481,7 +4481,7 @@ exports.up = pgm => {
     ('Engenho Velho',23),
     ('Entre Rios do Sul',23),
     ('Entre-Ijuís',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Erebango',23),
     ('Erechim',23),
     ('Ernestina',23),
@@ -4492,7 +4492,7 @@ exports.up = pgm => {
     ('Espumoso',23),
     ('Estação',23),
     ('Estância Velha',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Esteio',23),
     ('Estrela',23),
     ('Estrela Velha',23),
@@ -4503,7 +4503,7 @@ exports.up = pgm => {
     ('Faxinalzinho',23),
     ('Fazenda Vilanova',23),
     ('Feliz',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Flores da Cunha',23),
     ('Floriano Peixoto',23),
     ('Fontoura Xavier',23),
@@ -4514,7 +4514,7 @@ exports.up = pgm => {
     ('Garibaldi',23),
     ('Garruchos',23),
     ('Gaurama',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('General Câmara',23),
     ('Gentil',23),
     ('Getúlio Vargas',23),
@@ -4525,7 +4525,7 @@ exports.up = pgm => {
     ('Gramado Xavier',23),
     ('Gravataí',23),
     ('Guabiju',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Guaíba',23),
     ('Guaporé',23),
     ('Guarani das Missões',23),
@@ -4536,7 +4536,7 @@ exports.up = pgm => {
     ('Hulha Negra',23),
     ('Humaitá',23),
     ('Ibarama',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ibiaçá',23),
     ('Ibiraiaras',23),
     ('Ibirapuitã',23),
@@ -4547,7 +4547,7 @@ exports.up = pgm => {
     ('Imbé',23),
     ('Imigrante',23),
     ('Independência',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Inhacorá',23),
     ('Ipê',23),
     ('Ipiranga do Sul',23),
@@ -4558,7 +4558,7 @@ exports.up = pgm => {
     ('Itaqui',23),
     ('Itati',23),
     ('Itatiba do Sul',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ivorá',23),
     ('Ivoti',23),
     ('Jaboticaba',23),
@@ -4569,7 +4569,7 @@ exports.up = pgm => {
     ('Jaquirana',23),
     ('Jari',23),
     ('Jóia',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Júlio de Castilhos',23),
     ('Lagoa Bonita do Sul',23),
     ('Lagoa dos Três Cantos',23),
@@ -4580,7 +4580,7 @@ exports.up = pgm => {
     ('Lavras do Sul',23),
     ('Liberato Salzano',23),
     ('Lindolfo Collor',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Linha Nova',23),
     ('Maçambara',23),
     ('Machadinho',23),
@@ -4591,7 +4591,7 @@ exports.up = pgm => {
     ('Marau',23),
     ('Marcelino Ramos',23),
     ('Mariana Pimentel',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mariano Moro',23),
     ('Marques de Souza',23),
     ('Mata',23),
@@ -4602,7 +4602,7 @@ exports.up = pgm => {
     ('Minas do Leão',23),
     ('Miraguaí',23),
     ('Montauri',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Monte Alegre dos Campos',23),
     ('Monte Belo do Sul',23),
     ('Montenegro',23),
@@ -4613,7 +4613,7 @@ exports.up = pgm => {
     ('Mostardas',23),
     ('Muçum',23),
     ('Muitos Capões',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Muliterno',23),
     ('Não-Me-Toque',23),
     ('Nicolau Vergueiro',23),
@@ -4624,7 +4624,7 @@ exports.up = pgm => {
     ('Nova Boa Vista',23),
     ('Nova Bréscia',23),
     ('Nova Candelária',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Nova Esperança do Sul',23),
     ('Nova Hartz',23),
     ('Nova Pádua',23),
@@ -4635,7 +4635,7 @@ exports.up = pgm => {
     ('Nova Roma do Sul',23),
     ('Nova Santa Rita',23),
     ('Novo Barreiro',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Novo Cabrais',23),
     ('Novo Hamburgo',23),
     ('Novo Machado',23),
@@ -4646,7 +4646,7 @@ exports.up = pgm => {
     ('Palmares do Sul',23),
     ('Palmeira das Missões',23),
     ('Palmitinho',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Panambi',23),
     ('Pântano Grande',23),
     ('Paraí',23),
@@ -4657,7 +4657,7 @@ exports.up = pgm => {
     ('Passo do Sobrado',23),
     ('Passo Fundo',23),
     ('Paulo Bento',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Paverama',23),
     ('Pedras Altas',23),
     ('Pedro Osório',23),
@@ -4668,7 +4668,7 @@ exports.up = pgm => {
     ('Pinhal da Serra',23),
     ('Pinhal Grande',23),
     ('Pinheirinho do Vale',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pinheiro Machado',23),
     ('Pirapó',23),
     ('Piratini',23),
@@ -4679,7 +4679,7 @@ exports.up = pgm => {
     ('Portão',23),
     ('Porto Alegre',23),
     ('Porto Lucena',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Porto Mauá',23),
     ('Porto Vera Cruz',23),
     ('Porto Xavier',23),
@@ -4690,7 +4690,7 @@ exports.up = pgm => {
     ('Putinga',23),
     ('Quaraí',23),
     ('Quatro Irmãos',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Quevedos',23),
     ('Quinze de Novembro',23),
     ('Redentora',23),
@@ -4701,7 +4701,7 @@ exports.up = pgm => {
     ('Rio Pardo',23),
     ('Riozinho',23),
     ('Roca Sales',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Rodeio Bonito',23),
     ('Rolador',23),
     ('Rolante',23),
@@ -4712,7 +4712,7 @@ exports.up = pgm => {
     ('Sagrada Família',23),
     ('Saldanha Marinho',23),
     ('Salto do Jacuí',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Salvador das Missões',23),
     ('Salvador do Sul',23),
     ('Sananduva',23),
@@ -4723,7 +4723,7 @@ exports.up = pgm => {
     ('Santa Margarida do Sul',23),
     ('Santa Maria',23),
     ('Santa Maria do Herval',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Rosa',23),
     ('Santa Tereza',23),
     ('Santa Vitória do Palmar',23),
@@ -4734,7 +4734,7 @@ exports.up = pgm => {
     ('Santo Antônio da Patrulha',23),
     ('Santo Antônio das Missões',23),
     ('Santo Antônio do Palma',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santo Antônio do Planalto',23),
     ('Santo Augusto',23),
     ('Santo Cristo',23),
@@ -4745,7 +4745,7 @@ exports.up = pgm => {
     ('São Francisco de Paula',23),
     ('São Gabriel',23),
     ('São Jerônimo',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São João da Urtiga',23),
     ('São João do Polêsine',23),
     ('São Jorge',23),
@@ -4756,7 +4756,7 @@ exports.up = pgm => {
     ('São José do Norte',23),
     ('São José do Ouro',23),
     ('São José do Sul',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São José dos Ausentes',23),
     ('São Leopoldo',23),
     ('São Lourenço do Sul',23),
@@ -4767,7 +4767,7 @@ exports.up = pgm => {
     ('São Miguel das Missões',23),
     ('São Nicolau',23),
     ('São Paulo das Missões',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Pedro da Serra',23),
     ('São Pedro das Missões',23),
     ('São Pedro do Butiá',23),
@@ -4778,7 +4778,7 @@ exports.up = pgm => {
     ('São Valentim do Sul',23),
     ('São Valério do Sul',23),
     ('São Vendelino',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Vicente do Sul',23),
     ('Sapiranga',23),
     ('Sapucaia do Sul',23),
@@ -4789,7 +4789,7 @@ exports.up = pgm => {
     ('Selbach',23),
     ('Senador Salgado Filho',23),
     ('Sentinela do Sul',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Serafina Corrêa',23),
     ('Sério',23),
     ('Sertão',23),
@@ -4800,7 +4800,7 @@ exports.up = pgm => {
     ('Sinimbu',23),
     ('Sobradinho',23),
     ('Soledade',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Tabaí',23),
     ('Tapejara',23),
     ('Tapera',23),
@@ -4811,7 +4811,7 @@ exports.up = pgm => {
     ('Tavares',23),
     ('Tenente Portela',23),
     ('Terra de Areia',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Teutônia',23),
     ('Tio Hugo',23),
     ('Tiradentes do Sul',23),
@@ -4822,7 +4822,7 @@ exports.up = pgm => {
     ('Três Arroios',23),
     ('Três Cachoeiras',23),
     ('Três Coroas',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Três de Maio',23),
     ('Três Forquilhas',23),
     ('Três Palmeiras',23),
@@ -4833,7 +4833,7 @@ exports.up = pgm => {
     ('Tunas',23),
     ('Tupanci do Sul',23),
     ('Tupanciretã',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Tupandi',23),
     ('Tuparendi',23),
     ('Turuçu',23),
@@ -4844,7 +4844,7 @@ exports.up = pgm => {
     ('Vacaria',23),
     ('Vale do Sol',23),
     ('Vale Real',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Vale Verde',23),
     ('Vanini',23),
     ('Venâncio Aires',23),
@@ -4855,7 +4855,7 @@ exports.up = pgm => {
     ('Viamão',23),
     ('Vicente Dutra',23),
     ('Victor Graeff',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Vila Flores',23),
     ('Vila Lângaro',23),
     ('Vila Maria',23),
@@ -4866,7 +4866,7 @@ exports.up = pgm => {
     ('Vitória das Missões',23),
     ('Westfália',23),
     ('Xangri-lá',23);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Abdon Batista',24),
     ('Abelardo Luz',24),
     ('Agrolândia',24),
@@ -4877,7 +4877,7 @@ exports.up = pgm => {
     ('Águas Mornas',24),
     ('Alfredo Wagner',24),
     ('Alto Bela Vista',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Anchieta',24),
     ('Angelina',24),
     ('Anita Garibaldi',24),
@@ -4888,7 +4888,7 @@ exports.up = pgm => {
     ('Araquari',24),
     ('Araranguá',24),
     ('Armazém',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Arroio Trinta',24),
     ('Arvoredo',24),
     ('Ascurra',24),
@@ -4899,7 +4899,7 @@ exports.up = pgm => {
     ('Balneário Camboriú',24),
     ('Balneário Gaivota',24),
     ('Bandeirante',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Barra Bonita',24),
     ('Barra Velha',24),
     ('Bela Vista do Toldo',24),
@@ -4910,7 +4910,7 @@ exports.up = pgm => {
     ('Bocaina do Sul',24),
     ('Bom Jardim da Serra',24),
     ('Bom Jesus',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bom Jesus do Oeste',24),
     ('Bom Retiro',24),
     ('Bombinhas',24),
@@ -4921,7 +4921,7 @@ exports.up = pgm => {
     ('Brusque',24),
     ('Caçador',24),
     ('Caibi',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Calmon',24),
     ('Camboriú',24),
     ('Campo Alegre',24),
@@ -4932,7 +4932,7 @@ exports.up = pgm => {
     ('Canoinhas',24),
     ('Capão Alto',24),
     ('Capinzal',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Capivari de Baixo',24),
     ('Catanduvas',24),
     ('Caxambu do Sul',24),
@@ -4943,7 +4943,7 @@ exports.up = pgm => {
     ('Cocal do Sul',24),
     ('Concórdia',24),
     ('Cordilheira Alta',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Coronel Freitas',24),
     ('Coronel Martins',24),
     ('Correia Pinto',24),
@@ -4954,7 +4954,7 @@ exports.up = pgm => {
     ('Curitibanos',24),
     ('Descanso',24),
     ('Dionísio Cerqueira',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Dona Emma',24),
     ('Doutor Pedrinho',24),
     ('Entre Rios',24),
@@ -4965,7 +4965,7 @@ exports.up = pgm => {
     ('Florianópolis',24),
     ('Formosa do Sul',24),
     ('Forquilhinha',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Fraiburgo',24),
     ('Frei Rogério',24),
     ('Galvão',24),
@@ -4976,7 +4976,7 @@ exports.up = pgm => {
     ('Grão Pará',24),
     ('Gravatal',24),
     ('Guabiruba',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Guaraciaba',24),
     ('Guaramirim',24),
     ('Guarujá do Sul',24),
@@ -4987,7 +4987,7 @@ exports.up = pgm => {
     ('Ibirama',24),
     ('Içara',24),
     ('Ilhota',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Imaruí',24),
     ('Imbituba',24),
     ('Imbuia',24),
@@ -4998,7 +4998,7 @@ exports.up = pgm => {
     ('Ipuaçu',24),
     ('Ipumirim',24),
     ('Iraceminha',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Irani',24),
     ('Irati',24),
     ('Irineópolis',24),
@@ -5009,7 +5009,7 @@ exports.up = pgm => {
     ('Itapiranga',24),
     ('Itapoá',24),
     ('Ituporanga',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jaborá',24),
     ('Jacinto Machado',24),
     ('Jaguaruna',24),
@@ -5020,7 +5020,7 @@ exports.up = pgm => {
     ('José Boiteux',24),
     ('Jupiá',24),
     ('Lacerdópolis',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lages',24),
     ('Laguna',24),
     ('Lajeado Grande',24),
@@ -5031,7 +5031,7 @@ exports.up = pgm => {
     ('Lindóia do Sul',24),
     ('Lontras',24),
     ('Luiz Alves',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Luzerna',24),
     ('Macieira',24),
     ('Mafra',24),
@@ -5042,7 +5042,7 @@ exports.up = pgm => {
     ('Marema',24),
     ('Massaranduba',24),
     ('Matos Costa',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Meleiro',24),
     ('Mirim Doce',24),
     ('Modelo',24),
@@ -5053,7 +5053,7 @@ exports.up = pgm => {
     ('Morro Grande',24),
     ('Navegantes',24),
     ('Nova Erechim',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Nova Itaberaba',24),
     ('Nova Trento',24),
     ('Nova Veneza',24),
@@ -5064,7 +5064,7 @@ exports.up = pgm => {
     ('Ouro Verde',24),
     ('Paial',24),
     ('Painel',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Palhoça',24),
     ('Palma Sola',24),
     ('Palmeira',24),
@@ -5075,7 +5075,7 @@ exports.up = pgm => {
     ('Passos Maia',24),
     ('Paulo Lopes',24),
     ('Pedras Grandes',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Penha',24),
     ('Peritiba',24),
     ('Petrolândia',24),
@@ -5086,7 +5086,7 @@ exports.up = pgm => {
     ('Planalto Alegre',24),
     ('Pomerode',24),
     ('Ponte Alta',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ponte Alta do Norte',24),
     ('Ponte Serrada',24),
     ('Porto Belo',24),
@@ -5097,7 +5097,7 @@ exports.up = pgm => {
     ('Presidente Getúlio',24),
     ('Presidente Nereu',24),
     ('Princesa',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Quilombo',24),
     ('Rancho Queimado',24),
     ('Rio das Antas',24),
@@ -5108,7 +5108,7 @@ exports.up = pgm => {
     ('Rio Fortuna',24),
     ('Rio Negrinho',24),
     ('Rio Rufino',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Riqueza',24),
     ('Rodeio',24),
     ('Romelândia',24),
@@ -5119,7 +5119,7 @@ exports.up = pgm => {
     ('Santa Cecília',24),
     ('Santa Helena',24),
     ('Santa Rosa de Lima',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Rosa do Sul',24),
     ('Santa Terezinha',24),
     ('Santa Terezinha do Progresso',24),
@@ -5130,7 +5130,7 @@ exports.up = pgm => {
     ('São Bonifácio',24),
     ('São Carlos',24),
     ('São Cristovão do Sul',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Domingos',24),
     ('São Francisco do Sul',24),
     ('São João Batista',24),
@@ -5141,7 +5141,7 @@ exports.up = pgm => {
     ('São José',24),
     ('São José do Cedro',24),
     ('São José do Cerrito',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Lourenço do Oeste',24),
     ('São Ludgero',24),
     ('São Martinho',24),
@@ -5152,7 +5152,7 @@ exports.up = pgm => {
     ('Schroeder',24),
     ('Seara',24),
     ('Serra Alta',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Siderópolis',24),
     ('Sombrio',24),
     ('Sul Brasil',24),
@@ -5163,7 +5163,7 @@ exports.up = pgm => {
     ('Timbé do Sul',24),
     ('Timbó',24),
     ('Timbó Grande',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Três Barras',24),
     ('Treviso',24),
     ('Treze de Maio',24),
@@ -5174,7 +5174,7 @@ exports.up = pgm => {
     ('Turvo',24),
     ('União do Oeste',24),
     ('Urubici',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Urupema',24),
     ('Urussanga',24),
     ('Vargeão',24),
@@ -5185,7 +5185,7 @@ exports.up = pgm => {
     ('Vitor Meireles',24),
     ('Witmarsum',24),
     ('Xanxerê',24);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Xavantina',24),
     ('Xaxim',24),
     ('Zortéa',24),
@@ -5196,7 +5196,7 @@ exports.up = pgm => {
     ('Areia Branca',25),
     ('Barra dos Coqueiros',25),
     ('Boquim',25);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Brejo Grande',25),
     ('Campo do Brito',25),
     ('Canhoba',25),
@@ -5207,7 +5207,7 @@ exports.up = pgm => {
     ('Cedro de São João',25),
     ('Cristinápolis',25),
     ('Cumbe',25);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Divina Pastora',25),
     ('Estância',25),
     ('Feira Nova',25),
@@ -5218,7 +5218,7 @@ exports.up = pgm => {
     ('Ilha das Flores',25),
     ('Indiaroba',25),
     ('Itabaiana',25);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itabaianinha',25),
     ('Itabi',25),
     ('Itaporanga d''Ajuda',25),
@@ -5229,7 +5229,7 @@ exports.up = pgm => {
     ('Macambira',25),
     ('Malhada dos Bois',25),
     ('Malhador',25);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Maruim',25),
     ('Moita Bonita',25),
     ('Monte Alegre de Sergipe',25),
@@ -5240,7 +5240,7 @@ exports.up = pgm => {
     ('Nossa Senhora das Dores',25),
     ('Nossa Senhora de Lourdes',25),
     ('Nossa Senhora do Socorro',25);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pacatuba',25),
     ('Pedra Mole',25),
     ('Pedrinhas',25),
@@ -5251,7 +5251,7 @@ exports.up = pgm => {
     ('Porto da Folha',25),
     ('Propriá',25),
     ('Riachão do Dantas',25);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Riachuelo',25),
     ('Ribeirópolis',25),
     ('Rosário do Catete',25),
@@ -5262,7 +5262,7 @@ exports.up = pgm => {
     ('Santo Amaro das Brotas',25),
     ('São Cristóvão',25),
     ('São Domingos',25);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Francisco',25),
     ('São Miguel do Aleixo',25),
     ('Simão Dias',25),
@@ -5273,7 +5273,7 @@ exports.up = pgm => {
     ('Umbaúba',25),
     ('Adamantina',26),
     ('Adolfo',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Aguaí',26),
     ('Águas da Prata',26),
     ('Águas de Lindóia',26),
@@ -5284,7 +5284,7 @@ exports.up = pgm => {
     ('Alfredo Marcondes',26),
     ('Altair',26),
     ('Altinópolis',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Alto Alegre',26),
     ('Alumínio',26),
     ('Álvares Florence',26),
@@ -5295,7 +5295,7 @@ exports.up = pgm => {
     ('Américo Brasiliense',26),
     ('Américo de Campos',26),
     ('Amparo',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Analândia',26),
     ('Andradina',26),
     ('Angatuba',26),
@@ -5306,7 +5306,7 @@ exports.up = pgm => {
     ('Apiaí',26),
     ('Araçariguama',26),
     ('Araçatuba',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Araçoiaba da Serra',26),
     ('Aramina',26),
     ('Arandu',26),
@@ -5317,7 +5317,7 @@ exports.up = pgm => {
     ('Arealva',26),
     ('Areias',26),
     ('Areiópolis',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ariranha',26),
     ('Artur Nogueira',26),
     ('Arujá',26),
@@ -5328,7 +5328,7 @@ exports.up = pgm => {
     ('Avaí',26),
     ('Avanhandava',26),
     ('Avaré',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bady Bassitt',26),
     ('Balbinos',26),
     ('Bálsamo',26),
@@ -5339,7 +5339,7 @@ exports.up = pgm => {
     ('Barra Bonita',26),
     ('Barra do Chapéu',26),
     ('Barra do Turvo',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Barretos',26),
     ('Barrinha',26),
     ('Barueri',26),
@@ -5350,7 +5350,7 @@ exports.up = pgm => {
     ('Bento de Abreu',26),
     ('Bernardino de Campos',26),
     ('Bertioga',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Bilac',26),
     ('Birigui',26),
     ('Biritiba-Mirim',26),
@@ -5361,7 +5361,7 @@ exports.up = pgm => {
     ('Bom Jesus dos Perdões',26),
     ('Bom Sucesso de Itararé',26),
     ('Borá',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Boracéia',26),
     ('Borborema',26),
     ('Borebi',26),
@@ -5372,7 +5372,7 @@ exports.up = pgm => {
     ('Brodowski',26),
     ('Brotas',26),
     ('Buri',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Buritama',26),
     ('Buritizal',26),
     ('Cabrália Paulista',26),
@@ -5383,7 +5383,7 @@ exports.up = pgm => {
     ('Cafelândia',26),
     ('Caiabu',26),
     ('Caieiras',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Caiuá',26),
     ('Cajamar',26),
     ('Cajati',26),
@@ -5394,7 +5394,7 @@ exports.up = pgm => {
     ('Campo Limpo Paulista',26),
     ('Campos do Jordão',26),
     ('Campos Novos Paulista',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cananéia',26),
     ('Canas',26),
     ('Cândido Mota',26),
@@ -5405,7 +5405,7 @@ exports.up = pgm => {
     ('Capivari',26),
     ('Caraguatatuba',26),
     ('Carapicuíba',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Cardoso',26),
     ('Casa Branca',26),
     ('Cássia dos Coqueiros',26),
@@ -5416,7 +5416,7 @@ exports.up = pgm => {
     ('Cerqueira César',26),
     ('Cerquilho',26),
     ('Cesário Lange',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Charqueada',26),
     ('Chavantes',26),
     ('Clementina',26),
@@ -5427,7 +5427,7 @@ exports.up = pgm => {
     ('Cordeirópolis',26),
     ('Coroados',26),
     ('Coronel Macedo',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Corumbataí',26),
     ('Cosmópolis',26),
     ('Cosmorama',26),
@@ -5438,7 +5438,7 @@ exports.up = pgm => {
     ('Cruzeiro',26),
     ('Cubatão',26),
     ('Cunha',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Descalvado',26),
     ('Diadema',26),
     ('Dirce Reis',26),
@@ -5449,7 +5449,7 @@ exports.up = pgm => {
     ('Dourado',26),
     ('Dracena',26),
     ('Duartina',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Dumont',26),
     ('Echaporã',26),
     ('Eldorado',26),
@@ -5460,7 +5460,7 @@ exports.up = pgm => {
     ('Embu-Guaçu',26),
     ('Emilianópolis',26),
     ('Engenheiro Coelho',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Espírito Santo do Pinhal',26),
     ('Espírito Santo do Turvo',26),
     ('Estiva Gerbi',26),
@@ -5471,7 +5471,7 @@ exports.up = pgm => {
     ('Fernando Prestes',26),
     ('Fernandópolis',26),
     ('Fernão',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ferraz de Vasconcelos',26),
     ('Flora Rica',26),
     ('Floreal',26),
@@ -5482,7 +5482,7 @@ exports.up = pgm => {
     ('Franco da Rocha',26),
     ('Gabriel Monteiro',26),
     ('Gália',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Garça',26),
     ('Gastão Vidigal',26),
     ('Gavião Peixoto',26),
@@ -5493,7 +5493,7 @@ exports.up = pgm => {
     ('Guaimbê',26),
     ('Guaíra',26),
     ('Guapiaçu',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Guapiara',26),
     ('Guará',26),
     ('Guaraçaí',26),
@@ -5504,7 +5504,7 @@ exports.up = pgm => {
     ('Guararema',26),
     ('Guaratinguetá',26),
     ('Guareí',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Guariba',26),
     ('Guarujá',26),
     ('Guarulhos',26),
@@ -5515,7 +5515,7 @@ exports.up = pgm => {
     ('Hortolândia',26),
     ('Iacanga',26),
     ('Iacri',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Iaras',26),
     ('Ibaté',26),
     ('Ibirá',26),
@@ -5526,7 +5526,7 @@ exports.up = pgm => {
     ('Iepê',26),
     ('Igaraçu do Tietê',26),
     ('Igarapava',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Igaratá',26),
     ('Iguape',26),
     ('Ilha Comprida',26),
@@ -5537,7 +5537,7 @@ exports.up = pgm => {
     ('Indiaporã',26),
     ('Inúbia Paulista',26),
     ('Ipauçu',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Iperó',26),
     ('Ipeúna',26),
     ('Ipiguá',26),
@@ -5548,7 +5548,7 @@ exports.up = pgm => {
     ('Irapuru',26),
     ('Itaberá',26),
     ('Itaí',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itajobi',26),
     ('Itaju',26),
     ('Itanhaém',26),
@@ -5559,7 +5559,7 @@ exports.up = pgm => {
     ('Itapevi',26),
     ('Itapira',26),
     ('Itapirapuã Paulista',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itápolis',26),
     ('Itaporanga',26),
     ('Itapuí',26),
@@ -5570,7 +5570,7 @@ exports.up = pgm => {
     ('Itatiba',26),
     ('Itatinga',26),
     ('Itirapina',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Itirapuã',26),
     ('Itobi',26),
     ('Itu',26),
@@ -5581,7 +5581,7 @@ exports.up = pgm => {
     ('Jacareí',26),
     ('Jaci',26),
     ('Jacupiranga',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Jaguariúna',26),
     ('Jales',26),
     ('Jambeiro',26),
@@ -5592,7 +5592,7 @@ exports.up = pgm => {
     ('Jeriquara',26),
     ('Joanópolis',26),
     ('João Ramalho',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('José Bonifácio',26),
     ('Júlio Mesquita',26),
     ('Jumirim',26),
@@ -5603,7 +5603,7 @@ exports.up = pgm => {
     ('Lagoinha',26),
     ('Laranjal Paulista',26),
     ('Lavínia',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lavrinhas',26),
     ('Leme',26),
     ('Lençóis Paulista',26),
@@ -5614,7 +5614,7 @@ exports.up = pgm => {
     ('Lourdes',26),
     ('Louveira',26),
     ('Lucélia',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lucianópolis',26),
     ('Luís Antônio',26),
     ('Luiziânia',26),
@@ -5625,7 +5625,7 @@ exports.up = pgm => {
     ('Macedônia',26),
     ('Magda',26),
     ('Mairinque',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mairiporã',26),
     ('Manduri',26),
     ('Marabá Paulista',26),
@@ -5636,7 +5636,7 @@ exports.up = pgm => {
     ('Marinópolis',26),
     ('Martinópolis',26),
     ('Matão',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mauá',26),
     ('Mendonça',26),
     ('Meridiano',26),
@@ -5647,7 +5647,7 @@ exports.up = pgm => {
     ('Miracatu',26),
     ('Mirandópolis',26),
     ('Mirante do Paranapanema',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Mirassol',26),
     ('Mirassolândia',26),
     ('Mococa',26),
@@ -5658,7 +5658,7 @@ exports.up = pgm => {
     ('Monções',26),
     ('Mongaguá',26),
     ('Monte Alegre do Sul',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Monte Alto',26),
     ('Monte Aprazível',26),
     ('Monte Azul Paulista',26),
@@ -5669,7 +5669,7 @@ exports.up = pgm => {
     ('Morungaba',26),
     ('Motuca',26),
     ('Murutinga do Sul',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Nantes',26),
     ('Narandiba',26),
     ('Natividade da Serra',26),
@@ -5680,7 +5680,7 @@ exports.up = pgm => {
     ('Nova Aliança',26),
     ('Nova Campina',26),
     ('Nova Canaã Paulista',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Nova Castilho',26),
     ('Nova Europa',26),
     ('Nova Granada',26),
@@ -5691,7 +5691,7 @@ exports.up = pgm => {
     ('Novais',26),
     ('Novo Horizonte',26),
     ('Nuporanga',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ocauçu',26),
     ('Óleo',26),
     ('Olímpia',26),
@@ -5702,7 +5702,7 @@ exports.up = pgm => {
     ('Osasco',26),
     ('Oscar Bressane',26),
     ('Osvaldo Cruz',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ourinhos',26),
     ('Ouro Verde',26),
     ('Ouroeste',26),
@@ -5713,7 +5713,7 @@ exports.up = pgm => {
     ('Palmital',26),
     ('Panorama',26),
     ('Paraguaçu Paulista',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Paraibuna',26),
     ('Paraíso',26),
     ('Paranapanema',26),
@@ -5724,7 +5724,7 @@ exports.up = pgm => {
     ('Parisi',26),
     ('Patrocínio Paulista',26),
     ('Paulicéia',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Paulínia',26),
     ('Paulistânia',26),
     ('Paulo de Faria',26),
@@ -5735,7 +5735,7 @@ exports.up = pgm => {
     ('Pedreira',26),
     ('Pedrinhas Paulista',26),
     ('Pedro de Toledo',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Penápolis',26),
     ('Pereira Barreto',26),
     ('Pereiras',26),
@@ -5746,7 +5746,7 @@ exports.up = pgm => {
     ('Pindamonhangaba',26),
     ('Pindorama',26),
     ('Pinhalzinho',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Piquerobi',26),
     ('Piquete',26),
     ('Piracaia',26),
@@ -5757,7 +5757,7 @@ exports.up = pgm => {
     ('Pirapora do Bom Jesus',26),
     ('Pirapozinho',26),
     ('Pirassununga',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Piratininga',26),
     ('Pitangueiras',26),
     ('Planalto',26),
@@ -5768,7 +5768,7 @@ exports.up = pgm => {
     ('Pongaí',26),
     ('Pontal',26),
     ('Pontalinda',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pontes Gestal',26),
     ('Populina',26),
     ('Porangaba',26),
@@ -5779,7 +5779,7 @@ exports.up = pgm => {
     ('Pracinha',26),
     ('Pradópolis',26),
     ('Praia Grande',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pratânia',26),
     ('Presidente Alves',26),
     ('Presidente Bernardes',26),
@@ -5790,7 +5790,7 @@ exports.up = pgm => {
     ('Quadra',26),
     ('Quatá',26),
     ('Queiroz',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Queluz',26),
     ('Quintana',26),
     ('Rafard',26),
@@ -5801,7 +5801,7 @@ exports.up = pgm => {
     ('Registro',26),
     ('Restinga',26),
     ('Ribeira',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ribeirão Bonito',26),
     ('Ribeirão Branco',26),
     ('Ribeirão Corrente',26),
@@ -5812,7 +5812,7 @@ exports.up = pgm => {
     ('Ribeirão Preto',26),
     ('Rifaina',26),
     ('Rincão',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Rinópolis',26),
     ('Rio Claro',26),
     ('Rio das Pedras',26),
@@ -5823,7 +5823,7 @@ exports.up = pgm => {
     ('Roseira',26),
     ('Rubiácea',26),
     ('Rubinéia',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Sabino',26),
     ('Sagres',26),
     ('Sales',26),
@@ -5834,7 +5834,7 @@ exports.up = pgm => {
     ('Salto',26),
     ('Salto de Pirapora',26),
     ('Salto Grande',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Sandovalina',26),
     ('Santa Adélia',26),
     ('Santa Albertina',26),
@@ -5845,7 +5845,7 @@ exports.up = pgm => {
     ('Santa Cruz da Esperança',26),
     ('Santa Cruz das Palmeiras',26),
     ('Santa Cruz do Rio Pardo',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Ernestina',26),
     ('Santa Fé do Sul',26),
     ('Santa Gertrudes',26),
@@ -5856,7 +5856,7 @@ exports.up = pgm => {
     ('Santa Rita d''Oeste',26),
     ('Santa Rita do Passa Quatro',26),
     ('Santa Rosa de Viterbo',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Salete',26),
     ('Santana da Ponte Pensa',26),
     ('Santana de Parnaíba',26),
@@ -5867,7 +5867,7 @@ exports.up = pgm => {
     ('Santo Antônio do Aracanguá',26),
     ('Santo Antônio do Jardim',26),
     ('Santo Antônio do Pinhal',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santo Expedito',26),
     ('Santópolis do Aguapeí',26),
     ('Santos',26),
@@ -5878,7 +5878,7 @@ exports.up = pgm => {
     ('São Francisco',26),
     ('São João da Boa Vista',26),
     ('São João das Duas Pontes',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São João de Iracema',26),
     ('São João do Pau d''Alho',26),
     ('São Joaquim da Barra',26),
@@ -5889,7 +5889,7 @@ exports.up = pgm => {
     ('São José dos Campos',26),
     ('São Lourenço da Serra',26),
     ('São Luís do Paraitinga',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('São Manuel',26),
     ('São Miguel Arcanjo',26),
     ('São Paulo',26),
@@ -5900,7 +5900,7 @@ exports.up = pgm => {
     ('São Sebastião da Grama',26),
     ('São Simão',26),
     ('São Vicente',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Sarapuí',26),
     ('Sarutaiá',26),
     ('Sebastianópolis do Sul',26),
@@ -5911,7 +5911,7 @@ exports.up = pgm => {
     ('Sete Barras',26),
     ('Severínia',26),
     ('Silveiras',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Socorro',26),
     ('Sorocaba',26),
     ('Sud Mennucci',26),
@@ -5922,7 +5922,7 @@ exports.up = pgm => {
     ('Tabatinga',26),
     ('Taboão da Serra',26),
     ('Taciba',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Taguaí',26),
     ('Taiaçu',26),
     ('Taiúva',26),
@@ -5933,7 +5933,7 @@ exports.up = pgm => {
     ('Taquaral',26),
     ('Taquaritinga',26),
     ('Taquarituba',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Taquarivaí',26),
     ('Tarabai',26),
     ('Tarumã',26),
@@ -5944,7 +5944,7 @@ exports.up = pgm => {
     ('Terra Roxa',26),
     ('Tietê',26),
     ('Timburi',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Torre de Pedra',26),
     ('Torrinha',26),
     ('Trabiju',26),
@@ -5955,7 +5955,7 @@ exports.up = pgm => {
     ('Tupi Paulista',26),
     ('Turiúba',26),
     ('Turmalina',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Ubarana',26),
     ('Ubatuba',26),
     ('Ubirajara',26),
@@ -5966,7 +5966,7 @@ exports.up = pgm => {
     ('Urupês',26),
     ('Valentim Gentil',26),
     ('Valinhos',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Valparaíso',26),
     ('Vargem',26),
     ('Vargem Grande do Sul',26),
@@ -5977,7 +5977,7 @@ exports.up = pgm => {
     ('Viradouro',26),
     ('Vista Alegre do Alto',26),
     ('Vitória Brasil',26);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Votorantim',26),
     ('Votuporanga',26),
     ('Zacarias',26),
@@ -5988,7 +5988,7 @@ exports.up = pgm => {
     ('Alvorada',27),
     ('Ananás',27),
     ('Angico',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Aparecida do Rio Negro',27),
     ('Aragominas',27),
     ('Araguacema',27),
@@ -5999,7 +5999,7 @@ exports.up = pgm => {
     ('Arapoema',27),
     ('Arraias',27),
     ('Augustinópolis',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Aurora do Tocantins',27),
     ('Axixá do Tocantins',27),
     ('Babaçulândia',27),
@@ -6010,7 +6010,7 @@ exports.up = pgm => {
     ('Bom Jesus do Tocantins',27),
     ('Brasilândia do Tocantins',27),
     ('Brejinho de Nazaré',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Buriti do Tocantins',27),
     ('Cachoeirinha',27),
     ('Campos Lindos',27),
@@ -6021,7 +6021,7 @@ exports.up = pgm => {
     ('Centenário',27),
     ('Chapada da Natividade',27),
     ('Chapada de Areia',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Colinas do Tocantins',27),
     ('Colméia',27),
     ('Combinado',27),
@@ -6032,7 +6032,7 @@ exports.up = pgm => {
     ('Darcinópolis',27),
     ('Dianópolis',27),
     ('Divinópolis do Tocantins',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Dois Irmãos do Tocantins',27),
     ('Dueré',27),
     ('Esperantina',27),
@@ -6043,7 +6043,7 @@ exports.up = pgm => {
     ('Fortaleza do Tabocão',27),
     ('Goianorte',27),
     ('Goiatins',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Guaraí',27),
     ('Gurupi',27),
     ('Ipueiras',27),
@@ -6054,7 +6054,7 @@ exports.up = pgm => {
     ('Jaú do Tocantins',27),
     ('Juarina',27),
     ('Lagoa da Confusão',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Lagoa do Tocantins',27),
     ('Lajeado',27),
     ('Lavandeira',27),
@@ -6065,7 +6065,7 @@ exports.up = pgm => {
     ('Maurilândia do Tocantins',27),
     ('Miracema do Tocantins',27),
     ('Miranorte',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Monte do Carmo',27),
     ('Monte Santo do Tocantins',27),
     ('Muricilândia',27),
@@ -6076,7 +6076,7 @@ exports.up = pgm => {
     ('Novo Acordo',27),
     ('Novo Alegre',27),
     ('Novo Jardim',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Oliveira de Fátima',27),
     ('Palmas',27),
     ('Palmeirante',27),
@@ -6087,7 +6087,7 @@ exports.up = pgm => {
     ('Pau d''Arco',27),
     ('Pedro Afonso',27),
     ('Peixe',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pequizeiro',27),
     ('Pindorama do Tocantins',27),
     ('Piraquê',27),
@@ -6098,7 +6098,7 @@ exports.up = pgm => {
     ('Porto Nacional',27),
     ('Praia Norte',27),
     ('Presidente Kennedy',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Pugmil',27),
     ('Recursolândia',27),
     ('Riachinho',27),
@@ -6109,7 +6109,7 @@ exports.up = pgm => {
     ('Sandolândia',27),
     ('Santa Fé do Araguaia',27),
     ('Santa Maria do Tocantins',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Santa Rita do Tocantins',27),
     ('Santa Rosa do Tocantins',27),
     ('Santa Tereza do Tocantins',27),
@@ -6120,7 +6120,7 @@ exports.up = pgm => {
     ('São Salvador do Tocantins',27),
     ('São Sebastião do Tocantins',27),
     ('São Valério da Natividade',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Silvanópolis',27),
     ('Sítio Novo do Tocantins',27),
     ('Sucupira',27),
@@ -6131,10 +6131,10 @@ exports.up = pgm => {
     ('Tocantinópolis',27),
     ('Tupirama',27),
     ('Tupiratins',27);
-  INSERT INTO public.cities (city_name,state_id) VALUES
+  INSERT INTO public.cities (cityName,stateId) VALUES
     ('Wanderlândia',27),
     ('Xambioá',27);
   `)
 };
 
-exports.down = pgm => {};
+exports.down = pgm => { };

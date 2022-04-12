@@ -1,3 +1,3 @@
-INSERT INTO public.customer_addresses (id,customer_id,country_id,state_id,city_id,neighborhood,street,street_number,street_complement,postal_code,lat,lng,is_active,updated_at,created_at) VALUES
+INSERT INTO public.customer_addresses (id,customerId,countryId,stateId,cityId,neighborhood,street,streetNumber,streetComplement,postalCode,lat,lng,isActive,updatedAt,createdAt) VALUES
 	 ('da986c44-ffa2-4ad0-bd89-b2e361c67db9'::uuid,'781ce14c-f306-4720-a4c4-35ad9f86e810'::uuid,1,1,1,'Testelandia','Rua do Teste','123','123','30220000',-22.925477000000000,-43.205225000000000,true,'2022-04-11 21:54:40.888256-03','2022-04-11 21:54:40.888256-03'),
 	 ('963eb544-4827-4121-a4ae-4b0b88faf1a8'::uuid,'781ce14c-f306-4720-a4c4-35ad9f86e810'::uuid,1,1,1,'Outra TesteLandia','Rua do Teste 2','321','321','99999999',-22.925477000000000,-43.205225000000000,true,'2022-04-11 21:54:40.888256-03','2022-04-11 21:54:40.888256-03');

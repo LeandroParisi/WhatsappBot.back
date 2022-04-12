@@ -6,7 +6,7 @@ exports.up = pgm => {
   pgm.sql(`
   CREATE TABLE public.opening_hours (
     id serial NOT NULL,
-    branch_id uuid NOT NULL,
+    branchId uuid NOT NULL,
     monday "openingHours" NULL,
     tuesday "openingHours" NULL,
     wednesday "openingHours" NULL,
@@ -14,14 +14,14 @@ exports.up = pgm => {
     friday "openingHours" NULL,
     saturday "openingHours" NULL,
     sunday "openingHours" NULL,
-    updated_at timestamptz NULL DEFAULT now(),
-    created_at timestamptz NULL DEFAULT now(),
+    updatedAt timestamptz NULL DEFAULT now(),
+    createdAt timestamptz NULL DEFAULT now(),
     CONSTRAINT opening_hours_pkey PRIMARY KEY (id)
   );
   
   ALTER TABLE public.opening_hours 
     ADD CONSTRAINT opening_hours_branch_id_fkey 
-    FOREIGN KEY (branch_id) 
+    FOREIGN KEY (branchId) 
     REFERENCES public.branches(id) ON DELETE CASCADE ON UPDATE CASCADE;
   `)
 };

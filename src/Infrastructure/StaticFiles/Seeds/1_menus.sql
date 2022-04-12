@@ -1,4 +1,4 @@
-INSERT INTO public.menus (id,menu_name,image,description,is_active,updated_at,created_at) VALUES
+INSERT INTO public.menus (id,menuName,image,description,isActive,updatedAt,createdAt) VALUES
 	 ('8dc8285c-993a-406e-9d03-50d6ac3fb2fb'::uuid,'Pizzas',NULL,'Pizzas Boladas',true,'2022-04-11 21:54:40.842871-03','2022-04-11 21:54:40.842871-03'),
 	 ('bc3cd6a3-5071-4373-97ab-eb340a9af8a4'::uuid,'Sucos',NULL,'Sucos Bolados',true,'2022-04-11 21:54:40.842871-03','2022-04-11 21:54:40.842871-03'),
 	 ('ff6a6fc4-7e36-45ce-b01b-edfc7dd84427'::uuid,'Refris',NULL,'Refris Boladas',true,'2022-04-11 21:54:40.842871-03','2022-04-11 21:54:40.842871-03'),

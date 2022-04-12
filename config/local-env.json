@@ -1,6 +1,6 @@
 {
   "db": {
-    "migrations-dir": "./src.v2/Infrastructure/StaticFiles/Migrations",
+    "migrations-dir": "./src/Infrastructure/StaticFiles/Migrations",
     "migration-filename-format": "UTC"
   },
   "pg-connection": {

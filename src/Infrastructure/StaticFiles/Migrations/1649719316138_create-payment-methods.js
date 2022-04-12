@@ -6,11 +6,11 @@ exports.up = pgm => {
   pgm.sql(`
   CREATE TABLE public.payment_methods (
     id serial NOT NULL,
-    payment_method varchar(40) NOT NULL,
+    paymentMethod varchar(40) NOT NULL,
     CONSTRAINT payment_methods_pkey PRIMARY KEY (id)
   );
 
-  INSERT INTO public.payment_methods (payment_method) VALUES
+  INSERT INTO public.payment_methods (paymentMethod) VALUES
 	 ('money'),
 	 ('pix'),
 	 ('credit'),

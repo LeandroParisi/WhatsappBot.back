@@ -6,19 +6,19 @@ exports.up = pgm => {
   pgm.sql(`
   CREATE TABLE public.branches_products (
     id serial NOT NULL,
-    branch_id uuid NOT NULL,
-    product_id uuid NOT NULL,
+    branchId uuid NOT NULL,
+    productId uuid NOT NULL,
     CONSTRAINT branches_products_pkey PRIMARY KEY (id)
   );
   
   ALTER TABLE public.branches_products 
     ADD CONSTRAINT branches_products_branch_id_fkey 
-    FOREIGN KEY (branch_id) 
+    FOREIGN KEY (branchId) 
     REFERENCES public.branches(id) ON DELETE CASCADE ON UPDATE CASCADE;
   
   ALTER TABLE public.branches_products 
     ADD CONSTRAINT branches_products_product_id_fkey 
-    FOREIGN KEY (product_id) 
+    FOREIGN KEY (productId) 
     REFERENCES public.products(id) ON DELETE CASCADE ON UPDATE CASCADE;
   `)
 };
