@@ -1,5 +1,5 @@
 INSERT INTO public.coupons_branches (coupom_id,branch_id) VALUES
-	 (1,'1a90ae96-6e43-4459-908b-37942030a6fa'::uuid),
-	 (2,'1a90ae96-6e43-4459-908b-37942030a6fa'::uuid),
-	 (2,'d44b5798-675a-4027-8534-538ac6806ce1'::uuid),
-	 (3,'1a90ae96-6e43-4459-908b-37942030a6fa'::uuid);
+	 (1,'c1b5771e-d0d3-4374-bc63-75b644d15be9'::uuid),
+	 (2,'c1b5771e-d0d3-4374-bc63-75b644d15be9'::uuid),
+	 (2,'7d390c8f-e9c0-4cae-ab14-0fcbec388b56'::uuid),
+	 (3,'c1b5771e-d0d3-4374-bc63-75b644d15be9'::uuid);

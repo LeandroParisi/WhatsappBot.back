@@ -1,0 +1,7 @@
+INSERT INTO public.promotions_products (promotion_id,product_id,"attributes") VALUES
+	 (1,'38363877-1ccd-4b14-acd9-02079ed1c835'::uuid,'[{"id": "06084406-da60-488a-abac-9b088a088092", "name": "M", "type": "sizes", "price": 10, "quantity": 1}, {"id": "e33d7c94-2170-43d0-8449-ebbbec134740", "name": "borda queijo", "type": "additionals", "price": 2, "quantity": 1}, {"id": "415fc8af-eac9-41b2-ad74-9ce8540a38c9", "name": "catchup", "type": "additionals", "price": 0, "quantity": 5}]'),
+	 (1,'fcda17d7-5855-4e2b-be5e-658b27e4262a'::uuid,'[]'),
+	 (1,'2838e2bb-08bc-4ec6-b7bd-b07ad9c67c39'::uuid,'[{"id": "477846bc-a66c-4b02-988f-e8a5e40298da", "name": "bacon", "type": "additionals", "price": 5, "quantity": 2}, {"id": "11138a1d-fa99-41a4-a01f-1444a9261da5", "name": "carne extra", "type": "additionals", "price": 6, "quantity": 1}]'),
+	 (2,'38363877-1ccd-4b14-acd9-02079ed1c835'::uuid,'[{"id": "db734748-6495-4a5d-b9d2-75822c2b361a", "name": "P", "type": "sizes", "price": 5, "quantity": 1}, {"id": "e33d7c94-2170-43d0-8449-ebbbec134740", "name": "borda queijo", "type": "additionals", "price": 2, "quantity": 1}]'),
+	 (2,'fcda17d7-5855-4e2b-be5e-658b27e4262a'::uuid,'[]'),
+	 (3,'38363877-1ccd-4b14-acd9-02079ed1c835'::uuid,'[]');
