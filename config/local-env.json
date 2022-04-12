@@ -1,0 +1,12 @@
+{
+  "db": {
+    "migrations-dir": "./src.v2/Infrastructure/StaticFiles/Migrations",
+    "migration-filename-format": "UTC"
+  },
+  "pg-connection": {
+    "connectionString": "undefined",
+    "ssl": {
+      "rejectUnauthorized": false
+    }
+  }
+}

@@ -6,6 +6,6 @@
     "esModuleInterop": true,
     "allowJs": true,
     "strictNullChecks": true,
-    "exactOptionalPropertyTypes": true
+    "exactOptionalPropertyTypes": true,
   }
 }

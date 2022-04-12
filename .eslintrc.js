@@ -21,6 +21,7 @@ module.exports = {
   ignorePatterns: ['seeders/', 'migrations/', 'src/models/index.js'],
   rules: {
     semi: ['error', 'never'],
+
   },
 
   // =================================
@@ -102,6 +103,8 @@ module.exports = {
         'import/no-named-as-default': 0,
         'import/no-named-as-default-member': 0,
         'import/no-useless-path-segments': 0,
+        '@typescript-eslint/await-thenable': 0,
+        '@typescript-eslint/no-floating-promises': 0,
         '@typescript-eslint/no-unused-vars': ['error'],
         'max-len': [1, 125, 2],
         'no-useless-constructor': 0,
