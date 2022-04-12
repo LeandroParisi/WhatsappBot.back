@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.ts",
     "migrate": "node-pg-migrate",
-    "seed": "sh ./src.v2/Infrastructure/StaticFiles/Seeds/_run_seeds.sh",
+    "seed": "sh ./src/Infrastructure/StaticFiles/Seeds/_run_seeds.sh",
     "createRoute": "sh ./templates/2.new_route.sh"
   },
   "repository": {

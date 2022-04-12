@@ -7,10 +7,8 @@
 /* eslint-disable no-shadow */
 import 'reflect-metadata'
 import { Application } from 'express'
-import { Service } from 'typedi'
-import BaseRepository from './Infrastructure/Repositories/Base/BaseRepository'
-import TableNames from './Infrastructure/Enums/TableNames'
-import { branches } from 'zapatos/schema'
+import Container, { Service } from 'typedi'
+import CouponsService from './Domain/Services/Coupons/CouponsService'
 
 require('dotenv').config()
 
@@ -22,10 +20,6 @@ const corsOptions = {
   credentials: true,
   origin: true,
 }
-
-const t = new BaseRepository<branches.Whereable>(TableNames.branches)
-
-t.FindOne({}).then()
 
 @Service()
 class Main {
@@ -48,6 +42,7 @@ class Main {
   }
 
   public Start() {
+    Container.get(CouponsService).Create().then()
     this.app.use('/health', (req, res) => res.send('Alive'))
 
     // this.app.use(ErrorCatcher.HandleError)

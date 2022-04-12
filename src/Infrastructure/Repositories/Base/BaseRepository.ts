@@ -2,10 +2,15 @@
 import { Pool } from 'pg'
 import * as db from 'zapatos/db'
 import {
-  Insertable, Table, Updatable, Whereable,
+  Insertable, Selectable, Table, Updatable, Whereable,
 } from 'zapatos/schema'
 
-export default class BaseRepository<Where extends Whereable, Updates extends Updatable, Insert extends Insertable> {
+export default class BaseRepository<
+  Where extends Whereable,
+  Updates extends Updatable,
+  Insert extends Insertable,
+  Selectables extends Selectable
+ > {
   private TableName : Table
 
   /**
@@ -36,10 +41,10 @@ export default class BaseRepository<Where extends Whereable, Updates extends Upd
     return deleted
   }
 
-  public async Create(entity : Insert, pool : Pool) {
+  public async Create(entity : Insert, pool : Pool) : Promise<Selectables> {
     const inserted = await db
       .insert(this.TableName, entity).run(pool)
 
-    return inserted
+    return inserted as Selectables
   }
 }

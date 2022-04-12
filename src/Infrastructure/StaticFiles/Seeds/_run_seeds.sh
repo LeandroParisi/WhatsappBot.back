@@ -1,4 +1,4 @@
-SEEDS_PATH=./src.v2/Infrastructure/StaticFiles/Seeds
+SEEDS_PATH=./src/Infrastructure/StaticFiles/Seeds
 PGPASSWORD=123deolivera4
 
 PGPASSWORD=$PGPASSWORD psql -h 127.0.0.1 -d ta_on -U leandro_parisi -f $SEEDS_PATH/0_users.sql;
