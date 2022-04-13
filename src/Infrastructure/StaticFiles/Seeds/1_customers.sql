@@ -1,0 +1,4 @@
+INSERT INTO public.customers (id,whatsapp_number,whatsapp_id,email,first_name,middle_name,last_name,cpf,is_active,updated_at,created_at) VALUES
+	 ('781ce14c-f306-4720-a4c4-35ad9f86e810'::uuid,'5531993368575','5531993368575@c.us','customer1@teste.com','Customer','Teste','ONE','08891890057',true,'2022-04-11 21:54:40.88457-03','2022-04-11 21:54:40.88457-03'),
+	 ('a738a2df-d4d7-4775-83de-80de27f83c45'::uuid,'5531875080715','5531875080715@c.us','customer2@teste.com','Customer','Teste','TWO','96128398081',true,'2022-04-11 21:54:40.88457-03','2022-04-11 21:54:40.88457-03'),
+	 ('15390905-7881-4ee9-962f-ab9641fa9362'::uuid,'5531775080715','5531775080715@c.us','customer3@teste.com','Customer','Teste','THREE','25098789052',true,'2022-04-11 21:54:40.88457-03','2022-04-11 21:54:40.88457-03');
