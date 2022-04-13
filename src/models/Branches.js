@@ -2,7 +2,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 const { v4: uuid } = require('uuid')
-const { validationErrors } = require('../Domain/Shared/libs')
+const { validationErrors } = require('../Application/Shared/libs')
 
 const createBranches = (sequelize, DataTypes) => {
   const Branches = sequelize.define('Branches', {

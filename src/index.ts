@@ -15,11 +15,11 @@ import {
   ProductsRouter,
   PromotionsRouter,
   UsersRouter,
-} from './Domain/Services'
-import OrdersRouter from './Domain/Services/Orders/OrdersRouter'
-import CustomersAddressesRouter from './Domain/Services/CustomerAddresses/CustomerAddressesRouter'
-import CouponsRouter from './Domain/Services/Coupons/CouponsRouter'
-import ErrorCatcher from './Domain/Shared-v2-ts/Middlewares/ErrorHandler/ErrorCatcher'
+} from './Application/Services'
+import OrdersRouter from './Application/Services/Orders/OrdersRouter'
+import CustomersAddressesRouter from './Application/Services/CustomerAddresses/CustomerAddressesRouter'
+import CouponsRouter from './Application/Services/Coupons/CouponsRouter'
+import ErrorCatcher from './Application/Shared-v2-ts/Middlewares/ErrorHandler/ErrorCatcher'
 
 const express = require('express')
 const cookieParser = require('cookie-parser')

@@ -1,5 +1,5 @@
 import { Service } from 'typedi'
-import { METHODS } from '../../../Domain/Shared/libs'
+import { METHODS } from '../../../Application/Shared/libs'
 import IDirectionRoute from '../../Interfaces/IDistanceCalc'
 import AssembleQuery from '../../Shared/AssembleQuery'
 import Api from '../../Shared/Shared/api'

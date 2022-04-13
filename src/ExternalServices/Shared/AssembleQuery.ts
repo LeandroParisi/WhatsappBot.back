@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import StringParser from '../../Shared/Parsers/StringParser'
+import StringParser from '../../Commons/Parsers/StringParser'
 
 const AssembleQuery = (queryObject : any) => {
   let query = '?'

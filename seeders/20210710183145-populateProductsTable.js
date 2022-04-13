@@ -1,5 +1,5 @@
 const { v4: uuid } = require('uuid')
-const attributeTypes = require('../src/Domain/Shared/interfaces/attributes/attributeTypes')
+const attributeTypes = require('../src/Application/Shared/interfaces/attributes/attributeTypes')
 
 /* eslint-disable max-len */
 /**
