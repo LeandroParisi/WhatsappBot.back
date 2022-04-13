@@ -8,7 +8,7 @@ export default class Coupom {
 
   discount: number
 
-  used?: number
+  used: number
 
   priceLimit?: number
 

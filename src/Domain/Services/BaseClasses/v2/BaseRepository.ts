@@ -39,7 +39,7 @@ export default abstract class BaseRepository<Entity> {
     const updateQuery = dbConnection(this.Table)
       .insert(entity)
 
-    const result = await updateQuery as undefined as { rowCount: number }
+    const result = await updateQuery as unknown as { rowCount: number }
 
     return result.rowCount === 1
   }

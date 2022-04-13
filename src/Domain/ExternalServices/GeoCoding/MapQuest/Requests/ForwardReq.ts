@@ -2,7 +2,7 @@ import MapQuestConfig from '../Config'
 
 /* eslint-disable camelcase */
 export default class MapQuestForwardReq {
-  key : string
+  key : string | undefined
 
   location : string
 

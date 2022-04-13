@@ -48,7 +48,7 @@ export default class ErrorSender {
     const { path, message } = error.errors[0]
 
     return ({
-      invalidField: (DefaultPathDict as IIndexable)[path] || path,
+      invalidField: (DefaultPathDict as IIndexable)[path as string] || path,
       message: ErrorSender.TranslateDefaultError(message),
     })
   }
