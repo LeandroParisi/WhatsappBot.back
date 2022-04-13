@@ -4,7 +4,7 @@ import IUserToken from '../Interfaces/IUserToken'
 require('dotenv/config')
 
 export default class JwtConfig {
-  static SECRET = process.env.SECRET;
+  static SECRET = process.env.SECRET as unknown as string;
 
   static JWT = jwt
 

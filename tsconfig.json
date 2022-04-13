@@ -4,6 +4,8 @@
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "allowJs": true
+    "allowJs": true,
+    "strictNullChecks": true,
+    "exactOptionalPropertyTypes": true,
   }
 }
