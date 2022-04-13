@@ -1,5 +1,5 @@
 import { Service } from 'typedi'
-import { METHODS } from '../../../Shared/libs'
+import { METHODS } from '../../../Domain/Shared/libs'
 import ICoordinates from '../../Interfaces/ICoordinates'
 import AssembleQuery from '../../Shared/AssembleQuery'
 import Api from '../../Shared/Shared/api'

@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
-import StaticImplements from '../../../../Shared/Anotations/StaticImplements'
+import StaticImplements from '../../../Shared/Anotations/StaticImplements'
 import IExternalApiConfig from '../../Interfaces/IExternalApiConfig'
 
 require('dotenv').config()

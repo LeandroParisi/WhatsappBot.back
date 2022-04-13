@@ -1,5 +1,5 @@
 import { Service } from 'typedi'
-import { METHODS } from '../../../Shared/libs'
+import { METHODS } from '../../../Domain/Shared/libs'
 import IDirectionRoute from '../../Interfaces/IDistanceCalc'
 import AssembleQuery from '../../Shared/AssembleQuery'
 import Api from '../../Shared/Shared/api'
@@ -74,7 +74,7 @@ export default class MapBoxService {
     return directionRoute
   }
 
-  static GetDirectionOptions(options: IOptions): IOptions {
+  static GetDirectionOptions(options?: IOptions): IOptions {
     const defaultOptions : IOptions = {
       distanceInKilometers: true,
       durationInMinutes: true,

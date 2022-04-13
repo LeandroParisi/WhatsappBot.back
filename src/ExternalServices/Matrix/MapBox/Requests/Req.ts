@@ -19,7 +19,7 @@ export interface IParams {
 }
 
 export interface IQueries {
-  access_token : string
+  access_token : string | undefined
 }
 
 /* eslint-disable camelcase */

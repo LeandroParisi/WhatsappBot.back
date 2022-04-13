@@ -1,5 +1,5 @@
 import { Service } from 'typedi'
-import MapQuestService from '../../ExternalServices/GeoCoding/MapQuest/Service'
+import MapQuestService from '../../../ExternalServices/GeoCoding/MapQuest/Service'
 import AddressDTO from '../../../Data/Entities/DTOs/AddressDTO'
 import Address from '../../../Data/Entities/Models/Address'
 import CustomerAddressesRepository from './CustomerAddressesRepository'

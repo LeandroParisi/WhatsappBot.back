@@ -23,7 +23,7 @@ abstract class SchemaValidation implements IMiddleware {
       const errors : Array<IValidationError> = []
 
       Object.keys(this.Schema).forEach((field : keyof IValidator) => {
-        const { error } = this.Schema[field].validate(req[field])
+        const { error } = this.Schema[field]!.validate(req[field])
 
         if (error) errors.push({ field, error: error.message })
       })
