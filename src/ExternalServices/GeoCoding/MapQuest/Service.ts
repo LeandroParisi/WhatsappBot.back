@@ -36,8 +36,6 @@ export default class MapQuestService {
       },
     )
 
-    console.log(response.results)
-
     if (returnCoordinates) {
       return response.results[0].locations[0].latLng
     }

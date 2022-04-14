@@ -15,5 +15,5 @@ export default abstract class BaseRouter implements IRouter {
     this.Router = Router()
   }
 
-  abstract SetRouter() : Router
+  abstract SetRouter () : Router
 }

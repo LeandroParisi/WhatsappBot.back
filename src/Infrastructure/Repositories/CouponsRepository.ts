@@ -3,15 +3,14 @@
 
 import { Service } from 'typedi'
 import type * as s from 'zapatos/schema'
-import BaseRepository from './Base/BaseRepository'
 
 @Service()
 export default class CouponsRepository extends BaseRepository
 <
+  s.coupons.Selectable,
   s.coupons.Whereable,
   s.coupons.Updatable,
-  s.coupons.Insertable,
-  s.coupons.Selectable
+  s.coupons.Insertable
 > {
   /**
    *
