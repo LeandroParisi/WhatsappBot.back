@@ -60,7 +60,7 @@ class Main {
   // eslint-disable-next-line class-methods-use-this
   ConfigureZapatos() {
     db.setConfig({
-      queryListener: (q) => console.log({ query: q.text }, { values: q.values }),
+      queryListener: (q : any) => console.log({ query: q.text }, { values: q.values }),
     })
   }
 

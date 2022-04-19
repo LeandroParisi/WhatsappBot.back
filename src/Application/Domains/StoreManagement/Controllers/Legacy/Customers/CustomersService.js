@@ -1,10 +1,10 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
-const { default: KnexConnectionFactory } = require('../../../Data/DbConnections/Knex/ConnectionFactory/KnexConnectionFactory')
-const { default: Tables } = require('../../../Data/Entities/Enums/Tables')
-const { OrderStatus } = require('../../../Data/Entities/Models/Order')
-const { Customers } = require('../../../models')
-const BaseService = require('../BaseClasses/BaseService')
+const { default: KnexConnectionFactory } = require('../../../../../../Data/DbConnections/Knex/ConnectionFactory/KnexConnectionFactory')
+const { default: Tables } = require('../../../../../../Data/Entities/Enums/Tables')
+const { OrderStatus } = require('../../../../../../Data/Entities/Models/Order')
+const { Customers } = require('../../../../../../models')
+const BaseService = require('../../../../../Services/BaseClasses/BaseService')
 const CustomersQuery = require('./CustomersQueries')
 
 class CustomerService extends BaseService {
@@ -33,7 +33,7 @@ class CustomerService extends BaseService {
       },
     }
   }
-// No need to be extended yet
+  // No need to be extended yet
 }
 
 const CustomersService = new CustomerService(Customers, CustomersQuery)

@@ -1,5 +1,5 @@
-const BaseController = require('../BaseClasses/BaseController')
-const { METHODS, status } = require('../../Shared/libs')
+const BaseController = require('../../../../../Services/BaseClasses/BaseController')
+const { METHODS, status } = require('../../../../../Shared/libs')
 const CustomersService = require('./CustomersService')
 
 class CustomerController extends BaseController {

@@ -2,5 +2,6 @@
   "zapatos": "https://jawj.github.io/zapatos/",
   "node-migrate-pg": "https://salsita.github.io/node-pg-migrate/#/",
   "config": "https://github.com/node-config/node-config",
-  "pg": "https://node-postgres.com/features/ssl"
+  "pg": "https://node-postgres.com/features/ssl",
+  "typed-pg-alternatives": "https://phiresky.github.io/blog/2020/sql-libs-for-typescript/"
 }
