@@ -1,0 +1,436 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Branches {
+  id                       String                     @id @db.Uuid
+  userId                  String                     @db.Uuid @map("user_id")
+  whatsappNumber          String                     @unique @db.VarChar(255) @map("whatsapp_number")
+  whatsappId              String?                    @unique @db.VarChar(255) @map("whatsapp_id")
+  managerName             String                     @db.VarChar(255) @map("manager_name")
+  branchName              String                     @db.VarChar(255) @map("branch_name")
+  countryId               Int                        @map("country_id")
+  stateId                 Int                        @map("state_id")
+  cityId                  Int                        @map("city_id")
+  neighborhood             String                     @db.VarChar(255)
+  street                   String                     @db.VarChar(255)
+  streetNumber            String                     @db.VarChar(255) @map("street_number")
+  streetComplement        String                     @db.VarChar(255) @map("street_complement")
+  postalCode              String                     @db.VarChar(255) @map("postal_code")
+  lat                      Decimal                    @db.Decimal(17, 15)
+  lng                      Decimal                    @db.Decimal(19, 15)
+  deliveryFees            Json                        @map("delivery_fees")
+  logo                     String?                    @db.VarChar(255)
+  isActive                Boolean                    @default(true) @map("is_active")
+  updatedAt               DateTime?                  @default(now()) @db.Timestamptz(6) @map("updated_at")
+  createdAt               DateTime?                  @default(now()) @db.Timestamptz(6) @map("created_at")
+  city                   Cities                     @relation(fields: [cityId], references: [id])
+  country                Countries                  @relation(fields: [countryId], references: [id])
+  state                   States                     @relation(fields: [stateId], references: [id])
+  user                    Users                      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  branchesDeliveryTypes  BranchesDeliveryTypes[]
+  branchesMenus           BranchesMenus[]
+  branchesPaymentMethods BranchesPaymentMethods[]
+  branchesProducts        BranchesProducts[]
+  branchesPromotions      BranchesPromotions[]
+  couponsBranches         CouponsBranches[]
+  openingHours            OpeningHours[]
+  orders                   Orders[]
+
+  @@map("branches")
+  @@index([userId], map: "branches_user_id")
+  @@index([whatsappId], map: "branches_whatsapp_id")
+  @@index([whatsappNumber], map: "branches_whatsapp_number")
+}
+
+model BranchesDeliveryTypes {
+  id               Int            @id @default(autoincrement())
+  branchId        String         @db.Uuid @map("branch_id")
+  deliveryTypeId Int @map("delivery_type_id")
+  branches         Branches       @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  deliveryTypes   DeliveryTypes @relation(fields: [deliveryTypeId], references: [id], onDelete: Cascade)
+
+  @@map("branches_delivery_types")
+}
+
+model BranchesMenus {
+  id        Int      @id @default(autoincrement())
+  branchId String   @db.Uuid @map("branch_id")
+  menuId   String   @db.Uuid @map("menu_id")
+  branches  Branches @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  menus     Menus    @relation(fields: [menuId], references: [id], onDelete: Cascade)
+
+  @@map("branches_menus")
+}
+
+model BranchesPaymentMethods {
+  id                Int             @id @default(autoincrement())
+  branchId         String          @db.Uuid @map("branch_id")
+  paymentMethodId Int @map("payment_method_id")
+  branches          Branches        @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  paymentMethods   PaymentMethods @relation(fields: [paymentMethodId], references: [id], onDelete: Cascade)
+
+  @@map("branches_payment_methods")
+}
+
+model BranchesProducts {
+  id         Int      @id @default(autoincrement())
+  branchId  String   @db.Uuid @map("branch_id")
+  productId String   @db.Uuid @map("product_id")
+  branches   Branches @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  products   Products @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("branches_products")
+}
+
+model BranchesPromotions {
+  id           Int        @id @default(autoincrement())
+  branchId    String     @db.Uuid @map("branch_id")
+  promotionId Int @map("promotion_id")
+  branches     Branches   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  promotions   Promotions @relation(fields: [promotionId], references: [id], onDelete: Cascade)
+
+  @@map("branches_promotions")
+}
+
+model Categories {
+  id            Int        @id @default(autoincrement())
+  categoryName String     @db.VarChar(255) @map("category_name")
+  updatedAt    DateTime?  @default(now()) @db.Timestamptz(6) @map("updated_at")
+  createdAt    DateTime?  @default(now()) @db.Timestamptz(6) @map("created_at")
+  products      Products[]
+
+  @@map("categories")
+}
+
+model Cities {
+  id                 Int                  @id @default(autoincrement())
+  cityName          String               @db.VarChar(255) @map("city_name")
+  stateId           Int @map("state_id")
+  states             States               @relation(fields: [stateId], references: [id], onDelete: Cascade)
+  branches           Branches[]
+  customerAddresses CustomerAddresses[]
+
+  @@map("cities")
+}
+
+model Conditions {
+  id                 Int                  @id @default(autoincrement())
+  name               String               @db.VarChar(255)
+  couponsConditions CouponsConditions[]
+
+  @@map("conditions")
+}
+
+model Countries {
+  id                 Int                  @id @default(autoincrement())
+  countryName       String               @db.VarChar(255) @map("country_name")
+  branches           Branches[]
+  customerAddresses CustomerAddresses[]
+  states             States[]
+
+  @@map("countries")
+}
+
+model Coupons {
+  id                   Int                        @id @default(autoincrement())
+  coupomCode          String                     @db.VarChar(255) @map("coupom_code")
+  discountType        EnumCouponsDiscountType
+  discount             Decimal                    @db.Decimal(10, 2)
+  used                 Int?                       @default(0)
+  priceLimit          Decimal?                   @db.Decimal(10, 2)
+  dateLimit           DateTime?                  @db.Timestamptz(6) @map("date_limit")
+  distanceLimitInKm Int? @map("distance_limit_in_km")
+  usesLimit           Int? @map("uses_limit")
+  freeDelivery        Boolean                    @default(true) @map("free_delivery")
+  isActive            Boolean                    @default(true) @map("is_active")
+  updatedAt           DateTime?                  @default(now()) @db.Timestamptz(6) @map("updated_at")
+  createdAt           DateTime?                  @default(now()) @db.Timestamptz(6) @map("created_at")
+  couponsBranches     CouponsBranches[]
+  couponsConditions   CouponsConditions[]
+  orders               Orders[]
+
+  @@map("coupons")
+  @@index([coupomCode], map: "coupons_coupom_code")
+}
+
+model CouponsBranches {
+  id        Int      @id @default(autoincrement())
+  coupomId Int @map("coupom_id")
+  branchId String   @db.Uuid @map("branch_id")
+  branches  Branches @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  coupons   Coupons  @relation(fields: [coupomId], references: [id], onDelete: Cascade)
+
+  @@map("coupons_branches")
+}
+
+model CouponsConditions {
+  id           Int        @id @default(autoincrement())
+  coupomId    Int @map("coupom_id")
+  conditionId Int @map("condition_id")
+  conditions   Conditions @relation(fields: [conditionId], references: [id], onDelete: Cascade)
+  coupons      Coupons    @relation(fields: [coupomId], references: [id], onDelete: Cascade)
+
+  @@map("coupons_conditions")
+}
+
+model CustomerAddresses {
+  id                String    @id @db.Uuid
+  customerId       String    @db.Uuid @map("customer_id")
+  countryId        Int @map("country_id")
+  stateId          Int @map("state_id")
+  cityId           Int @map("city_id")
+  neighborhood      String    @db.VarChar(255)
+  street            String    @db.VarChar(255)
+  streetNumber     String    @db.VarChar(255) @map("street_number")
+  streetComplement String    @db.VarChar(255) @map("street_complement")
+  postalCode       String    @db.VarChar(255) @map("postal_code")
+  lat               Decimal   @db.Decimal(17, 15)
+  lng               Decimal   @db.Decimal(19, 15)
+  isActive         Boolean   @default(true) @map("is_active")
+  updatedAt        DateTime? @default(now()) @db.Timestamptz(6) @map("updated_at")
+  createdAt        DateTime? @default(now()) @db.Timestamptz(6) @map("created_at")
+  cities            Cities    @relation(fields: [cityId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  countries         Countries @relation(fields: [countryId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  customers         Customers @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  states            States    @relation(fields: [stateId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  orders            Orders[]
+
+  @@map("customer_addresses")
+}
+
+model Customers {
+  id                 String               @id @db.Uuid
+  whatsappNumber    String               @unique @db.VarChar(255) @map("whatsapp_number")
+  whatsappId        String               @unique @db.VarChar(255) @map("whatsapp_id")
+  email              String?              @unique @db.VarChar(255)
+  firstName         String               @db.VarChar(255) @map("first_name")
+  middleName        String?              @db.VarChar(255) @map("middle_name")
+  lastName          String?              @db.VarChar(255) @map("last_name")
+  cpf                String?              @db.VarChar(255)
+  isActive          Boolean              @default(true) @map("is_active")
+  updatedAt         DateTime?            @default(now()) @db.Timestamptz(6) @map("updated_at")
+  createdAt         DateTime?            @default(now()) @db.Timestamptz(6) @map("created_at")
+  customerAddresses CustomerAddresses[]
+  orders             Orders[]
+
+  @@map("customers")
+  @@index([cpf], map: "customers_cpf")
+  @@index([whatsappId], map: "customers_whatsapp_id")
+  @@index([whatsappNumber], map: "customers_whatsapp_number")
+}
+
+model DeliveryTypes {
+  id                      Int                               @id @default(autoincrement())
+  deliveryType           EnumDeliveryTypesDeliveryType
+  branchesDeliveryTypes BranchesDeliveryTypes[]
+  orders                  Orders[]
+
+  @@map("delivery_types")
+}
+
+model Menus {
+  id             String           @id @db.Uuid
+  menuName      String           @db.VarChar(255) @map("menu_name")
+  image          String?          @db.VarChar(255)
+  description    String?
+  isActive      Boolean          @default(true) @map("is_active")
+  updatedAt     DateTime?        @default(now()) @db.Timestamptz(6) @map("updated_at")
+  createdAt     DateTime?        @default(now()) @db.Timestamptz(6) @map("created_at")
+  branchesMenus BranchesMenus[]
+  menusProducts MenusProducts[]
+
+  @@map("menus")
+}
+
+model MenusProducts {
+  id         Int      @id @default(autoincrement())
+  menuId    String   @db.Uuid @map("menu_id")
+  productId String   @db.Uuid @map("product_id")
+  menus      Menus    @relation(fields: [menuId], references: [id], onDelete: Cascade)
+  products   Products @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("menus_products")
+}
+
+model OpeningHours {
+  id         Int       @id @default(autoincrement())
+  branchId  String    @db.Uuid @map("branch_id")
+  monday     Json?
+  tuesday    Json?
+  wednesday  Json?
+  thursday   Json?
+  friday     Json?
+  saturday   Json?
+  sunday     Json?
+  updatedAt DateTime? @default(now()) @db.Timestamptz(6) @map("updated_at")
+  createdAt DateTime? @default(now()) @db.Timestamptz(6) @map("created_at")
+  branches   Branches  @relation(fields: [branchId], references: [id], onDelete: Cascade)
+
+  @@map("opening_hours")
+}
+
+model Orders {
+  id                          String              @id @db.Uuid
+  branchId                   String              @db.Uuid @map("branch_id")
+  customerId                 String              @db.Uuid @map("customer_id")
+  addressId                  String?             @db.Uuid @map("address_id")
+  orderNumber                Int                 @default(autoincrement()) @map("order_number")
+  subTotal                   Decimal             @db.Decimal(10, 2)
+  deliveryTypeId            Int @map("delivery_type_id")
+  deliveryFee                Decimal             @default(0) @db.Decimal(10, 2)
+  paymentMethodId           Int @map("payment_method_id")
+  discount                    Decimal             @default(0) @db.Decimal(10, 2)
+  totalPrice                 Decimal             @db.Decimal(10, 2)
+  status                      Int
+  coupomId                   Int? @map("coupom_id")
+  promotionId                Int? @map("promotion_id")
+  estimatedDeliveryDuration Decimal?            @db.Decimal(10, 2)
+  distanceInKm              Decimal             @db.Decimal(10, 2)
+  comments                    String?
+  dispatchTime               DateTime?           @db.Timestamptz(6) @map("dispatch_time")
+  deliveryTime               DateTime?           @db.Timestamptz(6) @map("delivery_time")
+  updatedAt                  DateTime?           @default(now()) @db.Timestamptz(6) @map("updated_at")
+  createdAt                  DateTime?           @default(now()) @db.Timestamptz(6) @map("created_at")
+  customerAddresses          CustomerAddresses? @relation(fields: [addressId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  branches                    Branches            @relation(fields: [branchId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  coupons                     Coupons?            @relation(fields: [coupomId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  customers                   Customers           @relation(fields: [customerId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  deliveryTypes              DeliveryTypes      @relation(fields: [deliveryTypeId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  paymentMethods             PaymentMethods     @relation(fields: [paymentMethodId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  promotions                  Promotions?         @relation(fields: [promotionId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  ordersProducts             OrdersProducts[]
+
+  @@map("orders")
+  @@index([branchId], map: "orders_branch_id")
+  @@index([orderNumber], map: "orders_order_number")
+}
+
+model OrdersProducts {
+  id          Int      @id @default(autoincrement())
+  orderId    String   @db.Uuid @map("order_id")
+  productId  String   @db.Uuid @map("product_id")
+  quantity    Int      @default(1)
+  totalPrice Decimal  @db.Decimal(10, 2)
+  attributes  Json?
+  orders      Orders   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  products    Products @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("orders_products")
+}
+
+model PaymentMethods {
+  id                       Int                        @id @default(autoincrement())
+  paymentMethod           String                     @db.VarChar(255) @map("payment_method")
+  branchesPaymentMethods BranchesPaymentMethods[]
+  orders                   Orders[]
+
+  @@map("payment_methods")
+}
+
+model Products {
+  id                  String                @id @db.Uuid
+  categoryId         Int @map("category_id")
+  name                String                @db.VarChar(255)
+  image               String?               @db.VarChar(255)
+  attributes          Json                  @default("[]")
+  basePrice          Decimal?              @db.Decimal(10, 2)
+  description         String?
+  ingredients         String[]              @db.VarChar(255)
+  avaiabilitys         Int[]
+  isActive           Boolean               @default(true) @map("is_active")
+  updatedAt          DateTime?             @default(now()) @db.Timestamptz(6) @map("updated_at")
+  createdAt          DateTime?             @default(now()) @db.Timestamptz(6) @map("created_at")
+  categories          Categories            @relation(fields: [categoryId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  branchesProducts   BranchesProducts[]
+  menusProducts      MenusProducts[]
+  ordersProducts     OrdersProducts[]
+  promotionsProducts PromotionsProducts[]
+
+  @@map("products")
+}
+
+model Promotions {
+  id                  Int                   @id @default(autoincrement())
+  name                String                @db.VarChar(255)
+  totalPrice         Decimal               @db.Decimal(10, 2)
+  dueDate            DateTime?             @db.Timestamptz(6) @map("due_date")
+  avaiabilitys         Int[]
+  isActive           Boolean               @default(true) @map("is_active")
+  image               String?               @db.VarChar(255)
+  updatedAt          DateTime?             @default(now()) @db.Timestamptz(6) @map("updated_at")
+  createdAt          DateTime?             @default(now()) @db.Timestamptz(6) @map("created_at")
+  branchesPromotions BranchesPromotions[]
+  orders              Orders[]
+  promotionsProducts PromotionsProducts[]
+
+  @@map("promotions")
+}
+
+model PromotionsProducts {
+  id           Int        @id @default(autoincrement())
+  promotionId  Int        @map("promotion_id")
+  productId    String     @db.Uuid @map("product_id")
+  attributes   Json       @default("[]")
+  products     Products   @relation(fields: [productId], references: [id], onDelete: Cascade)
+  promotions   Promotions @relation(fields: [promotionId], references: [id], onDelete: Cascade)
+
+  @@map("promotions_products")
+}
+
+model States {
+  id                 Int                  @id @default(autoincrement())
+  stateName          String               @db.VarChar(255) @map("state_name")
+  stateCode          String               @db.VarChar(255) @map("state_code")
+  countryId          Int                  @map("country_id")
+  countries          Countries            @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  branches           Branches[]
+  cities             Cities[]
+  customerAddresses CustomerAddresses[]
+
+  @@map("states")
+}
+
+model Users {
+  id                String           @id @db.Uuid
+  phoneNumber       String           @unique @db.VarChar(255) @map("phone_number")
+  bussinessName     String           @db.VarChar(255) @map("bussiness_name")
+  cnpj              String           @unique @db.VarChar(255)
+  email             String           @unique @db.VarChar(255)
+  ownerFirstName    String           @db.VarChar(255) @map("owner_first_name")
+  ownerMiddleName   String?          @db.VarChar(255) @map("owner_middle_name")
+  ownerLastName     String           @db.VarChar(255) @map("owner_last_name")
+  ownerCpf          String           @unique @db.VarChar(255) @map("owner_cpf")
+  password          String           @db.VarChar(255)
+  botName           String           @default("Walle") @db.VarChar(255) @map("bot_name")
+  logo              String?          @db.VarChar(255)
+  role              EnumUsersRole? @default(user)
+  isActive          Boolean          @default(true) @map("is_active")
+  updatedAt         DateTime?        @default(now()) @db.Timestamptz(6) @map("updated_at")
+  createdAt         DateTime?        @default(now()) @db.Timestamptz(6) @map("created_at")
+  branches          Branches[]
+
+  @@map("users")
+  @@index([cnpj], map: "users_cnpj")
+}
+
+enum EnumCouponsDiscountType {
+  percentage
+  absolute_value
+}
+
+enum EnumDeliveryTypesDeliveryType {
+  delivery
+  counter_pickup
+  on_spot_consumption
+}
+
+enum EnumUsersRole {
+  admin
+  user
+}

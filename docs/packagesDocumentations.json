@@ -1,0 +1,6 @@
+{
+  "prisma-schema-transformer": [
+    "https://github.com/IBM/prisma-schema-transformer",
+    "https://github.com/prisma/prisma/issues/1934"
+  ]
+}
