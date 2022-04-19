@@ -24,7 +24,7 @@ class BranchController extends BaseController {
 
   async findAll(req, res) {
     const { user, query } = req
-    const data = await this.service.findAll({ user, query })
+    const data = await this.service.findAll(user, query)
     res.status(status.ok).json({ data })
   }
 

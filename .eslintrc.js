@@ -108,6 +108,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['error'],
         'max-len': [1, 125, 2],
         'no-useless-constructor': 0,
+        camelcase: 0,
       },
     },
   ],

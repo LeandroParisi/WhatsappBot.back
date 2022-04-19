@@ -38,6 +38,7 @@
     "@types/yup": "^0.29.13",
     "axios": "^0.25.0",
     "bcrypt": "^5.0.1",
+    "config": "^3.3.7",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "cpf-cnpj-validator": "^1.0.3",
