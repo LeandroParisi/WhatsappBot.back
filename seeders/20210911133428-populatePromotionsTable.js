@@ -1,4 +1,4 @@
-const attributeTypes = require('../src/Domain/Shared/interfaces/attributes/attributeTypes')
+const attributeTypes = require('../src/Application/Domains/StoreManagement/Controllers/Legacy/Shared/interfaces/attributes/attributeTypes')
 const {
   branchOneId,
   branchTwoId,
@@ -158,10 +158,10 @@ module.exports = {
       {
         promotion_id: promotionOneId,
         branch_id: branchThreeId,
-      },      {
+      }, {
         promotion_id: promotionOneId,
         branch_id: branchFourId,
-      },      {
+      }, {
         promotion_id: promotionOneId,
         branch_id: branchFiveId,
       },

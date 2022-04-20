@@ -1,7 +1,7 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-bitwise */
-import StaticImplements from '../../../Shared/Anotations/StaticImplements'
+import StaticImplements from '../../../Commons/Anotations/StaticImplements'
 
 type Entries<T> = {
   [K in keyof T]: [K, T[K]]

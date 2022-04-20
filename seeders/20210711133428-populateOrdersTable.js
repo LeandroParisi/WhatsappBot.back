@@ -1,5 +1,5 @@
 const { v4: uuid } = require('uuid')
-const attributeTypes = require('../src/Domain/Shared/interfaces/attributes/attributeTypes')
+const attributeTypes = require('../src/Application/Domains/StoreManagement/Controllers/Legacy/Shared/interfaces/attributes/attributeTypes')
 
 const { branchOneId } = require('./20210623221400-populateUsersTable')
 const { productOneId, productTwoId, productThreeId } = require('./20210710183145-populateProductsTable')

@@ -1,6 +1,6 @@
 import knex, { Knex } from 'knex'
 import { Service } from 'typedi'
-import StaticImplements from '../../../../Shared/Anotations/StaticImplements'
+import StaticImplements from '../../../../Commons/Anotations/StaticImplements'
 import IDbConnectionFactory from '../../Interfaces/IDbConnectionFactory'
 import KnexConfig from '../KnexConfig'
 

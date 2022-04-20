@@ -3,7 +3,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 const { v4: uuid } = require('uuid')
-const { validationErrors } = require('../Domain/Shared/libs')
+const { validationErrors } = require('../Application/Domains/StoreManagement/Controllers/Legacy/Shared/libs')
 
 const createCustomers = (sequelize, DataTypes) => {
   const Customers = sequelize.define('Customers', {

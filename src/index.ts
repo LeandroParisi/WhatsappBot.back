@@ -15,10 +15,10 @@ import {
   ProductsRouter,
   PromotionsRouter,
   UsersRouter,
-} from './Domain/Services'
-import OrdersRouter from './Domain/Services/Orders/OrdersRouter'
-import CustomersAddressesRouter from './Domain/Services/CustomerAddresses/CustomerAddressesRouter'
-import CouponsRouter from './Domain/Services/Coupons/CouponsRouter'
+} from './Application/Domains/StoreManagement/Controllers/Legacy'
+import OrdersRouter from './Application/Domains/StoreManagement/Controllers/Legacy/Orders/OrdersRouter'
+import CustomersAddressesRouter from './Application/Domains/StoreManagement/Controllers/Legacy/CustomerAddresses/CustomerAddressesRouter'
+import CouponsRouter from './Application/Domains/StoreManagement/Controllers/Legacy/Coupons/CouponsRouter'
 import ErrorCatcher from './Domain/Shared-v2-ts/Middlewares/ErrorHandler/ErrorCatcher'
 
 const express = require('express')
