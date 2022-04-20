@@ -7,7 +7,7 @@
 /* eslint-disable no-shadow */
 import 'reflect-metadata'
 import { Application } from 'express'
-import * as db from 'zapatos/db'
+// import * as db from 'zapatos/db'
 import Container, { Service } from 'typedi'
 import {
   BranchesRouter,
@@ -54,15 +54,15 @@ class Main {
     this.app.use(cors(corsOptions))
     this.app.use(express.json())
     this.app.use(cookieParser())
-    this.ConfigureZapatos()
+    // this.ConfigureZapatos()
   }
 
   // eslint-disable-next-line class-methods-use-this
-  ConfigureZapatos() {
-    db.setConfig({
-      queryListener: (q : any) => console.log({ query: q.text }, { values: q.values }),
-    })
-  }
+  // ConfigureZapatos() {
+  //   db.setConfig({
+  //     queryListener: (q : any) => console.log({ query: q.text }, { values: q.values }),
+  //   })
+  // }
 
   public Start() {
     this.app.use(PromotionsRouter.basePath, PromotionsRouter.setRouter())
