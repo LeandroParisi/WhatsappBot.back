@@ -1,14 +1,4 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable @typescript-eslint/triple-slash-reference */
-/// <reference path="../../../Infrastructure/StaticFiles/Schemas/zapatos/schema.d.ts" />
-import IUserToken from '../../Domains/Authentication/Interfaces/IUserToken'
-import * as db from 'zapatos/db'
-import type * as s from 'zapatos/schema'
-import PgConnectionFactory from '../../../Infrastructure/DbConnections/PgConnectionFactory'
-
 const rfr = require('rfr')
-const BranchesService2 = require('./BranchesServices2.ts')
-
 const { errorMessages, status } = require('../../Shared/libs')
 const { FireError } = require('../../Shared/middlewares/errorHandler/errorHandler')
 const { sequelize, Sequelize } = require('../../../models')
@@ -21,34 +11,10 @@ const insertMany = require('../helpers/commonQueries/insertMany')
 const BranchesQueries = require('./BranchesQueries')
 
 class BranchServices extends BaseService {
-  async findAll(user : IUserToken, query : s.branches.Whereable) {
-    // const pool = PgConnectionFactory.Create()
+  async findAll({ user, query }) {
+    const data = await this.model.findAll(this.queries.findAll({ id: user.id, query }))
 
-    // console.log({ query })
-    // const teste = db.select('branches', query, {
-    //   lateral: {
-    //     opening_hours: db.select(
-    //       'opening_hours',
-    //       { branch_id: db.parent('id') },
-    //       { columns: ['monday', 'thursday', 'friday', 'saturday', 'tuesday', 'wednesday', 'sunday'] },
-    //     ),
-    //     delivery_types: db.select(
-    //       'branches_delivery_types',
-    //       { branch_id: db.parent('id') },
-    //       {
-    //         lateral: {
-    //           teste: db.select('delivery_types', {id: db.})
-    //         }
-    //       }),
-    //   },
-    // })
-    // console.log({ teste })
-
-    // return await teste.run(pool)
-
-    // const data = await this.model.findAll(this.queries.findAll({ id: user.id, query }))
-
-    // return data
+    return data
   }
 
   async updateOne(id, payload) {
@@ -124,6 +90,6 @@ class BranchServices extends BaseService {
     return {}
   }
 }
-const BranchesService = new BranchServices()
+const BranchesService = new BranchServices(Branches, BranchesQueries)
 
 module.exports = BranchesService
