@@ -6,7 +6,7 @@ import FireError from '../../Abstractions/FireError'
 import { DefaultErrorsDict, DefaultPathDict } from '../../Enums/SequelizeErrorsLib'
 import { StatusCode } from '../../Enums/Status'
 import { ErrorMessages, ErrorTypes } from '../../Enums/Messages'
-import { IIndexable } from '../../../../Commons/Interfaces/SystemInterfaces/IIndexable'
+import { IIndexable } from '../../../../../../../../Commons/Interfaces/SystemInterfaces/IIndexable'
 
 @Service()
 export default class ErrorSender {

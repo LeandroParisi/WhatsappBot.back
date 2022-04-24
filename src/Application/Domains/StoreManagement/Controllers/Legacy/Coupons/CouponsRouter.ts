@@ -1,8 +1,8 @@
 import Container, { Service } from 'typedi'
-import METHODS from '../../../../../../Domain/Shared-v2-ts/Enums/Methods'
-import RoutesPath from '../../../../../../Domain/Shared-v2-ts/Enums/RoutesPath'
-import { Routes } from '../../../../../../Domain/Shared-v2-ts/Interfaces/IRouteDefinition'
-import AuthenticateUser from '../../../../../../Domain/Shared-v2-ts/Middlewares/Validations/AuthenticateUser'
+import METHODS from '../Shared-v2-ts/Enums/Methods'
+import RoutesPath from '../Shared-v2-ts/Enums/RoutesPath'
+import { Routes } from '../Shared-v2-ts/Interfaces/IRouteDefinition'
+import AuthenticateUser from '../Shared-v2-ts/Middlewares/Validations/AuthenticateUser'
 import BaseRouter from '../BaseClasses/v2/BaseRouter'
 import CouponsController from './CouponsController'
 

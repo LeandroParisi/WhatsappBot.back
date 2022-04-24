@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 import { Service } from 'typedi'
 import Coupom from '../../../../../../Data/Entities/Models/Coupom'
-import FireError from '../../../../../../Domain/Shared-v2-ts/Abstractions/FireError'
-import { StatusCode } from '../../../../../../Domain/Shared-v2-ts/Enums/Status'
+import FireError from '../Shared-v2-ts/Abstractions/FireError'
+import { StatusCode } from '../Shared-v2-ts/Enums/Status'
 import CouponsRepository from './CouponsRepository'
 import CoupomValidator from './Helpers/CoupomValidator'
 import ValidatedCoupom from './Interfaces/ValidatedCoupom'

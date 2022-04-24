@@ -4,7 +4,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Service } from 'typedi'
-import FireError from '../../../Domain/Shared-v2-ts/Abstractions/FireError'
+import FireError from '../../../Application/Domains/StoreManagement/Controllers/Legacy/Shared-v2-ts/Abstractions/FireError'
 
 /* eslint-disable max-len */
 const axios = require('axios')

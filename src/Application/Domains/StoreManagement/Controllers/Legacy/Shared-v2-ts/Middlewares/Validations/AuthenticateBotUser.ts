@@ -7,7 +7,7 @@ import { StatusCode } from '../../Enums/Status'
 import { ErrorMessages } from '../../Enums/Messages'
 import IMiddleware from '../Interfaces/IMiddleware'
 import JwtConfig from '../../Authentication/JwtConfig'
-import StaticImplements from '../../../../Commons/Anotations/StaticImplements'
+import StaticImplements from '../../../../../../../../Commons/Anotations/StaticImplements'
 
 @StaticImplements<IMiddleware>()
 export default class AuthenticateBotUser {

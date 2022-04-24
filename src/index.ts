@@ -19,7 +19,7 @@ import {
 import OrdersRouter from './Application/Domains/StoreManagement/Controllers/Legacy/Orders/OrdersRouter'
 import CustomersAddressesRouter from './Application/Domains/StoreManagement/Controllers/Legacy/CustomerAddresses/CustomerAddressesRouter'
 import CouponsRouter from './Application/Domains/StoreManagement/Controllers/Legacy/Coupons/CouponsRouter'
-import ErrorCatcher from './Domain/Shared-v2-ts/Middlewares/ErrorHandler/ErrorCatcher'
+import ErrorCatcher from './Application/Domains/StoreManagement/Controllers/Legacy/Shared-v2-ts/Middlewares/ErrorHandler/ErrorCatcher'
 
 const express = require('express')
 const cookieParser = require('cookie-parser')

@@ -1,7 +1,7 @@
 import Joi from 'joi'
 import { Service } from 'typedi'
 import AddressDTO from '../../../../../../../../Data/Entities/DTOs/AddressDTO'
-import SchemaValidation, { IValidator } from '../../../../../../../../Domain/Shared-v2-ts/Middlewares/Validations/SchemaValidation'
+import SchemaValidation, { IValidator } from '../../../Shared-v2-ts/Middlewares/Validations/SchemaValidation'
 
 const addressValidation = Joi.object<AddressDTO, true, AddressDTO>({
   id: Joi.string().uuid().required(),

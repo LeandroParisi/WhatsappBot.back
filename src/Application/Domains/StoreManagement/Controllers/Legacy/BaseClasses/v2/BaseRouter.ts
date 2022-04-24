@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { Router } from 'express'
-import RoutesPath from '../../../../../../../Domain/Shared-v2-ts/Enums/RoutesPath'
-import EndpointFn from '../../../../../../../Domain/Shared-v2-ts/Interfaces/ExpressInterfaces/EndpointFn'
-import IRouteDefinition, { Routes } from '../../../../../../../Domain/Shared-v2-ts/Interfaces/IRouteDefinition'
-import ErrorCatcher from '../../../../../../../Domain/Shared-v2-ts/Middlewares/ErrorHandler/ErrorCatcher'
+import RoutesPath from '../../Shared-v2-ts/Enums/RoutesPath'
+import EndpointFn from '../../Shared-v2-ts/Interfaces/ExpressInterfaces/EndpointFn'
+import IRouteDefinition, { Routes } from '../../Shared-v2-ts/Interfaces/IRouteDefinition'
+import ErrorCatcher from '../../Shared-v2-ts/Middlewares/ErrorHandler/ErrorCatcher'
 import BaseController from './BaseController'
 
 // const { errorCatcher } = require('../../Shared/middlewares/errorHandler/errorHandler')

@@ -1,5 +1,5 @@
 import { IncomingHttpHeaders } from 'http'
-import IUserToken from '../../../Domain/Shared-v2-ts/Interfaces/IUserToken'
+import IUserToken from '../../../Application/Domains/StoreManagement/Controllers/Legacy/Shared-v2-ts/Interfaces/IUserToken'
 
 declare module 'express' {
   export interface Request {

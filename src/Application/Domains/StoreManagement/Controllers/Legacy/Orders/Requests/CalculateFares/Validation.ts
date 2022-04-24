@@ -1,7 +1,7 @@
 import Joi from 'joi'
 import { Service } from 'typedi'
 import Order from '../../../../../../../../Data/Entities/Models/Order'
-import SchemaValidation, { IValidator } from '../../../../../../../../Domain/Shared-v2-ts/Middlewares/Validations/SchemaValidation'
+import SchemaValidation, { IValidator } from '../../../Shared-v2-ts/Middlewares/Validations/SchemaValidation'
 
 const orderValidation = Joi.object<Order>({
   id: Joi.string().uuid().required(),

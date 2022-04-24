@@ -2,7 +2,7 @@
 import Joi from 'joi'
 import { Service } from 'typedi'
 import { OrderStatus, OrderStatusValues } from '../../../../../../../../Data/Entities/Models/Order'
-import SchemaValidation, { IValidator } from '../../../../../../../../Domain/Shared-v2-ts/Middlewares/Validations/SchemaValidation'
+import SchemaValidation, { IValidator } from '../../../Shared-v2-ts/Middlewares/Validations/SchemaValidation'
 import GetByBranchAndCustomerParams from './Params'
 import GetByBranchAndCustomerQuery from './Query'
 

@@ -1,6 +1,6 @@
 import { Response } from 'express'
 import { Service } from 'typedi'
-import { StatusCode } from '../../../../../../Domain/Shared-v2-ts/Enums/Status'
+import { StatusCode } from '../Shared-v2-ts/Enums/Status'
 import { resMessages } from '../Shared/libs'
 import BaseController from '../BaseClasses/v2/BaseController'
 import CustomerAddressesHandler from './CustomerAddressesHandler'

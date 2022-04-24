@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { NextFunction, Response } from 'express'
-import StaticImplements from '../../../../Commons/Anotations/StaticImplements'
+import StaticImplements from '../../../../../../../../Commons/Anotations/StaticImplements'
 import FireError from '../../Abstractions/FireError'
 import JwtConfig from '../../Authentication/JwtConfig'
 import { ErrorMessages } from '../../Enums/Messages'
