@@ -14,7 +14,7 @@ const createCouponsBranches = (sequelize, DataTypes) => {
     },
     coupomId: {
       foreignKey: true,
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
     },
   }, { underscored: true, timestamps: false })
 

@@ -42,10 +42,10 @@ const createOrders = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
     },
     coupomId: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
     },
     promotionId: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
     },
     estimatedDeliveryDuration: {
       type: DataTypes.NUMBER,

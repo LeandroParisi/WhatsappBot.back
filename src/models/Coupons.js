@@ -1,12 +1,13 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
+const { v4: uuid } = require('uuid')
 
 const createCoupons = (sequelize, DataTypes) => {
   const Coupons = sequelize.define('Coupons', {
     id: {
       primaryKey: true,
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
     },
     coupomCode: {
       type: DataTypes.STRING,
@@ -39,6 +40,10 @@ const createCoupons = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
     },
   }, { underscored: true })
+
+  Coupons.beforeCreate((m) => {
+    m.id = uuid()
+  })
 
   Coupons.associate = (models) => {
     Coupons.belongsToMany(models.Branches, {

@@ -1,12 +1,13 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
+const { v4: uuid } = require('uuid')
 
 const createPromotions = (sequelize, DataTypes) => {
   const Promotions = sequelize.define('Promotions', {
     id: {
       primaryKey: true,
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
     },
     name: {
       type: DataTypes.STRING,
@@ -27,6 +28,10 @@ const createPromotions = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
   }, { underscored: true })
+
+  Promotions.beforeCreate((m) => {
+    m.id = uuid()
+  })
 
   Promotions.associate = (models) => {
     Promotions.hasMany(models.Orders, {

@@ -10,7 +10,7 @@ const createPromotionsProducts = (sequelize, DataTypes) => {
     },
     promotionId: {
       foreignKey: true,
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
     },
     productId: {
       foreignKey: true,

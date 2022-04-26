@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
 const { v4: uuid } = require('uuid')
-const { hashPassword } = require('../src/Domain/Shared/authentication/passwordHashing')
+const { hashPassword } = require('../src/Application/Domains/StoreManagement/Controllers/Legacy/Shared/authentication/passwordHashing')
 
 const userId = uuid()
 const userTwoId = uuid()

@@ -6,6 +6,7 @@ const {
   branchFourId,
   branchFiveId
 } = require('./20210623221400-populateUsersTable')
+const { v4: uuid } = require('uuid')
 
 const {
   productOneId,
@@ -25,26 +26,29 @@ const {
   productFourAttrThree,
 } = require('./20210710183145-populateProductsTable')
 
-const promotionOneId = 1
-const promotionTwoId = 2
-const promotionThreeId = 3
+const promotionOneId = uuid()
+const promotionTwoId = uuid()
+const promotionThreeId = uuid()
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('promotions', [
       {
+        id: promotionOneId,
         name: 'Super promoção 1',
         total_price: 20.20,
         due_date: new Date(2022, 1, 1),
         avaiability: [1, 2, 3, 4, 5, 6, 7],
       },
       {
+        id: promotionTwoId,
         name: 'Super promoção 2',
         total_price: 30.20,
         due_date: new Date(2022, 1, 1),
         avaiability: [1, 2, 3, 4, 5, 6, 7],
       },
       {
+        id: promotionThreeId,
         name: 'Super promoção 3',
         total_price: 40.20,
         due_date: new Date(2022, 1, 1),
@@ -54,7 +58,7 @@ module.exports = {
 
     await queryInterface.bulkInsert('promotions_products', [
       {
-        promotion_id: 1,
+        promotion_id: promotionOneId,
         product_id: productOneId,
         attributes: JSON.stringify([
           {
@@ -81,13 +85,13 @@ module.exports = {
         ]),
       },
       {
-        promotion_id: 1,
+        promotion_id: promotionOneId,
         product_id: productTwoId,
         attributes: JSON.stringify([]),
 
       },
       {
-        promotion_id: 1,
+        promotion_id: promotionOneId,
         product_id: productThreeId,
         attributes: JSON.stringify([
           {
@@ -107,7 +111,7 @@ module.exports = {
         ]),
       },
       {
-        promotion_id: 2,
+        promotion_id: promotionTwoId,
         product_id: productOneId,
         attributes: JSON.stringify([
           {
@@ -127,12 +131,12 @@ module.exports = {
         ]),
       },
       {
-        promotion_id: 2,
+        promotion_id: promotionTwoId,
         product_id: productTwoId,
         attributes: JSON.stringify([]),
       },
       {
-        promotion_id: 3,
+        promotion_id: promotionThreeId,
         product_id: productOneId,
         attributes: JSON.stringify([]),
       },

@@ -5,9 +5,10 @@ module.exports = {
     try {
       await queryInterface.createTable('promotions', {
         id: {
+          allowNull: false,
           primaryKey: true,
-          type: Sequelize.INTEGER,
-          autoIncrement: true,
+          type: Sequelize.UUID,
+          defaultValue: Sequelize.UUIDV4,
         },
         name: {
           allowNull: false,

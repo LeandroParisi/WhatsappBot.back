@@ -77,7 +77,7 @@ module.exports = {
         },
         coupom_id: {
           allowNull: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'coupons',
             key: 'id',
@@ -85,7 +85,7 @@ module.exports = {
         },
         promotion_id: {
           allowNull: true,
-          type: Sequelize.INTEGER,
+          type: Sequelize.UUID,
           references: {
             model: 'promotions',
             key: 'id',

@@ -10,7 +10,7 @@ const createCouponsConditions = (sequelize, DataTypes) => {
     },
     coupomId: {
       foreignKey: true,
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
     },
     conditionId: {
       foreignKey: true,

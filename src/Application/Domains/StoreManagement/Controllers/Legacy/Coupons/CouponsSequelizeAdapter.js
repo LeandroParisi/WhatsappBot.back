@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable class-methods-use-this */
 
 const {
@@ -65,6 +66,43 @@ class Adapter {
         }
 
         await CouponsBranches.destroy({ where: { coupomId: id } })
+
+        if (coupomBranches.length) {
+          await insertMany(
+            'coupons_branches',
+            id,
+            ['coupom_id', 'branch_id'],
+            coupomBranches,
+          )
+        }
+      })
+    } catch (e) {
+      console.log(e)
+      throw new FireError(status.internalError, errorMessages.internalError)
+    }
+    return {}
+  }
+
+  async Create(body) {
+    const { coupomBranches, coupomConditions } = body
+
+    const createBody = { ...body }
+    delete createBody.id
+
+    const { id } = await Coupons.create({ ...createBody })
+
+    if (!id) throw new FireError(status.notFound, errorMessages.notFound)
+
+    try {
+      await sequelize.transaction(async () => {
+        if (coupomConditions.length) {
+          await insertMany(
+            'coupons_conditions',
+            id,
+            ['coupom_id', 'condition_id'],
+            coupomConditions,
+          )
+        }
 
         if (coupomBranches.length) {
           await insertMany(

@@ -6,18 +6,22 @@ import { StatusCode } from '../Shared-v2-ts/Enums/Status'
 import CouponsRepository from './CouponsRepository'
 import CoupomValidator from './Helpers/CoupomValidator'
 import ValidatedCoupom from './Interfaces/ValidatedCoupom'
+import CouponsSequelizeAdapter from './CouponsSequelizeAdapter'
 import FindAllCouponsQuery from './Requests/FindAll/Query'
 import ValidateCoupomBody from './Requests/ValidateCoupom/Body'
 import ValidateCoupomParams from './Requests/ValidateCoupom/Params'
 
 @Service()
 export default class CouponsHandler {
+  Adapter : any
+
   /**
    *
    */
   constructor(
     private readonly Repository : CouponsRepository,
   ) {
+    this.Adapter = CouponsSequelizeAdapter
   }
 
   async Activate(id: string) : Promise<void> {
@@ -45,9 +49,7 @@ export default class CouponsHandler {
   }
 
   async Create(payload: Coupom) {
-    const isUpdated = await this.Repository.Insert(payload)
-
-    if (!isUpdated) throw new FireError(StatusCode.INTERNAL_SERVER_ERROR, 'Problem inseting coupom')
+    await this.Adapter.Create(payload)
   }
 
   async FindAll(query: FindAllCouponsQuery) : Promise<Coupom[]> {

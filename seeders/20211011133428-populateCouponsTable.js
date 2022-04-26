@@ -1,4 +1,9 @@
 const { branchOneId, branchTwoId } = require('./20210623221400-populateUsersTable')
+const { v4: uuid } = require('uuid')
+
+const id1 = uuid()
+const id2 = uuid()
+const id3 = uuid()
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -23,7 +28,7 @@ module.exports = {
 
     await queryInterface.bulkInsert('coupons', [
       {
-        id: 1,
+        id: id1,
         coupom_code: 'cupom_usos',
         discount_type: 'percentage',
         free_delivery: true,
@@ -32,7 +37,7 @@ module.exports = {
         uses_limit: 10,
       },
       {
-        id: 2,
+        id: id2,
         coupom_code: 'cupom_distancia',
         discount_type: 'absolute_value',
         free_delivery: true,
@@ -41,7 +46,7 @@ module.exports = {
         distance_limit_in_km: 15,
       },
       {
-        id: 3,
+        id: id3,
         coupom_code: 'cupom_data_preco',
         discount_type: 'absolute_value',
         free_delivery: false,
@@ -54,38 +59,38 @@ module.exports = {
 
     await queryInterface.bulkInsert('coupons_branches', [
       {
-        coupom_id: 1,
+        coupom_id: id1,
         branch_id: branchOneId,
       },
       {
-        coupom_id: 2,
+        coupom_id: id2,
         branch_id: branchOneId,
       },
       {
-        coupom_id: 2,
+        coupom_id: id2,
         branch_id: branchTwoId,
       },
       {
-        coupom_id: 3,
+        coupom_id: id3,
         branch_id: branchOneId,
       },
     ])
 
     await queryInterface.bulkInsert('coupons_conditions', [
       {
-        coupom_id: 1,
+        coupom_id: id1,
         condition_id: 4,
       },
       {
-        coupom_id: 2,
+        coupom_id: id2,
         condition_id: 3,
       },
       {
-        coupom_id: 3,
+        coupom_id: id3,
         condition_id: 2,
       },
       {
-        coupom_id: 3,
+        coupom_id: id3,
         condition_id: 1,
       },
     ])
