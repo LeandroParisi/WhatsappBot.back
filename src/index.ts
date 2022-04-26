@@ -8,6 +8,7 @@
 import 'reflect-metadata'
 import { Application } from 'express'
 import Container, { Service } from 'typedi'
+import multer from 'multer'
 import {
   BranchesRouter,
   CustomerRouter, LocationsRouter,
@@ -20,6 +21,7 @@ import OrdersRouter from './Application/Domains/StoreManagement/Controllers/Lega
 import CustomersAddressesRouter from './Application/Domains/StoreManagement/Controllers/Legacy/CustomerAddresses/CustomerAddressesRouter'
 import CouponsRouter from './Application/Domains/StoreManagement/Controllers/Legacy/Coupons/CouponsRouter'
 import ErrorCatcher from './Application/Domains/StoreManagement/Controllers/Legacy/Shared-v2-ts/Middlewares/ErrorHandler/ErrorCatcher'
+import MulterUpload from './Application/Shared/Middlewares/FileUpload/MulterUpload'
 
 const express = require('express')
 const cookieParser = require('cookie-parser')
@@ -57,9 +59,13 @@ class Main {
   }
 
   public Setup() {
+    const upload = multer({ dest: './uploads/' })
+    this.app.use(express.static('uploads'))
     this.app.use(cors(corsOptions))
     this.app.use(express.json())
     this.app.use(cookieParser())
+    // this.app.use(upload.array('image'))
+    // this.app.use(MulterUpload.ExecuteAsync)
   }
 
   public Start() {

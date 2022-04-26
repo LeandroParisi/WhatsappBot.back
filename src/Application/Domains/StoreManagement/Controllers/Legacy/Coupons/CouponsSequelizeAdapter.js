@@ -54,7 +54,7 @@ class Adapter {
       await sequelize.transaction(async (transaction) => {
         await Coupons.update(body, { where: { id }, transaction })
 
-        await CouponsConditions.destroy({ where: { id } })
+        await CouponsConditions.destroy({ where: { coupomId: id } })
 
         if (coupomConditions.length) {
           await insertMany(
