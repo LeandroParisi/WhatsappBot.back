@@ -8,10 +8,6 @@ export default class JwtConfig {
 
   static JWT = jwt
 
-  // jwtSign = (payload, jwtSecret, jwtConfig) => (
-  //   jwt.sign(payload, jwtSecret, jwtConfig)
-  // );
-
   static BaseConfig = {
     expiresIn: '1d',
     algorithm: 'HS256',
