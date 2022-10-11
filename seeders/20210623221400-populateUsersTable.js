@@ -5821,7 +5821,7 @@ module.exports = {
               [15, 12],
             ],
           }),
-          whatsapp_number: '553182630325',
+          whatsapp_number: '5521973245575',
         },
         {
           id: branchTwoId,

@@ -6,9 +6,10 @@ Backend built on NodeJs with Sequelize to manage restaurant order app
 
 ## Setup
 
-1) npm install
-2) install postgres - https://www.postgresql.org/download/
-3) Create .env file on project root with the following variables:
+1) Use node 14
+2) npm install
+3) install postgres - https://www.postgresql.org/download/
+4) Create .env file on project root with the following variables:
 </br>
 SECRET="desired-secret-for-login-token-creation"
 </br>
